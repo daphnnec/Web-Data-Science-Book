@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -76,10 +95,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b46385535caf84bc62f311a600ac5013.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8fee89e02ae113551d56c8e5eb7677c9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -296,14 +315,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./appendix-notebooks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Companion Notebooks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./appendix-ai-disclosure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">AI Coauthorship and Responsible Disclosure</span></span></a>
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">AI Coauthorship and Responsible Disclosure</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./appendix-further.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Where to Go from Here</span></span></a>
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Where to Go from Here</span></span></a>
   </div>
 </li>
       </ul>
@@ -336,15 +361,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#headless-mode" id="toc-headless-mode" class="nav-link" data-scroll-target="#headless-mode"><span class="header-section-number">8.8.1</span> Headless Mode</a></li>
   </ul></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">8.9</span> Exercises</a></li>
-  <li><a href="#social-history-and-public-interest" id="toc-social-history-and-public-interest" class="nav-link" data-scroll-target="#social-history-and-public-interest"><span class="header-section-number">8.10</span> Social History and Public Interest</a></li>
-  <li><a href="#common-issues-to-debug" id="toc-common-issues-to-debug" class="nav-link" data-scroll-target="#common-issues-to-debug"><span class="header-section-number">8.11</span> Common Issues to Debug</a></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">8.12</span> Key Takeaways</a></li>
-  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">8.13</span> Further Reading</a></li>
-  <li><a href="#a-practical-selenium-workflow" id="toc-a-practical-selenium-workflow" class="nav-link" data-scroll-target="#a-practical-selenium-workflow"><span class="header-section-number">8.14</span> A Practical Selenium Workflow</a>
-  <ul class="collapse">
-  <li><a href="#when-to-use-selenium-vs.-apis" id="toc-when-to-use-selenium-vs.-apis" class="nav-link" data-scroll-target="#when-to-use-selenium-vs.-apis"><span class="header-section-number">8.14.1</span> When to Use Selenium vs.&nbsp;APIs</a></li>
-  </ul></li>
+  <li><a href="#a-practical-selenium-workflow" id="toc-a-practical-selenium-workflow" class="nav-link" data-scroll-target="#a-practical-selenium-workflow"><span class="header-section-number">8.9</span> A Practical Selenium Workflow</a></li>
+  <li><a href="#when-to-use-selenium-vs.-apis" id="toc-when-to-use-selenium-vs.-apis" class="nav-link" data-scroll-target="#when-to-use-selenium-vs.-apis"><span class="header-section-number">8.10</span> When to Use Selenium vs.&nbsp;APIs</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">8.11</span> Exercises</a></li>
+  <li><a href="#social-history-and-public-interest" id="toc-social-history-and-public-interest" class="nav-link" data-scroll-target="#social-history-and-public-interest"><span class="header-section-number">8.12</span> Social History and Public Interest</a></li>
+  <li><a href="#common-issues-to-debug" id="toc-common-issues-to-debug" class="nav-link" data-scroll-target="#common-issues-to-debug"><span class="header-section-number">8.13</span> Common Issues to Debug</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">8.14</span> Key Takeaways</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading"><span class="header-section-number">8.15</span> Further Reading</a></li>
   </ul>
 </nav>
     </div>
@@ -390,6 +413,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Companion Notebook
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Run this chapter’s code as you read: download the <a href="notebooks/ch-08-dynamic-pages.ipynb">companion notebook</a> (see <a href="appendix-notebooks.html" class="quarto-xref"><span>Appendix A</span></a> for all of them).</p>
+</div>
+</div>
 <section id="when-static-scraping-fails" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="when-static-scraping-fails"><span class="header-section-number">8.1</span> When Static Scraping Fails</h2>
 <p>In <a href="ch-06-static-pages.html" class="quarto-xref"><span>Chapter 6</span></a>, you learned to retrieve web pages with <code>requests</code> and parse them with BeautifulSoup. This works well for pages whose content is fully present in the initial HTML — what we call <em>static</em> pages. But most modern websites are <em>dynamic</em>: their content is loaded, modified, or entirely rendered by JavaScript after the initial HTML arrives.</p>
@@ -398,28 +434,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="setting-up-selenium" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="setting-up-selenium"><span class="header-section-number">8.2</span> Setting Up Selenium</h2>
-<p>Selenium requires two components: the <code>selenium</code> Python library and a browser driver that lets Python control a specific browser.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Install from a terminal:</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="co"># pip install selenium webdriver-manager</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>webdriver_manager</code> library automatically downloads and configures the correct driver for your browser:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">from</span> selenium <span class="im">import</span> webdriver</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="im">from</span> selenium.webdriver.chrome.service <span class="im">import</span> Service</span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="im">from</span> webdriver_manager.chrome <span class="im">import</span> ChromeDriverManager</span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># For Chrome:</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>service <span class="op">=</span> Service(ChromeDriverManager().install())</span>
-<span id="cb2-7"><a href="#cb2-7"></a>driver <span class="op">=</span> webdriver.Chrome(service<span class="op">=</span>service)</span>
-<span id="cb2-8"><a href="#cb2-8"></a></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="co"># For Firefox:</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="co"># from selenium.webdriver.firefox.service import Service</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="co"># from webdriver_manager.firefox import GeckoDriverManager</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="co"># service = Service(GeckoDriverManager().install())</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="co"># driver = webdriver.Firefox(service=service)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Selenium requires two components: the <code>selenium</code> Python library and a browser driver — a small program that lets Python control a specific browser. Fortunately, you only need to install the library: since version 4.6 (late 2022), Selenium has shipped with <strong>Selenium Manager</strong>, which automatically finds or downloads the correct driver for whatever browser you have installed.</p>
+<div id="e1e23902" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Install from a terminal:</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="co"># pip install selenium</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Creating a driver is then a one-liner:</p>
+<div id="611e7185" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">from</span> selenium <span class="im">import</span> webdriver</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># For Chrome:</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>driver <span class="op">=</span> webdriver.Chrome()</span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="co"># For Firefox:</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co"># driver = webdriver.Firefox()</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If driver resolution fails on your machine — an unusual browser install location or a very new browser release can confuse it — check Selenium’s driver documentation for manual setup instructions.</p>
 <p>When you create the <code>driver</code>, a browser window opens. This is your programmable browser — every command you issue through the <code>driver</code> object happens in that window.</p>
 </section>
 <section id="navigating-and-finding-elements" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="navigating-and-finding-elements"><span class="header-section-number">8.3</span> Navigating and Finding Elements</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Navigate to a website</span></span>
+<div id="04b3e17b" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Navigate to a website</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a>driver.get(<span class="st">"https://xkcd.com"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3"></a></span>
 <span id="cb3-4"><a href="#cb3-4"></a><span class="co"># Find elements by various strategies</span></span>
@@ -434,24 +470,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-13"><a href="#cb3-13"></a><span class="co"># By XPath</span></span>
 <span id="cb3-14"><a href="#cb3-14"></a>title <span class="op">=</span> driver.find_element(By.XPATH, <span class="st">"//div[@id='ctitle']"</span>)</span>
 <span id="cb3-15"><a href="#cb3-15"></a><span class="bu">print</span>(title.text)  <span class="co"># The title of the current comic</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>The <code>find_element</code> method (singular) returns the first matching element. The <code>find_elements</code> method (plural) returns a list of all matches.</p>
 </section>
 <section id="extracting-data" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="extracting-data"><span class="header-section-number">8.4</span> Extracting Data</h2>
 <p>xkcd is famous for its hidden alt-text messages. You can extract element attributes:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Find the comic image</span></span>
+<div id="5cc6d6b8" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Find the comic image</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a>img <span class="op">=</span> driver.find_element(By.XPATH, <span class="st">"//div[@id='comic']//img"</span>)</span>
 <span id="cb4-3"><a href="#cb4-3"></a></span>
 <span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Get the alt-text and title attributes</span></span>
 <span id="cb4-5"><a href="#cb4-5"></a><span class="bu">print</span>(<span class="ss">f"Alt text: </span><span class="sc">{</span>img<span class="sc">.</span>get_attribute(<span class="st">'alt'</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb4-6"><a href="#cb4-6"></a><span class="bu">print</span>(<span class="ss">f"Title (hover text): </span><span class="sc">{</span>img<span class="sc">.</span>get_attribute(<span class="st">'title'</span>)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section id="simulating-interactions" class="level2" data-number="8.5">
 <h2 data-number="8.5" class="anchored" data-anchor-id="simulating-interactions"><span class="header-section-number">8.5</span> Simulating Interactions</h2>
 <p>Selenium can simulate clicks, keyboard input, and scrolling — anything a human user would do:</p>
 <section id="clicking" class="level3" data-number="8.5.1">
 <h3 data-number="8.5.1" class="anchored" data-anchor-id="clicking"><span class="header-section-number">8.5.1</span> Clicking</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Click the "Random" button to navigate to a random comic</span></span>
+<div id="9db713a7" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Click the "Random" button to navigate to a random comic</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a>random_button <span class="op">=</span> driver.find_element(By.XPATH, <span class="st">"//ul[@class='comicNav']//a[contains(text(),'Random')]"</span>)</span>
 <span id="cb5-3"><a href="#cb5-3"></a>random_button.click()</span>
 <span id="cb5-4"><a href="#cb5-4"></a></span>
@@ -461,29 +501,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-8"><a href="#cb5-8"></a></span>
 <span id="cb5-9"><a href="#cb5-9"></a>img <span class="op">=</span> driver.find_element(By.XPATH, <span class="st">"//div[@id='comic']//img"</span>)</span>
 <span id="cb5-10"><a href="#cb5-10"></a><span class="bu">print</span>(<span class="ss">f"Random comic title: </span><span class="sc">{</span>img<span class="sc">.</span>get_attribute(<span class="st">'title'</span>)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section id="typing-and-searching" class="level3" data-number="8.5.2">
 <h3 data-number="8.5.2" class="anchored" data-anchor-id="typing-and-searching"><span class="header-section-number">8.5.2</span> Typing and Searching</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">from</span> selenium.webdriver.common.keys <span class="im">import</span> Keys</span>
+<p>Selenium can type into forms and submit them. We will demonstrate with Wikipedia’s search box: Wikipedia’s robots policy is permissive toward automated access, and its markup is stable enough that this example should keep working for years. (Search engines like Google, by contrast, explicitly prohibit automated queries in their Terms of Service — where you point your automation matters as much as how you write it.)</p>
+<div id="f532cb2e" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">from</span> selenium.webdriver.common.keys <span class="im">import</span> Keys</span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Navigate to Google</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>driver.get(<span class="st">"https://www.google.com"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Navigate to the Wikipedia portal</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>driver.get(<span class="st">"https://www.wikipedia.org"</span>)</span>
 <span id="cb6-5"><a href="#cb6-5"></a></span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="co"># Find the search box</span></span>
-<span id="cb6-7"><a href="#cb6-7"></a>search_box <span class="op">=</span> driver.find_element(By.NAME, <span class="st">"q"</span>)</span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co"># Find the search box by its name attribute</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>search_box <span class="op">=</span> driver.find_element(By.NAME, <span class="st">"search"</span>)</span>
 <span id="cb6-8"><a href="#cb6-8"></a></span>
 <span id="cb6-9"><a href="#cb6-9"></a><span class="co"># Type a query</span></span>
 <span id="cb6-10"><a href="#cb6-10"></a>search_box.send_keys(<span class="st">"Colorado Buffaloes"</span>)</span>
 <span id="cb6-11"><a href="#cb6-11"></a>time.sleep(<span class="dv">1</span>)  <span class="co"># Observe autocomplete suggestions</span></span>
 <span id="cb6-12"><a href="#cb6-12"></a></span>
-<span id="cb6-13"><a href="#cb6-13"></a><span class="co"># Press Enter to search</span></span>
-<span id="cb6-14"><a href="#cb6-14"></a>search_box.send_keys(Keys.ENTER)</span>
-<span id="cb6-15"><a href="#cb6-15"></a>time.sleep(<span class="dv">2</span>)  <span class="co"># Wait for results</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-13"><a href="#cb6-13"></a><span class="co"># Press Enter to submit the search</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a>search_box.send_keys(Keys.RETURN)</span>
+<span id="cb6-15"><a href="#cb6-15"></a>time.sleep(<span class="dv">2</span>)  <span class="co"># Wait for the results page to load</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a></span>
+<span id="cb6-17"><a href="#cb6-17"></a><span class="co"># Read the resulting page</span></span>
+<span id="cb6-18"><a href="#cb6-18"></a><span class="bu">print</span>(driver.title)</span>
+<span id="cb6-19"><a href="#cb6-19"></a><span class="co"># Colorado Buffaloes - Wikipedia</span></span>
+<span id="cb6-20"><a href="#cb6-20"></a></span>
+<span id="cb6-21"><a href="#cb6-21"></a>heading <span class="op">=</span> driver.find_element(By.ID, <span class="st">"firstHeading"</span>)</span>
+<span id="cb6-22"><a href="#cb6-22"></a><span class="bu">print</span>(heading.text)</span>
+<span id="cb6-23"><a href="#cb6-23"></a><span class="co"># Colorado Buffaloes</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>When your query matches an article title exactly, Wikipedia takes you straight to that article; otherwise you land on a search results page listing candidate matches. Either way, the pattern is the one you will reuse on any site with a search form: find the input element, type with <code>send_keys()</code>, submit with <code>Keys.RETURN</code>, wait for the new page, and read the results.</p>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Automation Is Not a Loophole
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Everything from <a href="ch-02-ethics.html" class="quarto-xref"><span>Chapter 2</span></a> applies with full force to browser automation. A robots.txt disallow rule does not stop mattering because a real browser is doing the requesting, and a site’s Terms of Service does not stop applying because a script is doing the clicking. Legal risk concentrates precisely where Selenium is most tempting: automating logged-in accounts and ToS-restricted content. Check the policies of any site before you automate interactions with it.</p>
+</div>
+</div>
 </section>
 <section id="scrolling" class="level3" data-number="8.5.3">
 <h3 data-number="8.5.3" class="anchored" data-anchor-id="scrolling"><span class="header-section-number">8.5.3</span> Scrolling</h3>
 <p>Some pages load content as you scroll (infinite scroll). You can simulate this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">from</span> selenium.webdriver.common.keys <span class="im">import</span> Keys</span>
+<div id="ab904f5f" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">from</span> selenium.webdriver.common.keys <span class="im">import</span> Keys</span>
 <span id="cb7-2"><a href="#cb7-2"></a></span>
 <span id="cb7-3"><a href="#cb7-3"></a>body <span class="op">=</span> driver.find_element(By.TAG_NAME, <span class="st">"body"</span>)</span>
 <span id="cb7-4"><a href="#cb7-4"></a></span>
@@ -491,11 +558,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-6"><a href="#cb7-6"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
 <span id="cb7-7"><a href="#cb7-7"></a>    body.send_keys(Keys.PAGE_DOWN)</span>
 <span id="cb7-8"><a href="#cb7-8"></a>    time.sleep(<span class="dv">1</span>)  <span class="co"># Wait for new content to load</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section id="waiting-for-dynamic-content" class="level3" data-number="8.5.4">
 <h3 data-number="8.5.4" class="anchored" data-anchor-id="waiting-for-dynamic-content"><span class="header-section-number">8.5.4</span> Waiting for Dynamic Content</h3>
 <p>The <code>time.sleep()</code> calls in the examples above are a crude approach to waiting for content to load. A better strategy is <em>explicit waits</em>, which pause execution until a specific condition is met:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">from</span> selenium.webdriver.support.ui <span class="im">import</span> WebDriverWait</span>
+<div id="af86510b" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">from</span> selenium.webdriver.support.ui <span class="im">import</span> WebDriverWait</span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="im">from</span> selenium.webdriver.support <span class="im">import</span> expected_conditions <span class="im">as</span> EC</span>
 <span id="cb8-3"><a href="#cb8-3"></a></span>
 <span id="cb8-4"><a href="#cb8-4"></a><span class="co"># Navigate to a page with dynamically loaded content</span></span>
@@ -506,6 +575,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb8-9"><a href="#cb8-9"></a>    EC.presence_of_element_located((By.CLASS_NAME, <span class="st">"results-container"</span>))</span>
 <span id="cb8-10"><a href="#cb8-10"></a>)</span>
 <span id="cb8-11"><a href="#cb8-11"></a><span class="bu">print</span>(<span class="ss">f"Element found: </span><span class="sc">{</span>element<span class="sc">.</span>tag_name<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p><code>WebDriverWait</code> checks the condition repeatedly (every 0.5 seconds by default) and returns the element as soon as it appears, or raises a <code>TimeoutException</code> if the timeout expires. This is superior to <code>time.sleep()</code> in two ways: it does not wait longer than necessary (if the element appears in 0.2 seconds, it proceeds immediately), and it fails loudly if the element never appears (rather than silently returning an empty page).</p>
 <p>The most common expected conditions you will use are:</p>
 <ul>
@@ -514,12 +584,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>element_to_be_clickable</code> — the element is visible, enabled, and can receive clicks</li>
 <li><code>text_to_be_present_in_element</code> — specific text has appeared inside an element</li>
 </ul>
-<p>Use these instead of <code>time.sleep()</code> whenever possible. The combination of <code>WebDriverWait</code> with explicit conditions makes your Selenium scripts both more reliable (they wait for exactly what they need) and faster (they proceed as soon as the condition is met rather than waiting a fixed duration). You will see this pattern used in the practical workflow section at the end of this chapter.</p>
+<p>Use these instead of <code>time.sleep()</code> whenever possible. The combination of <code>WebDriverWait</code> with explicit conditions makes your Selenium scripts both more reliable (they wait for exactly what they need) and faster (they proceed as soon as the condition is met rather than waiting a fixed duration). You will see this pattern used in the practical workflow section later in this chapter.</p>
 </section>
 <section id="scraping-infinite-scroll-pages" class="level3" data-number="8.5.5">
 <h3 data-number="8.5.5" class="anchored" data-anchor-id="scraping-infinite-scroll-pages"><span class="header-section-number">8.5.5</span> Scraping Infinite Scroll Pages</h3>
 <p>Many modern websites load content progressively as you scroll — social media feeds, image galleries, and product listings all use this pattern. The technique for scraping these pages involves scrolling to the bottom, waiting for new content to load, and repeating until no more content appears:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> scrape_infinite_scroll(driver, max_scrolls<span class="op">=</span><span class="dv">20</span>, scroll_pause<span class="op">=</span><span class="dv">2</span>):</span>
+<div id="00d11ae4" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> scrape_infinite_scroll(driver, max_scrolls<span class="op">=</span><span class="dv">20</span>, scroll_pause<span class="op">=</span><span class="dv">2</span>):</span>
 <span id="cb9-2"><a href="#cb9-2"></a>    <span class="co">"""Scroll an infinite-scroll page and collect all loaded content."""</span></span>
 <span id="cb9-3"><a href="#cb9-3"></a>    last_height <span class="op">=</span> driver.execute_script(<span class="st">"return document.body.scrollHeight"</span>)</span>
 <span id="cb9-4"><a href="#cb9-4"></a></span>
@@ -538,6 +609,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-17"><a href="#cb9-17"></a></span>
 <span id="cb9-18"><a href="#cb9-18"></a>    <span class="co"># Return the fully-loaded page source</span></span>
 <span id="cb9-19"><a href="#cb9-19"></a>    <span class="cf">return</span> driver.page_source</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>The key insight is checking <code>document.body.scrollHeight</code> before and after each scroll. When the height stops growing, you have reached the end of the available content. Some sites use a “Load More” button instead of infinite scroll — for those, replace the scroll with a click on the button and watch for the button to disappear or become disabled.</p>
 <p>A practical consideration: infinite scroll pages can contain thousands of items, and loading them all consumes significant memory in the browser process. Set a reasonable <code>max_scrolls</code> limit based on how much data you actually need. If you are collecting data for a class project, you rarely need more than a few hundred items — scrolling through an entire social media feed of 10,000 posts is both unnecessary and discourteous to the server. Remember the proportionality principle from <a href="ch-02-ethics.html" class="quarto-xref"><span>Chapter 2</span></a>: collect only the data you need for your research question.</p>
 </section>
@@ -545,7 +617,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="passing-to-beautifulsoup" class="level2" data-number="8.6">
 <h2 data-number="8.6" class="anchored" data-anchor-id="passing-to-beautifulsoup"><span class="header-section-number">8.6</span> Passing to BeautifulSoup</h2>
 <p>Once the page is fully rendered in the browser, you can extract the complete HTML and parse it with the familiar BeautifulSoup tools:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
+<div id="5714b303" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
 <span id="cb10-2"><a href="#cb10-2"></a></span>
 <span id="cb10-3"><a href="#cb10-3"></a><span class="co"># Get the fully-rendered page source from Selenium</span></span>
 <span id="cb10-4"><a href="#cb10-4"></a>html <span class="op">=</span> driver.page_source</span>
@@ -554,19 +627,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-7"><a href="#cb10-7"></a><span class="co"># Now use BeautifulSoup as usual</span></span>
 <span id="cb10-8"><a href="#cb10-8"></a>links <span class="op">=</span> soup.find_all(<span class="st">"a"</span>, href<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb10-9"><a href="#cb10-9"></a><span class="bu">print</span>(<span class="ss">f"Total links on page: </span><span class="sc">{</span><span class="bu">len</span>(links)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>This hybrid approach — Selenium for rendering, BeautifulSoup for parsing — gives you the best of both worlds. Selenium excels at navigating, clicking, scrolling, and waiting for JavaScript to execute. BeautifulSoup excels at searching and extracting data from HTML. By combining them, you avoid the awkwardness of using Selenium’s relatively limited element-finding API for complex extraction tasks while still getting access to the fully-rendered page content.</p>
 <p>The workflow is always the same: use Selenium to get the page into the state you need (scrolled, clicked, searched, logged in), then hand off the rendered HTML to BeautifulSoup for extraction. Think of Selenium as the hands that navigate the browser and BeautifulSoup as the eyes that read the content. This division of labor keeps your code cleaner and more maintainable than trying to do everything with Selenium alone.</p>
 </section>
 <section id="always-close-the-driver" class="level2" data-number="8.7">
 <h2 data-number="8.7" class="anchored" data-anchor-id="always-close-the-driver"><span class="header-section-number">8.7</span> Always Close the Driver</h2>
 <p>When you are done, close the browser window:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>driver.quit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="5c4c4d31" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>driver.quit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>After calling <code>quit()</code>, any subsequent calls to the driver will raise an error. Use <code>try/finally</code> blocks to ensure cleanup:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="cf">try</span>:</span>
+<div id="b47ab0b4" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="cf">try</span>:</span>
 <span id="cb12-2"><a href="#cb12-2"></a>    driver.get(<span class="st">"https://example.com"</span>)</span>
 <span id="cb12-3"><a href="#cb12-3"></a>    <span class="co"># ... scraping logic ...</span></span>
 <span id="cb12-4"><a href="#cb12-4"></a><span class="cf">finally</span>:</span>
 <span id="cb12-5"><a href="#cb12-5"></a>    driver.quit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section id="the-fragility-problem" class="level2" data-number="8.8">
 <h2 data-number="8.8" class="anchored" data-anchor-id="the-fragility-problem"><span class="header-section-number">8.8</span> The Fragility Problem</h2>
@@ -584,13 +662,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>This fragility reinforces a principle from <a href="ch-03-post-api.html" class="quarto-xref"><span>Chapter 3</span></a>: when an API is available, use it. Selenium is a powerful last resort for cases where you ethically need data that no API provides, but it is slow, resource-intensive, and brittle compared to API access. The decision tree should be: API first → static scraping second → Selenium third.</p>
+<p>Selenium is also not the only browser automation tool. <strong>Playwright</strong>, developed by Microsoft, is the modern alternative: it waits for elements automatically (eliminating much of the explicit-wait boilerplate you saw earlier), runs noticeably faster, and supports asynchronous operation for parallel scraping. If browser automation becomes a regular part of your work, Playwright is worth learning. That said, Selenium remains far more widespread, has a deeper reservoir of documentation and community answers, and is entirely adequate for coursework — which is why this chapter teaches it.</p>
 <section id="headless-mode" class="level3" data-number="8.8.1">
 <h3 data-number="8.8.1" class="anchored" data-anchor-id="headless-mode"><span class="header-section-number">8.8.1</span> Headless Mode</h3>
 <p>For production scraping, you do not need a visible browser window. Headless mode runs the browser without a graphical interface, which is faster and can run on servers without a display:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">from</span> selenium.webdriver.chrome.options <span class="im">import</span> Options</span>
+<div id="ee4a5173" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">from</span> selenium.webdriver.chrome.options <span class="im">import</span> Options</span>
 <span id="cb13-2"><a href="#cb13-2"></a></span>
 <span id="cb13-3"><a href="#cb13-3"></a>options <span class="op">=</span> Options()</span>
-<span id="cb13-4"><a href="#cb13-4"></a>options.add_argument(<span class="st">"--headless"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4"></a>options.add_argument(<span class="st">"--headless=new"</span>)</span>
 <span id="cb13-5"><a href="#cb13-5"></a>options.add_argument(<span class="st">"--no-sandbox"</span>)</span>
 <span id="cb13-6"><a href="#cb13-6"></a>options.add_argument(<span class="st">"--disable-dev-shm-usage"</span>)</span>
 <span id="cb13-7"><a href="#cb13-7"></a></span>
@@ -598,18 +678,107 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-9"><a href="#cb13-9"></a>driver.get(<span class="st">"https://example.com"</span>)</span>
 <span id="cb13-10"><a href="#cb13-10"></a><span class="bu">print</span>(<span class="ss">f"Title: </span><span class="sc">{</span>driver<span class="sc">.</span>title<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb13-11"><a href="#cb13-11"></a>driver.quit()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The <code>--no-sandbox</code> and <code>--disable-dev-shm-usage</code> flags resolve common issues when running Chrome in containerized or server environments (like GitHub Actions, which you will use in <a href="ch-14-automation.html" class="quarto-xref"><span>Chapter 14</span></a>). Headless mode is essential for automated data collection pipelines where no one is watching the browser window.</p>
+</div>
+<p>The <code>=new</code> suffix selects Chrome’s new headless implementation (Chrome 109 and later), which behaves much more like the regular browser than the legacy <code>--headless</code> mode did. The <code>--no-sandbox</code> and <code>--disable-dev-shm-usage</code> flags resolve common issues when running Chrome in containerized or server environments (like GitHub Actions, which you will use in <a href="ch-14-automation.html" class="quarto-xref"><span>Chapter 14</span></a>). Headless mode is essential for automated data collection pipelines where no one is watching the browser window.</p>
 <p>One important caveat: some websites detect headless browsers and serve different content or block access entirely. They do this by checking for browser properties that headless mode handles differently (like the <code>navigator.webdriver</code> flag). If you get different results in headless mode than in a visible browser, this is likely the cause. For educational purposes, switching back to headed mode usually resolves the issue. In production settings, there are legitimate workarounds, but circumventing bot detection raises the ethical questions discussed in <a href="ch-02-ethics.html" class="quarto-xref"><span>Chapter 2</span></a> — the fact that you <em>can</em> evade detection does not mean you <em>should</em>.</p>
 </section>
 </section>
-<section id="exercises" class="level2" data-number="8.9">
-<h2 data-number="8.9" class="anchored" data-anchor-id="exercises"><span class="header-section-number">8.9</span> Exercises</h2>
+<section id="a-practical-selenium-workflow" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="a-practical-selenium-workflow"><span class="header-section-number">8.9</span> A Practical Selenium Workflow</h2>
+<p>Fragility is an argument for writing Selenium code defensively, not for avoiding Selenium. Here is a complete workflow that pulls together everything this chapter has covered. We will automate a multi-page interaction: navigating to a website, performing a search, waiting for results to load, extracting the data, and repeating across multiple pages.</p>
+<div id="a4940ae6" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="im">import</span> time</span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="im">from</span> selenium <span class="im">import</span> webdriver</span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="im">from</span> selenium.webdriver.chrome.options <span class="im">import</span> Options</span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="im">from</span> selenium.webdriver.common.by <span class="im">import</span> By</span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="im">from</span> selenium.webdriver.support.ui <span class="im">import</span> WebDriverWait</span>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="im">from</span> selenium.webdriver.support <span class="im">import</span> expected_conditions <span class="im">as</span> EC</span>
+<span id="cb14-7"><a href="#cb14-7"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
+<span id="cb14-8"><a href="#cb14-8"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb14-9"><a href="#cb14-9"></a></span>
+<span id="cb14-10"><a href="#cb14-10"></a><span class="kw">def</span> scrape_with_selenium(search_term, max_pages<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb14-11"><a href="#cb14-11"></a>    <span class="co">"""Scrape search results from a dynamic website.</span></span>
+<span id="cb14-12"><a href="#cb14-12"></a></span>
+<span id="cb14-13"><a href="#cb14-13"></a><span class="co">    This demonstrates the full Selenium workflow:</span></span>
+<span id="cb14-14"><a href="#cb14-14"></a><span class="co">    1. Launch a headless browser</span></span>
+<span id="cb14-15"><a href="#cb14-15"></a><span class="co">    2. Navigate and interact with the page</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a><span class="co">    3. Wait for dynamic content to load</span></span>
+<span id="cb14-17"><a href="#cb14-17"></a><span class="co">    4. Extract data via BeautifulSoup</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a><span class="co">    5. Handle pagination</span></span>
+<span id="cb14-19"><a href="#cb14-19"></a><span class="co">    6. Clean up</span></span>
+<span id="cb14-20"><a href="#cb14-20"></a><span class="co">    """</span></span>
+<span id="cb14-21"><a href="#cb14-21"></a>    options <span class="op">=</span> Options()</span>
+<span id="cb14-22"><a href="#cb14-22"></a>    options.add_argument(<span class="st">"--headless=new"</span>)</span>
+<span id="cb14-23"><a href="#cb14-23"></a>    driver <span class="op">=</span> webdriver.Chrome(options<span class="op">=</span>options)</span>
+<span id="cb14-24"><a href="#cb14-24"></a></span>
+<span id="cb14-25"><a href="#cb14-25"></a>    all_results <span class="op">=</span> []</span>
+<span id="cb14-26"><a href="#cb14-26"></a></span>
+<span id="cb14-27"><a href="#cb14-27"></a>    <span class="cf">try</span>:</span>
+<span id="cb14-28"><a href="#cb14-28"></a>        driver.get(<span class="st">"https://example-search-site.com"</span>)</span>
+<span id="cb14-29"><a href="#cb14-29"></a></span>
+<span id="cb14-30"><a href="#cb14-30"></a>        <span class="co"># Find and fill the search box</span></span>
+<span id="cb14-31"><a href="#cb14-31"></a>        search_box <span class="op">=</span> driver.find_element(By.NAME, <span class="st">"q"</span>)</span>
+<span id="cb14-32"><a href="#cb14-32"></a>        search_box.send_keys(search_term)</span>
+<span id="cb14-33"><a href="#cb14-33"></a>        search_box.submit()</span>
+<span id="cb14-34"><a href="#cb14-34"></a></span>
+<span id="cb14-35"><a href="#cb14-35"></a>        <span class="cf">for</span> page <span class="kw">in</span> <span class="bu">range</span>(max_pages):</span>
+<span id="cb14-36"><a href="#cb14-36"></a>            <span class="co"># Wait for results to load (up to 10 seconds)</span></span>
+<span id="cb14-37"><a href="#cb14-37"></a>            WebDriverWait(driver, <span class="dv">10</span>).until(</span>
+<span id="cb14-38"><a href="#cb14-38"></a>                EC.presence_of_element_located((By.CLASS_NAME, <span class="st">"result-item"</span>))</span>
+<span id="cb14-39"><a href="#cb14-39"></a>            )</span>
+<span id="cb14-40"><a href="#cb14-40"></a></span>
+<span id="cb14-41"><a href="#cb14-41"></a>            <span class="co"># Pass rendered HTML to BeautifulSoup</span></span>
+<span id="cb14-42"><a href="#cb14-42"></a>            soup <span class="op">=</span> BeautifulSoup(driver.page_source, <span class="st">"html.parser"</span>)</span>
+<span id="cb14-43"><a href="#cb14-43"></a></span>
+<span id="cb14-44"><a href="#cb14-44"></a>            <span class="co"># Extract data from this page</span></span>
+<span id="cb14-45"><a href="#cb14-45"></a>            <span class="cf">for</span> item <span class="kw">in</span> soup.find_all(<span class="st">"div"</span>, class_<span class="op">=</span><span class="st">"result-item"</span>):</span>
+<span id="cb14-46"><a href="#cb14-46"></a>                <span class="co"># Check that both elements exist before calling .text —</span></span>
+<span id="cb14-47"><a href="#cb14-47"></a>                <span class="co"># the same defensive pattern you learned for static scraping</span></span>
+<span id="cb14-48"><a href="#cb14-48"></a>                title_tag <span class="op">=</span> item.find(<span class="st">"h3"</span>)</span>
+<span id="cb14-49"><a href="#cb14-49"></a>                desc_tag <span class="op">=</span> item.find(<span class="st">"p"</span>)</span>
+<span id="cb14-50"><a href="#cb14-50"></a>                <span class="cf">if</span> title_tag <span class="kw">is</span> <span class="va">None</span> <span class="kw">or</span> desc_tag <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb14-51"><a href="#cb14-51"></a>                    <span class="cf">continue</span>  <span class="co"># Skip malformed result items rather than crash</span></span>
+<span id="cb14-52"><a href="#cb14-52"></a>                all_results.append({</span>
+<span id="cb14-53"><a href="#cb14-53"></a>                    <span class="st">"title"</span>: title_tag.text.strip(),</span>
+<span id="cb14-54"><a href="#cb14-54"></a>                    <span class="st">"description"</span>: desc_tag.text.strip(),</span>
+<span id="cb14-55"><a href="#cb14-55"></a>                    <span class="st">"page"</span>: page <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb14-56"><a href="#cb14-56"></a>                })</span>
+<span id="cb14-57"><a href="#cb14-57"></a></span>
+<span id="cb14-58"><a href="#cb14-58"></a>            <span class="co"># Try to click "Next" for pagination</span></span>
+<span id="cb14-59"><a href="#cb14-59"></a>            <span class="cf">try</span>:</span>
+<span id="cb14-60"><a href="#cb14-60"></a>                next_button <span class="op">=</span> driver.find_element(By.LINK_TEXT, <span class="st">"Next"</span>)</span>
+<span id="cb14-61"><a href="#cb14-61"></a>                next_button.click()</span>
+<span id="cb14-62"><a href="#cb14-62"></a>                time.sleep(<span class="dv">2</span>)  <span class="co"># Wait for next page to load</span></span>
+<span id="cb14-63"><a href="#cb14-63"></a>            <span class="cf">except</span> <span class="pp">Exception</span>:</span>
+<span id="cb14-64"><a href="#cb14-64"></a>                <span class="cf">break</span>  <span class="co"># No more pages</span></span>
+<span id="cb14-65"><a href="#cb14-65"></a></span>
+<span id="cb14-66"><a href="#cb14-66"></a>    <span class="cf">finally</span>:</span>
+<span id="cb14-67"><a href="#cb14-67"></a>        driver.quit()  <span class="co"># Always clean up</span></span>
+<span id="cb14-68"><a href="#cb14-68"></a></span>
+<span id="cb14-69"><a href="#cb14-69"></a>    <span class="cf">return</span> pd.DataFrame(all_results)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Notice the use of <code>WebDriverWait</code> with <code>expected_conditions</code> — this is superior to <code>time.sleep()</code> because it waits only as long as needed for the element to appear, rather than waiting a fixed amount of time that might be too short (element not loaded) or too long (wasted time). The <code>try/finally</code> block ensures the browser is closed even if an error occurs. And notice the <code>None</code> checks before calling <code>.text</code>: dynamic pages serve malformed or incomplete items just as often as static ones do, and the defensive parsing habits from <a href="ch-06-static-pages.html" class="quarto-xref"><span>Chapter 6</span></a> carry over unchanged.</p>
+</section>
+<section id="when-to-use-selenium-vs.-apis" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="when-to-use-selenium-vs.-apis"><span class="header-section-number">8.10</span> When to Use Selenium vs.&nbsp;APIs</h2>
+<p>With the full toolkit in hand, here is the decision tree for choosing your data access method:</p>
+<ol type="1">
+<li><strong>Is there an API?</strong> Use it. APIs are faster, more reliable, and more structured (see <a href="ch-10-wikipedia.html" class="quarto-xref"><span>Chapter 10</span></a> through <a href="ch-13-ai-apis.html" class="quarto-xref"><span>Chapter 13</span></a>).</li>
+<li><strong>Is the content in the static HTML?</strong> Use <code>requests</code> + BeautifulSoup (see <a href="ch-06-static-pages.html" class="quarto-xref"><span>Chapter 6</span></a>). It is simpler and faster than Selenium.</li>
+<li><strong>Is the content loaded by JavaScript?</strong> Use browser automation — Selenium, or Playwright if auto-waiting and speed matter for your project. Either way, expect it to be slower, more fragile, and more resource-intensive than the options above.</li>
+<li><strong>Is the content behind a login?</strong> This is where ethical judgment matters most. Automating access to login-gated content may violate Terms of Service. See <a href="ch-02-ethics.html" class="quarto-xref"><span>Chapter 2</span></a>.</li>
+</ol>
+<p>The exercises below give you practice at every branch of this tree.</p>
+</section>
+<section id="exercises" class="level2" data-number="8.11">
+<h2 data-number="8.11" class="anchored" data-anchor-id="exercises"><span class="header-section-number">8.11</span> Exercises</h2>
 <ol type="1">
 <li><p><strong>Dynamic content extraction.</strong> Find a website that loads content dynamically (via JavaScript, infinite scroll, or AJAX). Use Selenium to load the full page, then pass the source to BeautifulSoup and extract the dynamically-loaded data. Compare what you get with Selenium to what <code>requests.get()</code> returns.</p></li>
 <li><p><strong>Multi-step interaction.</strong> Use Selenium to automate a multi-step process: navigate to a site with a search form, enter a query, submit it, and extract results from the response page.</p></li>
 <li><p><strong>Static vs.&nbsp;dynamic comparison.</strong> For three websites of your choice, compare the HTML returned by <code>requests.get()</code> with the <code>driver.page_source</code> from Selenium. Categorize each site as static, partially dynamic, or fully dynamic.</p></li>
 <li><p><strong>Load More button.</strong> Find a website that uses a “Load More” button (rather than infinite scroll) to reveal additional content. Write a Selenium script that clicks the button in a loop until it disappears or becomes disabled, then extracts all the loaded data. How many items were hidden behind the button?</p></li>
 <li><p><strong>Performance comparison.</strong> For the same URL, measure the time taken by three approaches: <code>requests.get()</code>, headed Selenium (with a visible browser), and headless Selenium. Use <code>time.time()</code> to measure each. Create a table comparing the three approaches on speed, completeness of data retrieved, and resource usage. When is the speed tradeoff of Selenium worth it?</p></li>
+<li><p><strong>Graduate extension (INFO 5617).</strong> Choose a JavaScript-heavy site relevant to your own research interests and instrument it with both approaches from this part of the book: static <code>requests</code> + BeautifulSoup and Selenium. Quantify what each approach sees — count of elements retrieved, payload size in bytes, and wall-clock time — across at least five pages. Then write a roughly 500-word memo on when the added cost of browser automation is justified, engaging with the treatment of JavaScript scraping in <span class="citation" data-cites="mitchell2018web">Mitchell (<a href="#ref-mitchell2018web" role="doc-biblioref">2018</a>)</span>. Your memo should articulate a defensible general rule for other researchers, not just describe your particular site.</p></li>
 </ol>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -621,12 +790,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For background on debugging strategies when Selenium scripts fail, see <em>Missing Manual</em> Chapter 5: Debugging and Chapter 6: Reading Python Tracebacks.</p>
+<p>For background on debugging strategies when Selenium scripts fail, see <em>Missing Manual</em> Chapter 6: Debugging and Chapter 7: Reading Python Tracebacks.</p>
 </div>
 </div>
 </section>
-<section id="social-history-and-public-interest" class="level2" data-number="8.10">
-<h2 data-number="8.10" class="anchored" data-anchor-id="social-history-and-public-interest"><span class="header-section-number">8.10</span> Social History and Public Interest</h2>
+<section id="social-history-and-public-interest" class="level2" data-number="8.12">
+<h2 data-number="8.12" class="anchored" data-anchor-id="social-history-and-public-interest"><span class="header-section-number">8.12</span> Social History and Public Interest</h2>
 <p>The shift from server-rendered to client-rendered web pages represents a fundamental change in the web’s architecture. JavaScript frameworks like React, Angular, and Vue have made the web more interactive but also more opaque to automated observation. The ability to “view source” — once a straightforward way to see exactly what a page contained — now often reveals only a JavaScript bootstrap that fetches and renders content dynamically.</p>
 <p>This architectural shift interacts with the enclosure dynamics described in <a href="ch-03-post-api.html" class="quarto-xref"><span>Chapter 3</span></a>. When platforms render content client-side, they gain another layer of control over automated access. Anti-scraping measures — CAPTCHAs, bot detection, dynamically-generated class names — become easier to implement. Researchers who once could rely on simple HTTP requests increasingly need browser automation to access the same data, raising both the technical barrier and the ethical stakes. The tools in this chapter are a response to that architectural shift — they exist because the simpler approaches taught in <a href="ch-06-static-pages.html" class="quarto-xref"><span>Chapter 6</span></a> are no longer sufficient for much of the modern web.</p>
 <div class="callout callout-style-simple callout-note callout-titled">
@@ -643,109 +812,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="common-issues-to-debug" class="level2" data-number="8.11">
-<h2 data-number="8.11" class="anchored" data-anchor-id="common-issues-to-debug"><span class="header-section-number">8.11</span> Common Issues to Debug</h2>
+<section id="common-issues-to-debug" class="level2" data-number="8.13">
+<h2 data-number="8.13" class="anchored" data-anchor-id="common-issues-to-debug"><span class="header-section-number">8.13</span> Common Issues to Debug</h2>
 <ul>
 <li><strong><code>NoSuchElementException</code></strong>: The element does not exist yet because the page has not finished loading. Add <code>time.sleep()</code> or use explicit waits with <code>WebDriverWait</code>.</li>
 <li><strong><code>StaleElementReferenceException</code></strong>: The DOM changed between when you found the element and when you tried to interact with it. Re-find the element.</li>
-<li><strong>Driver/browser version mismatch</strong>: <code>webdriver_manager</code> usually handles this, but new browser releases occasionally break compatibility temporarily.</li>
+<li><strong>Driver/browser version mismatch</strong>: Selenium Manager usually resolves this automatically, but brand-new browser releases occasionally break compatibility for a few days. Updating the <code>selenium</code> package typically fixes it.</li>
 <li><strong>Memory issues</strong>: Each Selenium driver runs a full browser process. Close drivers promptly with <code>driver.quit()</code>.</li>
 </ul>
 </section>
-<section id="key-takeaways" class="level2" data-number="8.12">
-<h2 data-number="8.12" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">8.12</span> Key Takeaways</h2>
+<section id="key-takeaways" class="level2" data-number="8.14">
+<h2 data-number="8.14" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">8.14</span> Key Takeaways</h2>
 <p>The modern web is dynamic: JavaScript renders content after the initial HTML loads, making it invisible to static scraping tools. Selenium controls a real browser programmatically, letting you access fully-rendered pages, simulate user interactions, and extract content that <code>requests</code> cannot see. But Selenium is slow, fragile, and resource-intensive — a last resort when APIs and static scraping are unavailable. The hybrid approach of Selenium for rendering plus BeautifulSoup for parsing gives you full access to the modern web while keeping your parsing code familiar.</p>
 </section>
-<section id="further-reading" class="level2" data-number="8.13">
-<h2 data-number="8.13" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">8.13</span> Further Reading</h2>
+<section id="further-reading" class="level2" data-number="8.15">
+<h2 data-number="8.15" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">8.15</span> Further Reading</h2>
 <ul>
 <li>Selenium documentation: <a href="https://www.selenium.dev/documentation/" class="uri">https://www.selenium.dev/documentation/</a></li>
 <li>Selenium Python bindings: <a href="https://selenium-python.readthedocs.io/" class="uri">https://selenium-python.readthedocs.io/</a></li>
-<li>webdriver_manager: <a href="https://github.com/SergeyPirogov/webdriver_manager" class="uri">https://github.com/SergeyPirogov/webdriver_manager</a></li>
-<li><span class="citation" data-cites="mitchell2018web">@mitchell2018web</span> — Chapter 11: Scraping JavaScript</li>
+<li>Playwright for Python: <a href="https://playwright.dev/python/" class="uri">https://playwright.dev/python/</a></li>
+<li><span class="citation" data-cites="mitchell2018web">Mitchell (<a href="#ref-mitchell2018web" role="doc-biblioref">2018</a>)</span> — Chapter 11: Scraping JavaScript</li>
 </ul>
-</section>
-<section id="a-practical-selenium-workflow" class="level2" data-number="8.14">
-<h2 data-number="8.14" class="anchored" data-anchor-id="a-practical-selenium-workflow"><span class="header-section-number">8.14</span> A Practical Selenium Workflow</h2>
-<p>Here is a complete workflow that demonstrates the typical pattern for scraping a dynamically-rendered page. We will automate a multi-page interaction: navigating to a website, performing a search, waiting for results to load, extracting the data, and repeating across multiple pages.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="im">import</span> time</span>
-<span id="cb14-2"><a href="#cb14-2"></a><span class="im">from</span> selenium <span class="im">import</span> webdriver</span>
-<span id="cb14-3"><a href="#cb14-3"></a><span class="im">from</span> selenium.webdriver.chrome.options <span class="im">import</span> Options</span>
-<span id="cb14-4"><a href="#cb14-4"></a><span class="im">from</span> selenium.webdriver.common.by <span class="im">import</span> By</span>
-<span id="cb14-5"><a href="#cb14-5"></a><span class="im">from</span> selenium.webdriver.support.ui <span class="im">import</span> WebDriverWait</span>
-<span id="cb14-6"><a href="#cb14-6"></a><span class="im">from</span> selenium.webdriver.support <span class="im">import</span> expected_conditions <span class="im">as</span> EC</span>
-<span id="cb14-7"><a href="#cb14-7"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
-<span id="cb14-8"><a href="#cb14-8"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb14-9"><a href="#cb14-9"></a></span>
-<span id="cb14-10"><a href="#cb14-10"></a><span class="kw">def</span> scrape_with_selenium(search_term, max_pages<span class="op">=</span><span class="dv">3</span>):</span>
-<span id="cb14-11"><a href="#cb14-11"></a>    <span class="co">"""Scrape search results from a dynamic website.</span></span>
-<span id="cb14-12"><a href="#cb14-12"></a><span class="co">    </span></span>
-<span id="cb14-13"><a href="#cb14-13"></a><span class="co">    This demonstrates the full Selenium workflow:</span></span>
-<span id="cb14-14"><a href="#cb14-14"></a><span class="co">    1. Launch a headless browser</span></span>
-<span id="cb14-15"><a href="#cb14-15"></a><span class="co">    2. Navigate and interact with the page</span></span>
-<span id="cb14-16"><a href="#cb14-16"></a><span class="co">    3. Wait for dynamic content to load</span></span>
-<span id="cb14-17"><a href="#cb14-17"></a><span class="co">    4. Extract data via BeautifulSoup</span></span>
-<span id="cb14-18"><a href="#cb14-18"></a><span class="co">    5. Handle pagination</span></span>
-<span id="cb14-19"><a href="#cb14-19"></a><span class="co">    6. Clean up</span></span>
-<span id="cb14-20"><a href="#cb14-20"></a><span class="co">    """</span></span>
-<span id="cb14-21"><a href="#cb14-21"></a>    options <span class="op">=</span> Options()</span>
-<span id="cb14-22"><a href="#cb14-22"></a>    options.add_argument(<span class="st">"--headless"</span>)</span>
-<span id="cb14-23"><a href="#cb14-23"></a>    driver <span class="op">=</span> webdriver.Chrome(options<span class="op">=</span>options)</span>
-<span id="cb14-24"><a href="#cb14-24"></a>    </span>
-<span id="cb14-25"><a href="#cb14-25"></a>    all_results <span class="op">=</span> []</span>
-<span id="cb14-26"><a href="#cb14-26"></a>    </span>
-<span id="cb14-27"><a href="#cb14-27"></a>    <span class="cf">try</span>:</span>
-<span id="cb14-28"><a href="#cb14-28"></a>        driver.get(<span class="st">"https://example-search-site.com"</span>)</span>
-<span id="cb14-29"><a href="#cb14-29"></a>        </span>
-<span id="cb14-30"><a href="#cb14-30"></a>        <span class="co"># Find and fill the search box</span></span>
-<span id="cb14-31"><a href="#cb14-31"></a>        search_box <span class="op">=</span> driver.find_element(By.NAME, <span class="st">"q"</span>)</span>
-<span id="cb14-32"><a href="#cb14-32"></a>        search_box.send_keys(search_term)</span>
-<span id="cb14-33"><a href="#cb14-33"></a>        search_box.submit()</span>
-<span id="cb14-34"><a href="#cb14-34"></a>        </span>
-<span id="cb14-35"><a href="#cb14-35"></a>        <span class="cf">for</span> page <span class="kw">in</span> <span class="bu">range</span>(max_pages):</span>
-<span id="cb14-36"><a href="#cb14-36"></a>            <span class="co"># Wait for results to load (up to 10 seconds)</span></span>
-<span id="cb14-37"><a href="#cb14-37"></a>            WebDriverWait(driver, <span class="dv">10</span>).until(</span>
-<span id="cb14-38"><a href="#cb14-38"></a>                EC.presence_of_element_located((By.CLASS_NAME, <span class="st">"result-item"</span>))</span>
-<span id="cb14-39"><a href="#cb14-39"></a>            )</span>
-<span id="cb14-40"><a href="#cb14-40"></a>            </span>
-<span id="cb14-41"><a href="#cb14-41"></a>            <span class="co"># Pass rendered HTML to BeautifulSoup</span></span>
-<span id="cb14-42"><a href="#cb14-42"></a>            soup <span class="op">=</span> BeautifulSoup(driver.page_source, <span class="st">"html.parser"</span>)</span>
-<span id="cb14-43"><a href="#cb14-43"></a>            </span>
-<span id="cb14-44"><a href="#cb14-44"></a>            <span class="co"># Extract data from this page</span></span>
-<span id="cb14-45"><a href="#cb14-45"></a>            <span class="cf">for</span> item <span class="kw">in</span> soup.find_all(<span class="st">"div"</span>, class_<span class="op">=</span><span class="st">"result-item"</span>):</span>
-<span id="cb14-46"><a href="#cb14-46"></a>                all_results.append({</span>
-<span id="cb14-47"><a href="#cb14-47"></a>                    <span class="st">"title"</span>: item.find(<span class="st">"h3"</span>).text.strip(),</span>
-<span id="cb14-48"><a href="#cb14-48"></a>                    <span class="st">"description"</span>: item.find(<span class="st">"p"</span>).text.strip(),</span>
-<span id="cb14-49"><a href="#cb14-49"></a>                    <span class="st">"page"</span>: page <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb14-50"><a href="#cb14-50"></a>                })</span>
-<span id="cb14-51"><a href="#cb14-51"></a>            </span>
-<span id="cb14-52"><a href="#cb14-52"></a>            <span class="co"># Try to click "Next" for pagination</span></span>
-<span id="cb14-53"><a href="#cb14-53"></a>            <span class="cf">try</span>:</span>
-<span id="cb14-54"><a href="#cb14-54"></a>                next_button <span class="op">=</span> driver.find_element(By.LINK_TEXT, <span class="st">"Next"</span>)</span>
-<span id="cb14-55"><a href="#cb14-55"></a>                next_button.click()</span>
-<span id="cb14-56"><a href="#cb14-56"></a>                time.sleep(<span class="dv">2</span>)  <span class="co"># Wait for next page to load</span></span>
-<span id="cb14-57"><a href="#cb14-57"></a>            <span class="cf">except</span> <span class="pp">Exception</span>:</span>
-<span id="cb14-58"><a href="#cb14-58"></a>                <span class="cf">break</span>  <span class="co"># No more pages</span></span>
-<span id="cb14-59"><a href="#cb14-59"></a>    </span>
-<span id="cb14-60"><a href="#cb14-60"></a>    <span class="cf">finally</span>:</span>
-<span id="cb14-61"><a href="#cb14-61"></a>        driver.quit()  <span class="co"># Always clean up</span></span>
-<span id="cb14-62"><a href="#cb14-62"></a>    </span>
-<span id="cb14-63"><a href="#cb14-63"></a>    <span class="cf">return</span> pd.DataFrame(all_results)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Notice the use of <code>WebDriverWait</code> with <code>expected_conditions</code> — this is superior to <code>time.sleep()</code> because it waits only as long as needed for the element to appear, rather than waiting a fixed amount of time that might be too short (element not loaded) or too long (wasted time). The <code>try/finally</code> block ensures the browser is closed even if an error occurs.</p>
-<section id="when-to-use-selenium-vs.-apis" class="level3" data-number="8.14.1">
-<h3 data-number="8.14.1" class="anchored" data-anchor-id="when-to-use-selenium-vs.-apis"><span class="header-section-number">8.14.1</span> When to Use Selenium vs.&nbsp;APIs</h3>
-<p>The decision tree for choosing your data access method:</p>
-<ol type="1">
-<li><strong>Is there an API?</strong> Use it. APIs are faster, more reliable, and more structured (see <a href="ch-10-wikipedia.html" class="quarto-xref"><span>Chapter 10</span></a> through <a href="ch-13-ai-apis.html" class="quarto-xref"><span>Chapter 13</span></a>).</li>
-<li><strong>Is the content in the static HTML?</strong> Use <code>requests</code> + BeautifulSoup (see <a href="ch-06-static-pages.html" class="quarto-xref"><span>Chapter 6</span></a>). It is simpler and faster than Selenium.</li>
-<li><strong>Is the content loaded by JavaScript?</strong> Use Selenium. But be aware that it is slower, more fragile, and more resource-intensive.</li>
-<li><strong>Is the content behind a login?</strong> This is where ethical judgment matters most. Automating access to login-gated content may violate Terms of Service. See <a href="ch-02-ethics.html" class="quarto-xref"><span>Chapter 2</span></a>.</li>
-</ol>
 
 
 <!-- -->
 
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-mitchell2018web" class="csl-entry" role="listitem">
+Mitchell, Ryan. 2018. <em>Web Scraping with <span>Python</span>: Collecting More Data from the Modern Web</em>. 2nd ed. O’Reilly Media.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1224,386 +1320,418 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb15-10"><a href="#cb15-10"></a><span class="ss">- </span>Assess the fragility and ethical implications of browser automation</span>
 <span id="cb15-11"><a href="#cb15-11"></a>:::</span>
 <span id="cb15-12"><a href="#cb15-12"></a></span>
-<span id="cb15-13"><a href="#cb15-13"></a><span class="fu">## When Static Scraping Fails</span></span>
-<span id="cb15-14"><a href="#cb15-14"></a></span>
-<span id="cb15-15"><a href="#cb15-15"></a>In @sec-static-pages, you learned to retrieve web pages with <span class="in">`requests`</span> and parse them with BeautifulSoup. This works well for pages whose content is fully present in the initial HTML — what we call *static* pages. But most modern websites are *dynamic*: their content is loaded, modified, or entirely rendered by JavaScript after the initial HTML arrives.</span>
-<span id="cb15-16"><a href="#cb15-16"></a></span>
-<span id="cb15-17"><a href="#cb15-17"></a>When you use <span class="in">`requests.get()`</span> on a dynamic page, you get the HTML skeleton before JavaScript has run. The data you see in your browser may simply not exist in the response that <span class="in">`requests`</span> receives. You can verify this by comparing <span class="in">`requests.get(url).text`</span> with what you see in the browser — if significant content is missing from the <span class="in">`requests`</span> version, the page is dynamic.</span>
+<span id="cb15-13"><a href="#cb15-13"></a>::: {.callout-tip}</span>
+<span id="cb15-14"><a href="#cb15-14"></a><span class="fu">## Companion Notebook</span></span>
+<span id="cb15-15"><a href="#cb15-15"></a>Run this chapter's code as you read: download the <span class="co">[</span><span class="ot">companion notebook</span><span class="co">](notebooks/ch-08-dynamic-pages.ipynb)</span> (see @sec-appendix-notebooks for all of them).</span>
+<span id="cb15-16"><a href="#cb15-16"></a>:::</span>
+<span id="cb15-17"><a href="#cb15-17"></a></span>
 <span id="cb15-18"><a href="#cb15-18"></a></span>
-<span id="cb15-19"><a href="#cb15-19"></a>The solution is to use a tool that can execute JavaScript: a real web browser, controlled programmatically. Selenium is the standard tool for this.</span>
+<span id="cb15-19"><a href="#cb15-19"></a><span class="fu">## When Static Scraping Fails</span></span>
 <span id="cb15-20"><a href="#cb15-20"></a></span>
-<span id="cb15-21"><a href="#cb15-21"></a><span class="fu">## Setting Up Selenium</span></span>
+<span id="cb15-21"><a href="#cb15-21"></a>In @sec-static-pages, you learned to retrieve web pages with <span class="in">`requests`</span> and parse them with BeautifulSoup. This works well for pages whose content is fully present in the initial HTML — what we call *static* pages. But most modern websites are *dynamic*: their content is loaded, modified, or entirely rendered by JavaScript after the initial HTML arrives.</span>
 <span id="cb15-22"><a href="#cb15-22"></a></span>
-<span id="cb15-23"><a href="#cb15-23"></a>Selenium requires two components: the <span class="in">`selenium`</span> Python library and a browser driver that lets Python control a specific browser.</span>
+<span id="cb15-23"><a href="#cb15-23"></a>When you use <span class="in">`requests.get()`</span> on a dynamic page, you get the HTML skeleton before JavaScript has run. The data you see in your browser may simply not exist in the response that <span class="in">`requests`</span> receives. You can verify this by comparing <span class="in">`requests.get(url).text`</span> with what you see in the browser — if significant content is missing from the <span class="in">`requests`</span> version, the page is dynamic.</span>
 <span id="cb15-24"><a href="#cb15-24"></a></span>
-<span id="cb15-25"><a href="#cb15-25"></a><span class="in">```python</span></span>
-<span id="cb15-26"><a href="#cb15-26"></a><span class="co"># Install from a terminal:</span></span>
-<span id="cb15-27"><a href="#cb15-27"></a><span class="co"># pip install selenium webdriver-manager</span></span>
-<span id="cb15-28"><a href="#cb15-28"></a><span class="in">```</span></span>
-<span id="cb15-29"><a href="#cb15-29"></a></span>
-<span id="cb15-30"><a href="#cb15-30"></a>The <span class="in">`webdriver_manager`</span> library automatically downloads and configures the correct driver for your browser:</span>
-<span id="cb15-31"><a href="#cb15-31"></a></span>
-<span id="cb15-32"><a href="#cb15-32"></a><span class="in">```python</span></span>
-<span id="cb15-33"><a href="#cb15-33"></a><span class="im">from</span> selenium <span class="im">import</span> webdriver</span>
-<span id="cb15-34"><a href="#cb15-34"></a><span class="im">from</span> selenium.webdriver.chrome.service <span class="im">import</span> Service</span>
-<span id="cb15-35"><a href="#cb15-35"></a><span class="im">from</span> webdriver_manager.chrome <span class="im">import</span> ChromeDriverManager</span>
-<span id="cb15-36"><a href="#cb15-36"></a></span>
-<span id="cb15-37"><a href="#cb15-37"></a><span class="co"># For Chrome:</span></span>
-<span id="cb15-38"><a href="#cb15-38"></a>service <span class="op">=</span> Service(ChromeDriverManager().install())</span>
-<span id="cb15-39"><a href="#cb15-39"></a>driver <span class="op">=</span> webdriver.Chrome(service<span class="op">=</span>service)</span>
-<span id="cb15-40"><a href="#cb15-40"></a></span>
-<span id="cb15-41"><a href="#cb15-41"></a><span class="co"># For Firefox:</span></span>
-<span id="cb15-42"><a href="#cb15-42"></a><span class="co"># from selenium.webdriver.firefox.service import Service</span></span>
-<span id="cb15-43"><a href="#cb15-43"></a><span class="co"># from webdriver_manager.firefox import GeckoDriverManager</span></span>
-<span id="cb15-44"><a href="#cb15-44"></a><span class="co"># service = Service(GeckoDriverManager().install())</span></span>
-<span id="cb15-45"><a href="#cb15-45"></a><span class="co"># driver = webdriver.Firefox(service=service)</span></span>
-<span id="cb15-46"><a href="#cb15-46"></a><span class="in">```</span></span>
+<span id="cb15-25"><a href="#cb15-25"></a>The solution is to use a tool that can execute JavaScript: a real web browser, controlled programmatically. Selenium is the standard tool for this.</span>
+<span id="cb15-26"><a href="#cb15-26"></a></span>
+<span id="cb15-27"><a href="#cb15-27"></a><span class="fu">## Setting Up Selenium</span></span>
+<span id="cb15-28"><a href="#cb15-28"></a></span>
+<span id="cb15-29"><a href="#cb15-29"></a>Selenium requires two components: the <span class="in">`selenium`</span> Python library and a browser driver — a small program that lets Python control a specific browser. Fortunately, you only need to install the library: since version 4.6 (late 2022), Selenium has shipped with **Selenium Manager**, which automatically finds or downloads the correct driver for whatever browser you have installed.</span>
+<span id="cb15-30"><a href="#cb15-30"></a></span>
+<span id="cb15-33"><a href="#cb15-33"></a><span class="in">```{python}</span></span>
+<span id="cb15-34"><a href="#cb15-34"></a><span class="co"># Install from a terminal:</span></span>
+<span id="cb15-35"><a href="#cb15-35"></a><span class="co"># pip install selenium</span></span>
+<span id="cb15-36"><a href="#cb15-36"></a><span class="in">```</span></span>
+<span id="cb15-37"><a href="#cb15-37"></a></span>
+<span id="cb15-38"><a href="#cb15-38"></a>Creating a driver is then a one-liner:</span>
+<span id="cb15-39"><a href="#cb15-39"></a></span>
+<span id="cb15-42"><a href="#cb15-42"></a><span class="in">```{python}</span></span>
+<span id="cb15-43"><a href="#cb15-43"></a><span class="im">from</span> selenium <span class="im">import</span> webdriver</span>
+<span id="cb15-44"><a href="#cb15-44"></a></span>
+<span id="cb15-45"><a href="#cb15-45"></a><span class="co"># For Chrome:</span></span>
+<span id="cb15-46"><a href="#cb15-46"></a>driver <span class="op">=</span> webdriver.Chrome()</span>
 <span id="cb15-47"><a href="#cb15-47"></a></span>
-<span id="cb15-48"><a href="#cb15-48"></a>When you create the <span class="in">`driver`</span>, a browser window opens. This is your programmable browser — every command you issue through the <span class="in">`driver`</span> object happens in that window.</span>
-<span id="cb15-49"><a href="#cb15-49"></a></span>
-<span id="cb15-50"><a href="#cb15-50"></a><span class="fu">## Navigating and Finding Elements</span></span>
+<span id="cb15-48"><a href="#cb15-48"></a><span class="co"># For Firefox:</span></span>
+<span id="cb15-49"><a href="#cb15-49"></a><span class="co"># driver = webdriver.Firefox()</span></span>
+<span id="cb15-50"><a href="#cb15-50"></a><span class="in">```</span></span>
 <span id="cb15-51"><a href="#cb15-51"></a></span>
-<span id="cb15-52"><a href="#cb15-52"></a><span class="in">```python</span></span>
-<span id="cb15-53"><a href="#cb15-53"></a><span class="co"># Navigate to a website</span></span>
-<span id="cb15-54"><a href="#cb15-54"></a>driver.get(<span class="st">"https://xkcd.com"</span>)</span>
+<span id="cb15-52"><a href="#cb15-52"></a>If driver resolution fails on your machine — an unusual browser install location or a very new browser release can confuse it — check Selenium's driver documentation for manual setup instructions.</span>
+<span id="cb15-53"><a href="#cb15-53"></a></span>
+<span id="cb15-54"><a href="#cb15-54"></a>When you create the <span class="in">`driver`</span>, a browser window opens. This is your programmable browser — every command you issue through the <span class="in">`driver`</span> object happens in that window.</span>
 <span id="cb15-55"><a href="#cb15-55"></a></span>
-<span id="cb15-56"><a href="#cb15-56"></a><span class="co"># Find elements by various strategies</span></span>
-<span id="cb15-57"><a href="#cb15-57"></a><span class="im">from</span> selenium.webdriver.common.by <span class="im">import</span> By</span>
-<span id="cb15-58"><a href="#cb15-58"></a></span>
-<span id="cb15-59"><a href="#cb15-59"></a><span class="co"># By ID</span></span>
-<span id="cb15-60"><a href="#cb15-60"></a>comic_div <span class="op">=</span> driver.find_element(By.ID, <span class="st">"comic"</span>)</span>
-<span id="cb15-61"><a href="#cb15-61"></a></span>
-<span id="cb15-62"><a href="#cb15-62"></a><span class="co"># By CSS selector</span></span>
-<span id="cb15-63"><a href="#cb15-63"></a>nav_links <span class="op">=</span> driver.find_elements(By.CSS_SELECTOR, <span class="st">"ul.comicNav li a"</span>)</span>
-<span id="cb15-64"><a href="#cb15-64"></a></span>
-<span id="cb15-65"><a href="#cb15-65"></a><span class="co"># By XPath</span></span>
-<span id="cb15-66"><a href="#cb15-66"></a>title <span class="op">=</span> driver.find_element(By.XPATH, <span class="st">"//div[@id='ctitle']"</span>)</span>
-<span id="cb15-67"><a href="#cb15-67"></a><span class="bu">print</span>(title.text)  <span class="co"># The title of the current comic</span></span>
-<span id="cb15-68"><a href="#cb15-68"></a><span class="in">```</span></span>
+<span id="cb15-56"><a href="#cb15-56"></a><span class="fu">## Navigating and Finding Elements</span></span>
+<span id="cb15-57"><a href="#cb15-57"></a></span>
+<span id="cb15-60"><a href="#cb15-60"></a><span class="in">```{python}</span></span>
+<span id="cb15-61"><a href="#cb15-61"></a><span class="co"># Navigate to a website</span></span>
+<span id="cb15-62"><a href="#cb15-62"></a>driver.get(<span class="st">"https://xkcd.com"</span>)</span>
+<span id="cb15-63"><a href="#cb15-63"></a></span>
+<span id="cb15-64"><a href="#cb15-64"></a><span class="co"># Find elements by various strategies</span></span>
+<span id="cb15-65"><a href="#cb15-65"></a><span class="im">from</span> selenium.webdriver.common.by <span class="im">import</span> By</span>
+<span id="cb15-66"><a href="#cb15-66"></a></span>
+<span id="cb15-67"><a href="#cb15-67"></a><span class="co"># By ID</span></span>
+<span id="cb15-68"><a href="#cb15-68"></a>comic_div <span class="op">=</span> driver.find_element(By.ID, <span class="st">"comic"</span>)</span>
 <span id="cb15-69"><a href="#cb15-69"></a></span>
-<span id="cb15-70"><a href="#cb15-70"></a>The <span class="in">`find_element`</span> method (singular) returns the first matching element. The <span class="in">`find_elements`</span> method (plural) returns a list of all matches.</span>
-<span id="cb15-71"><a href="#cb15-71"></a></span>
-<span id="cb15-72"><a href="#cb15-72"></a><span class="fu">## Extracting Data</span></span>
-<span id="cb15-73"><a href="#cb15-73"></a></span>
-<span id="cb15-74"><a href="#cb15-74"></a>xkcd is famous for its hidden alt-text messages. You can extract element attributes:</span>
-<span id="cb15-75"><a href="#cb15-75"></a></span>
-<span id="cb15-76"><a href="#cb15-76"></a><span class="in">```python</span></span>
-<span id="cb15-77"><a href="#cb15-77"></a><span class="co"># Find the comic image</span></span>
-<span id="cb15-78"><a href="#cb15-78"></a>img <span class="op">=</span> driver.find_element(By.XPATH, <span class="st">"//div[@id='comic']//img"</span>)</span>
+<span id="cb15-70"><a href="#cb15-70"></a><span class="co"># By CSS selector</span></span>
+<span id="cb15-71"><a href="#cb15-71"></a>nav_links <span class="op">=</span> driver.find_elements(By.CSS_SELECTOR, <span class="st">"ul.comicNav li a"</span>)</span>
+<span id="cb15-72"><a href="#cb15-72"></a></span>
+<span id="cb15-73"><a href="#cb15-73"></a><span class="co"># By XPath</span></span>
+<span id="cb15-74"><a href="#cb15-74"></a>title <span class="op">=</span> driver.find_element(By.XPATH, <span class="st">"//div[@id='ctitle']"</span>)</span>
+<span id="cb15-75"><a href="#cb15-75"></a><span class="bu">print</span>(title.text)  <span class="co"># The title of the current comic</span></span>
+<span id="cb15-76"><a href="#cb15-76"></a><span class="in">```</span></span>
+<span id="cb15-77"><a href="#cb15-77"></a></span>
+<span id="cb15-78"><a href="#cb15-78"></a>The <span class="in">`find_element`</span> method (singular) returns the first matching element. The <span class="in">`find_elements`</span> method (plural) returns a list of all matches.</span>
 <span id="cb15-79"><a href="#cb15-79"></a></span>
-<span id="cb15-80"><a href="#cb15-80"></a><span class="co"># Get the alt-text and title attributes</span></span>
-<span id="cb15-81"><a href="#cb15-81"></a><span class="bu">print</span>(<span class="ss">f"Alt text: </span><span class="sc">{</span>img<span class="sc">.</span>get_attribute(<span class="st">'alt'</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb15-82"><a href="#cb15-82"></a><span class="bu">print</span>(<span class="ss">f"Title (hover text): </span><span class="sc">{</span>img<span class="sc">.</span>get_attribute(<span class="st">'title'</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb15-83"><a href="#cb15-83"></a><span class="in">```</span></span>
-<span id="cb15-84"><a href="#cb15-84"></a></span>
-<span id="cb15-85"><a href="#cb15-85"></a><span class="fu">## Simulating Interactions</span></span>
-<span id="cb15-86"><a href="#cb15-86"></a></span>
-<span id="cb15-87"><a href="#cb15-87"></a>Selenium can simulate clicks, keyboard input, and scrolling — anything a human user would do:</span>
-<span id="cb15-88"><a href="#cb15-88"></a></span>
-<span id="cb15-89"><a href="#cb15-89"></a><span class="fu">### Clicking</span></span>
-<span id="cb15-90"><a href="#cb15-90"></a></span>
-<span id="cb15-91"><a href="#cb15-91"></a><span class="in">```python</span></span>
-<span id="cb15-92"><a href="#cb15-92"></a><span class="co"># Click the "Random" button to navigate to a random comic</span></span>
-<span id="cb15-93"><a href="#cb15-93"></a>random_button <span class="op">=</span> driver.find_element(By.XPATH, <span class="st">"//ul[@class='comicNav']//a[contains(text(),'Random')]"</span>)</span>
-<span id="cb15-94"><a href="#cb15-94"></a>random_button.click()</span>
-<span id="cb15-95"><a href="#cb15-95"></a></span>
-<span id="cb15-96"><a href="#cb15-96"></a><span class="co"># Extract the alt-text from the random page</span></span>
-<span id="cb15-97"><a href="#cb15-97"></a><span class="im">import</span> time</span>
-<span id="cb15-98"><a href="#cb15-98"></a>time.sleep(<span class="dv">1</span>)  <span class="co"># Wait for the page to load</span></span>
-<span id="cb15-99"><a href="#cb15-99"></a></span>
-<span id="cb15-100"><a href="#cb15-100"></a>img <span class="op">=</span> driver.find_element(By.XPATH, <span class="st">"//div[@id='comic']//img"</span>)</span>
-<span id="cb15-101"><a href="#cb15-101"></a><span class="bu">print</span>(<span class="ss">f"Random comic title: </span><span class="sc">{</span>img<span class="sc">.</span>get_attribute(<span class="st">'title'</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb15-102"><a href="#cb15-102"></a><span class="in">```</span></span>
-<span id="cb15-103"><a href="#cb15-103"></a></span>
-<span id="cb15-104"><a href="#cb15-104"></a><span class="fu">### Typing and Searching</span></span>
-<span id="cb15-105"><a href="#cb15-105"></a></span>
-<span id="cb15-106"><a href="#cb15-106"></a><span class="in">```python</span></span>
-<span id="cb15-107"><a href="#cb15-107"></a><span class="im">from</span> selenium.webdriver.common.keys <span class="im">import</span> Keys</span>
-<span id="cb15-108"><a href="#cb15-108"></a></span>
-<span id="cb15-109"><a href="#cb15-109"></a><span class="co"># Navigate to Google</span></span>
-<span id="cb15-110"><a href="#cb15-110"></a>driver.get(<span class="st">"https://www.google.com"</span>)</span>
+<span id="cb15-80"><a href="#cb15-80"></a><span class="fu">## Extracting Data</span></span>
+<span id="cb15-81"><a href="#cb15-81"></a></span>
+<span id="cb15-82"><a href="#cb15-82"></a>xkcd is famous for its hidden alt-text messages. You can extract element attributes:</span>
+<span id="cb15-83"><a href="#cb15-83"></a></span>
+<span id="cb15-86"><a href="#cb15-86"></a><span class="in">```{python}</span></span>
+<span id="cb15-87"><a href="#cb15-87"></a><span class="co"># Find the comic image</span></span>
+<span id="cb15-88"><a href="#cb15-88"></a>img <span class="op">=</span> driver.find_element(By.XPATH, <span class="st">"//div[@id='comic']//img"</span>)</span>
+<span id="cb15-89"><a href="#cb15-89"></a></span>
+<span id="cb15-90"><a href="#cb15-90"></a><span class="co"># Get the alt-text and title attributes</span></span>
+<span id="cb15-91"><a href="#cb15-91"></a><span class="bu">print</span>(<span class="ss">f"Alt text: </span><span class="sc">{</span>img<span class="sc">.</span>get_attribute(<span class="st">'alt'</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-92"><a href="#cb15-92"></a><span class="bu">print</span>(<span class="ss">f"Title (hover text): </span><span class="sc">{</span>img<span class="sc">.</span>get_attribute(<span class="st">'title'</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-93"><a href="#cb15-93"></a><span class="in">```</span></span>
+<span id="cb15-94"><a href="#cb15-94"></a></span>
+<span id="cb15-95"><a href="#cb15-95"></a><span class="fu">## Simulating Interactions</span></span>
+<span id="cb15-96"><a href="#cb15-96"></a></span>
+<span id="cb15-97"><a href="#cb15-97"></a>Selenium can simulate clicks, keyboard input, and scrolling — anything a human user would do:</span>
+<span id="cb15-98"><a href="#cb15-98"></a></span>
+<span id="cb15-99"><a href="#cb15-99"></a><span class="fu">### Clicking</span></span>
+<span id="cb15-100"><a href="#cb15-100"></a></span>
+<span id="cb15-103"><a href="#cb15-103"></a><span class="in">```{python}</span></span>
+<span id="cb15-104"><a href="#cb15-104"></a><span class="co"># Click the "Random" button to navigate to a random comic</span></span>
+<span id="cb15-105"><a href="#cb15-105"></a>random_button <span class="op">=</span> driver.find_element(By.XPATH, <span class="st">"//ul[@class='comicNav']//a[contains(text(),'Random')]"</span>)</span>
+<span id="cb15-106"><a href="#cb15-106"></a>random_button.click()</span>
+<span id="cb15-107"><a href="#cb15-107"></a></span>
+<span id="cb15-108"><a href="#cb15-108"></a><span class="co"># Extract the alt-text from the random page</span></span>
+<span id="cb15-109"><a href="#cb15-109"></a><span class="im">import</span> time</span>
+<span id="cb15-110"><a href="#cb15-110"></a>time.sleep(<span class="dv">1</span>)  <span class="co"># Wait for the page to load</span></span>
 <span id="cb15-111"><a href="#cb15-111"></a></span>
-<span id="cb15-112"><a href="#cb15-112"></a><span class="co"># Find the search box</span></span>
-<span id="cb15-113"><a href="#cb15-113"></a>search_box <span class="op">=</span> driver.find_element(By.NAME, <span class="st">"q"</span>)</span>
-<span id="cb15-114"><a href="#cb15-114"></a></span>
-<span id="cb15-115"><a href="#cb15-115"></a><span class="co"># Type a query</span></span>
-<span id="cb15-116"><a href="#cb15-116"></a>search_box.send_keys(<span class="st">"Colorado Buffaloes"</span>)</span>
-<span id="cb15-117"><a href="#cb15-117"></a>time.sleep(<span class="dv">1</span>)  <span class="co"># Observe autocomplete suggestions</span></span>
-<span id="cb15-118"><a href="#cb15-118"></a></span>
-<span id="cb15-119"><a href="#cb15-119"></a><span class="co"># Press Enter to search</span></span>
-<span id="cb15-120"><a href="#cb15-120"></a>search_box.send_keys(Keys.ENTER)</span>
-<span id="cb15-121"><a href="#cb15-121"></a>time.sleep(<span class="dv">2</span>)  <span class="co"># Wait for results</span></span>
-<span id="cb15-122"><a href="#cb15-122"></a><span class="in">```</span></span>
-<span id="cb15-123"><a href="#cb15-123"></a></span>
-<span id="cb15-124"><a href="#cb15-124"></a><span class="fu">### Scrolling</span></span>
-<span id="cb15-125"><a href="#cb15-125"></a></span>
-<span id="cb15-126"><a href="#cb15-126"></a>Some pages load content as you scroll (infinite scroll). You can simulate this:</span>
+<span id="cb15-112"><a href="#cb15-112"></a>img <span class="op">=</span> driver.find_element(By.XPATH, <span class="st">"//div[@id='comic']//img"</span>)</span>
+<span id="cb15-113"><a href="#cb15-113"></a><span class="bu">print</span>(<span class="ss">f"Random comic title: </span><span class="sc">{</span>img<span class="sc">.</span>get_attribute(<span class="st">'title'</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-114"><a href="#cb15-114"></a><span class="in">```</span></span>
+<span id="cb15-115"><a href="#cb15-115"></a></span>
+<span id="cb15-116"><a href="#cb15-116"></a><span class="fu">### Typing and Searching</span></span>
+<span id="cb15-117"><a href="#cb15-117"></a></span>
+<span id="cb15-118"><a href="#cb15-118"></a>Selenium can type into forms and submit them. We will demonstrate with Wikipedia's search box: Wikipedia's robots policy is permissive toward automated access, and its markup is stable enough that this example should keep working for years. (Search engines like Google, by contrast, explicitly prohibit automated queries in their Terms of Service — where you point your automation matters as much as how you write it.)</span>
+<span id="cb15-119"><a href="#cb15-119"></a></span>
+<span id="cb15-122"><a href="#cb15-122"></a><span class="in">```{python}</span></span>
+<span id="cb15-123"><a href="#cb15-123"></a><span class="im">from</span> selenium.webdriver.common.keys <span class="im">import</span> Keys</span>
+<span id="cb15-124"><a href="#cb15-124"></a></span>
+<span id="cb15-125"><a href="#cb15-125"></a><span class="co"># Navigate to the Wikipedia portal</span></span>
+<span id="cb15-126"><a href="#cb15-126"></a>driver.get(<span class="st">"https://www.wikipedia.org"</span>)</span>
 <span id="cb15-127"><a href="#cb15-127"></a></span>
-<span id="cb15-128"><a href="#cb15-128"></a><span class="in">```python</span></span>
-<span id="cb15-129"><a href="#cb15-129"></a><span class="im">from</span> selenium.webdriver.common.keys <span class="im">import</span> Keys</span>
+<span id="cb15-128"><a href="#cb15-128"></a><span class="co"># Find the search box by its name attribute</span></span>
+<span id="cb15-129"><a href="#cb15-129"></a>search_box <span class="op">=</span> driver.find_element(By.NAME, <span class="st">"search"</span>)</span>
 <span id="cb15-130"><a href="#cb15-130"></a></span>
-<span id="cb15-131"><a href="#cb15-131"></a>body <span class="op">=</span> driver.find_element(By.TAG_NAME, <span class="st">"body"</span>)</span>
-<span id="cb15-132"><a href="#cb15-132"></a></span>
-<span id="cb15-133"><a href="#cb15-133"></a><span class="co"># Scroll down 5 times</span></span>
-<span id="cb15-134"><a href="#cb15-134"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb15-135"><a href="#cb15-135"></a>    body.send_keys(Keys.PAGE_DOWN)</span>
-<span id="cb15-136"><a href="#cb15-136"></a>    time.sleep(<span class="dv">1</span>)  <span class="co"># Wait for new content to load</span></span>
-<span id="cb15-137"><a href="#cb15-137"></a><span class="in">```</span></span>
+<span id="cb15-131"><a href="#cb15-131"></a><span class="co"># Type a query</span></span>
+<span id="cb15-132"><a href="#cb15-132"></a>search_box.send_keys(<span class="st">"Colorado Buffaloes"</span>)</span>
+<span id="cb15-133"><a href="#cb15-133"></a>time.sleep(<span class="dv">1</span>)  <span class="co"># Observe autocomplete suggestions</span></span>
+<span id="cb15-134"><a href="#cb15-134"></a></span>
+<span id="cb15-135"><a href="#cb15-135"></a><span class="co"># Press Enter to submit the search</span></span>
+<span id="cb15-136"><a href="#cb15-136"></a>search_box.send_keys(Keys.RETURN)</span>
+<span id="cb15-137"><a href="#cb15-137"></a>time.sleep(<span class="dv">2</span>)  <span class="co"># Wait for the results page to load</span></span>
 <span id="cb15-138"><a href="#cb15-138"></a></span>
-<span id="cb15-139"><a href="#cb15-139"></a><span class="fu">### Waiting for Dynamic Content</span></span>
-<span id="cb15-140"><a href="#cb15-140"></a></span>
-<span id="cb15-141"><a href="#cb15-141"></a>The <span class="in">`time.sleep()`</span> calls in the examples above are a crude approach to waiting for content to load. A better strategy is *explicit waits*, which pause execution until a specific condition is met:</span>
+<span id="cb15-139"><a href="#cb15-139"></a><span class="co"># Read the resulting page</span></span>
+<span id="cb15-140"><a href="#cb15-140"></a><span class="bu">print</span>(driver.title)</span>
+<span id="cb15-141"><a href="#cb15-141"></a><span class="co"># Colorado Buffaloes - Wikipedia</span></span>
 <span id="cb15-142"><a href="#cb15-142"></a></span>
-<span id="cb15-143"><a href="#cb15-143"></a><span class="in">```python</span></span>
-<span id="cb15-144"><a href="#cb15-144"></a><span class="im">from</span> selenium.webdriver.support.ui <span class="im">import</span> WebDriverWait</span>
-<span id="cb15-145"><a href="#cb15-145"></a><span class="im">from</span> selenium.webdriver.support <span class="im">import</span> expected_conditions <span class="im">as</span> EC</span>
-<span id="cb15-146"><a href="#cb15-146"></a></span>
-<span id="cb15-147"><a href="#cb15-147"></a><span class="co"># Navigate to a page with dynamically loaded content</span></span>
-<span id="cb15-148"><a href="#cb15-148"></a>driver.get(<span class="st">"https://example-dynamic-site.com"</span>)</span>
+<span id="cb15-143"><a href="#cb15-143"></a>heading <span class="op">=</span> driver.find_element(By.ID, <span class="st">"firstHeading"</span>)</span>
+<span id="cb15-144"><a href="#cb15-144"></a><span class="bu">print</span>(heading.text)</span>
+<span id="cb15-145"><a href="#cb15-145"></a><span class="co"># Colorado Buffaloes</span></span>
+<span id="cb15-146"><a href="#cb15-146"></a><span class="in">```</span></span>
+<span id="cb15-147"><a href="#cb15-147"></a></span>
+<span id="cb15-148"><a href="#cb15-148"></a>When your query matches an article title exactly, Wikipedia takes you straight to that article; otherwise you land on a search results page listing candidate matches. Either way, the pattern is the one you will reuse on any site with a search form: find the input element, type with <span class="in">`send_keys()`</span>, submit with <span class="in">`Keys.RETURN`</span>, wait for the new page, and read the results.</span>
 <span id="cb15-149"><a href="#cb15-149"></a></span>
-<span id="cb15-150"><a href="#cb15-150"></a><span class="co"># Wait up to 10 seconds for a specific element to appear</span></span>
-<span id="cb15-151"><a href="#cb15-151"></a>element <span class="op">=</span> WebDriverWait(driver, <span class="dv">10</span>).until(</span>
-<span id="cb15-152"><a href="#cb15-152"></a>    EC.presence_of_element_located((By.CLASS_NAME, <span class="st">"results-container"</span>))</span>
-<span id="cb15-153"><a href="#cb15-153"></a>)</span>
-<span id="cb15-154"><a href="#cb15-154"></a><span class="bu">print</span>(<span class="ss">f"Element found: </span><span class="sc">{</span>element<span class="sc">.</span>tag_name<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb15-155"><a href="#cb15-155"></a><span class="in">```</span></span>
+<span id="cb15-150"><a href="#cb15-150"></a>::: {.callout-warning}</span>
+<span id="cb15-151"><a href="#cb15-151"></a><span class="fu">## Automation Is Not a Loophole</span></span>
+<span id="cb15-152"><a href="#cb15-152"></a>Everything from @sec-ethics applies with full force to browser automation. A robots.txt disallow rule does not stop mattering because a real browser is doing the requesting, and a site's Terms of Service does not stop applying because a script is doing the clicking. Legal risk concentrates precisely where Selenium is most tempting: automating logged-in accounts and ToS-restricted content. Check the policies of any site before you automate interactions with it.</span>
+<span id="cb15-153"><a href="#cb15-153"></a>:::</span>
+<span id="cb15-154"><a href="#cb15-154"></a></span>
+<span id="cb15-155"><a href="#cb15-155"></a><span class="fu">### Scrolling</span></span>
 <span id="cb15-156"><a href="#cb15-156"></a></span>
-<span id="cb15-157"><a href="#cb15-157"></a><span class="in">`WebDriverWait`</span> checks the condition repeatedly (every 0.5 seconds by default) and returns the element as soon as it appears, or raises a <span class="in">`TimeoutException`</span> if the timeout expires. This is superior to <span class="in">`time.sleep()`</span> in two ways: it does not wait longer than necessary (if the element appears in 0.2 seconds, it proceeds immediately), and it fails loudly if the element never appears (rather than silently returning an empty page).</span>
+<span id="cb15-157"><a href="#cb15-157"></a>Some pages load content as you scroll (infinite scroll). You can simulate this:</span>
 <span id="cb15-158"><a href="#cb15-158"></a></span>
-<span id="cb15-159"><a href="#cb15-159"></a>The most common expected conditions you will use are:</span>
-<span id="cb15-160"><a href="#cb15-160"></a></span>
-<span id="cb15-161"><a href="#cb15-161"></a><span class="ss">- </span><span class="in">`presence_of_element_located`</span> — the element exists in the DOM (even if not visible)</span>
-<span id="cb15-162"><a href="#cb15-162"></a><span class="ss">- </span><span class="in">`visibility_of_element_located`</span> — the element is both present and visible on the page</span>
-<span id="cb15-163"><a href="#cb15-163"></a><span class="ss">- </span><span class="in">`element_to_be_clickable`</span> — the element is visible, enabled, and can receive clicks</span>
-<span id="cb15-164"><a href="#cb15-164"></a><span class="ss">- </span><span class="in">`text_to_be_present_in_element`</span> — specific text has appeared inside an element</span>
+<span id="cb15-161"><a href="#cb15-161"></a><span class="in">```{python}</span></span>
+<span id="cb15-162"><a href="#cb15-162"></a><span class="im">from</span> selenium.webdriver.common.keys <span class="im">import</span> Keys</span>
+<span id="cb15-163"><a href="#cb15-163"></a></span>
+<span id="cb15-164"><a href="#cb15-164"></a>body <span class="op">=</span> driver.find_element(By.TAG_NAME, <span class="st">"body"</span>)</span>
 <span id="cb15-165"><a href="#cb15-165"></a></span>
-<span id="cb15-166"><a href="#cb15-166"></a>Use these instead of <span class="in">`time.sleep()`</span> whenever possible. The combination of <span class="in">`WebDriverWait`</span> with explicit conditions makes your Selenium scripts both more reliable (they wait for exactly what they need) and faster (they proceed as soon as the condition is met rather than waiting a fixed duration). You will see this pattern used in the practical workflow section at the end of this chapter.</span>
-<span id="cb15-167"><a href="#cb15-167"></a></span>
-<span id="cb15-168"><a href="#cb15-168"></a><span class="fu">### Scraping Infinite Scroll Pages</span></span>
-<span id="cb15-169"><a href="#cb15-169"></a></span>
-<span id="cb15-170"><a href="#cb15-170"></a>Many modern websites load content progressively as you scroll — social media feeds, image galleries, and product listings all use this pattern. The technique for scraping these pages involves scrolling to the bottom, waiting for new content to load, and repeating until no more content appears:</span>
+<span id="cb15-166"><a href="#cb15-166"></a><span class="co"># Scroll down 5 times</span></span>
+<span id="cb15-167"><a href="#cb15-167"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb15-168"><a href="#cb15-168"></a>    body.send_keys(Keys.PAGE_DOWN)</span>
+<span id="cb15-169"><a href="#cb15-169"></a>    time.sleep(<span class="dv">1</span>)  <span class="co"># Wait for new content to load</span></span>
+<span id="cb15-170"><a href="#cb15-170"></a><span class="in">```</span></span>
 <span id="cb15-171"><a href="#cb15-171"></a></span>
-<span id="cb15-172"><a href="#cb15-172"></a><span class="in">```python</span></span>
-<span id="cb15-173"><a href="#cb15-173"></a><span class="kw">def</span> scrape_infinite_scroll(driver, max_scrolls<span class="op">=</span><span class="dv">20</span>, scroll_pause<span class="op">=</span><span class="dv">2</span>):</span>
-<span id="cb15-174"><a href="#cb15-174"></a>    <span class="co">"""Scroll an infinite-scroll page and collect all loaded content."""</span></span>
-<span id="cb15-175"><a href="#cb15-175"></a>    last_height <span class="op">=</span> driver.execute_script(<span class="st">"return document.body.scrollHeight"</span>)</span>
-<span id="cb15-176"><a href="#cb15-176"></a></span>
-<span id="cb15-177"><a href="#cb15-177"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(max_scrolls):</span>
-<span id="cb15-178"><a href="#cb15-178"></a>        <span class="co"># Scroll to the bottom of the page</span></span>
-<span id="cb15-179"><a href="#cb15-179"></a>        driver.execute_script(<span class="st">"window.scrollTo(0, document.body.scrollHeight);"</span>)</span>
-<span id="cb15-180"><a href="#cb15-180"></a>        time.sleep(scroll_pause)</span>
+<span id="cb15-172"><a href="#cb15-172"></a><span class="fu">### Waiting for Dynamic Content</span></span>
+<span id="cb15-173"><a href="#cb15-173"></a></span>
+<span id="cb15-174"><a href="#cb15-174"></a>The <span class="in">`time.sleep()`</span> calls in the examples above are a crude approach to waiting for content to load. A better strategy is *explicit waits*, which pause execution until a specific condition is met:</span>
+<span id="cb15-175"><a href="#cb15-175"></a></span>
+<span id="cb15-178"><a href="#cb15-178"></a><span class="in">```{python}</span></span>
+<span id="cb15-179"><a href="#cb15-179"></a><span class="im">from</span> selenium.webdriver.support.ui <span class="im">import</span> WebDriverWait</span>
+<span id="cb15-180"><a href="#cb15-180"></a><span class="im">from</span> selenium.webdriver.support <span class="im">import</span> expected_conditions <span class="im">as</span> EC</span>
 <span id="cb15-181"><a href="#cb15-181"></a></span>
-<span id="cb15-182"><a href="#cb15-182"></a>        <span class="co"># Check if the page grew</span></span>
-<span id="cb15-183"><a href="#cb15-183"></a>        new_height <span class="op">=</span> driver.execute_script(<span class="st">"return document.body.scrollHeight"</span>)</span>
-<span id="cb15-184"><a href="#cb15-184"></a>        <span class="cf">if</span> new_height <span class="op">==</span> last_height:</span>
-<span id="cb15-185"><a href="#cb15-185"></a>            <span class="bu">print</span>(<span class="ss">f"No new content after scroll </span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">. Stopping."</span>)</span>
-<span id="cb15-186"><a href="#cb15-186"></a>            <span class="cf">break</span></span>
-<span id="cb15-187"><a href="#cb15-187"></a>        last_height <span class="op">=</span> new_height</span>
-<span id="cb15-188"><a href="#cb15-188"></a>        <span class="bu">print</span>(<span class="ss">f"Scroll </span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">: page height grew to </span><span class="sc">{</span>new_height<span class="sc">}</span><span class="ss">px"</span>)</span>
-<span id="cb15-189"><a href="#cb15-189"></a></span>
-<span id="cb15-190"><a href="#cb15-190"></a>    <span class="co"># Return the fully-loaded page source</span></span>
-<span id="cb15-191"><a href="#cb15-191"></a>    <span class="cf">return</span> driver.page_source</span>
-<span id="cb15-192"><a href="#cb15-192"></a><span class="in">```</span></span>
+<span id="cb15-182"><a href="#cb15-182"></a><span class="co"># Navigate to a page with dynamically loaded content</span></span>
+<span id="cb15-183"><a href="#cb15-183"></a>driver.get(<span class="st">"https://example-dynamic-site.com"</span>)</span>
+<span id="cb15-184"><a href="#cb15-184"></a></span>
+<span id="cb15-185"><a href="#cb15-185"></a><span class="co"># Wait up to 10 seconds for a specific element to appear</span></span>
+<span id="cb15-186"><a href="#cb15-186"></a>element <span class="op">=</span> WebDriverWait(driver, <span class="dv">10</span>).until(</span>
+<span id="cb15-187"><a href="#cb15-187"></a>    EC.presence_of_element_located((By.CLASS_NAME, <span class="st">"results-container"</span>))</span>
+<span id="cb15-188"><a href="#cb15-188"></a>)</span>
+<span id="cb15-189"><a href="#cb15-189"></a><span class="bu">print</span>(<span class="ss">f"Element found: </span><span class="sc">{</span>element<span class="sc">.</span>tag_name<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-190"><a href="#cb15-190"></a><span class="in">```</span></span>
+<span id="cb15-191"><a href="#cb15-191"></a></span>
+<span id="cb15-192"><a href="#cb15-192"></a><span class="in">`WebDriverWait`</span> checks the condition repeatedly (every 0.5 seconds by default) and returns the element as soon as it appears, or raises a <span class="in">`TimeoutException`</span> if the timeout expires. This is superior to <span class="in">`time.sleep()`</span> in two ways: it does not wait longer than necessary (if the element appears in 0.2 seconds, it proceeds immediately), and it fails loudly if the element never appears (rather than silently returning an empty page).</span>
 <span id="cb15-193"><a href="#cb15-193"></a></span>
-<span id="cb15-194"><a href="#cb15-194"></a>The key insight is checking <span class="in">`document.body.scrollHeight`</span> before and after each scroll. When the height stops growing, you have reached the end of the available content. Some sites use a "Load More" button instead of infinite scroll — for those, replace the scroll with a click on the button and watch for the button to disappear or become disabled.</span>
+<span id="cb15-194"><a href="#cb15-194"></a>The most common expected conditions you will use are:</span>
 <span id="cb15-195"><a href="#cb15-195"></a></span>
-<span id="cb15-196"><a href="#cb15-196"></a>A practical consideration: infinite scroll pages can contain thousands of items, and loading them all consumes significant memory in the browser process. Set a reasonable <span class="in">`max_scrolls`</span> limit based on how much data you actually need. If you are collecting data for a class project, you rarely need more than a few hundred items — scrolling through an entire social media feed of 10,000 posts is both unnecessary and discourteous to the server. Remember the proportionality principle from @sec-ethics: collect only the data you need for your research question.</span>
-<span id="cb15-197"><a href="#cb15-197"></a></span>
-<span id="cb15-198"><a href="#cb15-198"></a><span class="fu">## Passing to BeautifulSoup</span></span>
-<span id="cb15-199"><a href="#cb15-199"></a></span>
-<span id="cb15-200"><a href="#cb15-200"></a>Once the page is fully rendered in the browser, you can extract the complete HTML and parse it with the familiar BeautifulSoup tools:</span>
-<span id="cb15-201"><a href="#cb15-201"></a></span>
-<span id="cb15-202"><a href="#cb15-202"></a><span class="in">```python</span></span>
-<span id="cb15-203"><a href="#cb15-203"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
+<span id="cb15-196"><a href="#cb15-196"></a><span class="ss">- </span><span class="in">`presence_of_element_located`</span> — the element exists in the DOM (even if not visible)</span>
+<span id="cb15-197"><a href="#cb15-197"></a><span class="ss">- </span><span class="in">`visibility_of_element_located`</span> — the element is both present and visible on the page</span>
+<span id="cb15-198"><a href="#cb15-198"></a><span class="ss">- </span><span class="in">`element_to_be_clickable`</span> — the element is visible, enabled, and can receive clicks</span>
+<span id="cb15-199"><a href="#cb15-199"></a><span class="ss">- </span><span class="in">`text_to_be_present_in_element`</span> — specific text has appeared inside an element</span>
+<span id="cb15-200"><a href="#cb15-200"></a></span>
+<span id="cb15-201"><a href="#cb15-201"></a>Use these instead of <span class="in">`time.sleep()`</span> whenever possible. The combination of <span class="in">`WebDriverWait`</span> with explicit conditions makes your Selenium scripts both more reliable (they wait for exactly what they need) and faster (they proceed as soon as the condition is met rather than waiting a fixed duration). You will see this pattern used in the practical workflow section later in this chapter.</span>
+<span id="cb15-202"><a href="#cb15-202"></a></span>
+<span id="cb15-203"><a href="#cb15-203"></a><span class="fu">### Scraping Infinite Scroll Pages</span></span>
 <span id="cb15-204"><a href="#cb15-204"></a></span>
-<span id="cb15-205"><a href="#cb15-205"></a><span class="co"># Get the fully-rendered page source from Selenium</span></span>
-<span id="cb15-206"><a href="#cb15-206"></a>html <span class="op">=</span> driver.page_source</span>
-<span id="cb15-207"><a href="#cb15-207"></a>soup <span class="op">=</span> BeautifulSoup(html, <span class="st">"html.parser"</span>)</span>
-<span id="cb15-208"><a href="#cb15-208"></a></span>
-<span id="cb15-209"><a href="#cb15-209"></a><span class="co"># Now use BeautifulSoup as usual</span></span>
-<span id="cb15-210"><a href="#cb15-210"></a>links <span class="op">=</span> soup.find_all(<span class="st">"a"</span>, href<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb15-211"><a href="#cb15-211"></a><span class="bu">print</span>(<span class="ss">f"Total links on page: </span><span class="sc">{</span><span class="bu">len</span>(links)<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb15-212"><a href="#cb15-212"></a><span class="in">```</span></span>
+<span id="cb15-205"><a href="#cb15-205"></a>Many modern websites load content progressively as you scroll — social media feeds, image galleries, and product listings all use this pattern. The technique for scraping these pages involves scrolling to the bottom, waiting for new content to load, and repeating until no more content appears:</span>
+<span id="cb15-206"><a href="#cb15-206"></a></span>
+<span id="cb15-209"><a href="#cb15-209"></a><span class="in">```{python}</span></span>
+<span id="cb15-210"><a href="#cb15-210"></a><span class="kw">def</span> scrape_infinite_scroll(driver, max_scrolls<span class="op">=</span><span class="dv">20</span>, scroll_pause<span class="op">=</span><span class="dv">2</span>):</span>
+<span id="cb15-211"><a href="#cb15-211"></a>    <span class="co">"""Scroll an infinite-scroll page and collect all loaded content."""</span></span>
+<span id="cb15-212"><a href="#cb15-212"></a>    last_height <span class="op">=</span> driver.execute_script(<span class="st">"return document.body.scrollHeight"</span>)</span>
 <span id="cb15-213"><a href="#cb15-213"></a></span>
-<span id="cb15-214"><a href="#cb15-214"></a>This hybrid approach — Selenium for rendering, BeautifulSoup for parsing — gives you the best of both worlds. Selenium excels at navigating, clicking, scrolling, and waiting for JavaScript to execute. BeautifulSoup excels at searching and extracting data from HTML. By combining them, you avoid the awkwardness of using Selenium's relatively limited element-finding API for complex extraction tasks while still getting access to the fully-rendered page content.</span>
-<span id="cb15-215"><a href="#cb15-215"></a></span>
-<span id="cb15-216"><a href="#cb15-216"></a>The workflow is always the same: use Selenium to get the page into the state you need (scrolled, clicked, searched, logged in), then hand off the rendered HTML to BeautifulSoup for extraction. Think of Selenium as the hands that navigate the browser and BeautifulSoup as the eyes that read the content. This division of labor keeps your code cleaner and more maintainable than trying to do everything with Selenium alone.</span>
-<span id="cb15-217"><a href="#cb15-217"></a></span>
-<span id="cb15-218"><a href="#cb15-218"></a><span class="fu">## Always Close the Driver</span></span>
-<span id="cb15-219"><a href="#cb15-219"></a></span>
-<span id="cb15-220"><a href="#cb15-220"></a>When you are done, close the browser window:</span>
-<span id="cb15-221"><a href="#cb15-221"></a></span>
-<span id="cb15-222"><a href="#cb15-222"></a><span class="in">```python</span></span>
-<span id="cb15-223"><a href="#cb15-223"></a>driver.quit()</span>
-<span id="cb15-224"><a href="#cb15-224"></a><span class="in">```</span></span>
-<span id="cb15-225"><a href="#cb15-225"></a></span>
-<span id="cb15-226"><a href="#cb15-226"></a>After calling <span class="in">`quit()`</span>, any subsequent calls to the driver will raise an error. Use <span class="in">`try/finally`</span> blocks to ensure cleanup:</span>
-<span id="cb15-227"><a href="#cb15-227"></a></span>
-<span id="cb15-228"><a href="#cb15-228"></a><span class="in">```python</span></span>
-<span id="cb15-229"><a href="#cb15-229"></a><span class="cf">try</span>:</span>
-<span id="cb15-230"><a href="#cb15-230"></a>    driver.get(<span class="st">"https://example.com"</span>)</span>
-<span id="cb15-231"><a href="#cb15-231"></a>    <span class="co"># ... scraping logic ...</span></span>
-<span id="cb15-232"><a href="#cb15-232"></a><span class="cf">finally</span>:</span>
-<span id="cb15-233"><a href="#cb15-233"></a>    driver.quit()</span>
-<span id="cb15-234"><a href="#cb15-234"></a><span class="in">```</span></span>
-<span id="cb15-235"><a href="#cb15-235"></a></span>
-<span id="cb15-236"><a href="#cb15-236"></a><span class="fu">## The Fragility Problem</span></span>
-<span id="cb15-237"><a href="#cb15-237"></a></span>
-<span id="cb15-238"><a href="#cb15-238"></a>::: {.callout-warning}</span>
-<span id="cb15-239"><a href="#cb15-239"></a><span class="fu">## Warning</span></span>
-<span id="cb15-240"><a href="#cb15-240"></a>Screen-scraping with Selenium is inherently fragile. The Twitter scraping examples that worked in the 2019 version of this course broke completely by 2024 because Twitter (now X) redesigned its HTML to use dynamically-generated class names and require authentication for basic browsing. This is not unusual — platforms regularly change their front-end code, sometimes specifically to resist automated access.</span>
-<span id="cb15-241"><a href="#cb15-241"></a>:::</span>
-<span id="cb15-242"><a href="#cb15-242"></a></span>
-<span id="cb15-243"><a href="#cb15-243"></a>This fragility reinforces a principle from @sec-post-api: when an API is available, use it. Selenium is a powerful last resort for cases where you ethically need data that no API provides, but it is slow, resource-intensive, and brittle compared to API access. The decision tree should be: API first → static scraping second → Selenium third.</span>
-<span id="cb15-244"><a href="#cb15-244"></a></span>
-<span id="cb15-245"><a href="#cb15-245"></a><span class="fu">### Headless Mode</span></span>
-<span id="cb15-246"><a href="#cb15-246"></a></span>
-<span id="cb15-247"><a href="#cb15-247"></a>For production scraping, you do not need a visible browser window. Headless mode runs the browser without a graphical interface, which is faster and can run on servers without a display:</span>
-<span id="cb15-248"><a href="#cb15-248"></a></span>
-<span id="cb15-249"><a href="#cb15-249"></a><span class="in">```python</span></span>
-<span id="cb15-250"><a href="#cb15-250"></a><span class="im">from</span> selenium.webdriver.chrome.options <span class="im">import</span> Options</span>
-<span id="cb15-251"><a href="#cb15-251"></a></span>
-<span id="cb15-252"><a href="#cb15-252"></a>options <span class="op">=</span> Options()</span>
-<span id="cb15-253"><a href="#cb15-253"></a>options.add_argument(<span class="st">"--headless"</span>)</span>
-<span id="cb15-254"><a href="#cb15-254"></a>options.add_argument(<span class="st">"--no-sandbox"</span>)</span>
-<span id="cb15-255"><a href="#cb15-255"></a>options.add_argument(<span class="st">"--disable-dev-shm-usage"</span>)</span>
+<span id="cb15-214"><a href="#cb15-214"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(max_scrolls):</span>
+<span id="cb15-215"><a href="#cb15-215"></a>        <span class="co"># Scroll to the bottom of the page</span></span>
+<span id="cb15-216"><a href="#cb15-216"></a>        driver.execute_script(<span class="st">"window.scrollTo(0, document.body.scrollHeight);"</span>)</span>
+<span id="cb15-217"><a href="#cb15-217"></a>        time.sleep(scroll_pause)</span>
+<span id="cb15-218"><a href="#cb15-218"></a></span>
+<span id="cb15-219"><a href="#cb15-219"></a>        <span class="co"># Check if the page grew</span></span>
+<span id="cb15-220"><a href="#cb15-220"></a>        new_height <span class="op">=</span> driver.execute_script(<span class="st">"return document.body.scrollHeight"</span>)</span>
+<span id="cb15-221"><a href="#cb15-221"></a>        <span class="cf">if</span> new_height <span class="op">==</span> last_height:</span>
+<span id="cb15-222"><a href="#cb15-222"></a>            <span class="bu">print</span>(<span class="ss">f"No new content after scroll </span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">. Stopping."</span>)</span>
+<span id="cb15-223"><a href="#cb15-223"></a>            <span class="cf">break</span></span>
+<span id="cb15-224"><a href="#cb15-224"></a>        last_height <span class="op">=</span> new_height</span>
+<span id="cb15-225"><a href="#cb15-225"></a>        <span class="bu">print</span>(<span class="ss">f"Scroll </span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">: page height grew to </span><span class="sc">{</span>new_height<span class="sc">}</span><span class="ss">px"</span>)</span>
+<span id="cb15-226"><a href="#cb15-226"></a></span>
+<span id="cb15-227"><a href="#cb15-227"></a>    <span class="co"># Return the fully-loaded page source</span></span>
+<span id="cb15-228"><a href="#cb15-228"></a>    <span class="cf">return</span> driver.page_source</span>
+<span id="cb15-229"><a href="#cb15-229"></a><span class="in">```</span></span>
+<span id="cb15-230"><a href="#cb15-230"></a></span>
+<span id="cb15-231"><a href="#cb15-231"></a>The key insight is checking <span class="in">`document.body.scrollHeight`</span> before and after each scroll. When the height stops growing, you have reached the end of the available content. Some sites use a "Load More" button instead of infinite scroll — for those, replace the scroll with a click on the button and watch for the button to disappear or become disabled.</span>
+<span id="cb15-232"><a href="#cb15-232"></a></span>
+<span id="cb15-233"><a href="#cb15-233"></a>A practical consideration: infinite scroll pages can contain thousands of items, and loading them all consumes significant memory in the browser process. Set a reasonable <span class="in">`max_scrolls`</span> limit based on how much data you actually need. If you are collecting data for a class project, you rarely need more than a few hundred items — scrolling through an entire social media feed of 10,000 posts is both unnecessary and discourteous to the server. Remember the proportionality principle from @sec-ethics: collect only the data you need for your research question.</span>
+<span id="cb15-234"><a href="#cb15-234"></a></span>
+<span id="cb15-235"><a href="#cb15-235"></a><span class="fu">## Passing to BeautifulSoup</span></span>
+<span id="cb15-236"><a href="#cb15-236"></a></span>
+<span id="cb15-237"><a href="#cb15-237"></a>Once the page is fully rendered in the browser, you can extract the complete HTML and parse it with the familiar BeautifulSoup tools:</span>
+<span id="cb15-238"><a href="#cb15-238"></a></span>
+<span id="cb15-241"><a href="#cb15-241"></a><span class="in">```{python}</span></span>
+<span id="cb15-242"><a href="#cb15-242"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
+<span id="cb15-243"><a href="#cb15-243"></a></span>
+<span id="cb15-244"><a href="#cb15-244"></a><span class="co"># Get the fully-rendered page source from Selenium</span></span>
+<span id="cb15-245"><a href="#cb15-245"></a>html <span class="op">=</span> driver.page_source</span>
+<span id="cb15-246"><a href="#cb15-246"></a>soup <span class="op">=</span> BeautifulSoup(html, <span class="st">"html.parser"</span>)</span>
+<span id="cb15-247"><a href="#cb15-247"></a></span>
+<span id="cb15-248"><a href="#cb15-248"></a><span class="co"># Now use BeautifulSoup as usual</span></span>
+<span id="cb15-249"><a href="#cb15-249"></a>links <span class="op">=</span> soup.find_all(<span class="st">"a"</span>, href<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb15-250"><a href="#cb15-250"></a><span class="bu">print</span>(<span class="ss">f"Total links on page: </span><span class="sc">{</span><span class="bu">len</span>(links)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-251"><a href="#cb15-251"></a><span class="in">```</span></span>
+<span id="cb15-252"><a href="#cb15-252"></a></span>
+<span id="cb15-253"><a href="#cb15-253"></a>This hybrid approach — Selenium for rendering, BeautifulSoup for parsing — gives you the best of both worlds. Selenium excels at navigating, clicking, scrolling, and waiting for JavaScript to execute. BeautifulSoup excels at searching and extracting data from HTML. By combining them, you avoid the awkwardness of using Selenium's relatively limited element-finding API for complex extraction tasks while still getting access to the fully-rendered page content.</span>
+<span id="cb15-254"><a href="#cb15-254"></a></span>
+<span id="cb15-255"><a href="#cb15-255"></a>The workflow is always the same: use Selenium to get the page into the state you need (scrolled, clicked, searched, logged in), then hand off the rendered HTML to BeautifulSoup for extraction. Think of Selenium as the hands that navigate the browser and BeautifulSoup as the eyes that read the content. This division of labor keeps your code cleaner and more maintainable than trying to do everything with Selenium alone.</span>
 <span id="cb15-256"><a href="#cb15-256"></a></span>
-<span id="cb15-257"><a href="#cb15-257"></a>driver <span class="op">=</span> webdriver.Chrome(options<span class="op">=</span>options)</span>
-<span id="cb15-258"><a href="#cb15-258"></a>driver.get(<span class="st">"https://example.com"</span>)</span>
-<span id="cb15-259"><a href="#cb15-259"></a><span class="bu">print</span>(<span class="ss">f"Title: </span><span class="sc">{</span>driver<span class="sc">.</span>title<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb15-260"><a href="#cb15-260"></a>driver.quit()</span>
-<span id="cb15-261"><a href="#cb15-261"></a><span class="in">```</span></span>
-<span id="cb15-262"><a href="#cb15-262"></a></span>
-<span id="cb15-263"><a href="#cb15-263"></a>The <span class="in">`--no-sandbox`</span> and <span class="in">`--disable-dev-shm-usage`</span> flags resolve common issues when running Chrome in containerized or server environments (like GitHub Actions, which you will use in @sec-automation). Headless mode is essential for automated data collection pipelines where no one is watching the browser window.</span>
-<span id="cb15-264"><a href="#cb15-264"></a></span>
-<span id="cb15-265"><a href="#cb15-265"></a>One important caveat: some websites detect headless browsers and serve different content or block access entirely. They do this by checking for browser properties that headless mode handles differently (like the <span class="in">`navigator.webdriver`</span> flag). If you get different results in headless mode than in a visible browser, this is likely the cause. For educational purposes, switching back to headed mode usually resolves the issue. In production settings, there are legitimate workarounds, but circumventing bot detection raises the ethical questions discussed in @sec-ethics — the fact that you *can* evade detection does not mean you *should*.</span>
+<span id="cb15-257"><a href="#cb15-257"></a><span class="fu">## Always Close the Driver</span></span>
+<span id="cb15-258"><a href="#cb15-258"></a></span>
+<span id="cb15-259"><a href="#cb15-259"></a>When you are done, close the browser window:</span>
+<span id="cb15-260"><a href="#cb15-260"></a></span>
+<span id="cb15-263"><a href="#cb15-263"></a><span class="in">```{python}</span></span>
+<span id="cb15-264"><a href="#cb15-264"></a>driver.quit()</span>
+<span id="cb15-265"><a href="#cb15-265"></a><span class="in">```</span></span>
 <span id="cb15-266"><a href="#cb15-266"></a></span>
-<span id="cb15-267"><a href="#cb15-267"></a><span class="fu">## Exercises</span></span>
+<span id="cb15-267"><a href="#cb15-267"></a>After calling <span class="in">`quit()`</span>, any subsequent calls to the driver will raise an error. Use <span class="in">`try/finally`</span> blocks to ensure cleanup:</span>
 <span id="cb15-268"><a href="#cb15-268"></a></span>
-<span id="cb15-269"><a href="#cb15-269"></a><span class="ss">1. </span>**Dynamic content extraction.** Find a website that loads content dynamically (via JavaScript, infinite scroll, or AJAX). Use Selenium to load the full page, then pass the source to BeautifulSoup and extract the dynamically-loaded data. Compare what you get with Selenium to what <span class="in">`requests.get()`</span> returns.</span>
-<span id="cb15-270"><a href="#cb15-270"></a></span>
-<span id="cb15-271"><a href="#cb15-271"></a><span class="ss">2. </span>**Multi-step interaction.** Use Selenium to automate a multi-step process: navigate to a site with a search form, enter a query, submit it, and extract results from the response page.</span>
-<span id="cb15-272"><a href="#cb15-272"></a></span>
-<span id="cb15-273"><a href="#cb15-273"></a><span class="ss">3. </span>**Static vs. dynamic comparison.** For three websites of your choice, compare the HTML returned by <span class="in">`requests.get()`</span> with the <span class="in">`driver.page_source`</span> from Selenium. Categorize each site as static, partially dynamic, or fully dynamic.</span>
-<span id="cb15-274"><a href="#cb15-274"></a></span>
-<span id="cb15-275"><a href="#cb15-275"></a><span class="ss">4. </span>**Load More button.** Find a website that uses a "Load More" button (rather than infinite scroll) to reveal additional content. Write a Selenium script that clicks the button in a loop until it disappears or becomes disabled, then extracts all the loaded data. How many items were hidden behind the button?</span>
-<span id="cb15-276"><a href="#cb15-276"></a></span>
-<span id="cb15-277"><a href="#cb15-277"></a><span class="ss">5. </span>**Performance comparison.** For the same URL, measure the time taken by three approaches: <span class="in">`requests.get()`</span>, headed Selenium (with a visible browser), and headless Selenium. Use <span class="in">`time.time()`</span> to measure each. Create a table comparing the three approaches on speed, completeness of data retrieved, and resource usage. When is the speed tradeoff of Selenium worth it?</span>
+<span id="cb15-271"><a href="#cb15-271"></a><span class="in">```{python}</span></span>
+<span id="cb15-272"><a href="#cb15-272"></a><span class="cf">try</span>:</span>
+<span id="cb15-273"><a href="#cb15-273"></a>    driver.get(<span class="st">"https://example.com"</span>)</span>
+<span id="cb15-274"><a href="#cb15-274"></a>    <span class="co"># ... scraping logic ...</span></span>
+<span id="cb15-275"><a href="#cb15-275"></a><span class="cf">finally</span>:</span>
+<span id="cb15-276"><a href="#cb15-276"></a>    driver.quit()</span>
+<span id="cb15-277"><a href="#cb15-277"></a><span class="in">```</span></span>
 <span id="cb15-278"><a href="#cb15-278"></a></span>
-<span id="cb15-279"><a href="#cb15-279"></a>::: {.callout-tip}</span>
-<span id="cb15-280"><a href="#cb15-280"></a><span class="fu">## Missing Manual Reference</span></span>
-<span id="cb15-281"><a href="#cb15-281"></a>For background on debugging strategies when Selenium scripts fail, see *Missing Manual* Chapter 5: Debugging and Chapter 6: Reading Python Tracebacks.</span>
-<span id="cb15-282"><a href="#cb15-282"></a>:::</span>
-<span id="cb15-283"><a href="#cb15-283"></a></span>
-<span id="cb15-284"><a href="#cb15-284"></a><span class="fu">## Social History and Public Interest</span></span>
+<span id="cb15-279"><a href="#cb15-279"></a><span class="fu">## The Fragility Problem</span></span>
+<span id="cb15-280"><a href="#cb15-280"></a></span>
+<span id="cb15-281"><a href="#cb15-281"></a>::: {.callout-warning}</span>
+<span id="cb15-282"><a href="#cb15-282"></a><span class="fu">## Warning</span></span>
+<span id="cb15-283"><a href="#cb15-283"></a>Screen-scraping with Selenium is inherently fragile. The Twitter scraping examples that worked in the 2019 version of this course broke completely by 2024 because Twitter (now X) redesigned its HTML to use dynamically-generated class names and require authentication for basic browsing. This is not unusual — platforms regularly change their front-end code, sometimes specifically to resist automated access.</span>
+<span id="cb15-284"><a href="#cb15-284"></a>:::</span>
 <span id="cb15-285"><a href="#cb15-285"></a></span>
-<span id="cb15-286"><a href="#cb15-286"></a>The shift from server-rendered to client-rendered web pages represents a fundamental change in the web's architecture. JavaScript frameworks like React, Angular, and Vue have made the web more interactive but also more opaque to automated observation. The ability to "view source" — once a straightforward way to see exactly what a page contained — now often reveals only a JavaScript bootstrap that fetches and renders content dynamically.</span>
+<span id="cb15-286"><a href="#cb15-286"></a>This fragility reinforces a principle from @sec-post-api: when an API is available, use it. Selenium is a powerful last resort for cases where you ethically need data that no API provides, but it is slow, resource-intensive, and brittle compared to API access. The decision tree should be: API first → static scraping second → Selenium third.</span>
 <span id="cb15-287"><a href="#cb15-287"></a></span>
-<span id="cb15-288"><a href="#cb15-288"></a>This architectural shift interacts with the enclosure dynamics described in @sec-post-api. When platforms render content client-side, they gain another layer of control over automated access. Anti-scraping measures — CAPTCHAs, bot detection, dynamically-generated class names — become easier to implement. Researchers who once could rely on simple HTTP requests increasingly need browser automation to access the same data, raising both the technical barrier and the ethical stakes. The tools in this chapter are a response to that architectural shift — they exist because the simpler approaches taught in @sec-static-pages are no longer sufficient for much of the modern web.</span>
+<span id="cb15-288"><a href="#cb15-288"></a>Selenium is also not the only browser automation tool. **Playwright**, developed by Microsoft, is the modern alternative: it waits for elements automatically (eliminating much of the explicit-wait boilerplate you saw earlier), runs noticeably faster, and supports asynchronous operation for parallel scraping. If browser automation becomes a regular part of your work, Playwright is worth learning. That said, Selenium remains far more widespread, has a deeper reservoir of documentation and community answers, and is entirely adequate for coursework — which is why this chapter teaches it.</span>
 <span id="cb15-289"><a href="#cb15-289"></a></span>
-<span id="cb15-290"><a href="#cb15-290"></a>::: {.callout-note}</span>
-<span id="cb15-291"><a href="#cb15-291"></a><span class="fu">## Public Interest Connection</span></span>
-<span id="cb15-292"><a href="#cb15-292"></a>When platforms close their APIs and render content exclusively through JavaScript, browser automation becomes the last-resort path to data that serves the public interest. The tools in this chapter exist because of the **enclosure** dynamic from @sec-post-api — the progressive restriction of access to data that was once openly available. Researchers studying algorithmic bias, misinformation, and platform governance increasingly depend on Selenium-based methods precisely because the APIs that once served these research needs have been shut down or restricted beyond practical use.</span>
-<span id="cb15-293"><a href="#cb15-293"></a>:::</span>
-<span id="cb15-294"><a href="#cb15-294"></a></span>
-<span id="cb15-295"><a href="#cb15-295"></a><span class="fu">## Common Issues to Debug</span></span>
-<span id="cb15-296"><a href="#cb15-296"></a></span>
-<span id="cb15-297"><a href="#cb15-297"></a><span class="ss">- </span>**`NoSuchElementException`**: The element does not exist yet because the page has not finished loading. Add <span class="in">`time.sleep()`</span> or use explicit waits with <span class="in">`WebDriverWait`</span>.</span>
-<span id="cb15-298"><a href="#cb15-298"></a><span class="ss">- </span>**`StaleElementReferenceException`**: The DOM changed between when you found the element and when you tried to interact with it. Re-find the element.</span>
-<span id="cb15-299"><a href="#cb15-299"></a><span class="ss">- </span>**Driver/browser version mismatch**: <span class="in">`webdriver_manager`</span> usually handles this, but new browser releases occasionally break compatibility temporarily.</span>
-<span id="cb15-300"><a href="#cb15-300"></a><span class="ss">- </span>**Memory issues**: Each Selenium driver runs a full browser process. Close drivers promptly with <span class="in">`driver.quit()`</span>.</span>
-<span id="cb15-301"><a href="#cb15-301"></a></span>
-<span id="cb15-302"><a href="#cb15-302"></a><span class="fu">## Key Takeaways</span></span>
+<span id="cb15-290"><a href="#cb15-290"></a><span class="fu">### Headless Mode</span></span>
+<span id="cb15-291"><a href="#cb15-291"></a></span>
+<span id="cb15-292"><a href="#cb15-292"></a>For production scraping, you do not need a visible browser window. Headless mode runs the browser without a graphical interface, which is faster and can run on servers without a display:</span>
+<span id="cb15-293"><a href="#cb15-293"></a></span>
+<span id="cb15-296"><a href="#cb15-296"></a><span class="in">```{python}</span></span>
+<span id="cb15-297"><a href="#cb15-297"></a><span class="im">from</span> selenium.webdriver.chrome.options <span class="im">import</span> Options</span>
+<span id="cb15-298"><a href="#cb15-298"></a></span>
+<span id="cb15-299"><a href="#cb15-299"></a>options <span class="op">=</span> Options()</span>
+<span id="cb15-300"><a href="#cb15-300"></a>options.add_argument(<span class="st">"--headless=new"</span>)</span>
+<span id="cb15-301"><a href="#cb15-301"></a>options.add_argument(<span class="st">"--no-sandbox"</span>)</span>
+<span id="cb15-302"><a href="#cb15-302"></a>options.add_argument(<span class="st">"--disable-dev-shm-usage"</span>)</span>
 <span id="cb15-303"><a href="#cb15-303"></a></span>
-<span id="cb15-304"><a href="#cb15-304"></a>The modern web is dynamic: JavaScript renders content after the initial HTML loads, making it invisible to static scraping tools. Selenium controls a real browser programmatically, letting you access fully-rendered pages, simulate user interactions, and extract content that <span class="in">`requests`</span> cannot see. But Selenium is slow, fragile, and resource-intensive — a last resort when APIs and static scraping are unavailable. The hybrid approach of Selenium for rendering plus BeautifulSoup for parsing gives you full access to the modern web while keeping your parsing code familiar.</span>
-<span id="cb15-305"><a href="#cb15-305"></a></span>
-<span id="cb15-306"><a href="#cb15-306"></a><span class="fu">## Further Reading</span></span>
-<span id="cb15-307"><a href="#cb15-307"></a></span>
-<span id="cb15-308"><a href="#cb15-308"></a><span class="ss">- </span>Selenium documentation: <span class="ot">&lt;https://www.selenium.dev/documentation/&gt;</span></span>
-<span id="cb15-309"><a href="#cb15-309"></a><span class="ss">- </span>Selenium Python bindings: <span class="ot">&lt;https://selenium-python.readthedocs.io/&gt;</span></span>
-<span id="cb15-310"><a href="#cb15-310"></a><span class="ss">- </span>webdriver_manager: <span class="ot">&lt;https://github.com/SergeyPirogov/webdriver_manager&gt;</span></span>
-<span id="cb15-311"><a href="#cb15-311"></a><span class="ss">- </span>@mitchell2018web — Chapter 11: Scraping JavaScript</span>
-<span id="cb15-312"><a href="#cb15-312"></a></span>
-<span id="cb15-313"><a href="#cb15-313"></a><span class="fu">## A Practical Selenium Workflow</span></span>
-<span id="cb15-314"><a href="#cb15-314"></a></span>
-<span id="cb15-315"><a href="#cb15-315"></a>Here is a complete workflow that demonstrates the typical pattern for scraping a dynamically-rendered page. We will automate a multi-page interaction: navigating to a website, performing a search, waiting for results to load, extracting the data, and repeating across multiple pages.</span>
-<span id="cb15-316"><a href="#cb15-316"></a></span>
-<span id="cb15-317"><a href="#cb15-317"></a><span class="in">```python</span></span>
-<span id="cb15-318"><a href="#cb15-318"></a><span class="im">import</span> time</span>
-<span id="cb15-319"><a href="#cb15-319"></a><span class="im">from</span> selenium <span class="im">import</span> webdriver</span>
-<span id="cb15-320"><a href="#cb15-320"></a><span class="im">from</span> selenium.webdriver.chrome.options <span class="im">import</span> Options</span>
-<span id="cb15-321"><a href="#cb15-321"></a><span class="im">from</span> selenium.webdriver.common.by <span class="im">import</span> By</span>
-<span id="cb15-322"><a href="#cb15-322"></a><span class="im">from</span> selenium.webdriver.support.ui <span class="im">import</span> WebDriverWait</span>
-<span id="cb15-323"><a href="#cb15-323"></a><span class="im">from</span> selenium.webdriver.support <span class="im">import</span> expected_conditions <span class="im">as</span> EC</span>
-<span id="cb15-324"><a href="#cb15-324"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
-<span id="cb15-325"><a href="#cb15-325"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb15-326"><a href="#cb15-326"></a></span>
-<span id="cb15-327"><a href="#cb15-327"></a><span class="kw">def</span> scrape_with_selenium(search_term, max_pages<span class="op">=</span><span class="dv">3</span>):</span>
-<span id="cb15-328"><a href="#cb15-328"></a>    <span class="co">"""Scrape search results from a dynamic website.</span></span>
-<span id="cb15-329"><a href="#cb15-329"></a><span class="co">    </span></span>
-<span id="cb15-330"><a href="#cb15-330"></a><span class="co">    This demonstrates the full Selenium workflow:</span></span>
-<span id="cb15-331"><a href="#cb15-331"></a><span class="co">    1. Launch a headless browser</span></span>
-<span id="cb15-332"><a href="#cb15-332"></a><span class="co">    2. Navigate and interact with the page</span></span>
-<span id="cb15-333"><a href="#cb15-333"></a><span class="co">    3. Wait for dynamic content to load</span></span>
-<span id="cb15-334"><a href="#cb15-334"></a><span class="co">    4. Extract data via BeautifulSoup</span></span>
-<span id="cb15-335"><a href="#cb15-335"></a><span class="co">    5. Handle pagination</span></span>
-<span id="cb15-336"><a href="#cb15-336"></a><span class="co">    6. Clean up</span></span>
-<span id="cb15-337"><a href="#cb15-337"></a><span class="co">    """</span></span>
-<span id="cb15-338"><a href="#cb15-338"></a>    options <span class="op">=</span> Options()</span>
-<span id="cb15-339"><a href="#cb15-339"></a>    options.add_argument(<span class="st">"--headless"</span>)</span>
-<span id="cb15-340"><a href="#cb15-340"></a>    driver <span class="op">=</span> webdriver.Chrome(options<span class="op">=</span>options)</span>
-<span id="cb15-341"><a href="#cb15-341"></a>    </span>
-<span id="cb15-342"><a href="#cb15-342"></a>    all_results <span class="op">=</span> []</span>
-<span id="cb15-343"><a href="#cb15-343"></a>    </span>
-<span id="cb15-344"><a href="#cb15-344"></a>    <span class="cf">try</span>:</span>
-<span id="cb15-345"><a href="#cb15-345"></a>        driver.get(<span class="st">"https://example-search-site.com"</span>)</span>
-<span id="cb15-346"><a href="#cb15-346"></a>        </span>
-<span id="cb15-347"><a href="#cb15-347"></a>        <span class="co"># Find and fill the search box</span></span>
-<span id="cb15-348"><a href="#cb15-348"></a>        search_box <span class="op">=</span> driver.find_element(By.NAME, <span class="st">"q"</span>)</span>
-<span id="cb15-349"><a href="#cb15-349"></a>        search_box.send_keys(search_term)</span>
-<span id="cb15-350"><a href="#cb15-350"></a>        search_box.submit()</span>
-<span id="cb15-351"><a href="#cb15-351"></a>        </span>
-<span id="cb15-352"><a href="#cb15-352"></a>        <span class="cf">for</span> page <span class="kw">in</span> <span class="bu">range</span>(max_pages):</span>
-<span id="cb15-353"><a href="#cb15-353"></a>            <span class="co"># Wait for results to load (up to 10 seconds)</span></span>
-<span id="cb15-354"><a href="#cb15-354"></a>            WebDriverWait(driver, <span class="dv">10</span>).until(</span>
-<span id="cb15-355"><a href="#cb15-355"></a>                EC.presence_of_element_located((By.CLASS_NAME, <span class="st">"result-item"</span>))</span>
-<span id="cb15-356"><a href="#cb15-356"></a>            )</span>
-<span id="cb15-357"><a href="#cb15-357"></a>            </span>
-<span id="cb15-358"><a href="#cb15-358"></a>            <span class="co"># Pass rendered HTML to BeautifulSoup</span></span>
-<span id="cb15-359"><a href="#cb15-359"></a>            soup <span class="op">=</span> BeautifulSoup(driver.page_source, <span class="st">"html.parser"</span>)</span>
-<span id="cb15-360"><a href="#cb15-360"></a>            </span>
-<span id="cb15-361"><a href="#cb15-361"></a>            <span class="co"># Extract data from this page</span></span>
-<span id="cb15-362"><a href="#cb15-362"></a>            <span class="cf">for</span> item <span class="kw">in</span> soup.find_all(<span class="st">"div"</span>, class_<span class="op">=</span><span class="st">"result-item"</span>):</span>
-<span id="cb15-363"><a href="#cb15-363"></a>                all_results.append({</span>
-<span id="cb15-364"><a href="#cb15-364"></a>                    <span class="st">"title"</span>: item.find(<span class="st">"h3"</span>).text.strip(),</span>
-<span id="cb15-365"><a href="#cb15-365"></a>                    <span class="st">"description"</span>: item.find(<span class="st">"p"</span>).text.strip(),</span>
-<span id="cb15-366"><a href="#cb15-366"></a>                    <span class="st">"page"</span>: page <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb15-367"><a href="#cb15-367"></a>                })</span>
-<span id="cb15-368"><a href="#cb15-368"></a>            </span>
-<span id="cb15-369"><a href="#cb15-369"></a>            <span class="co"># Try to click "Next" for pagination</span></span>
-<span id="cb15-370"><a href="#cb15-370"></a>            <span class="cf">try</span>:</span>
-<span id="cb15-371"><a href="#cb15-371"></a>                next_button <span class="op">=</span> driver.find_element(By.LINK_TEXT, <span class="st">"Next"</span>)</span>
-<span id="cb15-372"><a href="#cb15-372"></a>                next_button.click()</span>
-<span id="cb15-373"><a href="#cb15-373"></a>                time.sleep(<span class="dv">2</span>)  <span class="co"># Wait for next page to load</span></span>
-<span id="cb15-374"><a href="#cb15-374"></a>            <span class="cf">except</span> <span class="pp">Exception</span>:</span>
-<span id="cb15-375"><a href="#cb15-375"></a>                <span class="cf">break</span>  <span class="co"># No more pages</span></span>
-<span id="cb15-376"><a href="#cb15-376"></a>    </span>
-<span id="cb15-377"><a href="#cb15-377"></a>    <span class="cf">finally</span>:</span>
-<span id="cb15-378"><a href="#cb15-378"></a>        driver.quit()  <span class="co"># Always clean up</span></span>
-<span id="cb15-379"><a href="#cb15-379"></a>    </span>
-<span id="cb15-380"><a href="#cb15-380"></a>    <span class="cf">return</span> pd.DataFrame(all_results)</span>
-<span id="cb15-381"><a href="#cb15-381"></a><span class="in">```</span></span>
-<span id="cb15-382"><a href="#cb15-382"></a></span>
-<span id="cb15-383"><a href="#cb15-383"></a>Notice the use of <span class="in">`WebDriverWait`</span> with <span class="in">`expected_conditions`</span> — this is superior to <span class="in">`time.sleep()`</span> because it waits only as long as needed for the element to appear, rather than waiting a fixed amount of time that might be too short (element not loaded) or too long (wasted time). The <span class="in">`try/finally`</span> block ensures the browser is closed even if an error occurs.</span>
-<span id="cb15-384"><a href="#cb15-384"></a></span>
-<span id="cb15-385"><a href="#cb15-385"></a><span class="fu">### When to Use Selenium vs. APIs</span></span>
-<span id="cb15-386"><a href="#cb15-386"></a></span>
-<span id="cb15-387"><a href="#cb15-387"></a>The decision tree for choosing your data access method:</span>
+<span id="cb15-304"><a href="#cb15-304"></a>driver <span class="op">=</span> webdriver.Chrome(options<span class="op">=</span>options)</span>
+<span id="cb15-305"><a href="#cb15-305"></a>driver.get(<span class="st">"https://example.com"</span>)</span>
+<span id="cb15-306"><a href="#cb15-306"></a><span class="bu">print</span>(<span class="ss">f"Title: </span><span class="sc">{</span>driver<span class="sc">.</span>title<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-307"><a href="#cb15-307"></a>driver.quit()</span>
+<span id="cb15-308"><a href="#cb15-308"></a><span class="in">```</span></span>
+<span id="cb15-309"><a href="#cb15-309"></a></span>
+<span id="cb15-310"><a href="#cb15-310"></a>The <span class="in">`=new`</span> suffix selects Chrome's new headless implementation (Chrome 109 and later), which behaves much more like the regular browser than the legacy <span class="in">`--headless`</span> mode did. The <span class="in">`--no-sandbox`</span> and <span class="in">`--disable-dev-shm-usage`</span> flags resolve common issues when running Chrome in containerized or server environments (like GitHub Actions, which you will use in @sec-automation). Headless mode is essential for automated data collection pipelines where no one is watching the browser window.</span>
+<span id="cb15-311"><a href="#cb15-311"></a></span>
+<span id="cb15-312"><a href="#cb15-312"></a>One important caveat: some websites detect headless browsers and serve different content or block access entirely. They do this by checking for browser properties that headless mode handles differently (like the <span class="in">`navigator.webdriver`</span> flag). If you get different results in headless mode than in a visible browser, this is likely the cause. For educational purposes, switching back to headed mode usually resolves the issue. In production settings, there are legitimate workarounds, but circumventing bot detection raises the ethical questions discussed in @sec-ethics — the fact that you *can* evade detection does not mean you *should*.</span>
+<span id="cb15-313"><a href="#cb15-313"></a></span>
+<span id="cb15-314"><a href="#cb15-314"></a><span class="fu">## A Practical Selenium Workflow</span></span>
+<span id="cb15-315"><a href="#cb15-315"></a></span>
+<span id="cb15-316"><a href="#cb15-316"></a>Fragility is an argument for writing Selenium code defensively, not for avoiding Selenium. Here is a complete workflow that pulls together everything this chapter has covered. We will automate a multi-page interaction: navigating to a website, performing a search, waiting for results to load, extracting the data, and repeating across multiple pages.</span>
+<span id="cb15-317"><a href="#cb15-317"></a></span>
+<span id="cb15-320"><a href="#cb15-320"></a><span class="in">```{python}</span></span>
+<span id="cb15-321"><a href="#cb15-321"></a><span class="im">import</span> time</span>
+<span id="cb15-322"><a href="#cb15-322"></a><span class="im">from</span> selenium <span class="im">import</span> webdriver</span>
+<span id="cb15-323"><a href="#cb15-323"></a><span class="im">from</span> selenium.webdriver.chrome.options <span class="im">import</span> Options</span>
+<span id="cb15-324"><a href="#cb15-324"></a><span class="im">from</span> selenium.webdriver.common.by <span class="im">import</span> By</span>
+<span id="cb15-325"><a href="#cb15-325"></a><span class="im">from</span> selenium.webdriver.support.ui <span class="im">import</span> WebDriverWait</span>
+<span id="cb15-326"><a href="#cb15-326"></a><span class="im">from</span> selenium.webdriver.support <span class="im">import</span> expected_conditions <span class="im">as</span> EC</span>
+<span id="cb15-327"><a href="#cb15-327"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
+<span id="cb15-328"><a href="#cb15-328"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb15-329"><a href="#cb15-329"></a></span>
+<span id="cb15-330"><a href="#cb15-330"></a><span class="kw">def</span> scrape_with_selenium(search_term, max_pages<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb15-331"><a href="#cb15-331"></a>    <span class="co">"""Scrape search results from a dynamic website.</span></span>
+<span id="cb15-332"><a href="#cb15-332"></a></span>
+<span id="cb15-333"><a href="#cb15-333"></a><span class="co">    This demonstrates the full Selenium workflow:</span></span>
+<span id="cb15-334"><a href="#cb15-334"></a><span class="co">    1. Launch a headless browser</span></span>
+<span id="cb15-335"><a href="#cb15-335"></a><span class="co">    2. Navigate and interact with the page</span></span>
+<span id="cb15-336"><a href="#cb15-336"></a><span class="co">    3. Wait for dynamic content to load</span></span>
+<span id="cb15-337"><a href="#cb15-337"></a><span class="co">    4. Extract data via BeautifulSoup</span></span>
+<span id="cb15-338"><a href="#cb15-338"></a><span class="co">    5. Handle pagination</span></span>
+<span id="cb15-339"><a href="#cb15-339"></a><span class="co">    6. Clean up</span></span>
+<span id="cb15-340"><a href="#cb15-340"></a><span class="co">    """</span></span>
+<span id="cb15-341"><a href="#cb15-341"></a>    options <span class="op">=</span> Options()</span>
+<span id="cb15-342"><a href="#cb15-342"></a>    options.add_argument(<span class="st">"--headless=new"</span>)</span>
+<span id="cb15-343"><a href="#cb15-343"></a>    driver <span class="op">=</span> webdriver.Chrome(options<span class="op">=</span>options)</span>
+<span id="cb15-344"><a href="#cb15-344"></a></span>
+<span id="cb15-345"><a href="#cb15-345"></a>    all_results <span class="op">=</span> []</span>
+<span id="cb15-346"><a href="#cb15-346"></a></span>
+<span id="cb15-347"><a href="#cb15-347"></a>    <span class="cf">try</span>:</span>
+<span id="cb15-348"><a href="#cb15-348"></a>        driver.get(<span class="st">"https://example-search-site.com"</span>)</span>
+<span id="cb15-349"><a href="#cb15-349"></a></span>
+<span id="cb15-350"><a href="#cb15-350"></a>        <span class="co"># Find and fill the search box</span></span>
+<span id="cb15-351"><a href="#cb15-351"></a>        search_box <span class="op">=</span> driver.find_element(By.NAME, <span class="st">"q"</span>)</span>
+<span id="cb15-352"><a href="#cb15-352"></a>        search_box.send_keys(search_term)</span>
+<span id="cb15-353"><a href="#cb15-353"></a>        search_box.submit()</span>
+<span id="cb15-354"><a href="#cb15-354"></a></span>
+<span id="cb15-355"><a href="#cb15-355"></a>        <span class="cf">for</span> page <span class="kw">in</span> <span class="bu">range</span>(max_pages):</span>
+<span id="cb15-356"><a href="#cb15-356"></a>            <span class="co"># Wait for results to load (up to 10 seconds)</span></span>
+<span id="cb15-357"><a href="#cb15-357"></a>            WebDriverWait(driver, <span class="dv">10</span>).until(</span>
+<span id="cb15-358"><a href="#cb15-358"></a>                EC.presence_of_element_located((By.CLASS_NAME, <span class="st">"result-item"</span>))</span>
+<span id="cb15-359"><a href="#cb15-359"></a>            )</span>
+<span id="cb15-360"><a href="#cb15-360"></a></span>
+<span id="cb15-361"><a href="#cb15-361"></a>            <span class="co"># Pass rendered HTML to BeautifulSoup</span></span>
+<span id="cb15-362"><a href="#cb15-362"></a>            soup <span class="op">=</span> BeautifulSoup(driver.page_source, <span class="st">"html.parser"</span>)</span>
+<span id="cb15-363"><a href="#cb15-363"></a></span>
+<span id="cb15-364"><a href="#cb15-364"></a>            <span class="co"># Extract data from this page</span></span>
+<span id="cb15-365"><a href="#cb15-365"></a>            <span class="cf">for</span> item <span class="kw">in</span> soup.find_all(<span class="st">"div"</span>, class_<span class="op">=</span><span class="st">"result-item"</span>):</span>
+<span id="cb15-366"><a href="#cb15-366"></a>                <span class="co"># Check that both elements exist before calling .text —</span></span>
+<span id="cb15-367"><a href="#cb15-367"></a>                <span class="co"># the same defensive pattern you learned for static scraping</span></span>
+<span id="cb15-368"><a href="#cb15-368"></a>                title_tag <span class="op">=</span> item.find(<span class="st">"h3"</span>)</span>
+<span id="cb15-369"><a href="#cb15-369"></a>                desc_tag <span class="op">=</span> item.find(<span class="st">"p"</span>)</span>
+<span id="cb15-370"><a href="#cb15-370"></a>                <span class="cf">if</span> title_tag <span class="kw">is</span> <span class="va">None</span> <span class="kw">or</span> desc_tag <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb15-371"><a href="#cb15-371"></a>                    <span class="cf">continue</span>  <span class="co"># Skip malformed result items rather than crash</span></span>
+<span id="cb15-372"><a href="#cb15-372"></a>                all_results.append({</span>
+<span id="cb15-373"><a href="#cb15-373"></a>                    <span class="st">"title"</span>: title_tag.text.strip(),</span>
+<span id="cb15-374"><a href="#cb15-374"></a>                    <span class="st">"description"</span>: desc_tag.text.strip(),</span>
+<span id="cb15-375"><a href="#cb15-375"></a>                    <span class="st">"page"</span>: page <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb15-376"><a href="#cb15-376"></a>                })</span>
+<span id="cb15-377"><a href="#cb15-377"></a></span>
+<span id="cb15-378"><a href="#cb15-378"></a>            <span class="co"># Try to click "Next" for pagination</span></span>
+<span id="cb15-379"><a href="#cb15-379"></a>            <span class="cf">try</span>:</span>
+<span id="cb15-380"><a href="#cb15-380"></a>                next_button <span class="op">=</span> driver.find_element(By.LINK_TEXT, <span class="st">"Next"</span>)</span>
+<span id="cb15-381"><a href="#cb15-381"></a>                next_button.click()</span>
+<span id="cb15-382"><a href="#cb15-382"></a>                time.sleep(<span class="dv">2</span>)  <span class="co"># Wait for next page to load</span></span>
+<span id="cb15-383"><a href="#cb15-383"></a>            <span class="cf">except</span> <span class="pp">Exception</span>:</span>
+<span id="cb15-384"><a href="#cb15-384"></a>                <span class="cf">break</span>  <span class="co"># No more pages</span></span>
+<span id="cb15-385"><a href="#cb15-385"></a></span>
+<span id="cb15-386"><a href="#cb15-386"></a>    <span class="cf">finally</span>:</span>
+<span id="cb15-387"><a href="#cb15-387"></a>        driver.quit()  <span class="co"># Always clean up</span></span>
 <span id="cb15-388"><a href="#cb15-388"></a></span>
-<span id="cb15-389"><a href="#cb15-389"></a><span class="ss">1. </span>**Is there an API?** Use it. APIs are faster, more reliable, and more structured (see @sec-wikipedia through @sec-ai-apis).</span>
-<span id="cb15-390"><a href="#cb15-390"></a><span class="ss">2. </span>**Is the content in the static HTML?** Use <span class="in">`requests`</span> + BeautifulSoup (see @sec-static-pages). It is simpler and faster than Selenium.</span>
-<span id="cb15-391"><a href="#cb15-391"></a><span class="ss">3. </span>**Is the content loaded by JavaScript?** Use Selenium. But be aware that it is slower, more fragile, and more resource-intensive.</span>
-<span id="cb15-392"><a href="#cb15-392"></a><span class="ss">4. </span>**Is the content behind a login?** This is where ethical judgment matters most. Automating access to login-gated content may violate Terms of Service. See @sec-ethics.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb15-389"><a href="#cb15-389"></a>    <span class="cf">return</span> pd.DataFrame(all_results)</span>
+<span id="cb15-390"><a href="#cb15-390"></a><span class="in">```</span></span>
+<span id="cb15-391"><a href="#cb15-391"></a></span>
+<span id="cb15-392"><a href="#cb15-392"></a>Notice the use of <span class="in">`WebDriverWait`</span> with <span class="in">`expected_conditions`</span> — this is superior to <span class="in">`time.sleep()`</span> because it waits only as long as needed for the element to appear, rather than waiting a fixed amount of time that might be too short (element not loaded) or too long (wasted time). The <span class="in">`try/finally`</span> block ensures the browser is closed even if an error occurs. And notice the <span class="in">`None`</span> checks before calling <span class="in">`.text`</span>: dynamic pages serve malformed or incomplete items just as often as static ones do, and the defensive parsing habits from @sec-static-pages carry over unchanged.</span>
+<span id="cb15-393"><a href="#cb15-393"></a></span>
+<span id="cb15-394"><a href="#cb15-394"></a><span class="fu">## When to Use Selenium vs. APIs</span></span>
+<span id="cb15-395"><a href="#cb15-395"></a></span>
+<span id="cb15-396"><a href="#cb15-396"></a>With the full toolkit in hand, here is the decision tree for choosing your data access method:</span>
+<span id="cb15-397"><a href="#cb15-397"></a></span>
+<span id="cb15-398"><a href="#cb15-398"></a><span class="ss">1. </span>**Is there an API?** Use it. APIs are faster, more reliable, and more structured (see @sec-wikipedia through @sec-ai-apis).</span>
+<span id="cb15-399"><a href="#cb15-399"></a><span class="ss">2. </span>**Is the content in the static HTML?** Use <span class="in">`requests`</span> + BeautifulSoup (see @sec-static-pages). It is simpler and faster than Selenium.</span>
+<span id="cb15-400"><a href="#cb15-400"></a><span class="ss">3. </span>**Is the content loaded by JavaScript?** Use browser automation — Selenium, or Playwright if auto-waiting and speed matter for your project. Either way, expect it to be slower, more fragile, and more resource-intensive than the options above.</span>
+<span id="cb15-401"><a href="#cb15-401"></a><span class="ss">4. </span>**Is the content behind a login?** This is where ethical judgment matters most. Automating access to login-gated content may violate Terms of Service. See @sec-ethics.</span>
+<span id="cb15-402"><a href="#cb15-402"></a></span>
+<span id="cb15-403"><a href="#cb15-403"></a>The exercises below give you practice at every branch of this tree.</span>
+<span id="cb15-404"><a href="#cb15-404"></a></span>
+<span id="cb15-405"><a href="#cb15-405"></a><span class="fu">## Exercises</span></span>
+<span id="cb15-406"><a href="#cb15-406"></a></span>
+<span id="cb15-407"><a href="#cb15-407"></a><span class="ss">1. </span>**Dynamic content extraction.** Find a website that loads content dynamically (via JavaScript, infinite scroll, or AJAX). Use Selenium to load the full page, then pass the source to BeautifulSoup and extract the dynamically-loaded data. Compare what you get with Selenium to what <span class="in">`requests.get()`</span> returns.</span>
+<span id="cb15-408"><a href="#cb15-408"></a></span>
+<span id="cb15-409"><a href="#cb15-409"></a><span class="ss">2. </span>**Multi-step interaction.** Use Selenium to automate a multi-step process: navigate to a site with a search form, enter a query, submit it, and extract results from the response page.</span>
+<span id="cb15-410"><a href="#cb15-410"></a></span>
+<span id="cb15-411"><a href="#cb15-411"></a><span class="ss">3. </span>**Static vs. dynamic comparison.** For three websites of your choice, compare the HTML returned by <span class="in">`requests.get()`</span> with the <span class="in">`driver.page_source`</span> from Selenium. Categorize each site as static, partially dynamic, or fully dynamic.</span>
+<span id="cb15-412"><a href="#cb15-412"></a></span>
+<span id="cb15-413"><a href="#cb15-413"></a><span class="ss">4. </span>**Load More button.** Find a website that uses a "Load More" button (rather than infinite scroll) to reveal additional content. Write a Selenium script that clicks the button in a loop until it disappears or becomes disabled, then extracts all the loaded data. How many items were hidden behind the button?</span>
+<span id="cb15-414"><a href="#cb15-414"></a></span>
+<span id="cb15-415"><a href="#cb15-415"></a><span class="ss">5. </span>**Performance comparison.** For the same URL, measure the time taken by three approaches: <span class="in">`requests.get()`</span>, headed Selenium (with a visible browser), and headless Selenium. Use <span class="in">`time.time()`</span> to measure each. Create a table comparing the three approaches on speed, completeness of data retrieved, and resource usage. When is the speed tradeoff of Selenium worth it?</span>
+<span id="cb15-416"><a href="#cb15-416"></a></span>
+<span id="cb15-417"><a href="#cb15-417"></a><span class="ss">6. </span>**Graduate extension (INFO 5617).** Choose a JavaScript-heavy site relevant to your own research interests and instrument it with both approaches from this part of the book: static <span class="in">`requests`</span> + BeautifulSoup and Selenium. Quantify what each approach sees — count of elements retrieved, payload size in bytes, and wall-clock time — across at least five pages. Then write a roughly 500-word memo on when the added cost of browser automation is justified, engaging with the treatment of JavaScript scraping in @mitchell2018web. Your memo should articulate a defensible general rule for other researchers, not just describe your particular site.</span>
+<span id="cb15-418"><a href="#cb15-418"></a></span>
+<span id="cb15-419"><a href="#cb15-419"></a>::: {.callout-tip}</span>
+<span id="cb15-420"><a href="#cb15-420"></a><span class="fu">## Missing Manual Reference</span></span>
+<span id="cb15-421"><a href="#cb15-421"></a>For background on debugging strategies when Selenium scripts fail, see *Missing Manual* Chapter 6: Debugging and Chapter 7: Reading Python Tracebacks.</span>
+<span id="cb15-422"><a href="#cb15-422"></a>:::</span>
+<span id="cb15-423"><a href="#cb15-423"></a></span>
+<span id="cb15-424"><a href="#cb15-424"></a><span class="fu">## Social History and Public Interest</span></span>
+<span id="cb15-425"><a href="#cb15-425"></a></span>
+<span id="cb15-426"><a href="#cb15-426"></a>The shift from server-rendered to client-rendered web pages represents a fundamental change in the web's architecture. JavaScript frameworks like React, Angular, and Vue have made the web more interactive but also more opaque to automated observation. The ability to "view source" — once a straightforward way to see exactly what a page contained — now often reveals only a JavaScript bootstrap that fetches and renders content dynamically.</span>
+<span id="cb15-427"><a href="#cb15-427"></a></span>
+<span id="cb15-428"><a href="#cb15-428"></a>This architectural shift interacts with the enclosure dynamics described in @sec-post-api. When platforms render content client-side, they gain another layer of control over automated access. Anti-scraping measures — CAPTCHAs, bot detection, dynamically-generated class names — become easier to implement. Researchers who once could rely on simple HTTP requests increasingly need browser automation to access the same data, raising both the technical barrier and the ethical stakes. The tools in this chapter are a response to that architectural shift — they exist because the simpler approaches taught in @sec-static-pages are no longer sufficient for much of the modern web.</span>
+<span id="cb15-429"><a href="#cb15-429"></a></span>
+<span id="cb15-430"><a href="#cb15-430"></a>::: {.callout-note}</span>
+<span id="cb15-431"><a href="#cb15-431"></a><span class="fu">## Public Interest Connection</span></span>
+<span id="cb15-432"><a href="#cb15-432"></a>When platforms close their APIs and render content exclusively through JavaScript, browser automation becomes the last-resort path to data that serves the public interest. The tools in this chapter exist because of the **enclosure** dynamic from @sec-post-api — the progressive restriction of access to data that was once openly available. Researchers studying algorithmic bias, misinformation, and platform governance increasingly depend on Selenium-based methods precisely because the APIs that once served these research needs have been shut down or restricted beyond practical use.</span>
+<span id="cb15-433"><a href="#cb15-433"></a>:::</span>
+<span id="cb15-434"><a href="#cb15-434"></a></span>
+<span id="cb15-435"><a href="#cb15-435"></a><span class="fu">## Common Issues to Debug</span></span>
+<span id="cb15-436"><a href="#cb15-436"></a></span>
+<span id="cb15-437"><a href="#cb15-437"></a><span class="ss">- </span>**`NoSuchElementException`**: The element does not exist yet because the page has not finished loading. Add <span class="in">`time.sleep()`</span> or use explicit waits with <span class="in">`WebDriverWait`</span>.</span>
+<span id="cb15-438"><a href="#cb15-438"></a><span class="ss">- </span>**`StaleElementReferenceException`**: The DOM changed between when you found the element and when you tried to interact with it. Re-find the element.</span>
+<span id="cb15-439"><a href="#cb15-439"></a><span class="ss">- </span>**Driver/browser version mismatch**: Selenium Manager usually resolves this automatically, but brand-new browser releases occasionally break compatibility for a few days. Updating the <span class="in">`selenium`</span> package typically fixes it.</span>
+<span id="cb15-440"><a href="#cb15-440"></a><span class="ss">- </span>**Memory issues**: Each Selenium driver runs a full browser process. Close drivers promptly with <span class="in">`driver.quit()`</span>.</span>
+<span id="cb15-441"><a href="#cb15-441"></a></span>
+<span id="cb15-442"><a href="#cb15-442"></a><span class="fu">## Key Takeaways</span></span>
+<span id="cb15-443"><a href="#cb15-443"></a></span>
+<span id="cb15-444"><a href="#cb15-444"></a>The modern web is dynamic: JavaScript renders content after the initial HTML loads, making it invisible to static scraping tools. Selenium controls a real browser programmatically, letting you access fully-rendered pages, simulate user interactions, and extract content that <span class="in">`requests`</span> cannot see. But Selenium is slow, fragile, and resource-intensive — a last resort when APIs and static scraping are unavailable. The hybrid approach of Selenium for rendering plus BeautifulSoup for parsing gives you full access to the modern web while keeping your parsing code familiar.</span>
+<span id="cb15-445"><a href="#cb15-445"></a></span>
+<span id="cb15-446"><a href="#cb15-446"></a><span class="fu">## Further Reading</span></span>
+<span id="cb15-447"><a href="#cb15-447"></a></span>
+<span id="cb15-448"><a href="#cb15-448"></a><span class="ss">- </span>Selenium documentation: <span class="ot">&lt;https://www.selenium.dev/documentation/&gt;</span></span>
+<span id="cb15-449"><a href="#cb15-449"></a><span class="ss">- </span>Selenium Python bindings: <span class="ot">&lt;https://selenium-python.readthedocs.io/&gt;</span></span>
+<span id="cb15-450"><a href="#cb15-450"></a><span class="ss">- </span>Playwright for Python: <span class="ot">&lt;https://playwright.dev/python/&gt;</span></span>
+<span id="cb15-451"><a href="#cb15-451"></a><span class="ss">- </span>@mitchell2018web — Chapter 11: Scraping JavaScript</span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

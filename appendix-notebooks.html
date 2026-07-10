@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix C — Where to Go from Here – Web Data Science</title>
+<title>Appendix A — Companion Notebooks – Web Data Science</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -58,26 +58,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -87,7 +68,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./appendix-ai-disclosure.html" rel="prev">
+<link href="./appendix-ai-disclosure.html" rel="next">
+<link href="./ch-15-research-design.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -138,7 +120,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix-notebooks.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix-further.html"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Where to Go from Here</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix-notebooks.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix-notebooks.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Companion Notebooks</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -314,7 +296,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-notebooks.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendix-notebooks.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Companion Notebooks</span></span></a>
   </div>
 </li>
@@ -326,7 +308,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix-further.html" class="sidebar-item-text sidebar-link active">
+  <a href="./appendix-further.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Where to Go from Here</span></span></a>
   </div>
 </li>
@@ -342,23 +324,18 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#advanced-scraping-and-data-collection" id="toc-advanced-scraping-and-data-collection" class="nav-link active" data-scroll-target="#advanced-scraping-and-data-collection"><span class="header-section-number">C.1</span> Advanced Scraping and Data Collection</a></li>
-  <li><a href="#advanced-apis-and-data-access" id="toc-advanced-apis-and-data-access" class="nav-link" data-scroll-target="#advanced-apis-and-data-access"><span class="header-section-number">C.2</span> Advanced APIs and Data Access</a></li>
-  <li><a href="#text-analysis-and-nlp" id="toc-text-analysis-and-nlp" class="nav-link" data-scroll-target="#text-analysis-and-nlp"><span class="header-section-number">C.3</span> Text Analysis and NLP</a></li>
-  <li><a href="#network-analysis" id="toc-network-analysis" class="nav-link" data-scroll-target="#network-analysis"><span class="header-section-number">C.4</span> Network Analysis</a></li>
-  <li><a href="#geospatial-analysis" id="toc-geospatial-analysis" class="nav-link" data-scroll-target="#geospatial-analysis"><span class="header-section-number">C.5</span> Geospatial Analysis</a></li>
-  <li><a href="#data-management-and-infrastructure" id="toc-data-management-and-infrastructure" class="nav-link" data-scroll-target="#data-management-and-infrastructure"><span class="header-section-number">C.6</span> Data Management and Infrastructure</a></li>
-  <li><a href="#communities-and-continuing-education" id="toc-communities-and-continuing-education" class="nav-link" data-scroll-target="#communities-and-continuing-education"><span class="header-section-number">C.7</span> Communities and Continuing Education</a></li>
-  <li><a href="#recommended-textbooks" id="toc-recommended-textbooks" class="nav-link" data-scroll-target="#recommended-textbooks"><span class="header-section-number">C.8</span> Recommended Textbooks</a></li>
+  <li><a href="#how-to-use-the-notebooks" id="toc-how-to-use-the-notebooks" class="nav-link active" data-scroll-target="#how-to-use-the-notebooks"><span class="header-section-number">A.1</span> How to Use the Notebooks</a></li>
+  <li><a href="#the-notebooks" id="toc-the-notebooks" class="nav-link" data-scroll-target="#the-notebooks"><span class="header-section-number">A.2</span> The Notebooks</a></li>
+  <li><a href="#how-they-are-generated" id="toc-how-they-are-generated" class="nav-link" data-scroll-target="#how-they-are-generated"><span class="header-section-number">A.3</span> How They Are Generated</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix-notebooks.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix-further.html"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Where to Go from Here</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix-notebooks.html">Appendices</a></li><li class="breadcrumb-item"><a href="./appendix-notebooks.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Companion Notebooks</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-appendix-further" class="quarto-section-identifier">Appendix C — Where to Go from Here</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-appendix-notebooks" class="quarto-section-identifier">Appendix A — Companion Notebooks</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -375,82 +352,98 @@ div.csl-indent {
 </header>
 
 
-<p>This book has introduced the core tools and concepts of web data science. This appendix points you toward advanced topics, tools, and communities for continuing your education beyond this textbook.</p>
-<section id="advanced-scraping-and-data-collection" class="level2" data-number="C.1">
-<h2 data-number="C.1" class="anchored" data-anchor-id="advanced-scraping-and-data-collection"><span class="header-section-number">C.1</span> Advanced Scraping and Data Collection</h2>
-<p><strong>Scrapy</strong> is a full-featured web crawling framework for large-scale, production-grade scraping. If your projects outgrow the <code>requests</code> + BeautifulSoup approach of this book, Scrapy provides built-in support for following links, handling pagination, managing request queues, and exporting data. Documentation: <a href="https://scrapy.org/" class="uri">https://scrapy.org/</a></p>
-<p><strong>Playwright</strong> is a modern alternative to Selenium developed by Microsoft. It is faster, more reliable, and has better async support. If you work extensively with dynamic pages (as in <a href="ch-08-dynamic-pages.html" class="quarto-xref"><span>Chapter 8</span></a>), Playwright is worth learning. Documentation: <a href="https://playwright.dev/python/" class="uri">https://playwright.dev/python/</a></p>
-<p><strong>Cloud-based scraping</strong> with AWS Lambda, Google Cloud Functions, or similar serverless platforms lets you run scrapers without maintaining servers. This extends the GitHub Actions approach of <a href="ch-14-automation.html" class="quarto-xref"><span>Chapter 14</span></a> for larger-scale or more complex workflows.</p>
+<p>Every chapter of this book has a companion Jupyter Notebook that replicates the chapter’s code and the narrative around it, so you can run, modify, and break the examples as you read. This appendix lists them all in one place.</p>
+<section id="how-to-use-the-notebooks" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="how-to-use-the-notebooks"><span class="header-section-number">A.1</span> How to Use the Notebooks</h2>
+<ol type="1">
+<li><strong>Download</strong> the notebook for the chapter you are reading (links below). Right-click and “Save link as…” if your browser displays the raw file instead of downloading it.</li>
+<li><strong>Launch</strong> Jupyter (<code>jupyter lab</code> or <code>jupyter notebook</code>) from the folder where you saved it. If you need help getting Jupyter running, see <em>Missing Manual</em> Chapter 16: Jupyter.</li>
+<li><strong>Install as you go.</strong> Each chapter introduces its own libraries (<code>pip install</code> lines appear in the first code cells). You do not need everything installed to start.</li>
+<li><strong>Supply your own credentials.</strong> Notebooks for the API chapters (<a href="ch-11-government.html" class="quarto-xref"><span>Chapter 11</span></a> through <a href="ch-13-ai-apis.html" class="quarto-xref"><span>Chapter 13</span></a>) require your own API keys, set as environment variables — never pasted into cells.</li>
+</ol>
+<p>The code cells ship unexecuted by design: running code, encountering errors, and debugging them is where the learning happens. Expect some cells to require your input (API keys, file paths, a chosen article or subreddit) before they run.</p>
 </section>
-<section id="advanced-apis-and-data-access" class="level2" data-number="C.2">
-<h2 data-number="C.2" class="anchored" data-anchor-id="advanced-apis-and-data-access"><span class="header-section-number">C.2</span> Advanced APIs and Data Access</h2>
-<p><strong>GraphQL APIs</strong> represent a different approach to API design than the REST APIs covered in this book. Instead of multiple endpoints returning fixed data structures, GraphQL lets you specify exactly what data you want in a single query. GitHub’s API v4 is a prominent example.</p>
-<p><strong>Websockets and streaming APIs</strong> provide real-time data rather than request-response interactions. If you need to monitor live events — breaking news, financial markets, or social media feeds — streaming APIs are the appropriate tool.</p>
-<p><strong>The EU Digital Services Act (DSA)</strong> mandates researcher access to data from very large online platforms. As this framework matures, it may create new, regulated pathways for the kind of research data access that has been restricted by the enclosure dynamics described in <a href="ch-03-post-api.html" class="quarto-xref"><span>Chapter 3</span></a>.</p>
+<section id="the-notebooks" class="level2" data-number="A.2">
+<h2 data-number="A.2" class="anchored" data-anchor-id="the-notebooks"><span class="header-section-number">A.2</span> The Notebooks</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Chapter</th>
+<th>Notebook</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Introduction to Web Data Science</td>
+<td><a href="notebooks/ch-01-introduction.ipynb">ch-01-introduction.ipynb</a></td>
+</tr>
+<tr class="even">
+<td>2. Ethics, Law, and Responsible Data Collection</td>
+<td><a href="notebooks/ch-02-ethics.ipynb">ch-02-ethics.ipynb</a></td>
+</tr>
+<tr class="odd">
+<td>3. The Post-API Age</td>
+<td><a href="notebooks/ch-03-post-api.ipynb">ch-03-post-api.ipynb</a></td>
+</tr>
+<tr class="even">
+<td>4. Data Formats: XML and JSON</td>
+<td><a href="notebooks/ch-04-data-formats.ipynb">ch-04-data-formats.ipynb</a></td>
+</tr>
+<tr class="odd">
+<td>5. Web Architecture and Protocols</td>
+<td><a href="notebooks/ch-05-protocols.ipynb">ch-05-protocols.ipynb</a></td>
+</tr>
+<tr class="even">
+<td>6. Parsing Static Web Pages</td>
+<td><a href="notebooks/ch-06-static-pages.ipynb">ch-06-static-pages.ipynb</a></td>
+</tr>
+<tr class="odd">
+<td>7. Archived Web Pages and the Wayback Machine</td>
+<td><a href="notebooks/ch-07-archives.ipynb">ch-07-archives.ipynb</a></td>
+</tr>
+<tr class="even">
+<td>8. Dynamic Web Pages with Selenium</td>
+<td><a href="notebooks/ch-08-dynamic-pages.ipynb">ch-08-dynamic-pages.ipynb</a></td>
+</tr>
+<tr class="odd">
+<td>9. Extracting Data from PDFs</td>
+<td><a href="notebooks/ch-09-pdfs.ipynb">ch-09-pdfs.ipynb</a></td>
+</tr>
+<tr class="even">
+<td>10. Introduction to APIs: Wikipedia</td>
+<td><a href="notebooks/ch-10-wikipedia.ipynb">ch-10-wikipedia.ipynb</a></td>
+</tr>
+<tr class="odd">
+<td>11. Government Data APIs</td>
+<td><a href="notebooks/ch-11-government.ipynb">ch-11-government.ipynb</a></td>
+</tr>
+<tr class="even">
+<td>12. Social and Media Platform APIs</td>
+<td><a href="notebooks/ch-12-social.ipynb">ch-12-social.ipynb</a></td>
+</tr>
+<tr class="odd">
+<td>13. AI and Language Model APIs</td>
+<td><a href="notebooks/ch-13-ai-apis.ipynb">ch-13-ai-apis.ipynb</a></td>
+</tr>
+<tr class="even">
+<td>14. Automating Data Collection</td>
+<td><a href="notebooks/ch-14-automation.ipynb">ch-14-automation.ipynb</a></td>
+</tr>
+<tr class="odd">
+<td>15. Research Design with Web Data</td>
+<td><a href="notebooks/ch-15-research-design.ipynb">ch-15-research-design.ipynb</a></td>
+</tr>
+</tbody>
+</table>
+<p>Chapter 3 is a conceptual chapter, so its notebook contains discussion and exercises rather than code — it is included for completeness (and for taking notes in).</p>
 </section>
-<section id="text-analysis-and-nlp" class="level2" data-number="C.3">
-<h2 data-number="C.3" class="anchored" data-anchor-id="text-analysis-and-nlp"><span class="header-section-number">C.3</span> Text Analysis and NLP</h2>
-<p><strong>spaCy</strong> is an industrial-strength NLP library for tasks like named entity recognition, part-of-speech tagging, and dependency parsing. It complements the bag-of-words approach from <a href="ch-07-archives.html" class="quarto-xref"><span>Chapter 7</span></a> and the LLM-based analysis from <a href="ch-13-ai-apis.html" class="quarto-xref"><span>Chapter 13</span></a>. Documentation: <a href="https://spacy.io/" class="uri">https://spacy.io/</a></p>
-<p><strong>Hugging Face Transformers</strong> provides access to thousands of pre-trained models for text classification, summarization, translation, and embedding computation. If you need more control than the OpenAI API provides, or want to run models locally, Transformers is the standard library. Documentation: <a href="https://huggingface.co/docs/transformers/" class="uri">https://huggingface.co/docs/transformers/</a></p>
-<p><strong>Topic modeling</strong> with BERTopic or Latent Dirichlet Allocation (LDA) can help you discover the thematic structure of large text corpora — a natural extension of the content analysis techniques in <a href="ch-13-ai-apis.html" class="quarto-xref"><span>Chapter 13</span></a>.</p>
-</section>
-<section id="network-analysis" class="level2" data-number="C.4">
-<h2 data-number="C.4" class="anchored" data-anchor-id="network-analysis"><span class="header-section-number">C.4</span> Network Analysis</h2>
-<p><strong>NetworkX</strong> is the standard Python library for creating, analyzing, and visualizing graphs. The link structures from <a href="ch-10-wikipedia.html" class="quarto-xref"><span>Chapter 10</span></a> and social graphs from <a href="ch-12-social.html" class="quarto-xref"><span>Chapter 12</span></a> are natural inputs for network analysis. Documentation: <a href="https://networkx.org/" class="uri">https://networkx.org/</a></p>
-<p><strong>Gephi</strong> provides interactive network visualization for larger graphs. It can import data from NetworkX and produce publication-quality network visualizations. Download: <a href="https://gephi.org/" class="uri">https://gephi.org/</a></p>
-</section>
-<section id="geospatial-analysis" class="level2" data-number="C.5">
-<h2 data-number="C.5" class="anchored" data-anchor-id="geospatial-analysis"><span class="header-section-number">C.5</span> Geospatial Analysis</h2>
-<p><strong>GeoPandas</strong> extends pandas with support for spatial data types and operations. Combined with Census geographic data from <a href="ch-11-government.html" class="quarto-xref"><span>Chapter 11</span></a>, it enables spatial analysis and mapping of web-scraped data. Documentation: <a href="https://geopandas.org/" class="uri">https://geopandas.org/</a></p>
-<p><strong>Folium</strong> creates interactive maps using Leaflet.js. It is useful for visualizing scraped data with geographic components (business locations, legislative districts, environmental monitoring stations). Documentation: <a href="https://python-visualization.github.io/folium/" class="uri">https://python-visualization.github.io/folium/</a></p>
-</section>
-<section id="data-management-and-infrastructure" class="level2" data-number="C.6">
-<h2 data-number="C.6" class="anchored" data-anchor-id="data-management-and-infrastructure"><span class="header-section-number">C.6</span> Data Management and Infrastructure</h2>
-<p><strong>SQLite</strong> and <strong>PostgreSQL</strong> provide database storage for scraped data that outgrows flat CSV files. If your automated scrapers (<a href="ch-14-automation.html" class="quarto-xref"><span>Chapter 14</span></a>) accumulate large datasets, migrating from CSV to a database improves performance and query flexibility.</p>
-<p><strong>Apache Airflow</strong> orchestrates complex data pipelines with dependencies between tasks. It is the production-grade equivalent of the GitHub Actions workflows in <a href="ch-14-automation.html" class="quarto-xref"><span>Chapter 14</span></a>, suited for pipelines with many steps, conditional logic, and failure recovery.</p>
-<p><strong>Docker</strong> provides reproducible computing environments that bundle your code, dependencies, and configuration into a portable container. This solves the “works on my machine” problem for collaborative projects.</p>
-<p><strong>DVC (Data Version Control)</strong> extends git to handle large data files, tracking datasets alongside code. It addresses the challenge of versioning scraped data that is too large for standard git.</p>
-</section>
-<section id="communities-and-continuing-education" class="level2" data-number="C.7">
-<h2 data-number="C.7" class="anchored" data-anchor-id="communities-and-continuing-education"><span class="header-section-number">C.7</span> Communities and Continuing Education</h2>
-<p><strong>Summer Institutes in Computational Social Science (SICSS)</strong> are intensive two-week programs held at universities around the world. They cover advanced topics in computational social science with hands-on training and collaborative research. Apply at: <a href="https://sicss.io/" class="uri">https://sicss.io/</a></p>
-<p><strong>The Carpentries</strong> (Software Carpentry, Data Carpentry, Library Carpentry) offer workshops on foundational computing and data skills. Their instructor training program is also an excellent way to improve your own teaching. Information: <a href="https://carpentries.org/" class="uri">https://carpentries.org/</a></p>
-<p><strong>GESIS Computational Social Science Resource List</strong> maintains a curated collection of courses, textbooks, and tools: <a href="https://github.com/gesiscss/awesome-computational-social-science" class="uri">https://github.com/gesiscss/awesome-computational-social-science</a></p>
-</section>
-<section id="recommended-textbooks" class="level2" data-number="C.8">
-<h2 data-number="C.8" class="anchored" data-anchor-id="recommended-textbooks"><span class="header-section-number">C.8</span> Recommended Textbooks</h2>
-<ul>
-<li><span class="citation" data-cites="salganik2018bit">Salganik (<a href="#ref-salganik2018bit" role="doc-biblioref">2018</a>)</span> — the methodological companion to this book’s technical focus; essential reading on observing behavior, asking questions, and running experiments in the digital age</li>
-<li><span class="citation" data-cites="vanatteveldt2022computational">Atteveldt et al. (<a href="#ref-vanatteveldt2022computational" role="doc-biblioref">2022</a>)</span> — deeper treatment of text analysis, NLP methods, and communication research with computational tools</li>
-<li><span class="citation" data-cites="vandenbroucke2018practical">Vanden Broucke and Baesens (<a href="#ref-vandenbroucke2018practical" role="doc-biblioref">2018</a>)</span> — more advanced scraping patterns, anti-detection techniques, and production considerations</li>
-<li><span class="citation" data-cites="rogers2019doing">Rogers (<a href="#ref-rogers2019doing" role="doc-biblioref">2019</a>)</span> — qualitative and critical approaches to web data, complementing this book’s quantitative emphasis</li>
-<li><span class="citation" data-cites="munzert2014automated">Munzert et al. (<a href="#ref-munzert2014automated" role="doc-biblioref">2014</a>)</span> — covers similar ground to this book but using R; useful for multilingual researchers</li>
-<li><span class="citation" data-cites="lazer2009computational">Lazer et al. (<a href="#ref-lazer2009computational" role="doc-biblioref">2009</a>)</span> — the foundational manifesto for computational social science as a field</li>
-</ul>
+<section id="how-they-are-generated" class="level2" data-number="A.3">
+<h2 data-number="A.3" class="anchored" data-anchor-id="how-they-are-generated"><span class="header-section-number">A.3</span> How They Are Generated</h2>
+<p>The notebooks are generated directly from the chapter source files by <code>tools/make_notebooks.py</code>, which converts each chapter’s prose to Markdown cells and its code blocks to code cells. This keeps the notebooks in lockstep with the book: when a chapter changes, regenerating the notebooks (<code>python tools/make_notebooks.py</code> from the repository root) brings them back into sync. If you spot a discrepancy between a notebook and its chapter, trust the chapter — and please report it as an <a href="https://github.com/cuinfoscience/Web-Data-Science-Book/issues">issue</a>.</p>
 
 
 <!-- -->
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-vanatteveldt2022computational" class="csl-entry" role="listitem">
-Atteveldt, Wouter van, Damian Trilling, and Carlos Arcila Calderón. 2022. <em>Computational Analysis of Communication</em>. Wiley.
-</div>
-<div id="ref-lazer2009computational" class="csl-entry" role="listitem">
-Lazer, David, Alex Pentland, Lada Adamic, et al. 2009. <span>“Computational Social Science.”</span> <em>Science</em> 323 (5915): 721–23. <a href="https://doi.org/10.1126/science.1167742">https://doi.org/10.1126/science.1167742</a>.
-</div>
-<div id="ref-munzert2014automated" class="csl-entry" role="listitem">
-Munzert, Simon, Christian Rubba, Peter Meißner, and Dominic Nyhuis. 2014. <em>Automated Data Collection with <span>R</span>: A Practical Guide to Web Scraping and Text Mining</em>. John Wiley &amp; Sons.
-</div>
-<div id="ref-rogers2019doing" class="csl-entry" role="listitem">
-Rogers, Richard. 2019. <em>Doing Digital Methods</em>. SAGE Publications.
-</div>
-<div id="ref-salganik2018bit" class="csl-entry" role="listitem">
-Salganik, Matthew J. 2018. <em>Bit by Bit: Social Research in the Digital Age</em>. Princeton University Press. <a href="https://www.bitbybitbook.com/">https://www.bitbybitbook.com/</a>.
-</div>
-<div id="ref-vandenbroucke2018practical" class="csl-entry" role="listitem">
-Vanden Broucke, Seppe, and Bart Baesens. 2018. <em>Practical Web Scraping for Data Science: Best Practices and Examples with <span>Python</span></em>. Apress.
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
@@ -907,79 +900,54 @@ Vanden Broucke, Seppe, and Bart Baesens. 2018. <em>Practical Web Scraping for Da
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./appendix-ai-disclosure.html" class="pagination-link" aria-label="AI Coauthorship and Responsible Disclosure">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">AI Coauthorship and Responsible Disclosure</span></span>
+      <a href="./ch-15-research-design.html" class="pagination-link" aria-label="Research Design with Web Data">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Research Design with Web Data</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./appendix-ai-disclosure.html" class="pagination-link" aria-label="AI Coauthorship and Responsible Disclosure">
+        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">AI Coauthorship and Responsible Disclosure</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu"># Where to Go from Here {#sec-appendix-further}</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu"># Companion Notebooks {#sec-appendix-notebooks}</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a>This book has introduced the core tools and concepts of web data science. This appendix points you toward advanced topics, tools, and communities for continuing your education beyond this textbook.</span>
+<span id="cb1-3"><a href="#cb1-3"></a>Every chapter of this book has a companion Jupyter Notebook that replicates the chapter's code and the narrative around it, so you can run, modify, and break the examples as you read. This appendix lists them all in one place.</span>
 <span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">## Advanced Scraping and Data Collection</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">## How to Use the Notebooks</span></span>
 <span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a>**Scrapy** is a full-featured web crawling framework for large-scale, production-grade scraping. If your projects outgrow the <span class="in">`requests`</span> + BeautifulSoup approach of this book, Scrapy provides built-in support for following links, handling pagination, managing request queues, and exporting data. Documentation: <span class="ot">&lt;https://scrapy.org/&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a>**Playwright** is a modern alternative to Selenium developed by Microsoft. It is faster, more reliable, and has better async support. If you work extensively with dynamic pages (as in @sec-dynamic-pages), Playwright is worth learning. Documentation: <span class="ot">&lt;https://playwright.dev/python/&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a></span>
-<span id="cb1-11"><a href="#cb1-11"></a>**Cloud-based scraping** with AWS Lambda, Google Cloud Functions, or similar serverless platforms lets you run scrapers without maintaining servers. This extends the GitHub Actions approach of @sec-automation for larger-scale or more complex workflows.</span>
-<span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="fu">## Advanced APIs and Data Access</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a></span>
-<span id="cb1-15"><a href="#cb1-15"></a>**GraphQL APIs** represent a different approach to API design than the REST APIs covered in this book. Instead of multiple endpoints returning fixed data structures, GraphQL lets you specify exactly what data you want in a single query. GitHub's API v4 is a prominent example.</span>
-<span id="cb1-16"><a href="#cb1-16"></a></span>
-<span id="cb1-17"><a href="#cb1-17"></a>**Websockets and streaming APIs** provide real-time data rather than request-response interactions. If you need to monitor live events — breaking news, financial markets, or social media feeds — streaming APIs are the appropriate tool.</span>
-<span id="cb1-18"><a href="#cb1-18"></a></span>
-<span id="cb1-19"><a href="#cb1-19"></a>**The EU Digital Services Act (DSA)** mandates researcher access to data from very large online platforms. As this framework matures, it may create new, regulated pathways for the kind of research data access that has been restricted by the enclosure dynamics described in @sec-post-api.</span>
-<span id="cb1-20"><a href="#cb1-20"></a></span>
-<span id="cb1-21"><a href="#cb1-21"></a><span class="fu">## Text Analysis and NLP</span></span>
-<span id="cb1-22"><a href="#cb1-22"></a></span>
-<span id="cb1-23"><a href="#cb1-23"></a>**spaCy** is an industrial-strength NLP library for tasks like named entity recognition, part-of-speech tagging, and dependency parsing. It complements the bag-of-words approach from @sec-archives and the LLM-based analysis from @sec-ai-apis. Documentation: <span class="ot">&lt;https://spacy.io/&gt;</span></span>
-<span id="cb1-24"><a href="#cb1-24"></a></span>
-<span id="cb1-25"><a href="#cb1-25"></a>**Hugging Face Transformers** provides access to thousands of pre-trained models for text classification, summarization, translation, and embedding computation. If you need more control than the OpenAI API provides, or want to run models locally, Transformers is the standard library. Documentation: <span class="ot">&lt;https://huggingface.co/docs/transformers/&gt;</span></span>
-<span id="cb1-26"><a href="#cb1-26"></a></span>
-<span id="cb1-27"><a href="#cb1-27"></a>**Topic modeling** with BERTopic or Latent Dirichlet Allocation (LDA) can help you discover the thematic structure of large text corpora — a natural extension of the content analysis techniques in @sec-ai-apis.</span>
-<span id="cb1-28"><a href="#cb1-28"></a></span>
-<span id="cb1-29"><a href="#cb1-29"></a><span class="fu">## Network Analysis</span></span>
-<span id="cb1-30"><a href="#cb1-30"></a></span>
-<span id="cb1-31"><a href="#cb1-31"></a>**NetworkX** is the standard Python library for creating, analyzing, and visualizing graphs. The link structures from @sec-wikipedia and social graphs from @sec-social are natural inputs for network analysis. Documentation: <span class="ot">&lt;https://networkx.org/&gt;</span></span>
-<span id="cb1-32"><a href="#cb1-32"></a></span>
-<span id="cb1-33"><a href="#cb1-33"></a>**Gephi** provides interactive network visualization for larger graphs. It can import data from NetworkX and produce publication-quality network visualizations. Download: <span class="ot">&lt;https://gephi.org/&gt;</span></span>
-<span id="cb1-34"><a href="#cb1-34"></a></span>
-<span id="cb1-35"><a href="#cb1-35"></a><span class="fu">## Geospatial Analysis</span></span>
-<span id="cb1-36"><a href="#cb1-36"></a></span>
-<span id="cb1-37"><a href="#cb1-37"></a>**GeoPandas** extends pandas with support for spatial data types and operations. Combined with Census geographic data from @sec-government, it enables spatial analysis and mapping of web-scraped data. Documentation: <span class="ot">&lt;https://geopandas.org/&gt;</span></span>
-<span id="cb1-38"><a href="#cb1-38"></a></span>
-<span id="cb1-39"><a href="#cb1-39"></a>**Folium** creates interactive maps using Leaflet.js. It is useful for visualizing scraped data with geographic components (business locations, legislative districts, environmental monitoring stations). Documentation: <span class="ot">&lt;https://python-visualization.github.io/folium/&gt;</span></span>
-<span id="cb1-40"><a href="#cb1-40"></a></span>
-<span id="cb1-41"><a href="#cb1-41"></a><span class="fu">## Data Management and Infrastructure</span></span>
-<span id="cb1-42"><a href="#cb1-42"></a></span>
-<span id="cb1-43"><a href="#cb1-43"></a>**SQLite** and **PostgreSQL** provide database storage for scraped data that outgrows flat CSV files. If your automated scrapers (@sec-automation) accumulate large datasets, migrating from CSV to a database improves performance and query flexibility.</span>
-<span id="cb1-44"><a href="#cb1-44"></a></span>
-<span id="cb1-45"><a href="#cb1-45"></a>**Apache Airflow** orchestrates complex data pipelines with dependencies between tasks. It is the production-grade equivalent of the GitHub Actions workflows in @sec-automation, suited for pipelines with many steps, conditional logic, and failure recovery.</span>
-<span id="cb1-46"><a href="#cb1-46"></a></span>
-<span id="cb1-47"><a href="#cb1-47"></a>**Docker** provides reproducible computing environments that bundle your code, dependencies, and configuration into a portable container. This solves the "works on my machine" problem for collaborative projects.</span>
-<span id="cb1-48"><a href="#cb1-48"></a></span>
-<span id="cb1-49"><a href="#cb1-49"></a>**DVC (Data Version Control)** extends git to handle large data files, tracking datasets alongside code. It addresses the challenge of versioning scraped data that is too large for standard git.</span>
-<span id="cb1-50"><a href="#cb1-50"></a></span>
-<span id="cb1-51"><a href="#cb1-51"></a><span class="fu">## Communities and Continuing Education</span></span>
-<span id="cb1-52"><a href="#cb1-52"></a></span>
-<span id="cb1-53"><a href="#cb1-53"></a>**Summer Institutes in Computational Social Science (SICSS)** are intensive two-week programs held at universities around the world. They cover advanced topics in computational social science with hands-on training and collaborative research. Apply at: <span class="ot">&lt;https://sicss.io/&gt;</span></span>
-<span id="cb1-54"><a href="#cb1-54"></a></span>
-<span id="cb1-55"><a href="#cb1-55"></a>**The Carpentries** (Software Carpentry, Data Carpentry, Library Carpentry) offer workshops on foundational computing and data skills. Their instructor training program is also an excellent way to improve your own teaching. Information: <span class="ot">&lt;https://carpentries.org/&gt;</span></span>
-<span id="cb1-56"><a href="#cb1-56"></a></span>
-<span id="cb1-57"><a href="#cb1-57"></a>**GESIS Computational Social Science Resource List** maintains a curated collection of courses, textbooks, and tools: <span class="ot">&lt;https://github.com/gesiscss/awesome-computational-social-science&gt;</span></span>
-<span id="cb1-58"><a href="#cb1-58"></a></span>
-<span id="cb1-59"><a href="#cb1-59"></a><span class="fu">## Recommended Textbooks</span></span>
-<span id="cb1-60"><a href="#cb1-60"></a></span>
-<span id="cb1-61"><a href="#cb1-61"></a><span class="ss">- </span>@salganik2018bit — the methodological companion to this book's technical focus; essential reading on observing behavior, asking questions, and running experiments in the digital age</span>
-<span id="cb1-62"><a href="#cb1-62"></a><span class="ss">- </span>@vanatteveldt2022computational — deeper treatment of text analysis, NLP methods, and communication research with computational tools</span>
-<span id="cb1-63"><a href="#cb1-63"></a><span class="ss">- </span>@vandenbroucke2018practical — more advanced scraping patterns, anti-detection techniques, and production considerations</span>
-<span id="cb1-64"><a href="#cb1-64"></a><span class="ss">- </span>@rogers2019doing — qualitative and critical approaches to web data, complementing this book's quantitative emphasis</span>
-<span id="cb1-65"><a href="#cb1-65"></a><span class="ss">- </span>@munzert2014automated — covers similar ground to this book but using R; useful for multilingual researchers</span>
-<span id="cb1-66"><a href="#cb1-66"></a><span class="ss">- </span>@lazer2009computational — the foundational manifesto for computational social science as a field</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="ss">1. </span>**Download** the notebook for the chapter you are reading (links below). Right-click and "Save link as…" if your browser displays the raw file instead of downloading it.</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="ss">2. </span>**Launch** Jupyter (<span class="in">`jupyter lab`</span> or <span class="in">`jupyter notebook`</span>) from the folder where you saved it. If you need help getting Jupyter running, see *Missing Manual* Chapter 16: Jupyter.</span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="ss">3. </span>**Install as you go.** Each chapter introduces its own libraries (<span class="in">`pip install`</span> lines appear in the first code cells). You do not need everything installed to start.</span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="ss">4. </span>**Supply your own credentials.** Notebooks for the API chapters (@sec-government through @sec-ai-apis) require your own API keys, set as environment variables — never pasted into cells.</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a>The code cells ship unexecuted by design: running code, encountering errors, and debugging them is where the learning happens. Expect some cells to require your input (API keys, file paths, a chosen article or subreddit) before they run.</span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="fu">## The Notebooks</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="pp">|</span> Chapter <span class="pp">|</span> Notebook <span class="pp">|</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="pp">|---------|----------|</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="pp">|</span> 1. Introduction to Web Data Science <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-01-introduction.ipynb</span><span class="co">](notebooks/ch-01-introduction.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="pp">|</span> 2. Ethics, Law, and Responsible Data Collection <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-02-ethics.ipynb</span><span class="co">](notebooks/ch-02-ethics.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="pp">|</span> 3. The Post-API Age <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-03-post-api.ipynb</span><span class="co">](notebooks/ch-03-post-api.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="pp">|</span> 4. Data Formats: XML and JSON <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-04-data-formats.ipynb</span><span class="co">](notebooks/ch-04-data-formats.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="pp">|</span> 5. Web Architecture and Protocols <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-05-protocols.ipynb</span><span class="co">](notebooks/ch-05-protocols.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="pp">|</span> 6. Parsing Static Web Pages <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-06-static-pages.ipynb</span><span class="co">](notebooks/ch-06-static-pages.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="pp">|</span> 7. Archived Web Pages and the Wayback Machine <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-07-archives.ipynb</span><span class="co">](notebooks/ch-07-archives.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="pp">|</span> 8. Dynamic Web Pages with Selenium <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-08-dynamic-pages.ipynb</span><span class="co">](notebooks/ch-08-dynamic-pages.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="pp">|</span> 9. Extracting Data from PDFs <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-09-pdfs.ipynb</span><span class="co">](notebooks/ch-09-pdfs.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="pp">|</span> 10. Introduction to APIs: Wikipedia <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-10-wikipedia.ipynb</span><span class="co">](notebooks/ch-10-wikipedia.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a><span class="pp">|</span> 11. Government Data APIs <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-11-government.ipynb</span><span class="co">](notebooks/ch-11-government.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="pp">|</span> 12. Social and Media Platform APIs <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-12-social.ipynb</span><span class="co">](notebooks/ch-12-social.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="pp">|</span> 13. AI and Language Model APIs <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-13-ai-apis.ipynb</span><span class="co">](notebooks/ch-13-ai-apis.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="pp">|</span> 14. Automating Data Collection <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-14-automation.ipynb</span><span class="co">](notebooks/ch-14-automation.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="pp">|</span> 15. Research Design with Web Data <span class="pp">|</span> <span class="co">[</span><span class="ot">ch-15-research-design.ipynb</span><span class="co">](notebooks/ch-15-research-design.ipynb)</span> <span class="pp">|</span></span>
+<span id="cb1-33"><a href="#cb1-33"></a></span>
+<span id="cb1-34"><a href="#cb1-34"></a>Chapter 3 is a conceptual chapter, so its notebook contains discussion and exercises rather than code — it is included for completeness (and for taking notes in).</span>
+<span id="cb1-35"><a href="#cb1-35"></a></span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="fu">## How They Are Generated</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a></span>
+<span id="cb1-38"><a href="#cb1-38"></a>The notebooks are generated directly from the chapter source files by <span class="in">`tools/make_notebooks.py`</span>, which converts each chapter's prose to Markdown cells and its code blocks to code cells. This keeps the notebooks in lockstep with the book: when a chapter changes, regenerating the notebooks (<span class="in">`python tools/make_notebooks.py`</span> from the repository root) brings them back into sync. If you spot a discrepancy between a notebook and its chapter, trust the chapter — and please report it as an <span class="co">[</span><span class="ot">issue</span><span class="co">](https://github.com/cuinfoscience/Web-Data-Science-Book/issues)</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

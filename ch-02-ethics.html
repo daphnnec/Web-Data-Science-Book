@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -76,10 +95,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b46385535caf84bc62f311a600ac5013.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8fee89e02ae113551d56c8e5eb7677c9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -296,14 +315,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./appendix-notebooks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Companion Notebooks</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./appendix-ai-disclosure.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">AI Coauthorship and Responsible Disclosure</span></span></a>
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">AI Coauthorship and Responsible Disclosure</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./appendix-further.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Where to Go from Here</span></span></a>
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Where to Go from Here</span></span></a>
   </div>
 </li>
       </ul>
@@ -322,8 +347,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#legal-frameworks" id="toc-legal-frameworks" class="nav-link" data-scroll-target="#legal-frameworks"><span class="header-section-number">2.2</span> Legal Frameworks</a>
   <ul class="collapse">
   <li><a href="#the-computer-fraud-and-abuse-act" id="toc-the-computer-fraud-and-abuse-act" class="nav-link" data-scroll-target="#the-computer-fraud-and-abuse-act"><span class="header-section-number">2.2.1</span> The Computer Fraud and Abuse Act</a></li>
-  <li><a href="#terms-of-service-as-quasi-law" id="toc-terms-of-service-as-quasi-law" class="nav-link" data-scroll-target="#terms-of-service-as-quasi-law"><span class="header-section-number">2.2.2</span> Terms of Service as Quasi-Law</a></li>
-  <li><a href="#international-considerations" id="toc-international-considerations" class="nav-link" data-scroll-target="#international-considerations"><span class="header-section-number">2.2.3</span> International Considerations</a></li>
+  <li><a href="#the-current-landscape-scraping-ai-and-state-privacy-law" id="toc-the-current-landscape-scraping-ai-and-state-privacy-law" class="nav-link" data-scroll-target="#the-current-landscape-scraping-ai-and-state-privacy-law"><span class="header-section-number">2.2.2</span> The Current Landscape: Scraping, AI, and State Privacy Law</a></li>
+  <li><a href="#terms-of-service-as-quasi-law" id="toc-terms-of-service-as-quasi-law" class="nav-link" data-scroll-target="#terms-of-service-as-quasi-law"><span class="header-section-number">2.2.3</span> Terms of Service as Quasi-Law</a></li>
+  <li><a href="#international-considerations" id="toc-international-considerations" class="nav-link" data-scroll-target="#international-considerations"><span class="header-section-number">2.2.4</span> International Considerations</a></li>
   </ul></li>
   <li><a href="#technical-norms-robots.txt" id="toc-technical-norms-robots.txt" class="nav-link" data-scroll-target="#technical-norms-robots.txt"><span class="header-section-number">2.3</span> Technical Norms: <code>robots.txt</code></a>
   <ul class="collapse">
@@ -387,6 +413,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Companion Notebook
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Run this chapter’s code as you read: download the <a href="notebooks/ch-02-ethics.ipynb">companion notebook</a> (see <a href="appendix-notebooks.html" class="quarto-xref"><span>Appendix A</span></a> for all of them).</p>
+</div>
+</div>
 <section id="the-ethics-of-retrieval" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="the-ethics-of-retrieval"><span class="header-section-number">2.1</span> The Ethics of Retrieval</h2>
 <p>The phrase “web scraping” is colloquial and popular but has pejorative connotations. Data is valuable: other people invested time, money, and effort to create and host the content you are about to retrieve programmatically. Before writing a single line of scraping code, you need to understand the legal, normative, and ethical landscape that governs your work.</p>
@@ -396,13 +435,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="2.2" class="anchored" data-anchor-id="legal-frameworks"><span class="header-section-number">2.2</span> Legal Frameworks</h2>
 <section id="the-computer-fraud-and-abuse-act" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="the-computer-fraud-and-abuse-act"><span class="header-section-number">2.2.1</span> The Computer Fraud and Abuse Act</h3>
-<p>The <a href="https://en.wikipedia.org/wiki/Computer_Fraud_and_Abuse_Act">Computer Fraud and Abuse Act</a> (CFAA) was passed in 1984 in response to growing concerns about computer crime. Its key provision prohibits “unauthorized access” to computer systems, but what counts as “unauthorized” in the context of web scraping has been a matter of ongoing litigation.</p>
-<p>The landmark case <em>hiQ Labs v. LinkedIn</em> (2022) tested whether scraping publicly accessible data constitutes unauthorized access. hiQ, a data analytics company, scraped public LinkedIn profiles to build workforce analytics products. LinkedIn sent a cease-and-desist letter and blocked hiQ’s access. The Ninth Circuit ultimately held that scraping publicly accessible data does not violate the CFAA, since the data was not behind an authentication barrier. However, this ruling is narrow in scope — it applies to public-facing data and does not address data behind logins.</p>
-<p>The case of <em>Sandvig v. Barr</em> challenged the CFAA’s application to researchers who violated a website’s Terms of Service in order to conduct audit studies of algorithmic discrimination. The concern was that the CFAA criminalized legitimate research. This case illustrates the tension between researchers’ need for data and platforms’ desire to control how their systems are studied.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/Computer_Fraud_and_Abuse_Act">Computer Fraud and Abuse Act</a> (CFAA) was enacted in 1986, expanding a narrower 1984 predecessor statute, in response to growing concerns about computer crime. Its key provision prohibits “unauthorized access” to computer systems, but what counts as “unauthorized” in the context of web scraping has been a matter of ongoing litigation.</p>
+<p>Two cases define the modern boundaries. In <em>Van Buren v. United States</em> (2021), the Supreme Court narrowed the CFAA’s “exceeds authorized access” provision: the Court adopted a “gates-up-or-down” reading under which the statute targets accessing systems or areas of systems you are not entitled to enter — not misusing information you were allowed to see. Before <em>Van Buren</em>, violating a website’s stated terms could plausibly be framed as a federal crime; after it, that theory is much harder to sustain.</p>
+<p>The second is <em>hiQ Labs v. LinkedIn</em>, and its full arc is instructive. hiQ, a data analytics company, scraped public LinkedIn profiles to build workforce analytics products; LinkedIn sent a cease-and-desist letter and blocked hiQ’s access. The Ninth Circuit held in 2019 — and, after the Supreme Court sent the case back for reconsideration in light of <em>Van Buren</em>, held again in 2022 — that scraping publicly accessible data likely does not violate the CFAA, since no authentication “gate” was bypassed. But that is not the end of the story: later in 2022, hiQ <em>lost</em> on LinkedIn’s breach-of-contract claim — it had continued scraping after agreeing to the Terms of Service and receiving the cease-and-desist — and the case settled with hiQ agreeing to stop. The lesson is precise: the CFAA probably does not criminalize scraping public pages, but contract law can still make it costly.</p>
+<p>The case of <em>Sandvig v. Barr</em> challenged the CFAA’s application to researchers who violated a website’s Terms of Service in order to conduct audit studies of algorithmic discrimination. In 2020, a federal district court held that merely violating Terms of Service does not constitute a CFAA crime — a meaningful, if limited, protection for research. The case illustrates the tension between researchers’ need for data and platforms’ desire to control how their systems are studied.</p>
 <p>The key takeaway: the legal landscape is unsettled and varies by jurisdiction. “It’s technically possible” is not the same as “it’s legal,” and “it’s legal” is not the same as “it’s ethical.”</p>
 </section>
-<section id="terms-of-service-as-quasi-law" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="terms-of-service-as-quasi-law"><span class="header-section-number">2.2.2</span> Terms of Service as Quasi-Law</h3>
+<section id="the-current-landscape-scraping-ai-and-state-privacy-law" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="the-current-landscape-scraping-ai-and-state-privacy-law"><span class="header-section-number">2.2.2</span> The Current Landscape: Scraping, AI, and State Privacy Law</h3>
+<p>The legal terrain has kept shifting since these landmark cases, and as of mid-2026 three developments matter most for your work.</p>
+<p>First, courts have continued to treat scraping of <em>public, logged-out</em> content skeptically as a target for platform lawsuits. In early 2024, Meta’s breach-of-contract claims against the data broker Bright Data failed in federal court because the scraping at issue collected only publicly available data without logging in; a parallel suit by X Corp.&nbsp;against the same company was dismissed later that year, with the court warning against letting platforms use contract law to claim exclusive ownership of public web data. These are trial-court rulings, not nationwide rules — but the direction is consistent with <em>hiQ</em>: authentication barriers and contractual relationships, not public visibility, are where legal risk concentrates.</p>
+<p>Second, generative AI has opened a new front. <em>The New York Times v. OpenAI and Microsoft</em> (filed 2023) and a wave of similar suits ask whether scraping copyrighted content to train AI models is infringement or fair use. Whatever the outcomes, the litigation has already changed the web: publishers have hardened their sites against crawlers, added AI-specific directives to <code>robots.txt</code>, and signed exclusive licensing deals — enclosure dynamics you will recognize from <a href="ch-03-post-api.html" class="quarto-xref"><span>Chapter 3</span></a>.</p>
+<p>Third, U.S. states have filled part of the federal privacy vacuum. California’s CCPA/CPRA came first, and by 2026 more than a dozen states — including Colorado, whose Colorado Privacy Act applies to data about Colorado residents — have comprehensive privacy statutes with GDPR-like concepts: personal data rights, purpose limitation, and obligations on data processors. If your scraped dataset contains personal information about residents of these states, these laws can apply to you even as a student researcher. The practical implication is the same one this chapter keeps returning to: collect the minimum you need, and treat personal data as a liability, not an asset.</p>
+</section>
+<section id="terms-of-service-as-quasi-law" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="terms-of-service-as-quasi-law"><span class="header-section-number">2.2.3</span> Terms of Service as Quasi-Law</h3>
 <p>Every major platform has Terms of Service (ToS) that restrict automated data collection. When you create an account on Twitter, Reddit, or Facebook, you agree to these terms. Violating them can result in account suspension, IP blocking, or even legal action.</p>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -418,8 +465,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="international-considerations" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="international-considerations"><span class="header-section-number">2.2.3</span> International Considerations</h3>
+<section id="international-considerations" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="international-considerations"><span class="header-section-number">2.2.4</span> International Considerations</h3>
 <p>The European Union’s General Data Protection Regulation (GDPR) adds another layer of complexity. GDPR gives individuals the right to control how their personal data is collected and processed. If you are scraping data that includes personally identifiable information about EU residents — names, email addresses, social media handles — you may be subject to GDPR requirements regardless of where you are located.</p>
 </section>
 </section>
@@ -427,118 +474,160 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="2.3" class="anchored" data-anchor-id="technical-norms-robots.txt"><span class="header-section-number">2.3</span> Technical Norms: <code>robots.txt</code></h2>
 <p>Beyond legal requirements, the web has developed a set of community norms for responsible automated access. The most important of these is the <code>robots.txt</code> protocol.</p>
 <p>A <code>robots.txt</code> file lives at the root of a website (e.g., <code>https://example.com/robots.txt</code>) and specifies which parts of the site automated agents are permitted or forbidden from accessing. It uses a simple syntax:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> requests</span>
+<div id="5e88cc3e" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> requests</span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="co"># Retrieve robots.txt for Wikipedia</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a>response <span class="op">=</span> requests.get(<span class="st">"https://en.wikipedia.org/robots.txt"</span>)</span>
 <span id="cb1-5"><a href="#cb1-5"></a><span class="bu">print</span>(response.text[:<span class="dv">500</span>])</span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="co"># You'll see directives like:</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co"># The generic rules (as of mid-2026) include directives like:</span></span>
 <span id="cb1-7"><a href="#cb1-7"></a><span class="co"># User-agent: *</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># Disallow: /w/</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co"># Allow: /w/api.php</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># Allow: /w/api.php?action=mobileview&amp;</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co"># Allow: /w/load.php?</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co"># Disallow: /w/</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co"># Disallow: /api/</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co"># Disallow: /wiki/Special:</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>The key directives are <code>User-agent</code> (which crawler the rule applies to), <code>Disallow</code> (paths that should not be accessed), <code>Allow</code> (exceptions to disallow rules), and <code>Crawl-delay</code> (requested time between requests). You can parse these programmatically:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">from</span> urllib.robotparser <span class="im">import</span> RobotFileParser</span>
+<div id="ea488ff8" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="im">from</span> urllib.robotparser <span class="im">import</span> RobotFileParser</span>
 <span id="cb2-2"><a href="#cb2-2"></a></span>
 <span id="cb2-3"><a href="#cb2-3"></a>rp <span class="op">=</span> RobotFileParser()</span>
 <span id="cb2-4"><a href="#cb2-4"></a>rp.set_url(<span class="st">"https://en.wikipedia.org/robots.txt"</span>)</span>
 <span id="cb2-5"><a href="#cb2-5"></a>rp.read()</span>
 <span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co"># Can a generic crawler access the main API?</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="bu">print</span>(rp.can_fetch(<span class="st">"*"</span>, <span class="st">"https://en.wikipedia.org/w/api.php"</span>))</span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="co"># True — the API is explicitly allowed</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="co"># Can a generic crawler fetch an encyclopedia article?</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="bu">print</span>(rp.can_fetch(<span class="st">"*"</span>, <span class="st">"https://en.wikipedia.org/wiki/Python_(programming_language)"</span>))</span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co"># True — article pages under /wiki/ are open to crawlers</span></span>
 <span id="cb2-10"><a href="#cb2-10"></a></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="co"># Can it access the edit interface?</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="bu">print</span>(rp.can_fetch(<span class="st">"*"</span>, <span class="st">"https://en.wikipedia.org/w/index.php?action=edit"</span>))</span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="co"># Check the result — many edit paths are restricted</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="co"># Can it fetch the dynamic pages under /w/, including the API?</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="bu">print</span>(rp.can_fetch(<span class="st">"*"</span>, <span class="st">"https://en.wikipedia.org/w/api.php"</span>))</span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="co"># False — /w/ is disallowed for crawlers, with only narrow exceptions</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="co"># Can it fetch special/internal pages?</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="bu">print</span>(rp.can_fetch(<span class="st">"*"</span>, <span class="st">"https://en.wikipedia.org/wiki/Special:Search"</span>))</span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="co"># False — Special: pages are disallowed</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The second result deserves a pause, because it teaches an important nuance. Wikipedia <em>wants</em> programmatic users on its API — <a href="ch-10-wikipedia.html" class="quarto-xref"><span>Chapter 10</span></a> is built on it — yet <code>robots.txt</code> disallows <code>/w/</code> paths. The two facts are not in conflict: <code>robots.txt</code> addresses <em>crawlers</em> that discover and fetch pages by following links, and Wikipedia would rather crawlers index its stable article URLs than its infinite space of dynamic, server-intensive <code>/w/</code> URLs. Deliberate API clients are governed by a different set of norms — the Wikimedia User-Agent policy and API etiquette guidelines — that you will follow in <a href="ch-10-wikipedia.html" class="quarto-xref"><span>Chapter 10</span></a>. The general lesson: <code>robots.txt</code> tells you how a site wants <em>automated page-fetching</em> to behave, and it is one input among several (Terms of Service, API documentation, rate-limit guidance) rather than the complete rulebook.</p>
+<p>If a site declares a <code>Crawl-delay</code>, you can read it programmatically and respect it:</p>
+<div id="1f979fb5" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>delay <span class="op">=</span> rp.crawl_delay(<span class="st">"*"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="bu">print</span>(delay)</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="co"># None if the site declares no crawl delay; otherwise seconds between requests</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>wait <span class="op">=</span> delay <span class="cf">if</span> delay <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="cf">else</span> <span class="fl">1.0</span>  <span class="co"># Fall back to a polite default</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>Two important caveats. First, <code>robots.txt</code> is a norm, not a law. Violating it is not illegal (in most jurisdictions), but it is disrespectful of the site operator’s wishes and may result in your IP being blocked. Second, if a site does not have a <code>robots.txt</code> file (the request returns a 404), that means there are no crawling restrictions — not that you should crawl aggressively.</p>
 <section id="comparing-robots.txt-across-platforms" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="comparing-robots.txt-across-platforms"><span class="header-section-number">2.3.1</span> Comparing robots.txt Across Platforms</h3>
 <p>Different organizations have dramatically different approaches to automated access, and their <code>robots.txt</code> files reveal these philosophies. Compare three major sites:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> requests</span>
-<span id="cb3-2"><a href="#cb3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3"></a>sites <span class="op">=</span> {</span>
-<span id="cb3-4"><a href="#cb3-4"></a>    <span class="st">"Wikipedia"</span>: <span class="st">"https://en.wikipedia.org/robots.txt"</span>,</span>
-<span id="cb3-5"><a href="#cb3-5"></a>    <span class="st">"Reddit"</span>: <span class="st">"https://www.reddit.com/robots.txt"</span>,</span>
-<span id="cb3-6"><a href="#cb3-6"></a>    <span class="st">"NY Times"</span>: <span class="st">"https://www.nytimes.com/robots.txt"</span>,</span>
-<span id="cb3-7"><a href="#cb3-7"></a>}</span>
-<span id="cb3-8"><a href="#cb3-8"></a></span>
-<span id="cb3-9"><a href="#cb3-9"></a><span class="cf">for</span> name, url <span class="kw">in</span> sites.items():</span>
-<span id="cb3-10"><a href="#cb3-10"></a>    response <span class="op">=</span> requests.get(url)</span>
-<span id="cb3-11"><a href="#cb3-11"></a>    lines <span class="op">=</span> response.text.strip().split(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb3-12"><a href="#cb3-12"></a>    disallow_count <span class="op">=</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> line <span class="kw">in</span> lines <span class="cf">if</span> line.startswith(<span class="st">"Disallow"</span>))</span>
-<span id="cb3-13"><a href="#cb3-13"></a>    allow_count <span class="op">=</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> line <span class="kw">in</span> lines <span class="cf">if</span> line.startswith(<span class="st">"Allow"</span>))</span>
-<span id="cb3-14"><a href="#cb3-14"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span><span class="bu">len</span>(lines)<span class="sc">}</span><span class="ss"> lines, </span><span class="sc">{</span>disallow_count<span class="sc">}</span><span class="ss"> Disallow rules, </span><span class="sc">{</span>allow_count<span class="sc">}</span><span class="ss"> Allow rules"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Wikipedia’s <code>robots.txt</code> is relatively permissive — it restricts access to editing interfaces and internal administration pages but explicitly allows its API (<code>Allow: /w/api.php</code>). This reflects Wikipedia’s organizational commitment to openness: the data exists to be shared. Reddit’s file is more complex, restricting many URL patterns (user profiles, search results, sorted listings) while permitting basic page access. The New York Times is more restrictive still, blocking large sections of the site from automated access — reflecting the fact that its content is a commercial product.</p>
+<div id="2ea6c18e" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> requests</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>sites <span class="op">=</span> {</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    <span class="st">"Wikipedia"</span>: <span class="st">"https://en.wikipedia.org/robots.txt"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="st">"Reddit"</span>: <span class="st">"https://www.reddit.com/robots.txt"</span>,</span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="st">"NY Times"</span>: <span class="st">"https://www.nytimes.com/robots.txt"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7"></a>}</span>
+<span id="cb4-8"><a href="#cb4-8"></a></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="cf">for</span> name, url <span class="kw">in</span> sites.items():</span>
+<span id="cb4-10"><a href="#cb4-10"></a>    response <span class="op">=</span> requests.get(url)</span>
+<span id="cb4-11"><a href="#cb4-11"></a>    lines <span class="op">=</span> response.text.strip().split(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb4-12"><a href="#cb4-12"></a>    disallow_count <span class="op">=</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> line <span class="kw">in</span> lines <span class="cf">if</span> line.startswith(<span class="st">"Disallow"</span>))</span>
+<span id="cb4-13"><a href="#cb4-13"></a>    allow_count <span class="op">=</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> line <span class="kw">in</span> lines <span class="cf">if</span> line.startswith(<span class="st">"Allow"</span>))</span>
+<span id="cb4-14"><a href="#cb4-14"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span><span class="bu">len</span>(lines)<span class="sc">}</span><span class="ss"> lines, </span><span class="sc">{</span>disallow_count<span class="sc">}</span><span class="ss"> Disallow rules, </span><span class="sc">{</span>allow_count<span class="sc">}</span><span class="ss"> Allow rules"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Wikipedia’s <code>robots.txt</code> is permissive where it matters most — the encyclopedia articles under <code>/wiki/</code> are open to crawlers — while restricting dynamic pages, editing interfaces, and internal administration paths under <code>/w/</code> and <code>Special:</code>. Programmatic access to its data happens instead through the API and public database dumps, governed by their own etiquette policies. This division of labor reflects Wikipedia’s organizational commitment to openness: the data exists to be shared, through channels designed for sharing it. Reddit’s file is more complex, restricting many URL patterns (user profiles, search results, sorted listings) while permitting basic page access. The New York Times is more restrictive still, blocking large sections of the site from automated access — reflecting the fact that its content is a commercial product.</p>
 <p>These differences are not arbitrary. They reflect each organization’s relationship with automated access: Wikipedia encourages it as part of its mission, Reddit tolerates it within limits, and the Times treats its content as proprietary. Reading <code>robots.txt</code> before you scrape tells you not just what is permitted but what kind of organization you are dealing with.</p>
 </section>
 </section>
 <section id="responsible-request-headers" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="responsible-request-headers"><span class="header-section-number">2.4</span> Responsible Request Headers</h2>
 <p>When your code makes requests to a web server, the server sees metadata about the request including the <code>User-Agent</code> header, which identifies who is making the request. By default, the <code>requests</code> library sends a generic User-Agent string. You should replace it with one that identifies you and provides contact information:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> requests</span>
-<span id="cb4-2"><a href="#cb4-2"></a></span>
-<span id="cb4-3"><a href="#cb4-3"></a>headers <span class="op">=</span> {</span>
-<span id="cb4-4"><a href="#cb4-4"></a>    <span class="st">"User-Agent"</span>: <span class="st">"WebDataScience/1.0 (INFO 4871; brian.keegan@colorado.edu)"</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>}</span>
-<span id="cb4-6"><a href="#cb4-6"></a></span>
-<span id="cb4-7"><a href="#cb4-7"></a>response <span class="op">=</span> requests.get(<span class="st">"https://example.com"</span>, headers<span class="op">=</span>headers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="1b36dcca" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> requests</span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a>headers <span class="op">=</span> {</span>
+<span id="cb5-4"><a href="#cb5-4"></a>    <span class="st">"User-Agent"</span>: <span class="st">"WebDataScience/1.0 (INFO 4617; brian.keegan@colorado.edu)"</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>}</span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a>response <span class="op">=</span> requests.get(<span class="st">"https://example.com"</span>, headers<span class="op">=</span>headers)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>This practice serves two purposes: it lets site operators contact you if your scraping causes problems, and it signals that you are a responsible actor rather than a malicious bot. Some APIs (including the Wikimedia API you used in <a href="ch-01-introduction.html" class="quarto-xref"><span>Chapter 1</span></a>) require a meaningful User-Agent and will return errors or impose stricter rate limits if you do not provide one.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Missing Manual Reference
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For a deeper introduction to HTTP requests, headers, and status codes — the machinery beneath every example in this chapter — see <em>Missing Manual</em> Chapter 24: HTTP and Web APIs.</p>
+</div>
+</div>
 </section>
 <section id="rate-limiting" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="rate-limiting"><span class="header-section-number">2.5</span> Rate Limiting</h2>
 <p>Making hundreds of requests per second to a web server can degrade its performance for other users — effectively mounting a denial-of-service attack on a site you are trying to study. Always space out your requests:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">import</span> time</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="im">import</span> requests</span>
-<span id="cb5-3"><a href="#cb5-3"></a></span>
-<span id="cb5-4"><a href="#cb5-4"></a>urls <span class="op">=</span> [<span class="st">"https://example.com/page1"</span>, <span class="st">"https://example.com/page2"</span>]</span>
-<span id="cb5-5"><a href="#cb5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="cf">for</span> url <span class="kw">in</span> urls:</span>
-<span id="cb5-7"><a href="#cb5-7"></a>    response <span class="op">=</span> requests.get(url, headers<span class="op">=</span>headers)</span>
-<span id="cb5-8"><a href="#cb5-8"></a>    <span class="co"># Process the response...</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a>    time.sleep(<span class="dv">1</span>)  <span class="co"># Wait 1 second between requests</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="a87ae2f9" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> time</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="im">import</span> requests</span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a>urls <span class="op">=</span> [<span class="st">"https://example.com/page1"</span>, <span class="st">"https://example.com/page2"</span>]</span>
+<span id="cb6-5"><a href="#cb6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="cf">for</span> url <span class="kw">in</span> urls:</span>
+<span id="cb6-7"><a href="#cb6-7"></a>    response <span class="op">=</span> requests.get(url, headers<span class="op">=</span>headers)</span>
+<span id="cb6-8"><a href="#cb6-8"></a>    <span class="co"># Process the response...</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>    time.sleep(<span class="dv">1</span>)  <span class="co"># Wait 1 second between requests</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>A good default is one request per second. If the site’s <code>robots.txt</code> specifies a <code>Crawl-delay</code>, respect it. If you are hitting an API with documented rate limits, stay well within them.</p>
 <section id="building-a-responsible-scraper-function" class="level3" data-number="2.5.1">
 <h3 data-number="2.5.1" class="anchored" data-anchor-id="building-a-responsible-scraper-function"><span class="header-section-number">2.5.1</span> Building a Responsible Scraper Function</h3>
 <p>The principles above — custom User-Agent, rate limiting, error handling — appear in every scraping project. Rather than implementing them ad hoc each time, you can wrap them into a reusable function:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="im">import</span> requests</span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="im">import</span> time</span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="im">import</span> logging</span>
-<span id="cb6-4"><a href="#cb6-4"></a></span>
-<span id="cb6-5"><a href="#cb6-5"></a><span class="kw">def</span> responsible_get(url, headers<span class="op">=</span><span class="va">None</span>, delay<span class="op">=</span><span class="fl">1.0</span>):</span>
-<span id="cb6-6"><a href="#cb6-6"></a>    <span class="co">"""Make an HTTP GET request with responsible defaults.</span></span>
-<span id="cb6-7"><a href="#cb6-7"></a></span>
-<span id="cb6-8"><a href="#cb6-8"></a><span class="co">    Parameters</span></span>
-<span id="cb6-9"><a href="#cb6-9"></a><span class="co">    ----------</span></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="co">    url : str</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a><span class="co">        The URL to request</span></span>
-<span id="cb6-12"><a href="#cb6-12"></a><span class="co">    headers : dict, optional</span></span>
-<span id="cb6-13"><a href="#cb6-13"></a><span class="co">        Custom headers; a default User-Agent is added if none provided</span></span>
-<span id="cb6-14"><a href="#cb6-14"></a><span class="co">    delay : float</span></span>
-<span id="cb6-15"><a href="#cb6-15"></a><span class="co">        Seconds to wait after the request (default: 1.0)</span></span>
-<span id="cb6-16"><a href="#cb6-16"></a></span>
-<span id="cb6-17"><a href="#cb6-17"></a><span class="co">    Returns</span></span>
-<span id="cb6-18"><a href="#cb6-18"></a><span class="co">    -------</span></span>
-<span id="cb6-19"><a href="#cb6-19"></a><span class="co">    requests.Response or None</span></span>
-<span id="cb6-20"><a href="#cb6-20"></a><span class="co">        The response object, or None if the request failed</span></span>
-<span id="cb6-21"><a href="#cb6-21"></a><span class="co">    """</span></span>
-<span id="cb6-22"><a href="#cb6-22"></a>    default_headers <span class="op">=</span> {</span>
-<span id="cb6-23"><a href="#cb6-23"></a>        <span class="st">"User-Agent"</span>: <span class="st">"WebDataScience/1.0 (student-project; your-email@colorado.edu)"</span></span>
-<span id="cb6-24"><a href="#cb6-24"></a>    }</span>
-<span id="cb6-25"><a href="#cb6-25"></a>    <span class="cf">if</span> headers:</span>
-<span id="cb6-26"><a href="#cb6-26"></a>        default_headers.update(headers)</span>
-<span id="cb6-27"><a href="#cb6-27"></a></span>
-<span id="cb6-28"><a href="#cb6-28"></a>    <span class="cf">try</span>:</span>
-<span id="cb6-29"><a href="#cb6-29"></a>        response <span class="op">=</span> requests.get(url, headers<span class="op">=</span>default_headers, timeout<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb6-30"><a href="#cb6-30"></a>        logging.info(<span class="ss">f"</span><span class="sc">{</span>response<span class="sc">.</span>status_code<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>url<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb6-31"><a href="#cb6-31"></a>        time.sleep(delay)</span>
-<span id="cb6-32"><a href="#cb6-32"></a>        <span class="cf">return</span> response</span>
-<span id="cb6-33"><a href="#cb6-33"></a>    <span class="cf">except</span> requests.exceptions.<span class="pp">ConnectionError</span>:</span>
-<span id="cb6-34"><a href="#cb6-34"></a>        logging.error(<span class="ss">f"Connection failed: </span><span class="sc">{</span>url<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb6-35"><a href="#cb6-35"></a>        <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb6-36"><a href="#cb6-36"></a>    <span class="cf">except</span> requests.exceptions.Timeout:</span>
-<span id="cb6-37"><a href="#cb6-37"></a>        logging.error(<span class="ss">f"Request timed out: </span><span class="sc">{</span>url<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb6-38"><a href="#cb6-38"></a>        <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Every design choice in this function reflects a principle from this chapter. The default User-Agent identifies you and provides contact information, so site operators can reach you if your scraping causes problems. The configurable delay enforces rate limiting by default — you have to explicitly override it, which makes aggressive scraping a conscious decision rather than an oversight. The <code>try/except</code> blocks handle the two most common network failures gracefully, logging the error instead of crashing your entire scraping run. The <code>timeout</code> parameter prevents your script from hanging indefinitely on an unresponsive server.</p>
+<div id="9f608946" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="im">import</span> requests</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="im">import</span> time</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="im">import</span> logging</span>
+<span id="cb7-4"><a href="#cb7-4"></a></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="kw">def</span> responsible_get(url, headers<span class="op">=</span><span class="va">None</span>, delay<span class="op">=</span><span class="fl">1.0</span>):</span>
+<span id="cb7-6"><a href="#cb7-6"></a>    <span class="co">"""Make an HTTP GET request with responsible defaults.</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="co">    Parameters</span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="co">    ----------</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="co">    url : str</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="co">        The URL to request</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="co">    headers : dict, optional</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a><span class="co">        Custom headers; a default User-Agent is added if none provided</span></span>
+<span id="cb7-14"><a href="#cb7-14"></a><span class="co">    delay : float</span></span>
+<span id="cb7-15"><a href="#cb7-15"></a><span class="co">        Seconds to wait after the request (default: 1.0)</span></span>
+<span id="cb7-16"><a href="#cb7-16"></a></span>
+<span id="cb7-17"><a href="#cb7-17"></a><span class="co">    Returns</span></span>
+<span id="cb7-18"><a href="#cb7-18"></a><span class="co">    -------</span></span>
+<span id="cb7-19"><a href="#cb7-19"></a><span class="co">    requests.Response or None</span></span>
+<span id="cb7-20"><a href="#cb7-20"></a><span class="co">        The response object, or None if the request failed</span></span>
+<span id="cb7-21"><a href="#cb7-21"></a><span class="co">    """</span></span>
+<span id="cb7-22"><a href="#cb7-22"></a>    default_headers <span class="op">=</span> {</span>
+<span id="cb7-23"><a href="#cb7-23"></a>        <span class="st">"User-Agent"</span>: <span class="st">"WebDataScience/1.0 (student-project; your-email@colorado.edu)"</span></span>
+<span id="cb7-24"><a href="#cb7-24"></a>    }</span>
+<span id="cb7-25"><a href="#cb7-25"></a>    <span class="cf">if</span> headers:</span>
+<span id="cb7-26"><a href="#cb7-26"></a>        default_headers.update(headers)</span>
+<span id="cb7-27"><a href="#cb7-27"></a></span>
+<span id="cb7-28"><a href="#cb7-28"></a>    <span class="cf">try</span>:</span>
+<span id="cb7-29"><a href="#cb7-29"></a>        response <span class="op">=</span> requests.get(url, headers<span class="op">=</span>default_headers, timeout<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb7-30"><a href="#cb7-30"></a>        response.raise_for_status()  <span class="co"># Treat 4xx/5xx statuses as failures</span></span>
+<span id="cb7-31"><a href="#cb7-31"></a>        logging.info(<span class="ss">f"</span><span class="sc">{</span>response<span class="sc">.</span>status_code<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>url<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-32"><a href="#cb7-32"></a>        time.sleep(delay)</span>
+<span id="cb7-33"><a href="#cb7-33"></a>        <span class="cf">return</span> response</span>
+<span id="cb7-34"><a href="#cb7-34"></a>    <span class="cf">except</span> requests.exceptions.HTTPError <span class="im">as</span> e:</span>
+<span id="cb7-35"><a href="#cb7-35"></a>        logging.error(<span class="ss">f"HTTP error: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-36"><a href="#cb7-36"></a>        time.sleep(delay)  <span class="co"># A failed request still counts against the server</span></span>
+<span id="cb7-37"><a href="#cb7-37"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb7-38"><a href="#cb7-38"></a>    <span class="cf">except</span> requests.exceptions.RequestException <span class="im">as</span> e:</span>
+<span id="cb7-39"><a href="#cb7-39"></a>        logging.error(<span class="ss">f"Request failed (</span><span class="sc">{</span><span class="bu">type</span>(e)<span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss">): </span><span class="sc">{</span>url<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-40"><a href="#cb7-40"></a>        <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Every design choice in this function reflects a principle from this chapter. The default User-Agent identifies you and provides contact information, so site operators can reach you if your scraping causes problems. The configurable delay enforces rate limiting by default — you have to explicitly override it, which makes aggressive scraping a conscious decision rather than an oversight. The <code>raise_for_status()</code> call ensures that a <code>404 Not Found</code> or <code>403 Forbidden</code> is treated as the failure it is, rather than silently passed downstream to your parser. The <code>except</code> blocks handle both HTTP errors and the whole family of network failures (<code>ConnectionError</code>, <code>Timeout</code>, <code>SSLError</code>, and other <code>RequestException</code> subtypes) gracefully, logging the error instead of crashing your entire scraping run. The <code>timeout</code> parameter prevents your script from hanging indefinitely on an unresponsive server. And if a site declares a <code>Crawl-delay</code> in its <code>robots.txt</code>, pass that value as <code>delay</code> so your tool honors the site’s own stated preference.</p>
 <p>You will use variations of this pattern in <a href="ch-06-static-pages.html" class="quarto-xref"><span>Chapter 6</span></a> when scraping HTML tables, in <a href="ch-07-archives.html" class="quarto-xref"><span>Chapter 7</span></a> when retrieving historical snapshots, and throughout the API chapters. Building responsible defaults into your tools is more reliable than remembering to add them each time.</p>
 </section>
 </section>
@@ -568,6 +657,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Ethical decision framework.</strong> Apply the five-question framework to a hypothetical scenario: a researcher wants to scrape user profiles from a dating app to study patterns in self-presentation across demographic groups. Work through each question and write a recommendation.</p></li>
 <li><p><strong>Rate limiting experiment.</strong> Using <code>time.time()</code> to measure elapsed time, write a loop that makes five requests to a public website with a one-second delay between each. Then modify the delay to two seconds. Confirm that your actual request timing matches your intended rate.</p></li>
 <li><p><strong>Personal robots.txt audit.</strong> Retrieve <code>robots.txt</code> for a website you use daily but have never scraped. Read the <code>Disallow</code> rules carefully. Then find and read the site’s Terms of Service (look for links in the footer). Write a 300-word analysis: if you wanted to collect data from this site for a class project, what would <code>robots.txt</code>, the Terms of Service, and the five-question ethical framework each permit and restrict? Where do these three sources of guidance agree, and where do they conflict?</p></li>
+<li><p><strong>Graduate extension (INFO 5617).</strong> Read <span class="citation" data-cites="fiesler2020no">Fiesler et al. (<a href="#ref-fiesler2020no" role="doc-biblioref">2020</a>)</span> alongside the EFF’s CFAA explainer and a summary of <em>Van Buren v. United States</em>. Then write a two-page memo advising a university research team that wants to collect public data from three platforms of your choosing. For each platform, make an explicit determination on four dimensions: CFAA exposure after <em>Van Buren</em>, Terms of Service and contract risk after <em>hiQ</em>, <code>robots.txt</code> guidance, and whether the project likely requires IRB review. Conclude with a collection protocol the team should follow.</p></li>
 </ol>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -585,7 +675,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="social-history-and-public-interest" class="level2" data-number="2.8">
 <h2 data-number="2.8" class="anchored" data-anchor-id="social-history-and-public-interest"><span class="header-section-number">2.8</span> Social History and Public Interest</h2>
-<p>The tension between data access and data protection is not new. Journalists have long navigated similar terrain through freedom-of-information laws, source protection, and editorial ethics. The CFAA was originally designed to combat hacking, but its vague language about “unauthorized access” has been used to threaten researchers, journalists, and security auditors. The Aaron Swartz case — in which a young activist faced federal charges for downloading academic articles from JSTOR through MIT’s network — remains a sobering reminder of how aggressively the CFAA can be applied <span class="citation" data-cites="fiesler2020no">[@fiesler2020no]</span>.</p>
+<p>The tension between data access and data protection is not new. Journalists have long navigated similar terrain through freedom-of-information laws, source protection, and editorial ethics. The CFAA was originally designed to combat hacking, but its vague language about “unauthorized access” has been used to threaten researchers, journalists, and security auditors. The Aaron Swartz case — in which a young activist faced federal charges for downloading academic articles from JSTOR through MIT’s network — remains a sobering reminder of how aggressively the CFAA can be applied <span class="citation" data-cites="fiesler2020no">(<a href="#ref-fiesler2020no" role="doc-biblioref">Fiesler et al. 2020</a>)</span>.</p>
 <p>The Cambridge Analytica scandal of 2018 was a turning point. A researcher collected Facebook data through the platform’s API, ostensibly for academic purposes, then shared it with a political consulting firm. The fallout led Facebook, and then other platforms, to drastically restrict API access — a closure that affected all researchers, not just those who had misused data. This history is central to understanding the post-API landscape described in <a href="ch-03-post-api.html" class="quarto-xref"><span>Chapter 3</span></a>.</p>
 <p>The aftermath of Cambridge Analytica created a chilling effect that extended far beyond Facebook. IRBs at universities became more cautious about approving any research involving social media data, even when the data was public and the research served clear public interests. Platforms shut down APIs that legitimate researchers had depended on for years, citing privacy concerns that conveniently also prevented the kind of external scrutiny that might reveal algorithmic bias or content moderation failures. The academic research community is still rebuilding trust and access through alternative frameworks: the European Union’s Digital Services Act (DSA) now mandates researcher access to platform data for public interest research, data donation programs ask users to voluntarily share their data with researchers, and negotiated research agreements between universities and platforms provide structured access with privacy safeguards. These developments represent an ongoing effort to balance legitimate privacy concerns with the public’s interest in understanding how platforms shape information, attention, and behavior. The tools and ethical frameworks in this chapter position you to participate in that effort responsibly.</p>
 </section>
@@ -605,8 +695,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="further-reading" class="level2" data-number="2.11">
 <h2 data-number="2.11" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">2.11</span> Further Reading</h2>
 <ul>
-<li><span class="citation" data-cites="fiesler2020no">@fiesler2020no</span> — legal and ethical analysis of ToS-based data collection restrictions</li>
-<li><span class="citation" data-cites="freelon2018computational">@freelon2018computational</span> — the changing landscape of computational research access</li>
+<li><span class="citation" data-cites="fiesler2020no">Fiesler et al. (<a href="#ref-fiesler2020no" role="doc-biblioref">2020</a>)</span> — legal and ethical analysis of ToS-based data collection restrictions</li>
+<li><span class="citation" data-cites="freelon2018computational">Freelon (<a href="#ref-freelon2018computational" role="doc-biblioref">2018</a>)</span> — the changing landscape of computational research access</li>
 <li>Electronic Frontier Foundation on the CFAA: <a href="https://www.eff.org/issues/cfaa" class="uri">https://www.eff.org/issues/cfaa</a></li>
 <li>The <code>robots.txt</code> specification: <a href="https://www.robotstxt.org/" class="uri">https://www.robotstxt.org/</a></li>
 </ul>
@@ -614,6 +704,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <!-- -->
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-fiesler2020no" class="csl-entry" role="listitem">
+Fiesler, Casey, Nathan Beard, and Brian C. Keegan. 2020. <span>“No Robots, Spiders, or Scrapers: Legal and Ethical Regulation of Data Collection Methods in Social Media Terms of Service.”</span> <em>Proceedings of the International AAAI Conference on Web and Social Media</em> 14: 187–96.
+</div>
+<div id="ref-freelon2018computational" class="csl-entry" role="listitem">
+Freelon, Deen. 2018. <span>“Computational Research in the Post-<span>API</span> Age.”</span> <em>Political Communication</em> 35 (4): 665–68. <a href="https://doi.org/10.1080/10584609.2018.1477506">https://doi.org/10.1080/10584609.2018.1477506</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1080,260 +1178,306 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu"># Ethics, Law, and Responsible Data Collection {#sec-ethics}</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a></span>
-<span id="cb7-3"><a href="#cb7-3"></a>::: {.callout-tip}</span>
-<span id="cb7-4"><a href="#cb7-4"></a><span class="fu">## Learning Objectives</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="ss">- </span>Explain the legal frameworks governing web data access, including the CFAA, GDPR, and platform Terms of Service</span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="ss">- </span>Retrieve and interpret a website's <span class="in">`robots.txt`</span> file to determine what is permitted for automated access</span>
-<span id="cb7-7"><a href="#cb7-7"></a><span class="ss">- </span>Configure responsible HTTP request headers including custom User-Agent strings with contact information</span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="ss">- </span>Apply a structured ethical decision framework before collecting web data</span>
-<span id="cb7-9"><a href="#cb7-9"></a><span class="ss">- </span>Implement rate limiting with <span class="in">`time.sleep()`</span> to avoid overloading servers</span>
-<span id="cb7-10"><a href="#cb7-10"></a>:::</span>
-<span id="cb7-11"><a href="#cb7-11"></a></span>
-<span id="cb7-12"><a href="#cb7-12"></a><span class="fu">## The Ethics of Retrieval</span></span>
-<span id="cb7-13"><a href="#cb7-13"></a></span>
-<span id="cb7-14"><a href="#cb7-14"></a>The phrase "web scraping" is colloquial and popular but has pejorative connotations. Data is valuable: other people invested time, money, and effort to create and host the content you are about to retrieve programmatically. Before writing a single line of scraping code, you need to understand the legal, normative, and ethical landscape that governs your work.</span>
-<span id="cb7-15"><a href="#cb7-15"></a></span>
-<span id="cb7-16"><a href="#cb7-16"></a>This chapter establishes a decision framework that you should revisit before every data collection project in this book and beyond. The question is never simply "can I scrape this?" but rather "should I, and if so, how do I do it responsibly?"</span>
-<span id="cb7-17"><a href="#cb7-17"></a></span>
-<span id="cb7-18"><a href="#cb7-18"></a><span class="fu">## Legal Frameworks</span></span>
-<span id="cb7-19"><a href="#cb7-19"></a></span>
-<span id="cb7-20"><a href="#cb7-20"></a><span class="fu">### The Computer Fraud and Abuse Act</span></span>
-<span id="cb7-21"><a href="#cb7-21"></a></span>
-<span id="cb7-22"><a href="#cb7-22"></a>The <span class="co">[</span><span class="ot">Computer Fraud and Abuse Act</span><span class="co">](https://en.wikipedia.org/wiki/Computer_Fraud_and_Abuse_Act)</span> (CFAA) was passed in 1984 in response to growing concerns about computer crime. Its key provision prohibits "unauthorized access" to computer systems, but what counts as "unauthorized" in the context of web scraping has been a matter of ongoing litigation.</span>
-<span id="cb7-23"><a href="#cb7-23"></a></span>
-<span id="cb7-24"><a href="#cb7-24"></a>The landmark case *hiQ Labs v. LinkedIn* (2022) tested whether scraping publicly accessible data constitutes unauthorized access. hiQ, a data analytics company, scraped public LinkedIn profiles to build workforce analytics products. LinkedIn sent a cease-and-desist letter and blocked hiQ's access. The Ninth Circuit ultimately held that scraping publicly accessible data does not violate the CFAA, since the data was not behind an authentication barrier. However, this ruling is narrow in scope — it applies to public-facing data and does not address data behind logins.</span>
-<span id="cb7-25"><a href="#cb7-25"></a></span>
-<span id="cb7-26"><a href="#cb7-26"></a>The case of *Sandvig v. Barr* challenged the CFAA's application to researchers who violated a website's Terms of Service in order to conduct audit studies of algorithmic discrimination. The concern was that the CFAA criminalized legitimate research. This case illustrates the tension between researchers' need for data and platforms' desire to control how their systems are studied.</span>
-<span id="cb7-27"><a href="#cb7-27"></a></span>
-<span id="cb7-28"><a href="#cb7-28"></a>The key takeaway: the legal landscape is unsettled and varies by jurisdiction. "It's technically possible" is not the same as "it's legal," and "it's legal" is not the same as "it's ethical."</span>
-<span id="cb7-29"><a href="#cb7-29"></a></span>
-<span id="cb7-30"><a href="#cb7-30"></a><span class="fu">### Terms of Service as Quasi-Law</span></span>
-<span id="cb7-31"><a href="#cb7-31"></a></span>
-<span id="cb7-32"><a href="#cb7-32"></a>Every major platform has Terms of Service (ToS) that restrict automated data collection. When you create an account on Twitter, Reddit, or Facebook, you agree to these terms. Violating them can result in account suspension, IP blocking, or even legal action.</span>
-<span id="cb7-33"><a href="#cb7-33"></a></span>
-<span id="cb7-34"><a href="#cb7-34"></a>::: {.callout-warning}</span>
-<span id="cb7-35"><a href="#cb7-35"></a><span class="fu">## Warning</span></span>
-<span id="cb7-36"><a href="#cb7-36"></a>The code in several chapters of this book will retrieve data in ways that may violate the Terms of Service of the platforms involved. This is done in an educational context to teach technical skills. You are responsible for understanding and abiding by the terms of any platform you access. When in doubt, do not scrape — use an official API or request access through an institutional research program.</span>
-<span id="cb7-37"><a href="#cb7-37"></a>:::</span>
-<span id="cb7-38"><a href="#cb7-38"></a></span>
-<span id="cb7-39"><a href="#cb7-39"></a><span class="fu">### International Considerations</span></span>
-<span id="cb7-40"><a href="#cb7-40"></a></span>
-<span id="cb7-41"><a href="#cb7-41"></a>The European Union's General Data Protection Regulation (GDPR) adds another layer of complexity. GDPR gives individuals the right to control how their personal data is collected and processed. If you are scraping data that includes personally identifiable information about EU residents — names, email addresses, social media handles — you may be subject to GDPR requirements regardless of where you are located.</span>
-<span id="cb7-42"><a href="#cb7-42"></a></span>
-<span id="cb7-43"><a href="#cb7-43"></a><span class="fu">## Technical Norms: `robots.txt`</span></span>
-<span id="cb7-44"><a href="#cb7-44"></a></span>
-<span id="cb7-45"><a href="#cb7-45"></a>Beyond legal requirements, the web has developed a set of community norms for responsible automated access. The most important of these is the <span class="in">`robots.txt`</span> protocol.</span>
-<span id="cb7-46"><a href="#cb7-46"></a></span>
-<span id="cb7-47"><a href="#cb7-47"></a>A <span class="in">`robots.txt`</span> file lives at the root of a website (e.g., <span class="in">`https://example.com/robots.txt`</span>) and specifies which parts of the site automated agents are permitted or forbidden from accessing. It uses a simple syntax:</span>
-<span id="cb7-48"><a href="#cb7-48"></a></span>
-<span id="cb7-49"><a href="#cb7-49"></a><span class="in">```python</span></span>
-<span id="cb7-50"><a href="#cb7-50"></a><span class="im">import</span> requests</span>
-<span id="cb7-51"><a href="#cb7-51"></a></span>
-<span id="cb7-52"><a href="#cb7-52"></a><span class="co"># Retrieve robots.txt for Wikipedia</span></span>
-<span id="cb7-53"><a href="#cb7-53"></a>response <span class="op">=</span> requests.get(<span class="st">"https://en.wikipedia.org/robots.txt"</span>)</span>
-<span id="cb7-54"><a href="#cb7-54"></a><span class="bu">print</span>(response.text[:<span class="dv">500</span>])</span>
-<span id="cb7-55"><a href="#cb7-55"></a><span class="co"># You'll see directives like:</span></span>
-<span id="cb7-56"><a href="#cb7-56"></a><span class="co"># User-agent: *</span></span>
-<span id="cb7-57"><a href="#cb7-57"></a><span class="co"># Disallow: /w/</span></span>
-<span id="cb7-58"><a href="#cb7-58"></a><span class="co"># Allow: /w/api.php</span></span>
-<span id="cb7-59"><a href="#cb7-59"></a><span class="in">```</span></span>
-<span id="cb7-60"><a href="#cb7-60"></a></span>
-<span id="cb7-61"><a href="#cb7-61"></a>The key directives are <span class="in">`User-agent`</span> (which crawler the rule applies to), <span class="in">`Disallow`</span> (paths that should not be accessed), <span class="in">`Allow`</span> (exceptions to disallow rules), and <span class="in">`Crawl-delay`</span> (requested time between requests). You can parse these programmatically:</span>
-<span id="cb7-62"><a href="#cb7-62"></a></span>
-<span id="cb7-63"><a href="#cb7-63"></a><span class="in">```python</span></span>
-<span id="cb7-64"><a href="#cb7-64"></a><span class="im">from</span> urllib.robotparser <span class="im">import</span> RobotFileParser</span>
-<span id="cb7-65"><a href="#cb7-65"></a></span>
-<span id="cb7-66"><a href="#cb7-66"></a>rp <span class="op">=</span> RobotFileParser()</span>
-<span id="cb7-67"><a href="#cb7-67"></a>rp.set_url(<span class="st">"https://en.wikipedia.org/robots.txt"</span>)</span>
-<span id="cb7-68"><a href="#cb7-68"></a>rp.read()</span>
-<span id="cb7-69"><a href="#cb7-69"></a></span>
-<span id="cb7-70"><a href="#cb7-70"></a><span class="co"># Can a generic crawler access the main API?</span></span>
-<span id="cb7-71"><a href="#cb7-71"></a><span class="bu">print</span>(rp.can_fetch(<span class="st">"*"</span>, <span class="st">"https://en.wikipedia.org/w/api.php"</span>))</span>
-<span id="cb7-72"><a href="#cb7-72"></a><span class="co"># True — the API is explicitly allowed</span></span>
-<span id="cb7-73"><a href="#cb7-73"></a></span>
-<span id="cb7-74"><a href="#cb7-74"></a><span class="co"># Can it access the edit interface?</span></span>
-<span id="cb7-75"><a href="#cb7-75"></a><span class="bu">print</span>(rp.can_fetch(<span class="st">"*"</span>, <span class="st">"https://en.wikipedia.org/w/index.php?action=edit"</span>))</span>
-<span id="cb7-76"><a href="#cb7-76"></a><span class="co"># Check the result — many edit paths are restricted</span></span>
-<span id="cb7-77"><a href="#cb7-77"></a><span class="in">```</span></span>
-<span id="cb7-78"><a href="#cb7-78"></a></span>
-<span id="cb7-79"><a href="#cb7-79"></a>Two important caveats. First, <span class="in">`robots.txt`</span> is a norm, not a law. Violating it is not illegal (in most jurisdictions), but it is disrespectful of the site operator's wishes and may result in your IP being blocked. Second, if a site does not have a <span class="in">`robots.txt`</span> file (the request returns a 404), that means there are no crawling restrictions — not that you should crawl aggressively.</span>
-<span id="cb7-80"><a href="#cb7-80"></a></span>
-<span id="cb7-81"><a href="#cb7-81"></a><span class="fu">### Comparing robots.txt Across Platforms</span></span>
-<span id="cb7-82"><a href="#cb7-82"></a></span>
-<span id="cb7-83"><a href="#cb7-83"></a>Different organizations have dramatically different approaches to automated access, and their <span class="in">`robots.txt`</span> files reveal these philosophies. Compare three major sites:</span>
-<span id="cb7-84"><a href="#cb7-84"></a></span>
-<span id="cb7-85"><a href="#cb7-85"></a><span class="in">```python</span></span>
-<span id="cb7-86"><a href="#cb7-86"></a><span class="im">import</span> requests</span>
-<span id="cb7-87"><a href="#cb7-87"></a></span>
-<span id="cb7-88"><a href="#cb7-88"></a>sites <span class="op">=</span> {</span>
-<span id="cb7-89"><a href="#cb7-89"></a>    <span class="st">"Wikipedia"</span>: <span class="st">"https://en.wikipedia.org/robots.txt"</span>,</span>
-<span id="cb7-90"><a href="#cb7-90"></a>    <span class="st">"Reddit"</span>: <span class="st">"https://www.reddit.com/robots.txt"</span>,</span>
-<span id="cb7-91"><a href="#cb7-91"></a>    <span class="st">"NY Times"</span>: <span class="st">"https://www.nytimes.com/robots.txt"</span>,</span>
-<span id="cb7-92"><a href="#cb7-92"></a>}</span>
-<span id="cb7-93"><a href="#cb7-93"></a></span>
-<span id="cb7-94"><a href="#cb7-94"></a><span class="cf">for</span> name, url <span class="kw">in</span> sites.items():</span>
-<span id="cb7-95"><a href="#cb7-95"></a>    response <span class="op">=</span> requests.get(url)</span>
-<span id="cb7-96"><a href="#cb7-96"></a>    lines <span class="op">=</span> response.text.strip().split(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb7-97"><a href="#cb7-97"></a>    disallow_count <span class="op">=</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> line <span class="kw">in</span> lines <span class="cf">if</span> line.startswith(<span class="st">"Disallow"</span>))</span>
-<span id="cb7-98"><a href="#cb7-98"></a>    allow_count <span class="op">=</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> line <span class="kw">in</span> lines <span class="cf">if</span> line.startswith(<span class="st">"Allow"</span>))</span>
-<span id="cb7-99"><a href="#cb7-99"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span><span class="bu">len</span>(lines)<span class="sc">}</span><span class="ss"> lines, </span><span class="sc">{</span>disallow_count<span class="sc">}</span><span class="ss"> Disallow rules, </span><span class="sc">{</span>allow_count<span class="sc">}</span><span class="ss"> Allow rules"</span>)</span>
-<span id="cb7-100"><a href="#cb7-100"></a><span class="in">```</span></span>
-<span id="cb7-101"><a href="#cb7-101"></a></span>
-<span id="cb7-102"><a href="#cb7-102"></a>Wikipedia's <span class="in">`robots.txt`</span> is relatively permissive — it restricts access to editing interfaces and internal administration pages but explicitly allows its API (<span class="in">`Allow: /w/api.php`</span>). This reflects Wikipedia's organizational commitment to openness: the data exists to be shared. Reddit's file is more complex, restricting many URL patterns (user profiles, search results, sorted listings) while permitting basic page access. The New York Times is more restrictive still, blocking large sections of the site from automated access — reflecting the fact that its content is a commercial product.</span>
-<span id="cb7-103"><a href="#cb7-103"></a></span>
-<span id="cb7-104"><a href="#cb7-104"></a>These differences are not arbitrary. They reflect each organization's relationship with automated access: Wikipedia encourages it as part of its mission, Reddit tolerates it within limits, and the Times treats its content as proprietary. Reading <span class="in">`robots.txt`</span> before you scrape tells you not just what is permitted but what kind of organization you are dealing with.</span>
-<span id="cb7-105"><a href="#cb7-105"></a></span>
-<span id="cb7-106"><a href="#cb7-106"></a><span class="fu">## Responsible Request Headers</span></span>
-<span id="cb7-107"><a href="#cb7-107"></a></span>
-<span id="cb7-108"><a href="#cb7-108"></a>When your code makes requests to a web server, the server sees metadata about the request including the <span class="in">`User-Agent`</span> header, which identifies who is making the request. By default, the <span class="in">`requests`</span> library sends a generic User-Agent string. You should replace it with one that identifies you and provides contact information:</span>
-<span id="cb7-109"><a href="#cb7-109"></a></span>
-<span id="cb7-110"><a href="#cb7-110"></a><span class="in">```python</span></span>
-<span id="cb7-111"><a href="#cb7-111"></a><span class="im">import</span> requests</span>
-<span id="cb7-112"><a href="#cb7-112"></a></span>
-<span id="cb7-113"><a href="#cb7-113"></a>headers <span class="op">=</span> {</span>
-<span id="cb7-114"><a href="#cb7-114"></a>    <span class="st">"User-Agent"</span>: <span class="st">"WebDataScience/1.0 (INFO 4871; brian.keegan@colorado.edu)"</span></span>
-<span id="cb7-115"><a href="#cb7-115"></a>}</span>
-<span id="cb7-116"><a href="#cb7-116"></a></span>
-<span id="cb7-117"><a href="#cb7-117"></a>response <span class="op">=</span> requests.get(<span class="st">"https://example.com"</span>, headers<span class="op">=</span>headers)</span>
-<span id="cb7-118"><a href="#cb7-118"></a><span class="in">```</span></span>
-<span id="cb7-119"><a href="#cb7-119"></a></span>
-<span id="cb7-120"><a href="#cb7-120"></a>This practice serves two purposes: it lets site operators contact you if your scraping causes problems, and it signals that you are a responsible actor rather than a malicious bot. Some APIs (including the Wikimedia API you used in @sec-introduction) require a meaningful User-Agent and will return errors or impose stricter rate limits if you do not provide one.</span>
-<span id="cb7-121"><a href="#cb7-121"></a></span>
-<span id="cb7-122"><a href="#cb7-122"></a><span class="fu">## Rate Limiting</span></span>
-<span id="cb7-123"><a href="#cb7-123"></a></span>
-<span id="cb7-124"><a href="#cb7-124"></a>Making hundreds of requests per second to a web server can degrade its performance for other users — effectively mounting a denial-of-service attack on a site you are trying to study. Always space out your requests:</span>
-<span id="cb7-125"><a href="#cb7-125"></a></span>
-<span id="cb7-126"><a href="#cb7-126"></a><span class="in">```python</span></span>
-<span id="cb7-127"><a href="#cb7-127"></a><span class="im">import</span> time</span>
-<span id="cb7-128"><a href="#cb7-128"></a><span class="im">import</span> requests</span>
-<span id="cb7-129"><a href="#cb7-129"></a></span>
-<span id="cb7-130"><a href="#cb7-130"></a>urls <span class="op">=</span> [<span class="st">"https://example.com/page1"</span>, <span class="st">"https://example.com/page2"</span>]</span>
-<span id="cb7-131"><a href="#cb7-131"></a></span>
-<span id="cb7-132"><a href="#cb7-132"></a><span class="cf">for</span> url <span class="kw">in</span> urls:</span>
-<span id="cb7-133"><a href="#cb7-133"></a>    response <span class="op">=</span> requests.get(url, headers<span class="op">=</span>headers)</span>
-<span id="cb7-134"><a href="#cb7-134"></a>    <span class="co"># Process the response...</span></span>
-<span id="cb7-135"><a href="#cb7-135"></a>    time.sleep(<span class="dv">1</span>)  <span class="co"># Wait 1 second between requests</span></span>
-<span id="cb7-136"><a href="#cb7-136"></a><span class="in">```</span></span>
-<span id="cb7-137"><a href="#cb7-137"></a></span>
-<span id="cb7-138"><a href="#cb7-138"></a>A good default is one request per second. If the site's <span class="in">`robots.txt`</span> specifies a <span class="in">`Crawl-delay`</span>, respect it. If you are hitting an API with documented rate limits, stay well within them.</span>
-<span id="cb7-139"><a href="#cb7-139"></a></span>
-<span id="cb7-140"><a href="#cb7-140"></a><span class="fu">### Building a Responsible Scraper Function</span></span>
-<span id="cb7-141"><a href="#cb7-141"></a></span>
-<span id="cb7-142"><a href="#cb7-142"></a>The principles above — custom User-Agent, rate limiting, error handling — appear in every scraping project. Rather than implementing them ad hoc each time, you can wrap them into a reusable function:</span>
-<span id="cb7-143"><a href="#cb7-143"></a></span>
-<span id="cb7-144"><a href="#cb7-144"></a><span class="in">```python</span></span>
-<span id="cb7-145"><a href="#cb7-145"></a><span class="im">import</span> requests</span>
-<span id="cb7-146"><a href="#cb7-146"></a><span class="im">import</span> time</span>
-<span id="cb7-147"><a href="#cb7-147"></a><span class="im">import</span> logging</span>
-<span id="cb7-148"><a href="#cb7-148"></a></span>
-<span id="cb7-149"><a href="#cb7-149"></a><span class="kw">def</span> responsible_get(url, headers<span class="op">=</span><span class="va">None</span>, delay<span class="op">=</span><span class="fl">1.0</span>):</span>
-<span id="cb7-150"><a href="#cb7-150"></a>    <span class="co">"""Make an HTTP GET request with responsible defaults.</span></span>
-<span id="cb7-151"><a href="#cb7-151"></a></span>
-<span id="cb7-152"><a href="#cb7-152"></a><span class="co">    Parameters</span></span>
-<span id="cb7-153"><a href="#cb7-153"></a><span class="co">    ----------</span></span>
-<span id="cb7-154"><a href="#cb7-154"></a><span class="co">    url : str</span></span>
-<span id="cb7-155"><a href="#cb7-155"></a><span class="co">        The URL to request</span></span>
-<span id="cb7-156"><a href="#cb7-156"></a><span class="co">    headers : dict, optional</span></span>
-<span id="cb7-157"><a href="#cb7-157"></a><span class="co">        Custom headers; a default User-Agent is added if none provided</span></span>
-<span id="cb7-158"><a href="#cb7-158"></a><span class="co">    delay : float</span></span>
-<span id="cb7-159"><a href="#cb7-159"></a><span class="co">        Seconds to wait after the request (default: 1.0)</span></span>
-<span id="cb7-160"><a href="#cb7-160"></a></span>
-<span id="cb7-161"><a href="#cb7-161"></a><span class="co">    Returns</span></span>
-<span id="cb7-162"><a href="#cb7-162"></a><span class="co">    -------</span></span>
-<span id="cb7-163"><a href="#cb7-163"></a><span class="co">    requests.Response or None</span></span>
-<span id="cb7-164"><a href="#cb7-164"></a><span class="co">        The response object, or None if the request failed</span></span>
-<span id="cb7-165"><a href="#cb7-165"></a><span class="co">    """</span></span>
-<span id="cb7-166"><a href="#cb7-166"></a>    default_headers <span class="op">=</span> {</span>
-<span id="cb7-167"><a href="#cb7-167"></a>        <span class="st">"User-Agent"</span>: <span class="st">"WebDataScience/1.0 (student-project; your-email@colorado.edu)"</span></span>
-<span id="cb7-168"><a href="#cb7-168"></a>    }</span>
-<span id="cb7-169"><a href="#cb7-169"></a>    <span class="cf">if</span> headers:</span>
-<span id="cb7-170"><a href="#cb7-170"></a>        default_headers.update(headers)</span>
-<span id="cb7-171"><a href="#cb7-171"></a></span>
-<span id="cb7-172"><a href="#cb7-172"></a>    <span class="cf">try</span>:</span>
-<span id="cb7-173"><a href="#cb7-173"></a>        response <span class="op">=</span> requests.get(url, headers<span class="op">=</span>default_headers, timeout<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb7-174"><a href="#cb7-174"></a>        logging.info(<span class="ss">f"</span><span class="sc">{</span>response<span class="sc">.</span>status_code<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>url<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb7-175"><a href="#cb7-175"></a>        time.sleep(delay)</span>
-<span id="cb7-176"><a href="#cb7-176"></a>        <span class="cf">return</span> response</span>
-<span id="cb7-177"><a href="#cb7-177"></a>    <span class="cf">except</span> requests.exceptions.<span class="pp">ConnectionError</span>:</span>
-<span id="cb7-178"><a href="#cb7-178"></a>        logging.error(<span class="ss">f"Connection failed: </span><span class="sc">{</span>url<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb7-179"><a href="#cb7-179"></a>        <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb7-180"><a href="#cb7-180"></a>    <span class="cf">except</span> requests.exceptions.Timeout:</span>
-<span id="cb7-181"><a href="#cb7-181"></a>        logging.error(<span class="ss">f"Request timed out: </span><span class="sc">{</span>url<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb7-182"><a href="#cb7-182"></a>        <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb7-183"><a href="#cb7-183"></a><span class="in">```</span></span>
-<span id="cb7-184"><a href="#cb7-184"></a></span>
-<span id="cb7-185"><a href="#cb7-185"></a>Every design choice in this function reflects a principle from this chapter. The default User-Agent identifies you and provides contact information, so site operators can reach you if your scraping causes problems. The configurable delay enforces rate limiting by default — you have to explicitly override it, which makes aggressive scraping a conscious decision rather than an oversight. The <span class="in">`try/except`</span> blocks handle the two most common network failures gracefully, logging the error instead of crashing your entire scraping run. The <span class="in">`timeout`</span> parameter prevents your script from hanging indefinitely on an unresponsive server.</span>
-<span id="cb7-186"><a href="#cb7-186"></a></span>
-<span id="cb7-187"><a href="#cb7-187"></a>You will use variations of this pattern in @sec-static-pages when scraping HTML tables, in @sec-archives when retrieving historical snapshots, and throughout the API chapters. Building responsible defaults into your tools is more reliable than remembering to add them each time.</span>
-<span id="cb7-188"><a href="#cb7-188"></a></span>
-<span id="cb7-189"><a href="#cb7-189"></a><span class="fu">## An Ethical Decision Framework</span></span>
-<span id="cb7-190"><a href="#cb7-190"></a></span>
-<span id="cb7-191"><a href="#cb7-191"></a>Before any data collection project, work through these five questions:</span>
-<span id="cb7-192"><a href="#cb7-192"></a></span>
-<span id="cb7-193"><a href="#cb7-193"></a><span class="ss">1. </span>**Legality.** Is this data collection permitted under the CFAA, GDPR, and any applicable local laws? Is it consistent with the site's Terms of Service?</span>
-<span id="cb7-194"><a href="#cb7-194"></a></span>
-<span id="cb7-195"><a href="#cb7-195"></a><span class="ss">2. </span>**Consent.** Did the people whose data you are collecting consent to this use? Is the data truly public, or did users share it within a platform with reasonable expectations of limited visibility?</span>
-<span id="cb7-196"><a href="#cb7-196"></a></span>
-<span id="cb7-197"><a href="#cb7-197"></a><span class="ss">3. </span>**Proportionality.** Are you collecting only the data you need for your research question? Could you answer your question with less data or with less sensitive data?</span>
-<span id="cb7-198"><a href="#cb7-198"></a></span>
-<span id="cb7-199"><a href="#cb7-199"></a><span class="ss">4. </span>**Privacy.** Does your dataset contain personally identifiable information? Could individuals be re-identified from ostensibly anonymized data? What are the risks if the data is breached or misused?</span>
-<span id="cb7-200"><a href="#cb7-200"></a></span>
-<span id="cb7-201"><a href="#cb7-201"></a><span class="ss">5. </span>**Server impact.** Will your scraping impose a meaningful load on the server? Are you rate-limiting appropriately? Are you scraping during off-peak hours for high-traffic sites?</span>
-<span id="cb7-202"><a href="#cb7-202"></a></span>
-<span id="cb7-203"><a href="#cb7-203"></a>No framework can substitute for judgment. But working through these questions systematically will help you identify risks and make defensible decisions.</span>
-<span id="cb7-204"><a href="#cb7-204"></a></span>
-<span id="cb7-205"><a href="#cb7-205"></a><span class="fu">### IRBs and Web Data</span></span>
-<span id="cb7-206"><a href="#cb7-206"></a></span>
-<span id="cb7-207"><a href="#cb7-207"></a>If you are conducting research at a university, there is an additional layer of oversight: the Institutional Review Board (IRB). IRBs review research involving human subjects to ensure it meets ethical standards derived from the Belmont Report's three principles — respect for persons, beneficence, and justice.</span>
-<span id="cb7-208"><a href="#cb7-208"></a></span>
-<span id="cb7-209"><a href="#cb7-209"></a>When does web scraping become human subjects research? The general rule is that it qualifies when you collect data *about identifiable people* to produce *generalizable knowledge*. Scraping public government records — legislative votes, budget documents, meeting minutes — is usually not human subjects research because the subjects are institutions and public officials acting in their official capacities. But scraping social media profiles to study health behaviors, political attitudes, or personal relationships almost certainly is, because you are studying identifiable individuals and their behavior.</span>
-<span id="cb7-210"><a href="#cb7-210"></a></span>
-<span id="cb7-211"><a href="#cb7-211"></a>The line is not always clear. Scraping aggregated, anonymous data (like Wikipedia edit counts without usernames) falls into a gray area. When in doubt, consult your institution's IRB. Many universities have expedited review processes for minimal-risk research involving publicly available data, and the process of writing an IRB protocol forces you to think carefully about privacy, consent, and data security — exactly the issues this chapter's framework addresses. The Belmont Report's principles complement the five-question framework above: respect for persons maps to consent, beneficence to proportionality and privacy, and justice to the question of who bears the risks and who receives the benefits of your research.</span>
-<span id="cb7-212"><a href="#cb7-212"></a></span>
-<span id="cb7-213"><a href="#cb7-213"></a><span class="fu">## Exercises</span></span>
-<span id="cb7-214"><a href="#cb7-214"></a></span>
-<span id="cb7-215"><a href="#cb7-215"></a><span class="ss">1. </span>**Compare robots.txt files.** Retrieve and compare <span class="in">`robots.txt`</span> for five websites in the same category (e.g., five news organizations, five universities, or five social media platforms). What patterns emerge in what they allow and restrict? Write a brief analysis in a Markdown cell.</span>
-<span id="cb7-216"><a href="#cb7-216"></a></span>
-<span id="cb7-217"><a href="#cb7-217"></a><span class="ss">2. </span>**Terms of Service audit.** Read the Terms of Service for a platform you use regularly. Identify three clauses that restrict automated data collection. For each, assess whether academic research would be covered by any exceptions or fair use arguments.</span>
-<span id="cb7-218"><a href="#cb7-218"></a></span>
-<span id="cb7-219"><a href="#cb7-219"></a><span class="ss">3. </span>**Ethical decision framework.** Apply the five-question framework to a hypothetical scenario: a researcher wants to scrape user profiles from a dating app to study patterns in self-presentation across demographic groups. Work through each question and write a recommendation.</span>
-<span id="cb7-220"><a href="#cb7-220"></a></span>
-<span id="cb7-221"><a href="#cb7-221"></a><span class="ss">4. </span>**Rate limiting experiment.** Using <span class="in">`time.time()`</span> to measure elapsed time, write a loop that makes five requests to a public website with a one-second delay between each. Then modify the delay to two seconds. Confirm that your actual request timing matches your intended rate.</span>
-<span id="cb7-222"><a href="#cb7-222"></a></span>
-<span id="cb7-223"><a href="#cb7-223"></a><span class="ss">5. </span>**Personal robots.txt audit.** Retrieve <span class="in">`robots.txt`</span> for a website you use daily but have never scraped. Read the <span class="in">`Disallow`</span> rules carefully. Then find and read the site's Terms of Service (look for links in the footer). Write a 300-word analysis: if you wanted to collect data from this site for a class project, what would <span class="in">`robots.txt`</span>, the Terms of Service, and the five-question ethical framework each permit and restrict? Where do these three sources of guidance agree, and where do they conflict?</span>
-<span id="cb7-224"><a href="#cb7-224"></a></span>
-<span id="cb7-225"><a href="#cb7-225"></a>::: {.callout-note}</span>
-<span id="cb7-226"><a href="#cb7-226"></a><span class="fu">## Public Interest Connection</span></span>
-<span id="cb7-227"><a href="#cb7-227"></a>The ethical framework introduced here connects directly to the values of **oversight** and **openness** discussed in @sec-post-api. Responsible data collection practices are themselves a form of oversight — they make your methods transparent and accountable. And the commitment to documenting your scraping practices (User-Agent strings, rate limiting, data handling) embodies the openness that the web data science community depends on.</span>
-<span id="cb7-228"><a href="#cb7-228"></a>:::</span>
-<span id="cb7-229"><a href="#cb7-229"></a></span>
-<span id="cb7-230"><a href="#cb7-230"></a><span class="fu">## Social History and Public Interest</span></span>
-<span id="cb7-231"><a href="#cb7-231"></a></span>
-<span id="cb7-232"><a href="#cb7-232"></a>The tension between data access and data protection is not new. Journalists have long navigated similar terrain through freedom-of-information laws, source protection, and editorial ethics. The CFAA was originally designed to combat hacking, but its vague language about "unauthorized access" has been used to threaten researchers, journalists, and security auditors. The Aaron Swartz case — in which a young activist faced federal charges for downloading academic articles from JSTOR through MIT's network — remains a sobering reminder of how aggressively the CFAA can be applied <span class="co">[</span><span class="ot">@fiesler2020no</span><span class="co">]</span>.</span>
-<span id="cb7-233"><a href="#cb7-233"></a></span>
-<span id="cb7-234"><a href="#cb7-234"></a>The Cambridge Analytica scandal of 2018 was a turning point. A researcher collected Facebook data through the platform's API, ostensibly for academic purposes, then shared it with a political consulting firm. The fallout led Facebook, and then other platforms, to drastically restrict API access — a closure that affected all researchers, not just those who had misused data. This history is central to understanding the post-API landscape described in @sec-post-api.</span>
-<span id="cb7-235"><a href="#cb7-235"></a></span>
-<span id="cb7-236"><a href="#cb7-236"></a>The aftermath of Cambridge Analytica created a chilling effect that extended far beyond Facebook. IRBs at universities became more cautious about approving any research involving social media data, even when the data was public and the research served clear public interests. Platforms shut down APIs that legitimate researchers had depended on for years, citing privacy concerns that conveniently also prevented the kind of external scrutiny that might reveal algorithmic bias or content moderation failures. The academic research community is still rebuilding trust and access through alternative frameworks: the European Union's Digital Services Act (DSA) now mandates researcher access to platform data for public interest research, data donation programs ask users to voluntarily share their data with researchers, and negotiated research agreements between universities and platforms provide structured access with privacy safeguards. These developments represent an ongoing effort to balance legitimate privacy concerns with the public's interest in understanding how platforms shape information, attention, and behavior. The tools and ethical frameworks in this chapter position you to participate in that effort responsibly.</span>
-<span id="cb7-237"><a href="#cb7-237"></a></span>
-<span id="cb7-238"><a href="#cb7-238"></a><span class="fu">## Common Issues to Debug</span></span>
-<span id="cb7-239"><a href="#cb7-239"></a></span>
-<span id="cb7-240"><a href="#cb7-240"></a><span class="ss">- </span>**`robots.txt` not found (404)**: This means there are no crawling restrictions, not that the site is blocking you.</span>
-<span id="cb7-241"><a href="#cb7-241"></a><span class="ss">- </span>**Requests blocked despite `robots.txt` allowing access**: Some sites use additional bot detection (CAPTCHAs, JavaScript challenges, behavioral analysis) beyond <span class="in">`robots.txt`</span>.</span>
-<span id="cb7-242"><a href="#cb7-242"></a><span class="ss">- </span>**403 Forbidden with a responsible User-Agent**: The site may be blocking all automated access regardless of your headers. Respect this.</span>
-<span id="cb7-243"><a href="#cb7-243"></a><span class="ss">- </span>**Forgetting `time.sleep()`**: If your IP gets temporarily banned, wait at least an hour before trying again, and add appropriate delays to your code.</span>
-<span id="cb7-244"><a href="#cb7-244"></a></span>
-<span id="cb7-245"><a href="#cb7-245"></a><span class="fu">## Key Takeaways</span></span>
-<span id="cb7-246"><a href="#cb7-246"></a></span>
-<span id="cb7-247"><a href="#cb7-247"></a>Every capability introduced in subsequent chapters raises the questions you have worked through here. The legal landscape is unsettled; technical norms like <span class="in">`robots.txt`</span> provide guidance but not protection; and ethical principles require case-by-case judgment. The framework — legality, consent, proportionality, privacy, server impact — should become habitual. When in doubt, err on the side of caution: use an API instead of scraping, collect less data rather than more, and always identify yourself in your request headers.</span>
-<span id="cb7-248"><a href="#cb7-248"></a></span>
-<span id="cb7-249"><a href="#cb7-249"></a><span class="fu">## Further Reading</span></span>
-<span id="cb7-250"><a href="#cb7-250"></a></span>
-<span id="cb7-251"><a href="#cb7-251"></a><span class="ss">- </span>@fiesler2020no — legal and ethical analysis of ToS-based data collection restrictions</span>
-<span id="cb7-252"><a href="#cb7-252"></a><span class="ss">- </span>@freelon2018computational — the changing landscape of computational research access</span>
-<span id="cb7-253"><a href="#cb7-253"></a><span class="ss">- </span>Electronic Frontier Foundation on the CFAA: <span class="ot">&lt;https://www.eff.org/issues/cfaa&gt;</span></span>
-<span id="cb7-254"><a href="#cb7-254"></a><span class="ss">- </span>The <span class="in">`robots.txt`</span> specification: <span class="ot">&lt;https://www.robotstxt.org/&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu"># Ethics, Law, and Responsible Data Collection {#sec-ethics}</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a></span>
+<span id="cb8-3"><a href="#cb8-3"></a>::: {.callout-tip}</span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="fu">## Learning Objectives</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="ss">- </span>Explain the legal frameworks governing web data access, including the CFAA, GDPR, and platform Terms of Service</span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="ss">- </span>Retrieve and interpret a website's <span class="in">`robots.txt`</span> file to determine what is permitted for automated access</span>
+<span id="cb8-7"><a href="#cb8-7"></a><span class="ss">- </span>Configure responsible HTTP request headers including custom User-Agent strings with contact information</span>
+<span id="cb8-8"><a href="#cb8-8"></a><span class="ss">- </span>Apply a structured ethical decision framework before collecting web data</span>
+<span id="cb8-9"><a href="#cb8-9"></a><span class="ss">- </span>Implement rate limiting with <span class="in">`time.sleep()`</span> to avoid overloading servers</span>
+<span id="cb8-10"><a href="#cb8-10"></a>:::</span>
+<span id="cb8-11"><a href="#cb8-11"></a></span>
+<span id="cb8-12"><a href="#cb8-12"></a>::: {.callout-tip}</span>
+<span id="cb8-13"><a href="#cb8-13"></a><span class="fu">## Companion Notebook</span></span>
+<span id="cb8-14"><a href="#cb8-14"></a>Run this chapter's code as you read: download the <span class="co">[</span><span class="ot">companion notebook</span><span class="co">](notebooks/ch-02-ethics.ipynb)</span> (see @sec-appendix-notebooks for all of them).</span>
+<span id="cb8-15"><a href="#cb8-15"></a>:::</span>
+<span id="cb8-16"><a href="#cb8-16"></a></span>
+<span id="cb8-17"><a href="#cb8-17"></a></span>
+<span id="cb8-18"><a href="#cb8-18"></a><span class="fu">## The Ethics of Retrieval</span></span>
+<span id="cb8-19"><a href="#cb8-19"></a></span>
+<span id="cb8-20"><a href="#cb8-20"></a>The phrase "web scraping" is colloquial and popular but has pejorative connotations. Data is valuable: other people invested time, money, and effort to create and host the content you are about to retrieve programmatically. Before writing a single line of scraping code, you need to understand the legal, normative, and ethical landscape that governs your work.</span>
+<span id="cb8-21"><a href="#cb8-21"></a></span>
+<span id="cb8-22"><a href="#cb8-22"></a>This chapter establishes a decision framework that you should revisit before every data collection project in this book and beyond. The question is never simply "can I scrape this?" but rather "should I, and if so, how do I do it responsibly?"</span>
+<span id="cb8-23"><a href="#cb8-23"></a></span>
+<span id="cb8-24"><a href="#cb8-24"></a><span class="fu">## Legal Frameworks</span></span>
+<span id="cb8-25"><a href="#cb8-25"></a></span>
+<span id="cb8-26"><a href="#cb8-26"></a><span class="fu">### The Computer Fraud and Abuse Act</span></span>
+<span id="cb8-27"><a href="#cb8-27"></a></span>
+<span id="cb8-28"><a href="#cb8-28"></a>The <span class="co">[</span><span class="ot">Computer Fraud and Abuse Act</span><span class="co">](https://en.wikipedia.org/wiki/Computer_Fraud_and_Abuse_Act)</span> (CFAA) was enacted in 1986, expanding a narrower 1984 predecessor statute, in response to growing concerns about computer crime. Its key provision prohibits "unauthorized access" to computer systems, but what counts as "unauthorized" in the context of web scraping has been a matter of ongoing litigation.</span>
+<span id="cb8-29"><a href="#cb8-29"></a></span>
+<span id="cb8-30"><a href="#cb8-30"></a>Two cases define the modern boundaries. In *Van Buren v. United States* (2021), the Supreme Court narrowed the CFAA's "exceeds authorized access" provision: the Court adopted a "gates-up-or-down" reading under which the statute targets accessing systems or areas of systems you are not entitled to enter — not misusing information you were allowed to see. Before *Van Buren*, violating a website's stated terms could plausibly be framed as a federal crime; after it, that theory is much harder to sustain.</span>
+<span id="cb8-31"><a href="#cb8-31"></a></span>
+<span id="cb8-32"><a href="#cb8-32"></a>The second is *hiQ Labs v. LinkedIn*, and its full arc is instructive. hiQ, a data analytics company, scraped public LinkedIn profiles to build workforce analytics products; LinkedIn sent a cease-and-desist letter and blocked hiQ's access. The Ninth Circuit held in 2019 — and, after the Supreme Court sent the case back for reconsideration in light of *Van Buren*, held again in 2022 — that scraping publicly accessible data likely does not violate the CFAA, since no authentication "gate" was bypassed. But that is not the end of the story: later in 2022, hiQ *lost* on LinkedIn's breach-of-contract claim — it had continued scraping after agreeing to the Terms of Service and receiving the cease-and-desist — and the case settled with hiQ agreeing to stop. The lesson is precise: the CFAA probably does not criminalize scraping public pages, but contract law can still make it costly.</span>
+<span id="cb8-33"><a href="#cb8-33"></a></span>
+<span id="cb8-34"><a href="#cb8-34"></a>The case of *Sandvig v. Barr* challenged the CFAA's application to researchers who violated a website's Terms of Service in order to conduct audit studies of algorithmic discrimination. In 2020, a federal district court held that merely violating Terms of Service does not constitute a CFAA crime — a meaningful, if limited, protection for research. The case illustrates the tension between researchers' need for data and platforms' desire to control how their systems are studied.</span>
+<span id="cb8-35"><a href="#cb8-35"></a></span>
+<span id="cb8-36"><a href="#cb8-36"></a>The key takeaway: the legal landscape is unsettled and varies by jurisdiction. "It's technically possible" is not the same as "it's legal," and "it's legal" is not the same as "it's ethical."</span>
+<span id="cb8-37"><a href="#cb8-37"></a></span>
+<span id="cb8-38"><a href="#cb8-38"></a><span class="fu">### The Current Landscape: Scraping, AI, and State Privacy Law</span></span>
+<span id="cb8-39"><a href="#cb8-39"></a></span>
+<span id="cb8-40"><a href="#cb8-40"></a>The legal terrain has kept shifting since these landmark cases, and as of mid-2026 three developments matter most for your work.</span>
+<span id="cb8-41"><a href="#cb8-41"></a></span>
+<span id="cb8-42"><a href="#cb8-42"></a>First, courts have continued to treat scraping of *public, logged-out* content skeptically as a target for platform lawsuits. In early 2024, Meta's breach-of-contract claims against the data broker Bright Data failed in federal court because the scraping at issue collected only publicly available data without logging in; a parallel suit by X Corp. against the same company was dismissed later that year, with the court warning against letting platforms use contract law to claim exclusive ownership of public web data. These are trial-court rulings, not nationwide rules — but the direction is consistent with *hiQ*: authentication barriers and contractual relationships, not public visibility, are where legal risk concentrates.</span>
+<span id="cb8-43"><a href="#cb8-43"></a></span>
+<span id="cb8-44"><a href="#cb8-44"></a>Second, generative AI has opened a new front. *The New York Times v. OpenAI and Microsoft* (filed 2023) and a wave of similar suits ask whether scraping copyrighted content to train AI models is infringement or fair use. Whatever the outcomes, the litigation has already changed the web: publishers have hardened their sites against crawlers, added AI-specific directives to <span class="in">`robots.txt`</span>, and signed exclusive licensing deals — enclosure dynamics you will recognize from @sec-post-api.</span>
+<span id="cb8-45"><a href="#cb8-45"></a></span>
+<span id="cb8-46"><a href="#cb8-46"></a>Third, U.S. states have filled part of the federal privacy vacuum. California's CCPA/CPRA came first, and by 2026 more than a dozen states — including Colorado, whose Colorado Privacy Act applies to data about Colorado residents — have comprehensive privacy statutes with GDPR-like concepts: personal data rights, purpose limitation, and obligations on data processors. If your scraped dataset contains personal information about residents of these states, these laws can apply to you even as a student researcher. The practical implication is the same one this chapter keeps returning to: collect the minimum you need, and treat personal data as a liability, not an asset.</span>
+<span id="cb8-47"><a href="#cb8-47"></a></span>
+<span id="cb8-48"><a href="#cb8-48"></a><span class="fu">### Terms of Service as Quasi-Law</span></span>
+<span id="cb8-49"><a href="#cb8-49"></a></span>
+<span id="cb8-50"><a href="#cb8-50"></a>Every major platform has Terms of Service (ToS) that restrict automated data collection. When you create an account on Twitter, Reddit, or Facebook, you agree to these terms. Violating them can result in account suspension, IP blocking, or even legal action.</span>
+<span id="cb8-51"><a href="#cb8-51"></a></span>
+<span id="cb8-52"><a href="#cb8-52"></a>::: {.callout-warning}</span>
+<span id="cb8-53"><a href="#cb8-53"></a><span class="fu">## Warning</span></span>
+<span id="cb8-54"><a href="#cb8-54"></a>The code in several chapters of this book will retrieve data in ways that may violate the Terms of Service of the platforms involved. This is done in an educational context to teach technical skills. You are responsible for understanding and abiding by the terms of any platform you access. When in doubt, do not scrape — use an official API or request access through an institutional research program.</span>
+<span id="cb8-55"><a href="#cb8-55"></a>:::</span>
+<span id="cb8-56"><a href="#cb8-56"></a></span>
+<span id="cb8-57"><a href="#cb8-57"></a><span class="fu">### International Considerations</span></span>
+<span id="cb8-58"><a href="#cb8-58"></a></span>
+<span id="cb8-59"><a href="#cb8-59"></a>The European Union's General Data Protection Regulation (GDPR) adds another layer of complexity. GDPR gives individuals the right to control how their personal data is collected and processed. If you are scraping data that includes personally identifiable information about EU residents — names, email addresses, social media handles — you may be subject to GDPR requirements regardless of where you are located.</span>
+<span id="cb8-60"><a href="#cb8-60"></a></span>
+<span id="cb8-61"><a href="#cb8-61"></a><span class="fu">## Technical Norms: `robots.txt`</span></span>
+<span id="cb8-62"><a href="#cb8-62"></a></span>
+<span id="cb8-63"><a href="#cb8-63"></a>Beyond legal requirements, the web has developed a set of community norms for responsible automated access. The most important of these is the <span class="in">`robots.txt`</span> protocol.</span>
+<span id="cb8-64"><a href="#cb8-64"></a></span>
+<span id="cb8-65"><a href="#cb8-65"></a>A <span class="in">`robots.txt`</span> file lives at the root of a website (e.g., <span class="in">`https://example.com/robots.txt`</span>) and specifies which parts of the site automated agents are permitted or forbidden from accessing. It uses a simple syntax:</span>
+<span id="cb8-66"><a href="#cb8-66"></a></span>
+<span id="cb8-69"><a href="#cb8-69"></a><span class="in">```{python}</span></span>
+<span id="cb8-70"><a href="#cb8-70"></a><span class="im">import</span> requests</span>
+<span id="cb8-71"><a href="#cb8-71"></a></span>
+<span id="cb8-72"><a href="#cb8-72"></a><span class="co"># Retrieve robots.txt for Wikipedia</span></span>
+<span id="cb8-73"><a href="#cb8-73"></a>response <span class="op">=</span> requests.get(<span class="st">"https://en.wikipedia.org/robots.txt"</span>)</span>
+<span id="cb8-74"><a href="#cb8-74"></a><span class="bu">print</span>(response.text[:<span class="dv">500</span>])</span>
+<span id="cb8-75"><a href="#cb8-75"></a><span class="co"># The generic rules (as of mid-2026) include directives like:</span></span>
+<span id="cb8-76"><a href="#cb8-76"></a><span class="co"># User-agent: *</span></span>
+<span id="cb8-77"><a href="#cb8-77"></a><span class="co"># Allow: /w/api.php?action=mobileview&amp;</span></span>
+<span id="cb8-78"><a href="#cb8-78"></a><span class="co"># Allow: /w/load.php?</span></span>
+<span id="cb8-79"><a href="#cb8-79"></a><span class="co"># Disallow: /w/</span></span>
+<span id="cb8-80"><a href="#cb8-80"></a><span class="co"># Disallow: /api/</span></span>
+<span id="cb8-81"><a href="#cb8-81"></a><span class="co"># Disallow: /wiki/Special:</span></span>
+<span id="cb8-82"><a href="#cb8-82"></a><span class="in">```</span></span>
+<span id="cb8-83"><a href="#cb8-83"></a></span>
+<span id="cb8-84"><a href="#cb8-84"></a>The key directives are <span class="in">`User-agent`</span> (which crawler the rule applies to), <span class="in">`Disallow`</span> (paths that should not be accessed), <span class="in">`Allow`</span> (exceptions to disallow rules), and <span class="in">`Crawl-delay`</span> (requested time between requests). You can parse these programmatically:</span>
+<span id="cb8-85"><a href="#cb8-85"></a></span>
+<span id="cb8-88"><a href="#cb8-88"></a><span class="in">```{python}</span></span>
+<span id="cb8-89"><a href="#cb8-89"></a><span class="im">from</span> urllib.robotparser <span class="im">import</span> RobotFileParser</span>
+<span id="cb8-90"><a href="#cb8-90"></a></span>
+<span id="cb8-91"><a href="#cb8-91"></a>rp <span class="op">=</span> RobotFileParser()</span>
+<span id="cb8-92"><a href="#cb8-92"></a>rp.set_url(<span class="st">"https://en.wikipedia.org/robots.txt"</span>)</span>
+<span id="cb8-93"><a href="#cb8-93"></a>rp.read()</span>
+<span id="cb8-94"><a href="#cb8-94"></a></span>
+<span id="cb8-95"><a href="#cb8-95"></a><span class="co"># Can a generic crawler fetch an encyclopedia article?</span></span>
+<span id="cb8-96"><a href="#cb8-96"></a><span class="bu">print</span>(rp.can_fetch(<span class="st">"*"</span>, <span class="st">"https://en.wikipedia.org/wiki/Python_(programming_language)"</span>))</span>
+<span id="cb8-97"><a href="#cb8-97"></a><span class="co"># True — article pages under /wiki/ are open to crawlers</span></span>
+<span id="cb8-98"><a href="#cb8-98"></a></span>
+<span id="cb8-99"><a href="#cb8-99"></a><span class="co"># Can it fetch the dynamic pages under /w/, including the API?</span></span>
+<span id="cb8-100"><a href="#cb8-100"></a><span class="bu">print</span>(rp.can_fetch(<span class="st">"*"</span>, <span class="st">"https://en.wikipedia.org/w/api.php"</span>))</span>
+<span id="cb8-101"><a href="#cb8-101"></a><span class="co"># False — /w/ is disallowed for crawlers, with only narrow exceptions</span></span>
+<span id="cb8-102"><a href="#cb8-102"></a></span>
+<span id="cb8-103"><a href="#cb8-103"></a><span class="co"># Can it fetch special/internal pages?</span></span>
+<span id="cb8-104"><a href="#cb8-104"></a><span class="bu">print</span>(rp.can_fetch(<span class="st">"*"</span>, <span class="st">"https://en.wikipedia.org/wiki/Special:Search"</span>))</span>
+<span id="cb8-105"><a href="#cb8-105"></a><span class="co"># False — Special: pages are disallowed</span></span>
+<span id="cb8-106"><a href="#cb8-106"></a><span class="in">```</span></span>
+<span id="cb8-107"><a href="#cb8-107"></a></span>
+<span id="cb8-108"><a href="#cb8-108"></a>The second result deserves a pause, because it teaches an important nuance. Wikipedia *wants* programmatic users on its API — @sec-wikipedia is built on it — yet `robots.txt` disallows `/w/` paths. The two facts are not in conflict: `robots.txt` addresses *crawlers* that discover and fetch pages by following links, and Wikipedia would rather crawlers index its stable article URLs than its infinite space of dynamic, server-intensive `/w/` URLs. Deliberate API clients are governed by a different set of norms — the Wikimedia User-Agent policy and API etiquette guidelines — that you will follow in @sec-wikipedia. The general lesson: `robots.txt` tells you how a site wants *automated page-fetching* to behave, and it is one input among several (Terms of Service, API documentation, rate-limit guidance) rather than the complete rulebook.</span>
+<span id="cb8-109"><a href="#cb8-109"></a></span>
+<span id="cb8-110"><a href="#cb8-110"></a>If a site declares a <span class="in">`Crawl-delay`</span>, you can read it programmatically and respect it:</span>
+<span id="cb8-111"><a href="#cb8-111"></a></span>
+<span id="cb8-114"><a href="#cb8-114"></a><span class="in">```{python}</span></span>
+<span id="cb8-115"><a href="#cb8-115"></a>delay <span class="op">=</span> rp.crawl_delay(<span class="st">"*"</span>)</span>
+<span id="cb8-116"><a href="#cb8-116"></a><span class="bu">print</span>(delay)</span>
+<span id="cb8-117"><a href="#cb8-117"></a><span class="co"># None if the site declares no crawl delay; otherwise seconds between requests</span></span>
+<span id="cb8-118"><a href="#cb8-118"></a>wait <span class="op">=</span> delay <span class="cf">if</span> delay <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="cf">else</span> <span class="fl">1.0</span>  <span class="co"># Fall back to a polite default</span></span>
+<span id="cb8-119"><a href="#cb8-119"></a><span class="in">```</span></span>
+<span id="cb8-120"><a href="#cb8-120"></a></span>
+<span id="cb8-121"><a href="#cb8-121"></a>Two important caveats. First, <span class="in">`robots.txt`</span> is a norm, not a law. Violating it is not illegal (in most jurisdictions), but it is disrespectful of the site operator's wishes and may result in your IP being blocked. Second, if a site does not have a <span class="in">`robots.txt`</span> file (the request returns a 404), that means there are no crawling restrictions — not that you should crawl aggressively.</span>
+<span id="cb8-122"><a href="#cb8-122"></a></span>
+<span id="cb8-123"><a href="#cb8-123"></a><span class="fu">### Comparing robots.txt Across Platforms</span></span>
+<span id="cb8-124"><a href="#cb8-124"></a></span>
+<span id="cb8-125"><a href="#cb8-125"></a>Different organizations have dramatically different approaches to automated access, and their <span class="in">`robots.txt`</span> files reveal these philosophies. Compare three major sites:</span>
+<span id="cb8-126"><a href="#cb8-126"></a></span>
+<span id="cb8-129"><a href="#cb8-129"></a><span class="in">```{python}</span></span>
+<span id="cb8-130"><a href="#cb8-130"></a><span class="im">import</span> requests</span>
+<span id="cb8-131"><a href="#cb8-131"></a></span>
+<span id="cb8-132"><a href="#cb8-132"></a>sites <span class="op">=</span> {</span>
+<span id="cb8-133"><a href="#cb8-133"></a>    <span class="st">"Wikipedia"</span>: <span class="st">"https://en.wikipedia.org/robots.txt"</span>,</span>
+<span id="cb8-134"><a href="#cb8-134"></a>    <span class="st">"Reddit"</span>: <span class="st">"https://www.reddit.com/robots.txt"</span>,</span>
+<span id="cb8-135"><a href="#cb8-135"></a>    <span class="st">"NY Times"</span>: <span class="st">"https://www.nytimes.com/robots.txt"</span>,</span>
+<span id="cb8-136"><a href="#cb8-136"></a>}</span>
+<span id="cb8-137"><a href="#cb8-137"></a></span>
+<span id="cb8-138"><a href="#cb8-138"></a><span class="cf">for</span> name, url <span class="kw">in</span> sites.items():</span>
+<span id="cb8-139"><a href="#cb8-139"></a>    response <span class="op">=</span> requests.get(url)</span>
+<span id="cb8-140"><a href="#cb8-140"></a>    lines <span class="op">=</span> response.text.strip().split(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb8-141"><a href="#cb8-141"></a>    disallow_count <span class="op">=</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> line <span class="kw">in</span> lines <span class="cf">if</span> line.startswith(<span class="st">"Disallow"</span>))</span>
+<span id="cb8-142"><a href="#cb8-142"></a>    allow_count <span class="op">=</span> <span class="bu">sum</span>(<span class="dv">1</span> <span class="cf">for</span> line <span class="kw">in</span> lines <span class="cf">if</span> line.startswith(<span class="st">"Allow"</span>))</span>
+<span id="cb8-143"><a href="#cb8-143"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span><span class="bu">len</span>(lines)<span class="sc">}</span><span class="ss"> lines, </span><span class="sc">{</span>disallow_count<span class="sc">}</span><span class="ss"> Disallow rules, </span><span class="sc">{</span>allow_count<span class="sc">}</span><span class="ss"> Allow rules"</span>)</span>
+<span id="cb8-144"><a href="#cb8-144"></a><span class="in">```</span></span>
+<span id="cb8-145"><a href="#cb8-145"></a></span>
+<span id="cb8-146"><a href="#cb8-146"></a>Wikipedia's <span class="in">`robots.txt`</span> is permissive where it matters most — the encyclopedia articles under <span class="in">`/wiki/`</span> are open to crawlers — while restricting dynamic pages, editing interfaces, and internal administration paths under <span class="in">`/w/`</span> and <span class="in">`Special:`</span>. Programmatic access to its data happens instead through the API and public database dumps, governed by their own etiquette policies. This division of labor reflects Wikipedia's organizational commitment to openness: the data exists to be shared, through channels designed for sharing it. Reddit's file is more complex, restricting many URL patterns (user profiles, search results, sorted listings) while permitting basic page access. The New York Times is more restrictive still, blocking large sections of the site from automated access — reflecting the fact that its content is a commercial product.</span>
+<span id="cb8-147"><a href="#cb8-147"></a></span>
+<span id="cb8-148"><a href="#cb8-148"></a>These differences are not arbitrary. They reflect each organization's relationship with automated access: Wikipedia encourages it as part of its mission, Reddit tolerates it within limits, and the Times treats its content as proprietary. Reading <span class="in">`robots.txt`</span> before you scrape tells you not just what is permitted but what kind of organization you are dealing with.</span>
+<span id="cb8-149"><a href="#cb8-149"></a></span>
+<span id="cb8-150"><a href="#cb8-150"></a><span class="fu">## Responsible Request Headers</span></span>
+<span id="cb8-151"><a href="#cb8-151"></a></span>
+<span id="cb8-152"><a href="#cb8-152"></a>When your code makes requests to a web server, the server sees metadata about the request including the <span class="in">`User-Agent`</span> header, which identifies who is making the request. By default, the <span class="in">`requests`</span> library sends a generic User-Agent string. You should replace it with one that identifies you and provides contact information:</span>
+<span id="cb8-153"><a href="#cb8-153"></a></span>
+<span id="cb8-156"><a href="#cb8-156"></a><span class="in">```{python}</span></span>
+<span id="cb8-157"><a href="#cb8-157"></a><span class="im">import</span> requests</span>
+<span id="cb8-158"><a href="#cb8-158"></a></span>
+<span id="cb8-159"><a href="#cb8-159"></a>headers <span class="op">=</span> {</span>
+<span id="cb8-160"><a href="#cb8-160"></a>    <span class="st">"User-Agent"</span>: <span class="st">"WebDataScience/1.0 (INFO 4617; brian.keegan@colorado.edu)"</span></span>
+<span id="cb8-161"><a href="#cb8-161"></a>}</span>
+<span id="cb8-162"><a href="#cb8-162"></a></span>
+<span id="cb8-163"><a href="#cb8-163"></a>response <span class="op">=</span> requests.get(<span class="st">"https://example.com"</span>, headers<span class="op">=</span>headers)</span>
+<span id="cb8-164"><a href="#cb8-164"></a><span class="in">```</span></span>
+<span id="cb8-165"><a href="#cb8-165"></a></span>
+<span id="cb8-166"><a href="#cb8-166"></a>This practice serves two purposes: it lets site operators contact you if your scraping causes problems, and it signals that you are a responsible actor rather than a malicious bot. Some APIs (including the Wikimedia API you used in @sec-introduction) require a meaningful User-Agent and will return errors or impose stricter rate limits if you do not provide one.</span>
+<span id="cb8-167"><a href="#cb8-167"></a></span>
+<span id="cb8-168"><a href="#cb8-168"></a>::: {.callout-tip}</span>
+<span id="cb8-169"><a href="#cb8-169"></a><span class="fu">## Missing Manual Reference</span></span>
+<span id="cb8-170"><a href="#cb8-170"></a>For a deeper introduction to HTTP requests, headers, and status codes — the machinery beneath every example in this chapter — see *Missing Manual* Chapter 24: HTTP and Web APIs.</span>
+<span id="cb8-171"><a href="#cb8-171"></a>:::</span>
+<span id="cb8-172"><a href="#cb8-172"></a></span>
+<span id="cb8-173"><a href="#cb8-173"></a><span class="fu">## Rate Limiting</span></span>
+<span id="cb8-174"><a href="#cb8-174"></a></span>
+<span id="cb8-175"><a href="#cb8-175"></a>Making hundreds of requests per second to a web server can degrade its performance for other users — effectively mounting a denial-of-service attack on a site you are trying to study. Always space out your requests:</span>
+<span id="cb8-176"><a href="#cb8-176"></a></span>
+<span id="cb8-179"><a href="#cb8-179"></a><span class="in">```{python}</span></span>
+<span id="cb8-180"><a href="#cb8-180"></a><span class="im">import</span> time</span>
+<span id="cb8-181"><a href="#cb8-181"></a><span class="im">import</span> requests</span>
+<span id="cb8-182"><a href="#cb8-182"></a></span>
+<span id="cb8-183"><a href="#cb8-183"></a>urls <span class="op">=</span> [<span class="st">"https://example.com/page1"</span>, <span class="st">"https://example.com/page2"</span>]</span>
+<span id="cb8-184"><a href="#cb8-184"></a></span>
+<span id="cb8-185"><a href="#cb8-185"></a><span class="cf">for</span> url <span class="kw">in</span> urls:</span>
+<span id="cb8-186"><a href="#cb8-186"></a>    response <span class="op">=</span> requests.get(url, headers<span class="op">=</span>headers)</span>
+<span id="cb8-187"><a href="#cb8-187"></a>    <span class="co"># Process the response...</span></span>
+<span id="cb8-188"><a href="#cb8-188"></a>    time.sleep(<span class="dv">1</span>)  <span class="co"># Wait 1 second between requests</span></span>
+<span id="cb8-189"><a href="#cb8-189"></a><span class="in">```</span></span>
+<span id="cb8-190"><a href="#cb8-190"></a></span>
+<span id="cb8-191"><a href="#cb8-191"></a>A good default is one request per second. If the site's <span class="in">`robots.txt`</span> specifies a <span class="in">`Crawl-delay`</span>, respect it. If you are hitting an API with documented rate limits, stay well within them.</span>
+<span id="cb8-192"><a href="#cb8-192"></a></span>
+<span id="cb8-193"><a href="#cb8-193"></a><span class="fu">### Building a Responsible Scraper Function</span></span>
+<span id="cb8-194"><a href="#cb8-194"></a></span>
+<span id="cb8-195"><a href="#cb8-195"></a>The principles above — custom User-Agent, rate limiting, error handling — appear in every scraping project. Rather than implementing them ad hoc each time, you can wrap them into a reusable function:</span>
+<span id="cb8-196"><a href="#cb8-196"></a></span>
+<span id="cb8-199"><a href="#cb8-199"></a><span class="in">```{python}</span></span>
+<span id="cb8-200"><a href="#cb8-200"></a><span class="im">import</span> requests</span>
+<span id="cb8-201"><a href="#cb8-201"></a><span class="im">import</span> time</span>
+<span id="cb8-202"><a href="#cb8-202"></a><span class="im">import</span> logging</span>
+<span id="cb8-203"><a href="#cb8-203"></a></span>
+<span id="cb8-204"><a href="#cb8-204"></a><span class="kw">def</span> responsible_get(url, headers<span class="op">=</span><span class="va">None</span>, delay<span class="op">=</span><span class="fl">1.0</span>):</span>
+<span id="cb8-205"><a href="#cb8-205"></a>    <span class="co">"""Make an HTTP GET request with responsible defaults.</span></span>
+<span id="cb8-206"><a href="#cb8-206"></a></span>
+<span id="cb8-207"><a href="#cb8-207"></a><span class="co">    Parameters</span></span>
+<span id="cb8-208"><a href="#cb8-208"></a><span class="co">    ----------</span></span>
+<span id="cb8-209"><a href="#cb8-209"></a><span class="co">    url : str</span></span>
+<span id="cb8-210"><a href="#cb8-210"></a><span class="co">        The URL to request</span></span>
+<span id="cb8-211"><a href="#cb8-211"></a><span class="co">    headers : dict, optional</span></span>
+<span id="cb8-212"><a href="#cb8-212"></a><span class="co">        Custom headers; a default User-Agent is added if none provided</span></span>
+<span id="cb8-213"><a href="#cb8-213"></a><span class="co">    delay : float</span></span>
+<span id="cb8-214"><a href="#cb8-214"></a><span class="co">        Seconds to wait after the request (default: 1.0)</span></span>
+<span id="cb8-215"><a href="#cb8-215"></a></span>
+<span id="cb8-216"><a href="#cb8-216"></a><span class="co">    Returns</span></span>
+<span id="cb8-217"><a href="#cb8-217"></a><span class="co">    -------</span></span>
+<span id="cb8-218"><a href="#cb8-218"></a><span class="co">    requests.Response or None</span></span>
+<span id="cb8-219"><a href="#cb8-219"></a><span class="co">        The response object, or None if the request failed</span></span>
+<span id="cb8-220"><a href="#cb8-220"></a><span class="co">    """</span></span>
+<span id="cb8-221"><a href="#cb8-221"></a>    default_headers <span class="op">=</span> {</span>
+<span id="cb8-222"><a href="#cb8-222"></a>        <span class="st">"User-Agent"</span>: <span class="st">"WebDataScience/1.0 (student-project; your-email@colorado.edu)"</span></span>
+<span id="cb8-223"><a href="#cb8-223"></a>    }</span>
+<span id="cb8-224"><a href="#cb8-224"></a>    <span class="cf">if</span> headers:</span>
+<span id="cb8-225"><a href="#cb8-225"></a>        default_headers.update(headers)</span>
+<span id="cb8-226"><a href="#cb8-226"></a></span>
+<span id="cb8-227"><a href="#cb8-227"></a>    <span class="cf">try</span>:</span>
+<span id="cb8-228"><a href="#cb8-228"></a>        response <span class="op">=</span> requests.get(url, headers<span class="op">=</span>default_headers, timeout<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb8-229"><a href="#cb8-229"></a>        response.raise_for_status()  <span class="co"># Treat 4xx/5xx statuses as failures</span></span>
+<span id="cb8-230"><a href="#cb8-230"></a>        logging.info(<span class="ss">f"</span><span class="sc">{</span>response<span class="sc">.</span>status_code<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>url<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb8-231"><a href="#cb8-231"></a>        time.sleep(delay)</span>
+<span id="cb8-232"><a href="#cb8-232"></a>        <span class="cf">return</span> response</span>
+<span id="cb8-233"><a href="#cb8-233"></a>    <span class="cf">except</span> requests.exceptions.HTTPError <span class="im">as</span> e:</span>
+<span id="cb8-234"><a href="#cb8-234"></a>        logging.error(<span class="ss">f"HTTP error: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb8-235"><a href="#cb8-235"></a>        time.sleep(delay)  <span class="co"># A failed request still counts against the server</span></span>
+<span id="cb8-236"><a href="#cb8-236"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb8-237"><a href="#cb8-237"></a>    <span class="cf">except</span> requests.exceptions.RequestException <span class="im">as</span> e:</span>
+<span id="cb8-238"><a href="#cb8-238"></a>        logging.error(<span class="ss">f"Request failed (</span><span class="sc">{</span><span class="bu">type</span>(e)<span class="sc">.</span><span class="va">__name__</span><span class="sc">}</span><span class="ss">): </span><span class="sc">{</span>url<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb8-239"><a href="#cb8-239"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb8-240"><a href="#cb8-240"></a><span class="in">```</span></span>
+<span id="cb8-241"><a href="#cb8-241"></a></span>
+<span id="cb8-242"><a href="#cb8-242"></a>Every design choice in this function reflects a principle from this chapter. The default User-Agent identifies you and provides contact information, so site operators can reach you if your scraping causes problems. The configurable delay enforces rate limiting by default — you have to explicitly override it, which makes aggressive scraping a conscious decision rather than an oversight. The <span class="in">`raise_for_status()`</span> call ensures that a <span class="in">`404 Not Found`</span> or <span class="in">`403 Forbidden`</span> is treated as the failure it is, rather than silently passed downstream to your parser. The <span class="in">`except`</span> blocks handle both HTTP errors and the whole family of network failures (<span class="in">`ConnectionError`</span>, <span class="in">`Timeout`</span>, <span class="in">`SSLError`</span>, and other <span class="in">`RequestException`</span> subtypes) gracefully, logging the error instead of crashing your entire scraping run. The <span class="in">`timeout`</span> parameter prevents your script from hanging indefinitely on an unresponsive server. And if a site declares a <span class="in">`Crawl-delay`</span> in its <span class="in">`robots.txt`</span>, pass that value as <span class="in">`delay`</span> so your tool honors the site's own stated preference.</span>
+<span id="cb8-243"><a href="#cb8-243"></a></span>
+<span id="cb8-244"><a href="#cb8-244"></a>You will use variations of this pattern in @sec-static-pages when scraping HTML tables, in @sec-archives when retrieving historical snapshots, and throughout the API chapters. Building responsible defaults into your tools is more reliable than remembering to add them each time.</span>
+<span id="cb8-245"><a href="#cb8-245"></a></span>
+<span id="cb8-246"><a href="#cb8-246"></a><span class="fu">## An Ethical Decision Framework</span></span>
+<span id="cb8-247"><a href="#cb8-247"></a></span>
+<span id="cb8-248"><a href="#cb8-248"></a>Before any data collection project, work through these five questions:</span>
+<span id="cb8-249"><a href="#cb8-249"></a></span>
+<span id="cb8-250"><a href="#cb8-250"></a><span class="ss">1. </span>**Legality.** Is this data collection permitted under the CFAA, GDPR, and any applicable local laws? Is it consistent with the site's Terms of Service?</span>
+<span id="cb8-251"><a href="#cb8-251"></a></span>
+<span id="cb8-252"><a href="#cb8-252"></a><span class="ss">2. </span>**Consent.** Did the people whose data you are collecting consent to this use? Is the data truly public, or did users share it within a platform with reasonable expectations of limited visibility?</span>
+<span id="cb8-253"><a href="#cb8-253"></a></span>
+<span id="cb8-254"><a href="#cb8-254"></a><span class="ss">3. </span>**Proportionality.** Are you collecting only the data you need for your research question? Could you answer your question with less data or with less sensitive data?</span>
+<span id="cb8-255"><a href="#cb8-255"></a></span>
+<span id="cb8-256"><a href="#cb8-256"></a><span class="ss">4. </span>**Privacy.** Does your dataset contain personally identifiable information? Could individuals be re-identified from ostensibly anonymized data? What are the risks if the data is breached or misused?</span>
+<span id="cb8-257"><a href="#cb8-257"></a></span>
+<span id="cb8-258"><a href="#cb8-258"></a><span class="ss">5. </span>**Server impact.** Will your scraping impose a meaningful load on the server? Are you rate-limiting appropriately? Are you scraping during off-peak hours for high-traffic sites?</span>
+<span id="cb8-259"><a href="#cb8-259"></a></span>
+<span id="cb8-260"><a href="#cb8-260"></a>No framework can substitute for judgment. But working through these questions systematically will help you identify risks and make defensible decisions.</span>
+<span id="cb8-261"><a href="#cb8-261"></a></span>
+<span id="cb8-262"><a href="#cb8-262"></a><span class="fu">### IRBs and Web Data</span></span>
+<span id="cb8-263"><a href="#cb8-263"></a></span>
+<span id="cb8-264"><a href="#cb8-264"></a>If you are conducting research at a university, there is an additional layer of oversight: the Institutional Review Board (IRB). IRBs review research involving human subjects to ensure it meets ethical standards derived from the Belmont Report's three principles — respect for persons, beneficence, and justice.</span>
+<span id="cb8-265"><a href="#cb8-265"></a></span>
+<span id="cb8-266"><a href="#cb8-266"></a>When does web scraping become human subjects research? The general rule is that it qualifies when you collect data *about identifiable people* to produce *generalizable knowledge*. Scraping public government records — legislative votes, budget documents, meeting minutes — is usually not human subjects research because the subjects are institutions and public officials acting in their official capacities. But scraping social media profiles to study health behaviors, political attitudes, or personal relationships almost certainly is, because you are studying identifiable individuals and their behavior.</span>
+<span id="cb8-267"><a href="#cb8-267"></a></span>
+<span id="cb8-268"><a href="#cb8-268"></a>The line is not always clear. Scraping aggregated, anonymous data (like Wikipedia edit counts without usernames) falls into a gray area. When in doubt, consult your institution's IRB. Many universities have expedited review processes for minimal-risk research involving publicly available data, and the process of writing an IRB protocol forces you to think carefully about privacy, consent, and data security — exactly the issues this chapter's framework addresses. The Belmont Report's principles complement the five-question framework above: respect for persons maps to consent, beneficence to proportionality and privacy, and justice to the question of who bears the risks and who receives the benefits of your research.</span>
+<span id="cb8-269"><a href="#cb8-269"></a></span>
+<span id="cb8-270"><a href="#cb8-270"></a><span class="fu">## Exercises</span></span>
+<span id="cb8-271"><a href="#cb8-271"></a></span>
+<span id="cb8-272"><a href="#cb8-272"></a><span class="ss">1. </span>**Compare robots.txt files.** Retrieve and compare <span class="in">`robots.txt`</span> for five websites in the same category (e.g., five news organizations, five universities, or five social media platforms). What patterns emerge in what they allow and restrict? Write a brief analysis in a Markdown cell.</span>
+<span id="cb8-273"><a href="#cb8-273"></a></span>
+<span id="cb8-274"><a href="#cb8-274"></a><span class="ss">2. </span>**Terms of Service audit.** Read the Terms of Service for a platform you use regularly. Identify three clauses that restrict automated data collection. For each, assess whether academic research would be covered by any exceptions or fair use arguments.</span>
+<span id="cb8-275"><a href="#cb8-275"></a></span>
+<span id="cb8-276"><a href="#cb8-276"></a><span class="ss">3. </span>**Ethical decision framework.** Apply the five-question framework to a hypothetical scenario: a researcher wants to scrape user profiles from a dating app to study patterns in self-presentation across demographic groups. Work through each question and write a recommendation.</span>
+<span id="cb8-277"><a href="#cb8-277"></a></span>
+<span id="cb8-278"><a href="#cb8-278"></a><span class="ss">4. </span>**Rate limiting experiment.** Using <span class="in">`time.time()`</span> to measure elapsed time, write a loop that makes five requests to a public website with a one-second delay between each. Then modify the delay to two seconds. Confirm that your actual request timing matches your intended rate.</span>
+<span id="cb8-279"><a href="#cb8-279"></a></span>
+<span id="cb8-280"><a href="#cb8-280"></a><span class="ss">5. </span>**Personal robots.txt audit.** Retrieve <span class="in">`robots.txt`</span> for a website you use daily but have never scraped. Read the <span class="in">`Disallow`</span> rules carefully. Then find and read the site's Terms of Service (look for links in the footer). Write a 300-word analysis: if you wanted to collect data from this site for a class project, what would <span class="in">`robots.txt`</span>, the Terms of Service, and the five-question ethical framework each permit and restrict? Where do these three sources of guidance agree, and where do they conflict?</span>
+<span id="cb8-281"><a href="#cb8-281"></a></span>
+<span id="cb8-282"><a href="#cb8-282"></a><span class="ss">6. </span>**Graduate extension (INFO 5617).** Read @fiesler2020no alongside the EFF's CFAA explainer and a summary of *Van Buren v. United States*. Then write a two-page memo advising a university research team that wants to collect public data from three platforms of your choosing. For each platform, make an explicit determination on four dimensions: CFAA exposure after *Van Buren*, Terms of Service and contract risk after *hiQ*, <span class="in">`robots.txt`</span> guidance, and whether the project likely requires IRB review. Conclude with a collection protocol the team should follow.</span>
+<span id="cb8-283"><a href="#cb8-283"></a></span>
+<span id="cb8-284"><a href="#cb8-284"></a>::: {.callout-note}</span>
+<span id="cb8-285"><a href="#cb8-285"></a><span class="fu">## Public Interest Connection</span></span>
+<span id="cb8-286"><a href="#cb8-286"></a>The ethical framework introduced here connects directly to the values of **oversight** and **openness** discussed in @sec-post-api. Responsible data collection practices are themselves a form of oversight — they make your methods transparent and accountable. And the commitment to documenting your scraping practices (User-Agent strings, rate limiting, data handling) embodies the openness that the web data science community depends on.</span>
+<span id="cb8-287"><a href="#cb8-287"></a>:::</span>
+<span id="cb8-288"><a href="#cb8-288"></a></span>
+<span id="cb8-289"><a href="#cb8-289"></a><span class="fu">## Social History and Public Interest</span></span>
+<span id="cb8-290"><a href="#cb8-290"></a></span>
+<span id="cb8-291"><a href="#cb8-291"></a>The tension between data access and data protection is not new. Journalists have long navigated similar terrain through freedom-of-information laws, source protection, and editorial ethics. The CFAA was originally designed to combat hacking, but its vague language about "unauthorized access" has been used to threaten researchers, journalists, and security auditors. The Aaron Swartz case — in which a young activist faced federal charges for downloading academic articles from JSTOR through MIT's network — remains a sobering reminder of how aggressively the CFAA can be applied <span class="co">[</span><span class="ot">@fiesler2020no</span><span class="co">]</span>.</span>
+<span id="cb8-292"><a href="#cb8-292"></a></span>
+<span id="cb8-293"><a href="#cb8-293"></a>The Cambridge Analytica scandal of 2018 was a turning point. A researcher collected Facebook data through the platform's API, ostensibly for academic purposes, then shared it with a political consulting firm. The fallout led Facebook, and then other platforms, to drastically restrict API access — a closure that affected all researchers, not just those who had misused data. This history is central to understanding the post-API landscape described in @sec-post-api.</span>
+<span id="cb8-294"><a href="#cb8-294"></a></span>
+<span id="cb8-295"><a href="#cb8-295"></a>The aftermath of Cambridge Analytica created a chilling effect that extended far beyond Facebook. IRBs at universities became more cautious about approving any research involving social media data, even when the data was public and the research served clear public interests. Platforms shut down APIs that legitimate researchers had depended on for years, citing privacy concerns that conveniently also prevented the kind of external scrutiny that might reveal algorithmic bias or content moderation failures. The academic research community is still rebuilding trust and access through alternative frameworks: the European Union's Digital Services Act (DSA) now mandates researcher access to platform data for public interest research, data donation programs ask users to voluntarily share their data with researchers, and negotiated research agreements between universities and platforms provide structured access with privacy safeguards. These developments represent an ongoing effort to balance legitimate privacy concerns with the public's interest in understanding how platforms shape information, attention, and behavior. The tools and ethical frameworks in this chapter position you to participate in that effort responsibly.</span>
+<span id="cb8-296"><a href="#cb8-296"></a></span>
+<span id="cb8-297"><a href="#cb8-297"></a><span class="fu">## Common Issues to Debug</span></span>
+<span id="cb8-298"><a href="#cb8-298"></a></span>
+<span id="cb8-299"><a href="#cb8-299"></a><span class="ss">- </span>**`robots.txt` not found (404)**: This means there are no crawling restrictions, not that the site is blocking you.</span>
+<span id="cb8-300"><a href="#cb8-300"></a><span class="ss">- </span>**Requests blocked despite `robots.txt` allowing access**: Some sites use additional bot detection (CAPTCHAs, JavaScript challenges, behavioral analysis) beyond <span class="in">`robots.txt`</span>.</span>
+<span id="cb8-301"><a href="#cb8-301"></a><span class="ss">- </span>**403 Forbidden with a responsible User-Agent**: The site may be blocking all automated access regardless of your headers. Respect this.</span>
+<span id="cb8-302"><a href="#cb8-302"></a><span class="ss">- </span>**Forgetting `time.sleep()`**: If your IP gets temporarily banned, wait at least an hour before trying again, and add appropriate delays to your code.</span>
+<span id="cb8-303"><a href="#cb8-303"></a></span>
+<span id="cb8-304"><a href="#cb8-304"></a><span class="fu">## Key Takeaways</span></span>
+<span id="cb8-305"><a href="#cb8-305"></a></span>
+<span id="cb8-306"><a href="#cb8-306"></a>Every capability introduced in subsequent chapters raises the questions you have worked through here. The legal landscape is unsettled; technical norms like <span class="in">`robots.txt`</span> provide guidance but not protection; and ethical principles require case-by-case judgment. The framework — legality, consent, proportionality, privacy, server impact — should become habitual. When in doubt, err on the side of caution: use an API instead of scraping, collect less data rather than more, and always identify yourself in your request headers.</span>
+<span id="cb8-307"><a href="#cb8-307"></a></span>
+<span id="cb8-308"><a href="#cb8-308"></a><span class="fu">## Further Reading</span></span>
+<span id="cb8-309"><a href="#cb8-309"></a></span>
+<span id="cb8-310"><a href="#cb8-310"></a><span class="ss">- </span>@fiesler2020no — legal and ethical analysis of ToS-based data collection restrictions</span>
+<span id="cb8-311"><a href="#cb8-311"></a><span class="ss">- </span>@freelon2018computational — the changing landscape of computational research access</span>
+<span id="cb8-312"><a href="#cb8-312"></a><span class="ss">- </span>Electronic Frontier Foundation on the CFAA: <span class="ot">&lt;https://www.eff.org/issues/cfaa&gt;</span></span>
+<span id="cb8-313"><a href="#cb8-313"></a><span class="ss">- </span>The <span class="in">`robots.txt`</span> specification: <span class="ot">&lt;https://www.robotstxt.org/&gt;</span></span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
