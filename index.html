@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -76,10 +79,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8fee89e02ae113551d56c8e5eb7677c9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1b15cd7dfe5d645daabccee077c4b062.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -357,7 +360,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 2026</p>
+      <p class="date">August 2026</p>
     </div>
   </div>
   
@@ -512,16 +515,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
     function toggleCodeHandler(show) {
       return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
           if (show) {
             details.open = true;
           } else {
             details.removeAttribute("open");
           }
         }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
         const fromCls = show ? "hidden" : "unhidden";
         const toCls = show ? "unhidden" : "hidden";
         for (let i=0; i<cellCodeDivs.length; i++) {
@@ -880,45 +883,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu"># Preface {.unnumbered}</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a>The internet makes many kinds of information easy to access. Public agencies publish data through APIs, social platforms expose behavioral traces through developer tools, news organizations structure their archives in parseable HTML, and government bodies release records as downloadable documents. The ability to retrieve, parse, and analyze this information is a valuable and increasingly contested skill.</span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>This book provides an overview of computational tools and practices for transforming web documents and APIs into data for common research designs. It is designed for advanced undergraduates and early-career master's students who have some experience with Python programming — you know loops, functions, lists, and dictionaries — but have not yet worked extensively with web protocols, HTML parsing, or API access.</span>
-<span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">## What You Will Learn</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a>By the end of this book, you will be able to:</span>
-<span id="cb1-10"><a href="#cb1-10"></a></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="ss">- </span>Retrieve data from static and dynamic web pages, archived documents, and PDF files</span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="ss">- </span>Access and query web APIs including Wikipedia, the U.S. Census Bureau, FRED, the FEC, Reddit, Spotify, Bluesky, Mastodon, OpenAI, and Anthropic</span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="ss">- </span>Navigate the legal and ethical landscape of web data collection</span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="ss">- </span>Automate data collection pipelines using GitHub Actions</span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="ss">- </span>Design research projects that combine multiple web data sources</span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="ss">- </span>Reason critically about the structural forces — enclosure, exemption, and erosion — that are reshaping access to web data</span>
-<span id="cb1-17"><a href="#cb1-17"></a></span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="fu">## How This Book Is Organized</span></span>
-<span id="cb1-19"><a href="#cb1-19"></a></span>
-<span id="cb1-20"><a href="#cb1-20"></a>The book is divided into four parts. **Part I (Foundations)** introduces the computing environment, ethical and legal frameworks, the changing landscape of data access, web data formats, and internet protocols. **Part II (Documents)** covers extracting data from static web pages, archived pages, dynamic pages, and PDFs. **Part III (APIs)** teaches you to work with Wikipedia, government, social media, and AI APIs. **Part IV (Practice)** addresses automation and research design.</span>
-<span id="cb1-21"><a href="#cb1-21"></a></span>
-<span id="cb1-22"><a href="#cb1-22"></a>Each chapter follows a consistent structure: learning objectives, conceptual motivation, a guided tutorial with narrative code, exercises, a discussion of social history and public interest themes, common debugging issues, key takeaways, and links to further reading. Because this book serves a combined undergraduate and graduate course (INFO 4617/5617), each chapter's final exercise is a **graduate extension** — a scholarly reading paired with a more open-ended task — intended for the 5000-level section, though ambitious undergraduates are welcome to attempt them.</span>
-<span id="cb1-23"><a href="#cb1-23"></a></span>
-<span id="cb1-24"><a href="#cb1-24"></a>Every chapter also has a companion Jupyter Notebook containing the chapter's code and narrative, ready to download and run as you read. See @sec-appendix-notebooks for the full list.</span>
-<span id="cb1-25"><a href="#cb1-25"></a></span>
-<span id="cb1-26"><a href="#cb1-26"></a><span class="fu">## Prerequisites and Companion Resources</span></span>
-<span id="cb1-27"><a href="#cb1-27"></a></span>
-<span id="cb1-28"><a href="#cb1-28"></a>This book assumes you have Python 3.10 or above installed via the Anaconda distribution, and that you are comfortable working in Jupyter Notebooks. If you need to set up or troubleshoot your computing environment, the <span class="co">[</span><span class="ot">*Missing Manual for Information Scientists*</span><span class="co">](https://cuinfoscience.github.io/INFO-Missing-Manual/)</span> is a companion resource that covers the hidden curriculum of computing technologies — from operating systems and file management to debugging, version control, and secrets management. This book references specific chapters of the *Missing Manual* throughout.</span>
-<span id="cb1-29"><a href="#cb1-29"></a></span>
-<span id="cb1-30"><a href="#cb1-30"></a>Code blocks in this book are narrative: they include comments explaining what each line does, but they are set to not execute automatically. You should run the code yourself in a Jupyter Notebook or Python script to see the results. This design choice reflects a pedagogical commitment: running code, seeing it fail, and debugging it is where the learning happens.</span>
-<span id="cb1-31"><a href="#cb1-31"></a></span>
-<span id="cb1-32"><a href="#cb1-32"></a><span class="fu">## Acknowledgements</span></span>
-<span id="cb1-33"><a href="#cb1-33"></a></span>
-<span id="cb1-34"><a href="#cb1-34"></a>This book grew out of the INFO 4871/5871: Web Data Science course at the University of Colorado Boulder. It has benefited from the questions, frustrations, and insights of many cohorts of students. The author also gratefully acknowledges the journalists, researchers, and civic technologists whose work demonstrates why web data fluency matters for the public interest.</span>
-<span id="cb1-35"><a href="#cb1-35"></a></span>
-<span id="cb1-36"><a href="#cb1-36"></a>::: {.callout-note}</span>
-<span id="cb1-37"><a href="#cb1-37"></a><span class="fu">## AI Disclosure</span></span>
-<span id="cb1-38"><a href="#cb1-38"></a>Portions of this book were drafted with the assistance of large language model tools. All content has been reviewed, edited, and verified by the author. For more on responsible AI disclosure in academic work, see @sec-appendix-ai-disclosure.</span>
-<span id="cb1-39"><a href="#cb1-39"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-label="1"></a><span class="fu"># Preface {.unnumbered}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-label="2"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-label="3"></a>The internet makes many kinds of information easy to access. Public agencies publish data through APIs, social platforms expose behavioral traces through developer tools, news organizations structure their archives in parseable HTML, and government bodies release records as downloadable documents. The ability to retrieve, parse, and analyze this information is a valuable and increasingly contested skill.</span>
+<span id="cb1-4"><a href="#cb1-4" aria-label="4"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-label="5"></a>This book provides an overview of computational tools and practices for transforming web documents and APIs into data for common research designs. It is designed for advanced undergraduates and early-career master's students who have some experience with Python programming — you know loops, functions, lists, and dictionaries — but have not yet worked extensively with web protocols, HTML parsing, or API access.</span>
+<span id="cb1-6"><a href="#cb1-6" aria-label="6"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-label="7"></a><span class="fu">## What You Will Learn</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-label="8"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-label="9"></a>By the end of this book, you will be able to:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-label="10"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-label="11"></a><span class="ss">- </span>Retrieve data from static and dynamic web pages, archived documents, and PDF files</span>
+<span id="cb1-12"><a href="#cb1-12" aria-label="12"></a><span class="ss">- </span>Access and query web APIs including Wikipedia, the U.S. Census Bureau, FRED, the FEC, Reddit, Spotify, Bluesky, Mastodon, OpenAI, and Anthropic</span>
+<span id="cb1-13"><a href="#cb1-13" aria-label="13"></a><span class="ss">- </span>Navigate the legal and ethical landscape of web data collection</span>
+<span id="cb1-14"><a href="#cb1-14" aria-label="14"></a><span class="ss">- </span>Automate data collection pipelines using GitHub Actions</span>
+<span id="cb1-15"><a href="#cb1-15" aria-label="15"></a><span class="ss">- </span>Design research projects that combine multiple web data sources</span>
+<span id="cb1-16"><a href="#cb1-16" aria-label="16"></a><span class="ss">- </span>Reason critically about the structural forces — enclosure, exemption, and erosion — that are reshaping access to web data</span>
+<span id="cb1-17"><a href="#cb1-17" aria-label="17"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-label="18"></a><span class="fu">## How This Book Is Organized</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-label="19"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-label="20"></a>The book is divided into four parts. **Part I (Foundations)** introduces the computing environment, ethical and legal frameworks, the changing landscape of data access, web data formats, and internet protocols. **Part II (Documents)** covers extracting data from static web pages, archived pages, dynamic pages, and PDFs. **Part III (APIs)** teaches you to work with Wikipedia, government, social media, and AI APIs. **Part IV (Practice)** addresses automation and research design.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-label="21"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-label="22"></a>Each chapter follows a consistent structure: learning objectives, conceptual motivation, a guided tutorial with narrative code, exercises, a discussion of social history and public interest themes, common debugging issues, key takeaways, and links to further reading. Because this book serves a combined undergraduate and graduate course (INFO 4617/5617), each chapter's final exercise is a **graduate extension** — a scholarly reading paired with a more open-ended task — intended for the 5000-level section, though ambitious undergraduates are welcome to attempt them.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-label="23"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-label="24"></a>Every chapter also has a companion Jupyter Notebook containing the chapter's code and narrative, ready to download and run as you read. See @sec-appendix-notebooks for the full list.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-label="25"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-label="26"></a><span class="fu">## Prerequisites and Companion Resources</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-label="27"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-label="28"></a>This book assumes you have Python 3.10 or above installed via the Anaconda distribution, and that you are comfortable working in Jupyter Notebooks. If you need to set up or troubleshoot your computing environment, the <span class="co">[</span><span class="ot">*Missing Manual for Information Scientists*</span><span class="co">](https://cuinfoscience.github.io/INFO-Missing-Manual/)</span> is a companion resource that covers the hidden curriculum of computing technologies — from operating systems and file management to debugging, version control, and secrets management. This book references specific chapters of the *Missing Manual* throughout.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-label="29"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-label="30"></a>Code blocks in this book are narrative: they include comments explaining what each line does, but they are set to not execute automatically. You should run the code yourself in a Jupyter Notebook or Python script to see the results. This design choice reflects a pedagogical commitment: running code, seeing it fail, and debugging it is where the learning happens.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-label="31"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-label="32"></a><span class="fu">## Acknowledgements</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-label="33"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-label="34"></a>This book grew out of the INFO 4871/5871: Web Data Science course at the University of Colorado Boulder. It has benefited from the questions, frustrations, and insights of many cohorts of students. The author also gratefully acknowledges the journalists, researchers, and civic technologists whose work demonstrates why web data fluency matters for the public interest.</span>
+<span id="cb1-35"><a href="#cb1-35" aria-label="35"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-label="36"></a>::: {.callout-note}</span>
+<span id="cb1-37"><a href="#cb1-37" aria-label="37"></a><span class="fu">## AI Disclosure</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-label="38"></a>Portions of this book were drafted with the assistance of large language model tools. All content has been reviewed, edited, and verified by the author. For more on responsible AI disclosure in academic work, see @sec-appendix-ai-disclosure.</span>
+<span id="cb1-39"><a href="#cb1-39" aria-label="39"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -95,10 +98,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8fee89e02ae113551d56c8e5eb7677c9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1b15cd7dfe5d645daabccee077c4b062.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -680,16 +683,16 @@ Perriam, Jessamy, Andreas Birkbak, and Andy Freeman. 2020. <span>“Digital Meth
     }
     function toggleCodeHandler(show) {
       return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
           if (show) {
             details.open = true;
           } else {
             details.removeAttribute("open");
           }
         }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
         const fromCls = show ? "hidden" : "unhidden";
         const toCls = show ? "unhidden" : "hidden";
         for (let i=0; i<cellCodeDivs.length; i++) {
@@ -1051,167 +1054,167 @@ Perriam, Jessamy, Andreas Birkbak, and Andy Freeman. 2020. <span>“Digital Meth
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu"># The Post-API Age {#sec-post-api}</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a>::: {.callout-tip}</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">## Learning Objectives</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="ss">- </span>Describe the historical arc of web data access from open APIs to restricted, monetized, and disappearing endpoints</span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="ss">- </span>Analyze specific cases of access restriction using the enclosure, exemption, and erosion framework</span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="ss">- </span>Identify alternative data access strategies including archives, FOIA requests, data donations, and federated platforms</span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="ss">- </span>Connect contemporary data access challenges to longer traditions of public interest inquiry</span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="ss">- </span>Articulate the values of openness, oversight, and ownership as guiding principles for web data practice</span>
-<span id="cb1-10"><a href="#cb1-10"></a>:::</span>
-<span id="cb1-11"><a href="#cb1-11"></a></span>
-<span id="cb1-12"><a href="#cb1-12"></a>::: {.callout-tip}</span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="fu">## Companion Notebook</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>This chapter's <span class="co">[</span><span class="ot">companion notebook</span><span class="co">](notebooks/ch-03-post-api.ipynb)</span> contains the discussion and exercises for note-taking — this is a conceptual chapter with no code (see @sec-appendix-notebooks for all notebooks).</span>
-<span id="cb1-15"><a href="#cb1-15"></a>:::</span>
-<span id="cb1-16"><a href="#cb1-16"></a></span>
-<span id="cb1-17"><a href="#cb1-17"></a></span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="fu">## The Golden Age of Web Data Access</span></span>
-<span id="cb1-19"><a href="#cb1-19"></a></span>
-<span id="cb1-20"><a href="#cb1-20"></a>For roughly a decade — from about 2008 to 2018 — the web behaved as if it wanted to be studied. Twitter opened its API in 2006 and for years offered researchers a generous view of public conversation. Facebook launched the Graph API in 2010, and academic teams used it to map friendship networks at unprecedented scale. Reddit's API was free and essentially unrestricted, Google exposed programmatic access to search trends, maps, and books, and a generation of startups assumed that open data access was simply how platforms worked.</span>
-<span id="cb1-21"><a href="#cb1-21"></a></span>
-<span id="cb1-22"><a href="#cb1-22"></a>Platforms were not being charitable. Open APIs served their strategic interests: third-party developers built apps that made platforms more useful, academic partnerships lent credibility and surfaced insights, and every integration deepened the platform's position as infrastructure that other people's software depended on. The unspoken bargain was that platforms got ecosystems and researchers got data.</span>
-<span id="cb1-23"><a href="#cb1-23"></a></span>
-<span id="cb1-24"><a href="#cb1-24"></a>What that access enabled was real. Computational social science emerged as a field in this window <span class="co">[</span><span class="ot">@lazer2009computational</span><span class="co">]</span>, built substantially on platform data: studies of information diffusion, social movements, public health signals, and political communication that would have been unimaginable with surveys alone. Data journalists used APIs to hold institutions accountable. Civic technologists built tools on open government and platform data. When researchers today describe the "post-API age" <span class="co">[</span><span class="ot">@freelon2018computational</span><span class="co">]</span>, this is the era they measure against.</span>
-<span id="cb1-25"><a href="#cb1-25"></a></span>
-<span id="cb1-26"><a href="#cb1-26"></a><span class="co">&lt;!-- AUTHOR VOICE: review and personalize. Drafted from the public record of your research trajectory; adjust the examples and add texture in your own voice. --&gt;</span></span>
-<span id="cb1-27"><a href="#cb1-27"></a>My own research career took shape inside this bargain. The Wikipedia studies that formed my dissertation — how volunteer editors self-organize to cover breaking news events — were possible because the MediaWiki API and public database dumps exposed every edit, by every editor, with timestamps, for free (@sec-wikipedia teaches you the same interfaces). Later work on Reddit communities depended on Pushshift, a volunteer-run archive that made the site's full comment history queryable for researchers <span class="co">[</span><span class="ot">@baumgartner2020pushshift</span><span class="co">]</span>. Neither project required permission, partnership, or payment. That is what has changed.</span>
-<span id="cb1-28"><a href="#cb1-28"></a></span>
-<span id="cb1-29"><a href="#cb1-29"></a>The landscape of web data access has undergone a structural transformation since approximately 2018. Three pressures — enclosure, exemption, and erosion — explain not just *that* access is shrinking but *why*, and what forces are driving the change.</span>
-<span id="cb1-30"><a href="#cb1-30"></a></span>
-<span id="cb1-31"><a href="#cb1-31"></a><span class="co">&lt;!-- JRC: the enclosure/exemption/erosion framework and the openness/oversight/ownership values are adapted from the working paper ("Public interest data infrastructuring"). Add the citation here when it is published. --&gt;</span></span>
-<span id="cb1-32"><a href="#cb1-32"></a></span>
-<span id="cb1-33"><a href="#cb1-33"></a>::: {.callout-tip}</span>
-<span id="cb1-34"><a href="#cb1-34"></a><span class="fu">## Missing Manual Reference</span></span>
-<span id="cb1-35"><a href="#cb1-35"></a>Technical systems embed political choices — who gets access, on what terms, and who decides. For a broader introduction to this idea, see *Missing Manual* Chapter 8: Artifacts Have Politics.</span>
-<span id="cb1-36"><a href="#cb1-36"></a>:::</span>
-<span id="cb1-37"><a href="#cb1-37"></a></span>
-<span id="cb1-38"><a href="#cb1-38"></a><span class="fu">## Three Structural Pressures</span></span>
-<span id="cb1-39"><a href="#cb1-39"></a></span>
-<span id="cb1-40"><a href="#cb1-40"></a><span class="fu">### Enclosure</span></span>
-<span id="cb1-41"><a href="#cb1-41"></a></span>
-<span id="cb1-42"><a href="#cb1-42"></a>**Enclosure** is the privatization of previously accessible data: platforms converting a shared resource into a controlled asset. The name deliberately echoes the enclosure of common land in England between the sixteenth and nineteenth centuries, when fields that villagers had collectively farmed and grazed for generations were fenced off, by force of law, into private holdings. The land did not disappear. What disappeared was the commons — the shared arrangement under which ordinary people could use it. Data enclosure works the same way: the posts, edits, and traces are still there, but the terms of access have been fenced.</span>
-<span id="cb1-43"><a href="#cb1-43"></a></span>
-<span id="cb1-44"><a href="#cb1-44"></a>The mechanisms are familiar by now. APIs are shut down or repriced beyond reach. Third-party archives are cut off. Bulk exports are restricted. And, increasingly, access is bundled into exclusive licensing deals.</span>
-<span id="cb1-45"><a href="#cb1-45"></a></span>
-<span id="cb1-46"><a href="#cb1-46"></a>Two cases anchor the pattern:</span>
-<span id="cb1-47"><a href="#cb1-47"></a></span>
-<span id="cb1-48"><a href="#cb1-48"></a><span class="ss">- </span>**Twitter/X.** In January 2021, Twitter launched an Academic Research track offering qualified researchers free access to the full historical archive — arguably the high-water mark of platform openness. Two years later, following the company's 2022 acquisition, free access was eliminated, the academic track was discontinued, and enterprise access was priced at $42,000 per month and up. Hundreds of research projects and public-interest tools — bot detectors, misinformation trackers, disaster-response monitors — went dark within months.</span>
-<span id="cb1-49"><a href="#cb1-49"></a><span class="ss">- </span>**Reddit.** Reddit's API had been free since 2008. In 2023 the company announced pricing of $0.24 per 1,000 API calls, effective that July. The developer of Apollo, a popular third-party client, calculated the change would cost roughly $20 million a year and shut the app down; more than seven thousand subreddits went dark in protest. The same enforcement wave cut off Pushshift <span class="co">[</span><span class="ot">@baumgartner2020pushshift</span><span class="co">]</span>, the archive that had underpinned hundreds of published Reddit studies. The research community lost not just future access but its accumulated observational infrastructure.</span>
-<span id="cb1-50"><a href="#cb1-50"></a></span>
-<span id="cb1-51"><a href="#cb1-51"></a>Facebook's trajectory is the template both followed: after the Cambridge Analytica scandal broke in 2018, Meta locked down the Graph API, and in August 2024 it shut down CrowdTangle — the tool journalists and researchers used to monitor viral content — replacing it with a Meta Content Library available only through gated application.</span>
-<span id="cb1-52"><a href="#cb1-52"></a></span>
-<span id="cb1-53"><a href="#cb1-53"></a>Why did enclosure accelerate when it did? Generative AI is a large part of the answer. Once large language models made user-generated text valuable as training data, the calculus flipped: an open API stopped looking like ecosystem-building and started looking like giving away inventory. Reddit's reported licensing deal with Google — roughly $60 million per year for training access — was announced within months of the API repricing that had priced out researchers and hobbyists. Data that communities produced collectively is now sold privately, which is the enclosure of the commons in nearly literal form.</span>
-<span id="cb1-54"><a href="#cb1-54"></a></span>
-<span id="cb1-55"><a href="#cb1-55"></a><span class="fu">### Exemption</span></span>
-<span id="cb1-56"><a href="#cb1-56"></a></span>
-<span id="cb1-57"><a href="#cb1-57"></a>**Exemption** is the second pressure: platforms operating beyond meaningful outside scrutiny, invoking privacy, intellectual property, or security to resist independent investigation while conducting the same investigations internally at will.</span>
-<span id="cb1-58"><a href="#cb1-58"></a></span>
-<span id="cb1-59"><a href="#cb1-59"></a>The asymmetry is the tell. Platforms run experiments on their users continuously — every A/B test is a behavioral study — and employ large internal research teams with total data access. But when outside researchers attempt to study the platforms, the tools of resistance come out: cease-and-desist letters citing the Computer Fraud and Abuse Act, Terms of Service that prohibit the data collection that public-interest research requires <span class="co">[</span><span class="ot">@fiesler2020no</span><span class="co">]</span>, and account bans for researchers who persist. In 2021, Meta disabled the accounts of NYU's Ad Observatory team, who were studying political ad targeting with data volunteered by consenting users — an action Meta justified as protecting user privacy. Courts have pushed back at the margins (@sec-ethics covers *Sandvig v. Barr*, *Van Buren*, and the *hiQ* litigation), but legal ambiguity itself does deterrence work: a graduate student weighing a scraping study against a potential federal claim usually just picks a different topic.</span>
-<span id="cb1-60"><a href="#cb1-60"></a></span>
-<span id="cb1-61"><a href="#cb1-61"></a>The privacy justification deserves particular scrutiny. Platforms routinely cite user protection when closing researcher access — while continuing to sell fine-grained targeting on the same users to advertisers. Privacy is genuinely important, and @sec-ethics takes it seriously. But when "privacy" restricts only accountability research and never revenue, it is functioning as exemption, not protection.</span>
-<span id="cb1-62"><a href="#cb1-62"></a></span>
-<span id="cb1-63"><a href="#cb1-63"></a>Regulation is beginning to respond. The European Union's Digital Services Act includes a provision — Article 40 — that requires very large platforms to provide vetted researchers with data access for studying systemic risks, with implementing rules still maturing as of mid-2026. Whether such mandates produce usable access, or a new bureaucratic bottleneck, is one of the defining open questions of this decade of internet research.</span>
-<span id="cb1-64"><a href="#cb1-64"></a></span>
-<span id="cb1-65"><a href="#cb1-65"></a><span class="fu">### Erosion</span></span>
-<span id="cb1-66"><a href="#cb1-66"></a></span>
-<span id="cb1-67"><a href="#cb1-67"></a>**Erosion** is the third pressure, and the quietest: the decay of the infrastructure for sustained observation. Enclosure and exemption are things platforms do; erosion is what happens to the web itself.</span>
-<span id="cb1-68"><a href="#cb1-68"></a></span>
-<span id="cb1-69"><a href="#cb1-69"></a>Links rot. Roughly half the hyperlinks cited in U.S. Supreme Court opinions no longer point to the content the justices cited, and a 2024 Pew study found that about a third of webpages that existed in 2013 were gone a decade later. Platforms churn: GeoCities vanished with its era of amateur web culture; Parler went offline overnight when its hosting was pulled; Twitter became X and broke a decade of embedded links and stored identifiers. Sites redesign their HTML and silently break every scraper built against the old structure — a fragility you will experience personally in @sec-static-pages and @sec-dynamic-pages.</span>
-<span id="cb1-70"><a href="#cb1-70"></a></span>
-<span id="cb1-71"><a href="#cb1-71"></a>For researchers, erosion produces a reproducibility crisis. A study built on the Twitter Academic API cannot be replicated at any price today. Papers that cite Pushshift point at an archive that no longer accepts queries. When the data underlying published findings disappears, the scientific record quietly loses its evidentiary base <span class="co">[</span><span class="ot">@davidson2023platform</span><span class="co">]</span>. And migration to federated platforms — Mastodon, Bluesky — solves some access problems (@sec-social) while complicating basic measurement: there is no single API endpoint for "all of Mastodon," because there is no single Mastodon.</span>
-<span id="cb1-72"><a href="#cb1-72"></a></span>
-<span id="cb1-73"><a href="#cb1-73"></a>Erosion is also why two later chapters exist. The Wayback Machine (@sec-archives) is counter-erosion infrastructure — a deliberate institutional bet that the web is worth preserving. And automation (@sec-automation) is counter-erosion practice: if data disappears, systematic collection *now* is the only insurance for research *later*.</span>
-<span id="cb1-74"><a href="#cb1-74"></a></span>
-<span id="cb1-75"><a href="#cb1-75"></a><span class="fu">## Three Counter-Values</span></span>
-<span id="cb1-76"><a href="#cb1-76"></a></span>
-<span id="cb1-77"><a href="#cb1-77"></a>In response to these pressures, three values can guide how researchers, technologists, and institutions build and sustain access to web data for the public interest. They are not a solution to the post-API age; they are a stance for working inside it.</span>
-<span id="cb1-78"><a href="#cb1-78"></a></span>
-<span id="cb1-79"><a href="#cb1-79"></a><span class="co">&lt;!-- JRC: this section adapts the values framework from the working paper. Add citation and adjust emphasis when published. --&gt;</span></span>
-<span id="cb1-80"><a href="#cb1-80"></a></span>
-<span id="cb1-81"><a href="#cb1-81"></a><span class="fu">### Openness</span></span>
-<span id="cb1-82"><a href="#cb1-82"></a></span>
-<span id="cb1-83"><a href="#cb1-83"></a>**Openness** means conducting your own work so that it resists enclosure. Transparent methods and pipelines let others evaluate and reproduce what you did. Documenting not just *what* data you collected but *how* — which endpoints, which parameters, which dates, what the platform's constraints were at collection time — is what allows a future researcher to understand your dataset after the source has changed or vanished (datasheets are the tool for this <span class="co">[</span><span class="ot">@gebru2021datasheets</span><span class="co">]</span>). Redundancy is openness in practice: depositing data in durable public repositories like Zenodo or institutional archives, relying on community resources like the Internet Archive and Common Crawl, and preferring platforms whose data carries open licenses. Wikipedia, which anchors @sec-wikipedia, is the standing counter-example to enclosure: open API, open license, full public dumps.</span>
-<span id="cb1-84"><a href="#cb1-84"></a></span>
-<span id="cb1-85"><a href="#cb1-85"></a><span class="fu">### Oversight</span></span>
-<span id="cb1-86"><a href="#cb1-86"></a></span>
-<span id="cb1-87"><a href="#cb1-87"></a>**Oversight** means insisting that consequential systems be inspectable by parties who do not own them. In practice this includes independent audits of platform algorithms and content moderation; documentation standards that make datasets and collection methods legible to review; impact assessment when access regimes change; and regulatory frameworks — like DSA Article 40 — that convert researcher access from a privilege platforms grant into an obligation they carry. The professional skills this book teaches are oversight skills: someone who can retrieve, parse, and analyze web data independently is someone a platform cannot simply refuse.</span>
-<span id="cb1-88"><a href="#cb1-88"></a></span>
-<span id="cb1-89"><a href="#cb1-89"></a><span class="fu">### Ownership</span></span>
-<span id="cb1-90"><a href="#cb1-90"></a></span>
-<span id="cb1-91"><a href="#cb1-91"></a>**Ownership** means preferring arrangements where communities govern the infrastructure their data lives in. Federated systems built on open protocols — ActivityPub, which underlies Mastodon, and the AT Protocol, which underlies Bluesky — distribute control so that no single acquisition or pricing decision can enclose the whole network (@sec-social works with both). Community-maintained archives, data cooperatives, and volunteer preservation efforts like ArchiveTeam embody the same value: the traces of collective life are held collectively. Ownership is the long-horizon value — hardest to practice, and the only durable answer to enclosure.</span>
-<span id="cb1-92"><a href="#cb1-92"></a></span>
-<span id="cb1-93"><a href="#cb1-93"></a><span class="fu">## Public Interest Lineages</span></span>
-<span id="cb1-94"><a href="#cb1-94"></a></span>
-<span id="cb1-95"><a href="#cb1-95"></a>The tensions described in this chapter are not new to data science. Other professions have confronted analogous challenges — powerful actors controlling access to information that the public needs — and developed institutional responses worth learning from.</span>
-<span id="cb1-96"><a href="#cb1-96"></a></span>
-<span id="cb1-97"><a href="#cb1-97"></a>**Journalism** built the most direct precedent. Freedom of information laws exist because reporters and reformers spent decades establishing that government records belong to the public; the muckraking tradition established that private power, too, is a legitimate target of sustained scrutiny. When you file a public records request to obtain data an agency will not publish (a strategy revisited below), you are working in this lineage.</span>
-<span id="cb1-98"><a href="#cb1-98"></a></span>
-<span id="cb1-99"><a href="#cb1-99"></a>**Law** institutionalized compelled disclosure. Discovery rules force parties to produce documents they would prefer to hide, on the theory that adjudication without evidence is theater. Due process embodies a proceduralist answer to arbitrary power — decisions must be explainable and reviewable — that algorithmic accountability research inherits almost verbatim.</span>
-<span id="cb1-100"><a href="#cb1-100"></a></span>
-<span id="cb1-101"><a href="#cb1-101"></a>**Accounting** shows how disclosure becomes infrastructure. After the 1929 crash, mandatory audits and standardized reporting turned corporate finances from private mystery into public record. The lesson for data science: trustworthy disclosure at scale requires standards, professional norms, and independent examiners — not goodwill.</span>
-<span id="cb1-102"><a href="#cb1-102"></a></span>
-<span id="cb1-103"><a href="#cb1-103"></a>**Urban planning** developed participation as method. Environmental impact statements and public comment periods encode the principle that decisions affecting shared resources require advance disclosure and community input — a template now echoed in calls for algorithmic impact assessments.</span>
-<span id="cb1-104"><a href="#cb1-104"></a></span>
-<span id="cb1-105"><a href="#cb1-105"></a>**Engineering** professionalized public safety. Licensure, safety codes, and ethics canons — many written in the aftermath of disasters — established that technical practitioners owe duties to the public that override duties to employers. Data science is still writing its equivalent.</span>
-<span id="cb1-106"><a href="#cb1-106"></a></span>
-<span id="cb1-107"><a href="#cb1-107"></a>The argument of this section is not that data science should copy any one of these professions, but that it is developing its own public interest mission — and that mission has precedents, institutions, and hard-won lessons to draw on.</span>
-<span id="cb1-108"><a href="#cb1-108"></a></span>
-<span id="cb1-109"><a href="#cb1-109"></a><span class="fu">## What This Means for Practice</span></span>
-<span id="cb1-110"><a href="#cb1-110"></a></span>
-<span id="cb1-111"><a href="#cb1-111"></a>The rest of this book equips you with a diverse technical toolkit precisely because no single method of access is reliable. When APIs close, you may need to scrape HTML (@sec-static-pages, @sec-dynamic-pages). When web pages change, archives provide continuity (@sec-archives). When documents are locked in inaccessible formats, PDF extraction opens them up (@sec-pdfs). When platforms restrict automated access, federated alternatives offer open protocols (@sec-social). And when you need sustained observation over time, automation turns one-time data collection into durable infrastructure (@sec-automation).</span>
-<span id="cb1-112"><a href="#cb1-112"></a></span>
-<span id="cb1-113"><a href="#cb1-113"></a>Beyond this book's core toolkit, four alternative access strategies belong in your repertoire:</span>
-<span id="cb1-114"><a href="#cb1-114"></a></span>
-<span id="cb1-115"><a href="#cb1-115"></a><span class="ss">- </span>**Official research access programs.** Some platforms now offer application-gated researcher access — the Meta Content Library, TikTok's Research API, Reddit's researcher program. These are real but rationed: eligibility is narrow, terms restrict publication and sharing, and access can be revoked. Use them, and document their constraints in your methods.</span>
-<span id="cb1-116"><a href="#cb1-116"></a><span class="ss">- </span>**Data donation.** Users have rights to their own data — in many jurisdictions, legally enforceable export rights — and can volunteer it to research. Donation studies recruit participants to contribute their download packages or install instrumented browser extensions, converting individual data rights into collective observation, with consent built in.</span>
-<span id="cb1-117"><a href="#cb1-117"></a><span class="ss">- </span>**FOIA and public records requests.** Government-held data is subject to disclosure law. A well-scoped records request can produce datasets no API offers — inspection records, communications, contracts — with @sec-government covering the data agencies publish proactively.</span>
-<span id="cb1-118"><a href="#cb1-118"></a><span class="ss">- </span>**Crowdsourcing and citizen science.** When no one holds the data, communities can create it: distributed observation, structured reporting, and collaborative annotation have produced public-interest datasets from air quality to political advertising.</span>
-<span id="cb1-119"><a href="#cb1-119"></a></span>
-<span id="cb1-120"><a href="#cb1-120"></a>The strategic lesson is redundancy and flexibility. Build your skills across the full range of techniques so that the closure of any single data source does not shut down your research program.</span>
-<span id="cb1-121"><a href="#cb1-121"></a></span>
-<span id="cb1-122"><a href="#cb1-122"></a><span class="fu">## Common Misconceptions</span></span>
-<span id="cb1-123"><a href="#cb1-123"></a></span>
-<span id="cb1-124"><a href="#cb1-124"></a>Students often arrive at this material with intuitions that the post-API age has quietly invalidated. Five are worth correcting explicitly:</span>
-<span id="cb1-125"><a href="#cb1-125"></a></span>
-<span id="cb1-126"><a href="#cb1-126"></a><span class="ss">- </span>**"The post-API age means APIs are gone."** There are more APIs than ever. What changed is the terms: free and open access for outside observers is what is disappearing, replaced by paid tiers, gated programs, and licensing deals.</span>
-<span id="cb1-127"><a href="#cb1-127"></a><span class="ss">- </span>**"If the API closes, I'll just scrape."** Sometimes — this book teaches you how. But scraping carries its own legal ambiguity (@sec-ethics), breaks when sites redesign, and scales poorly. Treat it as one tool in a portfolio, not an escape hatch that makes enclosure irrelevant.</span>
-<span id="cb1-128"><a href="#cb1-128"></a><span class="ss">- </span>**"If data is publicly visible, access must be permitted and ethical."** Visibility, permission, and ethics are three different questions <span class="co">[</span><span class="ot">@fiesler2020no</span><span class="co">]</span>. A post being public does not mean its author expected it in a dataset, and a page being viewable does not mean its ToS allows automated collection.</span>
-<span id="cb1-129"><a href="#cb1-129"></a><span class="ss">- </span>**"This only matters for social media research."** Enclosure logic is spreading wherever data gained AI-training value: news archives, code repositories, forums, image libraries. Government data (@sec-government) is the notable counter-current, held open by legal mandate.</span>
-<span id="cb1-130"><a href="#cb1-130"></a><span class="ss">- </span>**"Nothing can be done about it."** The counter-values are not wishful thinking: regulation is creating access obligations, archives are institutionalizing preservation, and federated platforms are growing. The constraint environment is contested, and practitioners' choices are part of the contest.</span>
-<span id="cb1-131"><a href="#cb1-131"></a></span>
-<span id="cb1-132"><a href="#cb1-132"></a><span class="fu">## Exercises</span></span>
-<span id="cb1-133"><a href="#cb1-133"></a></span>
-<span id="cb1-134"><a href="#cb1-134"></a><span class="ss">1. </span>**Timeline exercise.** Create a timeline of major API access changes from 2008 to the present. Include at least five events across at least three platforms. For each event, identify which of the three pressures (enclosure, exemption, erosion) best characterizes it.</span>
-<span id="cb1-135"><a href="#cb1-135"></a></span>
-<span id="cb1-136"><a href="#cb1-136"></a><span class="ss">2. </span>**Framework application.** Choose a platform API change not discussed in this chapter. Write a 500-word analysis applying the enclosure/exemption/erosion framework.</span>
-<span id="cb1-137"><a href="#cb1-137"></a></span>
-<span id="cb1-138"><a href="#cb1-138"></a><span class="ss">3. </span>**Data contingency plan.** Design a research project that depends on a specific web data source. Then write a contingency plan: if your primary source disappears mid-study, what are your backup strategies? Consider at least three alternatives.</span>
-<span id="cb1-139"><a href="#cb1-139"></a></span>
-<span id="cb1-140"><a href="#cb1-140"></a><span class="ss">4. </span>**Public interest audit.** Identify a web data research project (published paper, journalism investigation, or civic tech tool) that was enabled by API access. Assess how the project would be affected by current access restrictions. Which of the three values — openness, oversight, or ownership — does the project embody?</span>
-<span id="cb1-141"><a href="#cb1-141"></a></span>
-<span id="cb1-142"><a href="#cb1-142"></a><span class="ss">5. </span>**Graduate extension (INFO 5617).** Read @davidson2023platform and @perriam2020digital. Choose one platform and write a two-to-three page "state of research access" brief: what data researchers could obtain five years ago, what is available today and on what terms (cost, eligibility, restrictions), what official research-access programs exist, and which of this chapter's three pressures best explains the trajectory. Close with a concrete recommendation for a researcher starting a study of that platform this year.</span>
-<span id="cb1-143"><a href="#cb1-143"></a></span>
-<span id="cb1-144"><a href="#cb1-144"></a><span class="fu">## Key Takeaways</span></span>
-<span id="cb1-145"><a href="#cb1-145"></a></span>
-<span id="cb1-146"><a href="#cb1-146"></a>The core argument of this chapter is that understanding *why* access is shrinking — not just *that* it is — equips you to navigate the constraints strategically rather than being surprised by them.</span>
-<span id="cb1-147"><a href="#cb1-147"></a></span>
-<span id="cb1-148"><a href="#cb1-148"></a><span class="ss">- </span>The open-API era (roughly 2008–2018) was a strategic bargain, not a natural state: platforms traded data access for ecosystems, and computational social science was built on the trade.</span>
-<span id="cb1-149"><a href="#cb1-149"></a><span class="ss">- </span>**Enclosure** converts collectively produced data into privately controlled assets — API shutdowns, repricing, archive removals, and AI-training licensing deals are its mechanisms.</span>
-<span id="cb1-150"><a href="#cb1-150"></a><span class="ss">- </span>**Exemption** is the asymmetry of scrutiny: platforms study their users freely while deploying legal and technical tools against independent researchers who study the platforms.</span>
-<span id="cb1-151"><a href="#cb1-151"></a><span class="ss">- </span>**Erosion** is infrastructural decay — link rot, platform churn, and disappearing datasets — and it makes reproducibility a design problem you must solve at collection time.</span>
-<span id="cb1-152"><a href="#cb1-152"></a><span class="ss">- </span>**Openness, oversight, and ownership** are the counter-values: document and deposit so your work resists enclosure, insist on inspectability, and prefer community-governed infrastructure.</span>
-<span id="cb1-153"><a href="#cb1-153"></a><span class="ss">- </span>The practical response is redundancy: master multiple access techniques (documents, archives, APIs, automation) so no single closure ends your research program.</span>
-<span id="cb1-154"><a href="#cb1-154"></a></span>
-<span id="cb1-155"><a href="#cb1-155"></a><span class="fu">## Further Reading</span></span>
-<span id="cb1-156"><a href="#cb1-156"></a></span>
-<span id="cb1-157"><a href="#cb1-157"></a><span class="ss">- </span>@freelon2018computational — the original articulation of the "post-API age"</span>
-<span id="cb1-158"><a href="#cb1-158"></a><span class="ss">- </span>@bruns2019after — platforms' fight against critical scholarly research</span>
-<span id="cb1-159"><a href="#cb1-159"></a><span class="ss">- </span>@davidson2023platform — empirical study of how API restrictions threaten open science</span>
-<span id="cb1-160"><a href="#cb1-160"></a><span class="ss">- </span>@perriam2020digital — digital methods in a post-API environment</span>
-<span id="cb1-161"><a href="#cb1-161"></a><span class="ss">- </span>@lazer2020computational — obstacles and opportunities in computational social science</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-label="1"></a><span class="fu"># The Post-API Age {#sec-post-api}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-label="2"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-label="3"></a>::: {.callout-tip}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-label="4"></a><span class="fu">## Learning Objectives</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-label="5"></a><span class="ss">- </span>Describe the historical arc of web data access from open APIs to restricted, monetized, and disappearing endpoints</span>
+<span id="cb1-6"><a href="#cb1-6" aria-label="6"></a><span class="ss">- </span>Analyze specific cases of access restriction using the enclosure, exemption, and erosion framework</span>
+<span id="cb1-7"><a href="#cb1-7" aria-label="7"></a><span class="ss">- </span>Identify alternative data access strategies including archives, FOIA requests, data donations, and federated platforms</span>
+<span id="cb1-8"><a href="#cb1-8" aria-label="8"></a><span class="ss">- </span>Connect contemporary data access challenges to longer traditions of public interest inquiry</span>
+<span id="cb1-9"><a href="#cb1-9" aria-label="9"></a><span class="ss">- </span>Articulate the values of openness, oversight, and ownership as guiding principles for web data practice</span>
+<span id="cb1-10"><a href="#cb1-10" aria-label="10"></a>:::</span>
+<span id="cb1-11"><a href="#cb1-11" aria-label="11"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-label="12"></a>::: {.callout-tip}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-label="13"></a><span class="fu">## Companion Notebook</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-label="14"></a>This chapter's <span class="co">[</span><span class="ot">companion notebook</span><span class="co">](notebooks/ch-03-post-api.ipynb)</span> contains the discussion and exercises for note-taking — this is a conceptual chapter with no code (see @sec-appendix-notebooks for all notebooks).</span>
+<span id="cb1-15"><a href="#cb1-15" aria-label="15"></a>:::</span>
+<span id="cb1-16"><a href="#cb1-16" aria-label="16"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-label="17"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-label="18"></a><span class="fu">## The Golden Age of Web Data Access</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-label="19"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-label="20"></a>For roughly a decade — from about 2008 to 2018 — the web behaved as if it wanted to be studied. Twitter opened its API in 2006 and for years offered researchers a generous view of public conversation. Facebook launched the Graph API in 2010, and academic teams used it to map friendship networks at unprecedented scale. Reddit's API was free and essentially unrestricted, Google exposed programmatic access to search trends, maps, and books, and a generation of startups assumed that open data access was simply how platforms worked.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-label="21"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-label="22"></a>Platforms were not being charitable. Open APIs served their strategic interests: third-party developers built apps that made platforms more useful, academic partnerships lent credibility and surfaced insights, and every integration deepened the platform's position as infrastructure that other people's software depended on. The unspoken bargain was that platforms got ecosystems and researchers got data.</span>
+<span id="cb1-23"><a href="#cb1-23" aria-label="23"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-label="24"></a>What that access enabled was real. Computational social science emerged as a field in this window <span class="co">[</span><span class="ot">@lazer2009computational</span><span class="co">]</span>, built substantially on platform data: studies of information diffusion, social movements, public health signals, and political communication that would have been unimaginable with surveys alone. Data journalists used APIs to hold institutions accountable. Civic technologists built tools on open government and platform data. When researchers today describe the "post-API age" <span class="co">[</span><span class="ot">@freelon2018computational</span><span class="co">]</span>, this is the era they measure against.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-label="25"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-label="26"></a><span class="co">&lt;!-- AUTHOR VOICE: review and personalize. Drafted from the public record of your research trajectory; adjust the examples and add texture in your own voice. --&gt;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-label="27"></a>My own research career took shape inside this bargain. The Wikipedia studies that formed my dissertation — how volunteer editors self-organize to cover breaking news events — were possible because the MediaWiki API and public database dumps exposed every edit, by every editor, with timestamps, for free (@sec-wikipedia teaches you the same interfaces). Later work on Reddit communities depended on Pushshift, a volunteer-run archive that made the site's full comment history queryable for researchers <span class="co">[</span><span class="ot">@baumgartner2020pushshift</span><span class="co">]</span>. Neither project required permission, partnership, or payment. That is what has changed.</span>
+<span id="cb1-28"><a href="#cb1-28" aria-label="28"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-label="29"></a>The landscape of web data access has undergone a structural transformation since approximately 2018. Three pressures — enclosure, exemption, and erosion — explain not just *that* access is shrinking but *why*, and what forces are driving the change.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-label="30"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-label="31"></a><span class="co">&lt;!-- JRC: the enclosure/exemption/erosion framework and the openness/oversight/ownership values are adapted from the working paper ("Public interest data infrastructuring"). Add the citation here when it is published. --&gt;</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-label="32"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-label="33"></a>::: {.callout-tip}</span>
+<span id="cb1-34"><a href="#cb1-34" aria-label="34"></a><span class="fu">## Missing Manual Reference</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-label="35"></a>Technical systems embed political choices — who gets access, on what terms, and who decides. For a broader introduction to this idea, see *Missing Manual* Chapter 8: Artifacts Have Politics.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-label="36"></a>:::</span>
+<span id="cb1-37"><a href="#cb1-37" aria-label="37"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-label="38"></a><span class="fu">## Three Structural Pressures</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-label="39"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-label="40"></a><span class="fu">### Enclosure</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-label="41"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-label="42"></a>**Enclosure** is the privatization of previously accessible data: platforms converting a shared resource into a controlled asset. The name deliberately echoes the enclosure of common land in England between the sixteenth and nineteenth centuries, when fields that villagers had collectively farmed and grazed for generations were fenced off, by force of law, into private holdings. The land did not disappear. What disappeared was the commons — the shared arrangement under which ordinary people could use it. Data enclosure works the same way: the posts, edits, and traces are still there, but the terms of access have been fenced.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-label="43"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-label="44"></a>The mechanisms are familiar by now. APIs are shut down or repriced beyond reach. Third-party archives are cut off. Bulk exports are restricted. And, increasingly, access is bundled into exclusive licensing deals.</span>
+<span id="cb1-45"><a href="#cb1-45" aria-label="45"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-label="46"></a>Two cases anchor the pattern:</span>
+<span id="cb1-47"><a href="#cb1-47" aria-label="47"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-label="48"></a><span class="ss">- </span>**Twitter/X.** In January 2021, Twitter launched an Academic Research track offering qualified researchers free access to the full historical archive — arguably the high-water mark of platform openness. Two years later, following the company's 2022 acquisition, free access was eliminated, the academic track was discontinued, and enterprise access was priced at $42,000 per month and up. Hundreds of research projects and public-interest tools — bot detectors, misinformation trackers, disaster-response monitors — went dark within months.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-label="49"></a><span class="ss">- </span>**Reddit.** Reddit's API had been free since 2008. In 2023 the company announced pricing of $0.24 per 1,000 API calls, effective that July. The developer of Apollo, a popular third-party client, calculated the change would cost roughly $20 million a year and shut the app down; more than seven thousand subreddits went dark in protest. The same enforcement wave cut off Pushshift <span class="co">[</span><span class="ot">@baumgartner2020pushshift</span><span class="co">]</span>, the archive that had underpinned hundreds of published Reddit studies. The research community lost not just future access but its accumulated observational infrastructure.</span>
+<span id="cb1-50"><a href="#cb1-50" aria-label="50"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-label="51"></a>Facebook's trajectory is the template both followed: after the Cambridge Analytica scandal broke in 2018, Meta locked down the Graph API, and in August 2024 it shut down CrowdTangle — the tool journalists and researchers used to monitor viral content — replacing it with a Meta Content Library available only through gated application.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-label="52"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-label="53"></a>Why did enclosure accelerate when it did? Generative AI is a large part of the answer. Once large language models made user-generated text valuable as training data, the calculus flipped: an open API stopped looking like ecosystem-building and started looking like giving away inventory. Reddit's reported licensing deal with Google — roughly $60 million per year for training access — was announced within months of the API repricing that had priced out researchers and hobbyists. Data that communities produced collectively is now sold privately, which is the enclosure of the commons in nearly literal form.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-label="54"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-label="55"></a><span class="fu">### Exemption</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-label="56"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-label="57"></a>**Exemption** is the second pressure: platforms operating beyond meaningful outside scrutiny, invoking privacy, intellectual property, or security to resist independent investigation while conducting the same investigations internally at will.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-label="58"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-label="59"></a>The asymmetry is the tell. Platforms run experiments on their users continuously — every A/B test is a behavioral study — and employ large internal research teams with total data access. But when outside researchers attempt to study the platforms, the tools of resistance come out: cease-and-desist letters citing the Computer Fraud and Abuse Act, Terms of Service that prohibit the data collection that public-interest research requires <span class="co">[</span><span class="ot">@fiesler2020no</span><span class="co">]</span>, and account bans for researchers who persist. In 2021, Meta disabled the accounts of NYU's Ad Observatory team, who were studying political ad targeting with data volunteered by consenting users — an action Meta justified as protecting user privacy. Courts have pushed back at the margins (@sec-ethics covers *Sandvig v. Barr*, *Van Buren*, and the *hiQ* litigation), but legal ambiguity itself does deterrence work: a graduate student weighing a scraping study against a potential federal claim usually just picks a different topic.</span>
+<span id="cb1-60"><a href="#cb1-60" aria-label="60"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-label="61"></a>The privacy justification deserves particular scrutiny. Platforms routinely cite user protection when closing researcher access — while continuing to sell fine-grained targeting on the same users to advertisers. Privacy is genuinely important, and @sec-ethics takes it seriously. But when "privacy" restricts only accountability research and never revenue, it is functioning as exemption, not protection.</span>
+<span id="cb1-62"><a href="#cb1-62" aria-label="62"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-label="63"></a>Regulation is beginning to respond. The European Union's Digital Services Act includes a provision — Article 40 — that requires very large platforms to provide vetted researchers with data access for studying systemic risks, with implementing rules still maturing as of mid-2026. Whether such mandates produce usable access, or a new bureaucratic bottleneck, is one of the defining open questions of this decade of internet research.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-label="64"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-label="65"></a><span class="fu">### Erosion</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-label="66"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-label="67"></a>**Erosion** is the third pressure, and the quietest: the decay of the infrastructure for sustained observation. Enclosure and exemption are things platforms do; erosion is what happens to the web itself.</span>
+<span id="cb1-68"><a href="#cb1-68" aria-label="68"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-label="69"></a>Links rot. Roughly half the hyperlinks cited in U.S. Supreme Court opinions no longer point to the content the justices cited, and a 2024 Pew study found that about a third of webpages that existed in 2013 were gone a decade later. Platforms churn: GeoCities vanished with its era of amateur web culture; Parler went offline overnight when its hosting was pulled; Twitter became X and broke a decade of embedded links and stored identifiers. Sites redesign their HTML and silently break every scraper built against the old structure — a fragility you will experience personally in @sec-static-pages and @sec-dynamic-pages.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-label="70"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-label="71"></a>For researchers, erosion produces a reproducibility crisis. A study built on the Twitter Academic API cannot be replicated at any price today. Papers that cite Pushshift point at an archive that no longer accepts queries. When the data underlying published findings disappears, the scientific record quietly loses its evidentiary base <span class="co">[</span><span class="ot">@davidson2023platform</span><span class="co">]</span>. And migration to federated platforms — Mastodon, Bluesky — solves some access problems (@sec-social) while complicating basic measurement: there is no single API endpoint for "all of Mastodon," because there is no single Mastodon.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-label="72"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-label="73"></a>Erosion is also why two later chapters exist. The Wayback Machine (@sec-archives) is counter-erosion infrastructure — a deliberate institutional bet that the web is worth preserving. And automation (@sec-automation) is counter-erosion practice: if data disappears, systematic collection *now* is the only insurance for research *later*.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-label="74"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-label="75"></a><span class="fu">## Three Counter-Values</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-label="76"></a></span>
+<span id="cb1-77"><a href="#cb1-77" aria-label="77"></a>In response to these pressures, three values can guide how researchers, technologists, and institutions build and sustain access to web data for the public interest. They are not a solution to the post-API age; they are a stance for working inside it.</span>
+<span id="cb1-78"><a href="#cb1-78" aria-label="78"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-label="79"></a><span class="co">&lt;!-- JRC: this section adapts the values framework from the working paper. Add citation and adjust emphasis when published. --&gt;</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-label="80"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-label="81"></a><span class="fu">### Openness</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-label="82"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-label="83"></a>**Openness** means conducting your own work so that it resists enclosure. Transparent methods and pipelines let others evaluate and reproduce what you did. Documenting not just *what* data you collected but *how* — which endpoints, which parameters, which dates, what the platform's constraints were at collection time — is what allows a future researcher to understand your dataset after the source has changed or vanished (datasheets are the tool for this <span class="co">[</span><span class="ot">@gebru2021datasheets</span><span class="co">]</span>). Redundancy is openness in practice: depositing data in durable public repositories like Zenodo or institutional archives, relying on community resources like the Internet Archive and Common Crawl, and preferring platforms whose data carries open licenses. Wikipedia, which anchors @sec-wikipedia, is the standing counter-example to enclosure: open API, open license, full public dumps.</span>
+<span id="cb1-84"><a href="#cb1-84" aria-label="84"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-label="85"></a><span class="fu">### Oversight</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-label="86"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-label="87"></a>**Oversight** means insisting that consequential systems be inspectable by parties who do not own them. In practice this includes independent audits of platform algorithms and content moderation; documentation standards that make datasets and collection methods legible to review; impact assessment when access regimes change; and regulatory frameworks — like DSA Article 40 — that convert researcher access from a privilege platforms grant into an obligation they carry. The professional skills this book teaches are oversight skills: someone who can retrieve, parse, and analyze web data independently is someone a platform cannot simply refuse.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-label="88"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-label="89"></a><span class="fu">### Ownership</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-label="90"></a></span>
+<span id="cb1-91"><a href="#cb1-91" aria-label="91"></a>**Ownership** means preferring arrangements where communities govern the infrastructure their data lives in. Federated systems built on open protocols — ActivityPub, which underlies Mastodon, and the AT Protocol, which underlies Bluesky — distribute control so that no single acquisition or pricing decision can enclose the whole network (@sec-social works with both). Community-maintained archives, data cooperatives, and volunteer preservation efforts like ArchiveTeam embody the same value: the traces of collective life are held collectively. Ownership is the long-horizon value — hardest to practice, and the only durable answer to enclosure.</span>
+<span id="cb1-92"><a href="#cb1-92" aria-label="92"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-label="93"></a><span class="fu">## Public Interest Lineages</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-label="94"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-label="95"></a>The tensions described in this chapter are not new to data science. Other professions have confronted analogous challenges — powerful actors controlling access to information that the public needs — and developed institutional responses worth learning from.</span>
+<span id="cb1-96"><a href="#cb1-96" aria-label="96"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-label="97"></a>**Journalism** built the most direct precedent. Freedom of information laws exist because reporters and reformers spent decades establishing that government records belong to the public; the muckraking tradition established that private power, too, is a legitimate target of sustained scrutiny. When you file a public records request to obtain data an agency will not publish (a strategy revisited below), you are working in this lineage.</span>
+<span id="cb1-98"><a href="#cb1-98" aria-label="98"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-label="99"></a>**Law** institutionalized compelled disclosure. Discovery rules force parties to produce documents they would prefer to hide, on the theory that adjudication without evidence is theater. Due process embodies a proceduralist answer to arbitrary power — decisions must be explainable and reviewable — that algorithmic accountability research inherits almost verbatim.</span>
+<span id="cb1-100"><a href="#cb1-100" aria-label="100"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-label="101"></a>**Accounting** shows how disclosure becomes infrastructure. After the 1929 crash, mandatory audits and standardized reporting turned corporate finances from private mystery into public record. The lesson for data science: trustworthy disclosure at scale requires standards, professional norms, and independent examiners — not goodwill.</span>
+<span id="cb1-102"><a href="#cb1-102" aria-label="102"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-label="103"></a>**Urban planning** developed participation as method. Environmental impact statements and public comment periods encode the principle that decisions affecting shared resources require advance disclosure and community input — a template now echoed in calls for algorithmic impact assessments.</span>
+<span id="cb1-104"><a href="#cb1-104" aria-label="104"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-label="105"></a>**Engineering** professionalized public safety. Licensure, safety codes, and ethics canons — many written in the aftermath of disasters — established that technical practitioners owe duties to the public that override duties to employers. Data science is still writing its equivalent.</span>
+<span id="cb1-106"><a href="#cb1-106" aria-label="106"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-label="107"></a>The argument of this section is not that data science should copy any one of these professions, but that it is developing its own public interest mission — and that mission has precedents, institutions, and hard-won lessons to draw on.</span>
+<span id="cb1-108"><a href="#cb1-108" aria-label="108"></a></span>
+<span id="cb1-109"><a href="#cb1-109" aria-label="109"></a><span class="fu">## What This Means for Practice</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-label="110"></a></span>
+<span id="cb1-111"><a href="#cb1-111" aria-label="111"></a>The rest of this book equips you with a diverse technical toolkit precisely because no single method of access is reliable. When APIs close, you may need to scrape HTML (@sec-static-pages, @sec-dynamic-pages). When web pages change, archives provide continuity (@sec-archives). When documents are locked in inaccessible formats, PDF extraction opens them up (@sec-pdfs). When platforms restrict automated access, federated alternatives offer open protocols (@sec-social). And when you need sustained observation over time, automation turns one-time data collection into durable infrastructure (@sec-automation).</span>
+<span id="cb1-112"><a href="#cb1-112" aria-label="112"></a></span>
+<span id="cb1-113"><a href="#cb1-113" aria-label="113"></a>Beyond this book's core toolkit, four alternative access strategies belong in your repertoire:</span>
+<span id="cb1-114"><a href="#cb1-114" aria-label="114"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-label="115"></a><span class="ss">- </span>**Official research access programs.** Some platforms now offer application-gated researcher access — the Meta Content Library, TikTok's Research API, Reddit's researcher program. These are real but rationed: eligibility is narrow, terms restrict publication and sharing, and access can be revoked. Use them, and document their constraints in your methods.</span>
+<span id="cb1-116"><a href="#cb1-116" aria-label="116"></a><span class="ss">- </span>**Data donation.** Users have rights to their own data — in many jurisdictions, legally enforceable export rights — and can volunteer it to research. Donation studies recruit participants to contribute their download packages or install instrumented browser extensions, converting individual data rights into collective observation, with consent built in.</span>
+<span id="cb1-117"><a href="#cb1-117" aria-label="117"></a><span class="ss">- </span>**FOIA and public records requests.** Government-held data is subject to disclosure law. A well-scoped records request can produce datasets no API offers — inspection records, communications, contracts — with @sec-government covering the data agencies publish proactively.</span>
+<span id="cb1-118"><a href="#cb1-118" aria-label="118"></a><span class="ss">- </span>**Crowdsourcing and citizen science.** When no one holds the data, communities can create it: distributed observation, structured reporting, and collaborative annotation have produced public-interest datasets from air quality to political advertising.</span>
+<span id="cb1-119"><a href="#cb1-119" aria-label="119"></a></span>
+<span id="cb1-120"><a href="#cb1-120" aria-label="120"></a>The strategic lesson is redundancy and flexibility. Build your skills across the full range of techniques so that the closure of any single data source does not shut down your research program.</span>
+<span id="cb1-121"><a href="#cb1-121" aria-label="121"></a></span>
+<span id="cb1-122"><a href="#cb1-122" aria-label="122"></a><span class="fu">## Common Misconceptions</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-label="123"></a></span>
+<span id="cb1-124"><a href="#cb1-124" aria-label="124"></a>Students often arrive at this material with intuitions that the post-API age has quietly invalidated. Five are worth correcting explicitly:</span>
+<span id="cb1-125"><a href="#cb1-125" aria-label="125"></a></span>
+<span id="cb1-126"><a href="#cb1-126" aria-label="126"></a><span class="ss">- </span>**"The post-API age means APIs are gone."** There are more APIs than ever. What changed is the terms: free and open access for outside observers is what is disappearing, replaced by paid tiers, gated programs, and licensing deals.</span>
+<span id="cb1-127"><a href="#cb1-127" aria-label="127"></a><span class="ss">- </span>**"If the API closes, I'll just scrape."** Sometimes — this book teaches you how. But scraping carries its own legal ambiguity (@sec-ethics), breaks when sites redesign, and scales poorly. Treat it as one tool in a portfolio, not an escape hatch that makes enclosure irrelevant.</span>
+<span id="cb1-128"><a href="#cb1-128" aria-label="128"></a><span class="ss">- </span>**"If data is publicly visible, access must be permitted and ethical."** Visibility, permission, and ethics are three different questions <span class="co">[</span><span class="ot">@fiesler2020no</span><span class="co">]</span>. A post being public does not mean its author expected it in a dataset, and a page being viewable does not mean its ToS allows automated collection.</span>
+<span id="cb1-129"><a href="#cb1-129" aria-label="129"></a><span class="ss">- </span>**"This only matters for social media research."** Enclosure logic is spreading wherever data gained AI-training value: news archives, code repositories, forums, image libraries. Government data (@sec-government) is the notable counter-current, held open by legal mandate.</span>
+<span id="cb1-130"><a href="#cb1-130" aria-label="130"></a><span class="ss">- </span>**"Nothing can be done about it."** The counter-values are not wishful thinking: regulation is creating access obligations, archives are institutionalizing preservation, and federated platforms are growing. The constraint environment is contested, and practitioners' choices are part of the contest.</span>
+<span id="cb1-131"><a href="#cb1-131" aria-label="131"></a></span>
+<span id="cb1-132"><a href="#cb1-132" aria-label="132"></a><span class="fu">## Exercises</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-label="133"></a></span>
+<span id="cb1-134"><a href="#cb1-134" aria-label="134"></a><span class="ss">1. </span>**Timeline exercise.** Create a timeline of major API access changes from 2008 to the present. Include at least five events across at least three platforms. For each event, identify which of the three pressures (enclosure, exemption, erosion) best characterizes it.</span>
+<span id="cb1-135"><a href="#cb1-135" aria-label="135"></a></span>
+<span id="cb1-136"><a href="#cb1-136" aria-label="136"></a><span class="ss">2. </span>**Framework application.** Choose a platform API change not discussed in this chapter. Write a 500-word analysis applying the enclosure/exemption/erosion framework.</span>
+<span id="cb1-137"><a href="#cb1-137" aria-label="137"></a></span>
+<span id="cb1-138"><a href="#cb1-138" aria-label="138"></a><span class="ss">3. </span>**Data contingency plan.** Design a research project that depends on a specific web data source. Then write a contingency plan: if your primary source disappears mid-study, what are your backup strategies? Consider at least three alternatives.</span>
+<span id="cb1-139"><a href="#cb1-139" aria-label="139"></a></span>
+<span id="cb1-140"><a href="#cb1-140" aria-label="140"></a><span class="ss">4. </span>**Public interest audit.** Identify a web data research project (published paper, journalism investigation, or civic tech tool) that was enabled by API access. Assess how the project would be affected by current access restrictions. Which of the three values — openness, oversight, or ownership — does the project embody?</span>
+<span id="cb1-141"><a href="#cb1-141" aria-label="141"></a></span>
+<span id="cb1-142"><a href="#cb1-142" aria-label="142"></a><span class="ss">5. </span>**Graduate extension (INFO 5617).** Read @davidson2023platform and @perriam2020digital. Choose one platform and write a two-to-three page "state of research access" brief: what data researchers could obtain five years ago, what is available today and on what terms (cost, eligibility, restrictions), what official research-access programs exist, and which of this chapter's three pressures best explains the trajectory. Close with a concrete recommendation for a researcher starting a study of that platform this year.</span>
+<span id="cb1-143"><a href="#cb1-143" aria-label="143"></a></span>
+<span id="cb1-144"><a href="#cb1-144" aria-label="144"></a><span class="fu">## Key Takeaways</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-label="145"></a></span>
+<span id="cb1-146"><a href="#cb1-146" aria-label="146"></a>The core argument of this chapter is that understanding *why* access is shrinking — not just *that* it is — equips you to navigate the constraints strategically rather than being surprised by them.</span>
+<span id="cb1-147"><a href="#cb1-147" aria-label="147"></a></span>
+<span id="cb1-148"><a href="#cb1-148" aria-label="148"></a><span class="ss">- </span>The open-API era (roughly 2008–2018) was a strategic bargain, not a natural state: platforms traded data access for ecosystems, and computational social science was built on the trade.</span>
+<span id="cb1-149"><a href="#cb1-149" aria-label="149"></a><span class="ss">- </span>**Enclosure** converts collectively produced data into privately controlled assets — API shutdowns, repricing, archive removals, and AI-training licensing deals are its mechanisms.</span>
+<span id="cb1-150"><a href="#cb1-150" aria-label="150"></a><span class="ss">- </span>**Exemption** is the asymmetry of scrutiny: platforms study their users freely while deploying legal and technical tools against independent researchers who study the platforms.</span>
+<span id="cb1-151"><a href="#cb1-151" aria-label="151"></a><span class="ss">- </span>**Erosion** is infrastructural decay — link rot, platform churn, and disappearing datasets — and it makes reproducibility a design problem you must solve at collection time.</span>
+<span id="cb1-152"><a href="#cb1-152" aria-label="152"></a><span class="ss">- </span>**Openness, oversight, and ownership** are the counter-values: document and deposit so your work resists enclosure, insist on inspectability, and prefer community-governed infrastructure.</span>
+<span id="cb1-153"><a href="#cb1-153" aria-label="153"></a><span class="ss">- </span>The practical response is redundancy: master multiple access techniques (documents, archives, APIs, automation) so no single closure ends your research program.</span>
+<span id="cb1-154"><a href="#cb1-154" aria-label="154"></a></span>
+<span id="cb1-155"><a href="#cb1-155" aria-label="155"></a><span class="fu">## Further Reading</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-label="156"></a></span>
+<span id="cb1-157"><a href="#cb1-157" aria-label="157"></a><span class="ss">- </span>@freelon2018computational — the original articulation of the "post-API age"</span>
+<span id="cb1-158"><a href="#cb1-158" aria-label="158"></a><span class="ss">- </span>@bruns2019after — platforms' fight against critical scholarly research</span>
+<span id="cb1-159"><a href="#cb1-159" aria-label="159"></a><span class="ss">- </span>@davidson2023platform — empirical study of how API restrictions threaten open science</span>
+<span id="cb1-160"><a href="#cb1-160" aria-label="160"></a><span class="ss">- </span>@perriam2020digital — digital methods in a post-API environment</span>
+<span id="cb1-161"><a href="#cb1-161" aria-label="161"></a><span class="ss">- </span>@lazer2020computational — obstacles and opportunities in computational social science</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
