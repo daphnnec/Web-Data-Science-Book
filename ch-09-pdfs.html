@@ -448,7 +448,7 @@ div.csl-indent {
 <section id="pypdf-basics" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="pypdf-basics"><span class="header-section-number">9.2</span> PyPDF Basics</h2>
 <p>The <code>pypdf</code> library provides page-level text extraction and metadata access:</p>
-<div id="81a00a53" class="cell" data-execution_count="1">
+<div id="4cd1c3a0" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-label="1"></a><span class="co"># Install if needed:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-label="2"></a><span class="co"># pip install pypdf</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-label="3"></a></span>
@@ -463,7 +463,7 @@ div.csl-indent {
 </div>
 <section id="extracting-text" class="level3" data-number="9.2.1">
 <h3 data-number="9.2.1" class="anchored" data-anchor-id="extracting-text"><span class="header-section-number">9.2.1</span> Extracting Text</h3>
-<div id="52a0696d" class="cell" data-execution_count="2">
+<div id="1dde08e7" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-label="1"></a><span class="co"># Extract text from the first page</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-label="2"></a>page <span class="op">=</span> reader.pages[<span class="dv">0</span>]</span>
 <span id="cb2-3"><a href="#cb2-3" aria-label="3"></a>text <span class="op">=</span> page.extract_text()</span>
@@ -473,7 +473,7 @@ div.csl-indent {
 </section>
 <section id="cleanup-strategies" class="level3" data-number="9.2.2">
 <h3 data-number="9.2.2" class="anchored" data-anchor-id="cleanup-strategies"><span class="header-section-number">9.2.2</span> Cleanup Strategies</h3>
-<div id="84bae20f" class="cell" data-execution_count="3">
+<div id="c8234891" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-label="1"></a><span class="im">import</span> re</span>
 <span id="cb3-2"><a href="#cb3-2" aria-label="2"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-label="3"></a><span class="kw">def</span> clean_page_text(raw_text):</span>
@@ -513,7 +513,7 @@ div.csl-indent {
 <h3 data-number="9.2.3" class="anchored" data-anchor-id="regular-expressions-for-pdf-text"><span class="header-section-number">9.2.3</span> Regular Expressions for PDF Text</h3>
 <p>Regular expressions are your primary tool for imposing structure on the messy text that comes out of PDF extraction. Where structured data formats give you fields and columns, PDF text gives you a wall of characters — and regex is how you carve that wall into usable pieces. The patterns below cover the most common extraction tasks you will encounter when working with government and institutional PDFs.</p>
 <p>Each pattern targets a specific kind of structured information that appears in unstructured text. Learning to recognize these patterns and adapt them to your specific documents is a skill that improves with practice. No single regex will work across all PDFs, but these five cover a wide range of common scenarios.</p>
-<div id="21f48b78" class="cell" data-execution_count="4">
+<div id="9ae98da6" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-label="1"></a><span class="im">import</span> re</span>
 <span id="cb4-2"><a href="#cb4-2" aria-label="2"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-label="3"></a><span class="co"># 1. Dates in slash-separated format (e.g., "1/15/2024", "12/03/23")</span></span>
@@ -565,7 +565,7 @@ div.csl-indent {
 <p>Boulder’s City Council publishes signed minutes of its public meetings <a href="https://documents.bouldercolorado.gov">online</a>. These PDFs contain structured information — council member attendance, public comment speakers, agenda items, voting records — that can be extracted and analyzed.</p>
 <section id="measuring-council-attendance" class="level3" data-number="9.3.1">
 <h3 data-number="9.3.1" class="anchored" data-anchor-id="measuring-council-attendance"><span class="header-section-number">9.3.1</span> Measuring Council Attendance</h3>
-<div id="b0642292" class="cell" data-execution_count="5">
+<div id="fb211fc6" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-label="1"></a><span class="im">import</span> os</span>
 <span id="cb5-2"><a href="#cb5-2" aria-label="2"></a><span class="im">from</span> pypdf <span class="im">import</span> PdfReader</span>
 <span id="cb5-3"><a href="#cb5-3" aria-label="3"></a></span>
@@ -623,7 +623,7 @@ div.csl-indent {
 </section>
 <section id="building-the-pipeline" class="level3" data-number="9.3.2">
 <h3 data-number="9.3.2" class="anchored" data-anchor-id="building-the-pipeline"><span class="header-section-number">9.3.2</span> Building the Pipeline</h3>
-<div id="80682209" class="cell" data-execution_count="6">
+<div id="b0df36b2" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-label="1"></a>results <span class="op">=</span> []</span>
 <span id="cb6-2"><a href="#cb6-2" aria-label="2"></a><span class="cf">for</span> pdf_file <span class="kw">in</span> pdf_files:</span>
 <span id="cb6-3"><a href="#cb6-3" aria-label="3"></a>    <span class="cf">try</span>:</span>
@@ -646,7 +646,7 @@ div.csl-indent {
 </section>
 <section id="visualizing-trends" class="level3" data-number="9.3.3">
 <h3 data-number="9.3.3" class="anchored" data-anchor-id="visualizing-trends"><span class="header-section-number">9.3.3</span> Visualizing Trends</h3>
-<div id="dc38579d" class="cell" data-execution_count="7">
+<div id="b2fe9760" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb7-2"><a href="#cb7-2" aria-label="2"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-label="3"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">5</span>))</span>
@@ -662,7 +662,7 @@ div.csl-indent {
 <h3 data-number="9.3.4" class="anchored" data-anchor-id="measuring-public-comment-frequency"><span class="header-section-number">9.3.4</span> Measuring Public Comment Frequency</h3>
 <p>One of the most civically valuable pieces of information buried in meeting minutes is how many members of the public showed up to speak. Public comment sections are where residents voice concerns about zoning changes, police oversight, budget priorities, and development projects. Extracting this data requires detective work: you need to identify the textual markers that signal a public comment section and then count the speakers within it.</p>
 <p>The challenge is that different municipalities format public comment sections differently, and even within the same city, the format may shift over time as clerks change or recording practices evolve. You are looking for patterns — section headers like “PUBLIC COMMENT” or “PUBLIC HEARING,” followed by names or numbered items indicating individual speakers. This is the kind of work where you iterate: try a pattern on one document, inspect the results manually, refine the pattern, test it on a second document, and adjust again. Start by printing the raw text of several public comment sections to understand the format before writing any extraction code.</p>
-<div id="75a6b9d9" class="cell" data-execution_count="8">
+<div id="af831953" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-label="1"></a><span class="kw">def</span> count_public_comments(text):</span>
 <span id="cb8-2"><a href="#cb8-2" aria-label="2"></a>    <span class="co">"""Count the number of public comment speakers in meeting text.</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-label="3"></a></span>
@@ -698,7 +698,7 @@ div.csl-indent {
 <span id="cb8-33"><a href="#cb8-33" aria-label="33"></a>    <span class="co"># Return the higher count (different formats capture different patterns)</span></span>
 <span id="cb8-34"><a href="#cb8-34" aria-label="34"></a>    <span class="cf">return</span> <span class="bu">max</span>(spoke_count, numbered_count)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="a37382e4" class="cell" data-execution_count="9">
+<div id="436880f5" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-label="1"></a><span class="co"># Apply across all meeting files</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-label="2"></a>comment_counts <span class="op">=</span> []</span>
 <span id="cb9-3"><a href="#cb9-3" aria-label="3"></a><span class="cf">for</span> pdf_file <span class="kw">in</span> pdf_files:</span>
@@ -728,7 +728,7 @@ div.csl-indent {
 <section id="building-a-reusable-pdf-pipeline" class="level2" data-number="9.4">
 <h2 data-number="9.4" class="anchored" data-anchor-id="building-a-reusable-pdf-pipeline"><span class="header-section-number">9.4</span> Building a Reusable PDF Pipeline</h2>
 <p>When you work with PDFs at scale — processing dozens or hundreds of documents from the same source — you need a structured pipeline. Here is a pattern that works for most government document collections:</p>
-<div id="d73716b6" class="cell" data-execution_count="10">
+<div id="1786195b" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-label="1"></a><span class="im">import</span> os</span>
 <span id="cb10-2"><a href="#cb10-2" aria-label="2"></a><span class="im">import</span> re</span>
 <span id="cb10-3"><a href="#cb10-3" aria-label="3"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -826,7 +826,7 @@ div.csl-indent {
 <h3 data-number="9.4.1" class="anchored" data-anchor-id="when-pypdf-is-not-enough"><span class="header-section-number">9.4.1</span> When PyPDF Is Not Enough</h3>
 <p>PyPDF handles text-based PDFs well but struggles with two common scenarios:</p>
 <p><strong>Tables in PDFs</strong>: PyPDF extracts tables as streams of text, losing the column-row structure. For tabular PDF data, use <code>pdfplumber</code>, which preserves spatial relationships:</p>
-<div id="035da892" class="cell" data-execution_count="11">
+<div id="e467d5de" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-label="1"></a><span class="co"># pip install pdfplumber</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-label="2"></a><span class="im">import</span> pdfplumber</span>
 <span id="cb11-3"><a href="#cb11-3" aria-label="3"></a></span>
