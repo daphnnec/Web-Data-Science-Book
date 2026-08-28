@@ -1946,7 +1946,7 @@
     "href": "appendix-notebooks.html#how-to-use-the-notebooks",
     "title": "Appendix A — Companion Notebooks",
     "section": "",
-    "text": "Download the notebook for the chapter you are reading (links below). Right-click and “Save link as…” if your browser displays the raw file instead of downloading it.\nLaunch Jupyter (jupyter lab or jupyter notebook) from the folder where you saved it. If you need help getting Jupyter running, see Missing Manual Chapter 16: Jupyter.\nInstall as you go. Each chapter introduces its own libraries (pip install lines appear in the first code cells). You do not need everything installed to start.\nSupply your own credentials. Notebooks for the API chapters (Chapter 11 through Chapter 13) require your own API keys, set as environment variables — never pasted into cells.",
+    "text": "Download the notebook for the chapter you are reading. Each link below opens the notebook on GitHub, which displays the cells so you can read it in the browser. To get a copy you can run, use the download button above the notebook (the ⤓ icon, or Raw then “Save as…”).\nLaunch Jupyter (jupyter lab or jupyter notebook) from the folder where you saved it. If you need help getting Jupyter running, see Missing Manual Chapter 16: Jupyter.\nInstall as you go. Each chapter introduces its own libraries (pip install lines appear in the first code cells). You do not need everything installed to start.\nSupply your own credentials. Notebooks for the API chapters (Chapter 11 through Chapter 13) require your own API keys, set as environment variables — never pasted into cells.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Companion Notebooks</span>"
