@@ -437,7 +437,7 @@ div.csl-indent {
 <section id="the-availability-api" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="the-availability-api"><span class="header-section-number">7.2</span> The Availability API</h2>
 <p>The simplest way to check whether the Wayback Machine has a snapshot of a URL is the Availability API:</p>
-<div id="83157013" class="cell" data-execution_count="1">
+<div id="e1c4eb79" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-label="1"></a><span class="im">import</span> requests</span>
 <span id="cb1-2"><a href="#cb1-2" aria-label="2"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-label="3"></a>url <span class="op">=</span> <span class="st">"https://www.cnn.com"</span></span>
@@ -460,7 +460,7 @@ div.csl-indent {
 <span id="cb1-20"><a href="#cb1-20" aria-label="20"></a>    <span class="bu">print</span>(<span class="st">"No snapshot available near this date"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The API returns the closest snapshot to your requested timestamp. Before you retrieve it, one crucial detail. A snapshot URL like <code>https://web.archive.org/web/20000815052826/http://www.cnn.com/</code> does <em>not</em> return the page exactly as it was captured: the Wayback Machine injects its own toolbar, banner, and JavaScript into the page, and rewrites every link, script, and image reference to point back into the archive. That is convenient for browsing but poisonous for measurement — counts of links, scripts, and images, and even text length, will include the archive’s scaffolding along with the original page. Appending <code>id_</code> to the timestamp (<code>.../web/20000815052826id_/http://www.cnn.com/</code>) asks for the original capture, unmodified. The tradeoff is that <code>id_</code> returns the rawest form of the capture: relative links are left unresolved and the page may not render nicely in a browser. For measurement, raw is exactly what you want.</p>
-<div id="39bade66" class="cell" data-execution_count="2">
+<div id="3183c6c2" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-label="1"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
 <span id="cb2-2"><a href="#cb2-2" aria-label="2"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-label="3"></a><span class="co"># Append id_ to the timestamp to request the original, unmodified</span></span>
@@ -478,7 +478,7 @@ div.csl-indent {
 <section id="comparing-multiple-snapshots" class="level3" data-number="7.2.1">
 <h3 data-number="7.2.1" class="anchored" data-anchor-id="comparing-multiple-snapshots"><span class="header-section-number">7.2.1</span> Comparing Multiple Snapshots</h3>
 <p>A single historical snapshot is interesting; comparing snapshots across time is where the real research value lies. Let us retrieve CNN’s homepage at three different points in history and see how the web has evolved:</p>
-<div id="c39bb383" class="cell" data-execution_count="3">
+<div id="8aaf03b9" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-label="1"></a><span class="im">import</span> time</span>
 <span id="cb3-2"><a href="#cb3-2" aria-label="2"></a><span class="im">import</span> requests</span>
 <span id="cb3-3"><a href="#cb3-3" aria-label="3"></a><span class="im">from</span> bs4 <span class="im">import</span> BeautifulSoup</span>
@@ -528,7 +528,7 @@ div.csl-indent {
 <span id="cb3-47"><a href="#cb3-47" aria-label="47"></a>        stats.append(result)</span>
 <span id="cb3-48"><a href="#cb3-48" aria-label="48"></a>    time.sleep(<span class="dv">2</span>)  <span class="co"># Be respectful of the Archive</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="99a0bc9f" class="cell" data-execution_count="4">
+<div id="2fbba7a8" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-label="1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-2"><a href="#cb4-2" aria-label="2"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-label="3"></a>comparison <span class="op">=</span> pd.DataFrame(stats)</span>
@@ -546,7 +546,7 @@ div.csl-indent {
 <section id="the-cdx-server-api" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="the-cdx-server-api"><span class="header-section-number">7.3</span> The CDX Server API</h2>
 <p>The Availability API finds one snapshot near a date. The CDX Server API lets you query the entire history of snapshots for a URL, which is essential for longitudinal research:</p>
-<div id="3d1db54f" class="cell" data-execution_count="5">
+<div id="0939be2f" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-label="1"></a><span class="im">import</span> requests</span>
 <span id="cb5-2"><a href="#cb5-2" aria-label="2"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb5-3"><a href="#cb5-3" aria-label="3"></a></span>
@@ -573,7 +573,7 @@ div.csl-indent {
 </div>
 <p>Two of these parameters do server-side filtering that saves you cleanup work later. The <code>filter=statuscode:200</code> parameter returns only successful captures, so failed requests and redirects never reach your DataFrame. The <code>collapse=digest</code> parameter drops consecutive captures whose content hash is identical — the Archive often captures a page daily even when nothing changed, and collapsing on digest keeps one capture per distinct version. While developing, it is also worth adding <code>"limit": 100</code> to cap the response at a manageable size until your code works.</p>
 <p>You can visualize how frequently the page was captured and how its size changed over time:</p>
-<div id="30c163b8" class="cell" data-execution_count="6">
+<div id="f1cffa73" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-2"><a href="#cb6-2" aria-label="2"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-label="3"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">8</span>), sharex<span class="op">=</span><span class="va">True</span>)</span>
@@ -594,7 +594,7 @@ div.csl-indent {
 <section id="filtering-and-analyzing-cdx-data" class="level3" data-number="7.3.1">
 <h3 data-number="7.3.1" class="anchored" data-anchor-id="filtering-and-analyzing-cdx-data"><span class="header-section-number">7.3.1</span> Filtering and Analyzing CDX Data</h3>
 <p>The raw CDX feed includes every capture attempt — failed requests, redirects, and duplicate captures that can skew your analysis. Because our query already filtered to status 200 and collapsed identical captures on the server side, the DataFrame arrives analysis-ready; had you omitted those parameters, the equivalent pandas filter would be <code>df[df["statuscode"] == "200"]</code>. Prefer the server-side version: it transfers less data and leaves less cleanup code to maintain.</p>
-<div id="86e3977f" class="cell" data-execution_count="7">
+<div id="7760d369" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-label="1"></a><span class="co"># Every row is already a successful, distinct capture (filtered</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-label="2"></a><span class="co"># server-side), so we can go straight to trend analysis</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-label="3"></a>df_ok <span class="op">=</span> df.set_index(<span class="st">"timestamp"</span>)</span>
@@ -609,7 +609,7 @@ div.csl-indent {
 <span id="cb7-12"><a href="#cb7-12" aria-label="12"></a>yearly <span class="op">=</span> df_ok.resample(<span class="st">"YS"</span>).agg(mean_size<span class="op">=</span>(<span class="st">"length"</span>, <span class="st">"mean"</span>))</span>
 <span id="cb7-13"><a href="#cb7-13" aria-label="13"></a><span class="bu">print</span>(yearly.tail(<span class="dv">10</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="4672c452" class="cell" data-execution_count="8">
+<div id="bb39fb1a" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-label="1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">8</span>), sharex<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-label="2"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-label="3"></a>quarterly[<span class="st">"captures"</span>].plot(ax<span class="op">=</span>axes[<span class="dv">0</span>])</span>
@@ -632,7 +632,7 @@ div.csl-indent {
 <p>A current research project explores how social media platforms’ terms of service have evolved. Let us track changes in Facebook’s Terms of Service by retrieving content at regular intervals.</p>
 <section id="generating-date-ranges" class="level3" data-number="7.4.1">
 <h3 data-number="7.4.1" class="anchored" data-anchor-id="generating-date-ranges"><span class="header-section-number">7.4.1</span> Generating Date Ranges</h3>
-<div id="3a4432db" class="cell" data-execution_count="9">
+<div id="c7f2f254" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-label="1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb9-2"><a href="#cb9-2" aria-label="2"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-label="3"></a><span class="co"># Generate quarterly dates from 2005 to 2024</span></span>
@@ -642,7 +642,7 @@ div.csl-indent {
 </section>
 <section id="retrieving-historical-content" class="level3" data-number="7.4.2">
 <h3 data-number="7.4.2" class="anchored" data-anchor-id="retrieving-historical-content"><span class="header-section-number">7.4.2</span> Retrieving Historical Content</h3>
-<div id="66560576" class="cell" data-execution_count="10">
+<div id="fc31842a" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-label="1"></a><span class="im">import</span> time</span>
 <span id="cb10-2"><a href="#cb10-2" aria-label="2"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
 <span id="cb10-3"><a href="#cb10-3" aria-label="3"></a></span>
@@ -708,7 +708,7 @@ div.csl-indent {
 <section id="collecting-the-history" class="level3" data-number="7.4.3">
 <h3 data-number="7.4.3" class="anchored" data-anchor-id="collecting-the-history"><span class="header-section-number">7.4.3</span> Collecting the History</h3>
 <p>The function retrieves one snapshot; a loop over the quarterly dates assembles the history. Note where the <code>time.sleep()</code> lives — in the loop, between requests, just as in <a href="ch-06-static-pages.html" class="quarto-xref"><span>Chapter 6</span></a> — and that failed retrievals (returned as <code>None</code>) are simply skipped rather than crashing the run:</p>
-<div id="fc74ffbb" class="cell" data-execution_count="11">
+<div id="da8c831c" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-label="1"></a>results <span class="op">=</span> []</span>
 <span id="cb11-2"><a href="#cb11-2" aria-label="2"></a><span class="cf">for</span> date <span class="kw">in</span> dates:</span>
 <span id="cb11-3"><a href="#cb11-3" aria-label="3"></a>    <span class="bu">print</span>(<span class="ss">f"Fetching snapshot near </span><span class="sc">{</span>date<span class="sc">.</span>date()<span class="sc">}</span><span class="ss">..."</span>)</span>
@@ -724,7 +724,7 @@ div.csl-indent {
 <section id="serializing-data" class="level3" data-number="7.4.4">
 <h3 data-number="7.4.4" class="anchored" data-anchor-id="serializing-data"><span class="header-section-number">7.4.4</span> Serializing Data</h3>
 <p>Once you have collected historical content, save it so you do not need to re-scrape:</p>
-<div id="3cd27c8b" class="cell" data-execution_count="12">
+<div id="0feff226" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-label="1"></a><span class="im">import</span> json</span>
 <span id="cb12-2"><a href="#cb12-2" aria-label="2"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-label="3"></a><span class="co"># Save the results collected by the loop above:</span></span>
@@ -739,7 +739,7 @@ div.csl-indent {
 <section id="caching-raw-captures" class="level3" data-number="7.4.5">
 <h3 data-number="7.4.5" class="anchored" data-anchor-id="caching-raw-captures"><span class="header-section-number">7.4.5</span> Caching Raw Captures</h3>
 <p>Serializing your final results is one half of a reproducible workflow. The other half is caching each raw capture as you fetch it, so that re-running the collection loop never re-downloads something you already have:</p>
-<div id="7d48e54c" class="cell" data-execution_count="13">
+<div id="fbffaafc" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-label="1"></a><span class="im">import</span> os</span>
 <span id="cb13-2"><a href="#cb13-2" aria-label="2"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-label="3"></a>os.makedirs(<span class="st">"wayback_cache"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
@@ -765,7 +765,7 @@ div.csl-indent {
 <section id="document-similarity-with-bag-of-words" class="level2" data-number="7.5">
 <h2 data-number="7.5" class="anchored" data-anchor-id="document-similarity-with-bag-of-words"><span class="header-section-number">7.5</span> Document Similarity with Bag-of-Words</h2>
 <p>To measure how much a document changed between versions, you can use a bag-of-words approach. This technique represents each document as a vector of word frequencies, ignoring word order, and then measures the similarity between vectors.</p>
-<div id="6fc385a5" class="cell" data-execution_count="14">
+<div id="2dc4e3e0" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-label="1"></a><span class="im">from</span> gensim.utils <span class="im">import</span> simple_preprocess</span>
 <span id="cb14-2"><a href="#cb14-2" aria-label="2"></a><span class="im">from</span> nltk.corpus <span class="im">import</span> stopwords</span>
 <span id="cb14-3"><a href="#cb14-3" aria-label="3"></a><span class="im">import</span> nltk</span>
@@ -788,7 +788,7 @@ div.csl-indent {
 <span id="cb14-20"><a href="#cb14-20" aria-label="20"></a><span class="bu">print</span>(<span class="ss">f"Version 2 tokens: </span><span class="sc">{</span><span class="bu">len</span>(doc_v2)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Using gensim’s dictionary and bag-of-words tools, you can build a corpus and compute similarity:</p>
-<div id="1648ed3f" class="cell" data-execution_count="15">
+<div id="d9e99c24" class="cell" data-execution_count="15">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-label="1"></a><span class="im">from</span> gensim <span class="im">import</span> corpora, similarities</span>
 <span id="cb15-2"><a href="#cb15-2" aria-label="2"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-label="3"></a><span class="co"># Build a dictionary mapping words to IDs</span></span>
@@ -807,7 +807,7 @@ div.csl-indent {
 <section id="visualizing-document-change-over-time" class="level3" data-number="7.5.1">
 <h3 data-number="7.5.1" class="anchored" data-anchor-id="visualizing-document-change-over-time"><span class="header-section-number">7.5.1</span> Visualizing Document Change Over Time</h3>
 <p>The bag-of-words similarity measure tells you how similar two documents are, but plotting similarity between <em>consecutive</em> versions over time creates a “change timeline” — a visual record of when and how much a document evolved:</p>
-<div id="f4dbf06a" class="cell" data-execution_count="16">
+<div id="607203d4" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-label="1"></a><span class="im">from</span> gensim <span class="im">import</span> corpora, similarities</span>
 <span id="cb16-2"><a href="#cb16-2" aria-label="2"></a><span class="im">from</span> gensim.utils <span class="im">import</span> simple_preprocess</span>
 <span id="cb16-3"><a href="#cb16-3" aria-label="3"></a><span class="im">from</span> nltk.corpus <span class="im">import</span> stopwords</span>

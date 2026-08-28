@@ -477,7 +477,7 @@ div.csl-indent {
 <h2 data-number="2.3" class="anchored" data-anchor-id="technical-norms-robots.txt"><span class="header-section-number">2.3</span> Technical Norms: <code>robots.txt</code></h2>
 <p>Beyond legal requirements, the web has developed a set of community norms for responsible automated access. The most important of these is the <code>robots.txt</code> protocol.</p>
 <p>A <code>robots.txt</code> file lives at the root of a website (e.g., <code>https://example.com/robots.txt</code>) and specifies which parts of the site automated agents are permitted or forbidden from accessing. It uses a simple syntax:</p>
-<div id="847f0286" class="cell" data-execution_count="1">
+<div id="4928970f" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-label="1"></a><span class="im">import</span> requests</span>
 <span id="cb1-2"><a href="#cb1-2" aria-label="2"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-label="3"></a><span class="co"># Identify yourself. The next section explains why this header matters;</span></span>
@@ -500,7 +500,7 @@ div.csl-indent {
 <span id="cb1-20"><a href="#cb1-20" aria-label="20"></a><span class="co"># Disallow: /wiki/Special:</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The key directives are <code>User-agent</code> (which crawler the rule applies to), <code>Disallow</code> (paths that should not be accessed), <code>Allow</code> (exceptions to disallow rules), and <code>Crawl-delay</code> (requested time between requests). You can parse these programmatically:</p>
-<div id="5d40593c" class="cell" data-execution_count="2">
+<div id="cafeb411" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-label="1"></a><span class="im">from</span> urllib.robotparser <span class="im">import</span> RobotFileParser</span>
 <span id="cb2-2"><a href="#cb2-2" aria-label="2"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-label="3"></a><span class="co"># Hand the parser text you fetched yourself, rather than calling</span></span>
@@ -541,7 +541,7 @@ div.csl-indent {
 </div>
 <p>The second result deserves a pause, because it teaches an important nuance. Wikipedia <em>wants</em> programmatic users on its API — <a href="ch-10-wikipedia.html" class="quarto-xref"><span>Chapter 10</span></a> is built on it — yet <code>robots.txt</code> disallows <code>/w/</code> paths. The two facts are not in conflict: <code>robots.txt</code> addresses <em>crawlers</em> that discover and fetch pages by following links, and Wikipedia would rather crawlers index its stable article URLs than its infinite space of dynamic, server-intensive <code>/w/</code> URLs. Deliberate API clients are governed by a different set of norms — the Wikimedia User-Agent policy and API etiquette guidelines — that you will follow in <a href="ch-10-wikipedia.html" class="quarto-xref"><span>Chapter 10</span></a>. The general lesson: <code>robots.txt</code> tells you how a site wants <em>automated page-fetching</em> to behave, and it is one input among several (Terms of Service, API documentation, rate-limit guidance) rather than the complete rulebook.</p>
 <p>If a site declares a <code>Crawl-delay</code>, you can read it programmatically and respect it:</p>
-<div id="06f62cd6" class="cell" data-execution_count="3">
+<div id="62e999e6" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-label="1"></a>delay <span class="op">=</span> rp.crawl_delay(<span class="st">"*"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-label="2"></a><span class="bu">print</span>(delay)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-label="3"></a><span class="co"># None if the site declares no crawl delay; otherwise seconds between requests</span></span>
@@ -551,7 +551,7 @@ div.csl-indent {
 <section id="comparing-robots.txt-across-platforms" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="comparing-robots.txt-across-platforms"><span class="header-section-number">2.3.1</span> Comparing robots.txt Across Platforms</h3>
 <p>Different organizations have dramatically different approaches to automated access, and their <code>robots.txt</code> files reveal these philosophies. Compare three major sites:</p>
-<div id="d4e7910e" class="cell" data-execution_count="4">
+<div id="db265301" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-label="1"></a><span class="im">import</span> requests</span>
 <span id="cb5-2"><a href="#cb5-2" aria-label="2"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-label="3"></a>sites <span class="op">=</span> {</span>
@@ -579,7 +579,7 @@ div.csl-indent {
 <section id="responsible-request-headers" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="responsible-request-headers"><span class="header-section-number">2.4</span> Responsible Request Headers</h2>
 <p>When your code makes requests to a web server, the server sees metadata about the request including the <code>User-Agent</code> header, which identifies who is making the request. By default, the <code>requests</code> library sends a generic User-Agent string. You should replace it with one that identifies you and provides contact information:</p>
-<div id="8bac5e9e" class="cell" data-execution_count="5">
+<div id="fcc5d15a" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-label="1"></a><span class="im">import</span> requests</span>
 <span id="cb6-2"><a href="#cb6-2" aria-label="2"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-label="3"></a>headers <span class="op">=</span> {</span>
@@ -606,7 +606,7 @@ div.csl-indent {
 <section id="rate-limiting" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="rate-limiting"><span class="header-section-number">2.5</span> Rate Limiting</h2>
 <p>Making hundreds of requests per second to a web server can degrade its performance for other users — effectively mounting a denial-of-service attack on a site you are trying to study. Always space out your requests:</p>
-<div id="3bfc6a38" class="cell" data-execution_count="6">
+<div id="38ec9f9c" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-label="1"></a><span class="im">import</span> time</span>
 <span id="cb7-2"><a href="#cb7-2" aria-label="2"></a><span class="im">import</span> requests</span>
 <span id="cb7-3"><a href="#cb7-3" aria-label="3"></a></span>
@@ -621,7 +621,7 @@ div.csl-indent {
 <section id="building-a-responsible-scraper-function" class="level3" data-number="2.5.1">
 <h3 data-number="2.5.1" class="anchored" data-anchor-id="building-a-responsible-scraper-function"><span class="header-section-number">2.5.1</span> Building a Responsible Scraper Function</h3>
 <p>The principles above — custom User-Agent, rate limiting, error handling — appear in every scraping project. Rather than implementing them ad hoc each time, you can wrap them into a reusable function:</p>
-<div id="b7ba7b4f" class="cell" data-execution_count="7">
+<div id="66fe0fc1" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-label="1"></a><span class="im">import</span> requests</span>
 <span id="cb8-2"><a href="#cb8-2" aria-label="2"></a><span class="im">import</span> time</span>
 <span id="cb8-3"><a href="#cb8-3" aria-label="3"></a><span class="im">import</span> logging</span>
