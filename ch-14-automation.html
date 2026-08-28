@@ -452,7 +452,7 @@ div.csl-indent {
 <section id="step-1-notebook-to-script" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="step-1-notebook-to-script"><span class="header-section-number">14.3</span> Step 1: Notebook to Script</h2>
 <p>Let us convert a Rotten Tomatoes score scraper from notebook format to a standalone script. The key changes: remove interactive exploration, add a <code>main()</code> function, handle imports and configuration at the top, and write output to a file.</p>
-<div id="c89414b0" class="cell" data-execution_count="1">
+<div id="15bfad34" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-label="1"></a><span class="co"># scraper.py — Rotten Tomatoes Score Scraper</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-label="2"></a><span class="co">"""Scrape Rotten Tomatoes audience and critic scores for a film."""</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-label="3"></a></span>
@@ -542,7 +542,7 @@ div.csl-indent {
 <section id="testing-your-script-locally" class="level3" data-number="14.3.1">
 <h3 data-number="14.3.1" class="anchored" data-anchor-id="testing-your-script-locally"><span class="header-section-number">14.3.1</span> Testing Your Script Locally</h3>
 <p>Before deploying your script to GitHub Actions, always test it locally from the command line. Running a script in the terminal is different from running cells in a notebook — import errors, missing dependencies, and file path issues that were invisible in Jupyter will surface immediately.</p>
-<div id="c310bd73" class="cell" data-execution_count="2">
+<div id="fc9618e2" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-label="1"></a><span class="co"># From your terminal, run the script directly:</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-label="2"></a><span class="co"># $ python scraper.py</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-label="3"></a><span class="co"># Saved scores at 2024-11-15T14:23:07.482361+00:00</span></span>
@@ -720,7 +720,7 @@ div.csl-indent {
 <h3 data-number="14.4.5" class="anchored" data-anchor-id="handling-failures-gracefully"><span class="header-section-number">14.4.5</span> Handling Failures Gracefully</h3>
 <p>Even with validation in place, your scraper will occasionally fail due to circumstances beyond your control: the target website goes down for maintenance, a rate limit is temporarily enforced, or a network timeout occurs. A well-designed scraping pipeline handles these failures without losing previously collected data or crashing the workflow.</p>
 <p>The simplest approach is to wrap your scraping logic in a try/except block that logs the error and exits gracefully rather than raising an unhandled exception:</p>
-<div id="c9f4bb32" class="cell" data-execution_count="3">
+<div id="57b70645" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-label="1"></a><span class="im">import</span> sys</span>
 <span id="cb7-2"><a href="#cb7-2" aria-label="2"></a><span class="im">import</span> traceback</span>
 <span id="cb7-3"><a href="#cb7-3" aria-label="3"></a></span>
@@ -763,7 +763,7 @@ div.csl-indent {
 <section id="step-3-analyze-collected-data" class="level2" data-number="14.5">
 <h2 data-number="14.5" class="anchored" data-anchor-id="step-3-analyze-collected-data"><span class="header-section-number">14.5</span> Step 3: Analyze Collected Data</h2>
 <p>After running your scraper for a period, you will have accumulated data to analyze:</p>
-<div id="aeeb1f36" class="cell" data-execution_count="4">
+<div id="8a54ced5" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-label="1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb9-2"><a href="#cb9-2" aria-label="2"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-label="3"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"scores.csv"</span>)</span>
